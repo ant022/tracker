@@ -1,0 +1,50 @@
+name: Scrape Prices and Build Site
+
+on:
+  # Run manually from GitHub Actions tab
+  workflow_dispatch:
+    inputs:
+      single_category:
+        description: 'Single category to scrape (optional, format: Store:CategoryName)'
+        required: false
+        type: string
+  
+  # Run automatically every day at 6 AM UTC
+  schedule:
+    - cron: '0 6 * * *'
+
+jobs:
+  scrape-and-build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install playwright
+        playwright install chromium
+        
+    - name: Run scraper
+      env:
+        SCRAPE_SINGLE_CATEGORY: ${{ github.event.inputs.single_category }}
+      run: |
+        python scraper2.py
+        
+    - name: Build static site
+      run: |
+        python build_site.py
+        
+    - name: Commit and push if changed
+      run: |
+        git config --global user.name 'GitHub Actions Bot'
+        git config --global user.email 'actions@github.com'
+        git add alcohol_history.json index.html
+        git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update: Scraped prices $(date +'%Y-%m-%d %H:%M')" && git push)
