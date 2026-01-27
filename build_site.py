@@ -99,7 +99,7 @@ def build():
     
     # Add favorites section link
     sidebar_links += f'''
-        <a href="#favorites-section" class="nav-link nav-link-special" id="favorites-nav-link" style="display:none;">
+        <a href="#favorites-section" class="nav-link nav-link-special" id="favorites-nav-link" style="display:none;" onclick="closeMobileMenu()">
             <span class="fav-icon">⭐</span>
             <span class="category-name">My Favorites (<span id="fav-count">0</span>)</span>
         </a>'''
@@ -107,7 +107,7 @@ def build():
     # Add sales section link if there are sales
     if sale_products:
         sidebar_links += f'''
-        <a href="#sales-section" class="nav-link nav-link-sale">
+        <a href="#sales-section" class="nav-link nav-link-sale" onclick="closeMobileMenu()">
             <span class="sale-icon">🔥</span>
             <span class="category-name">Sales ({len(sale_products)})</span>
         </a>'''
@@ -116,7 +116,7 @@ def build():
     
     for i, cat in enumerate(categories):
         sidebar_links += f'''
-        <a href="#cat_{i}" class="nav-link">
+        <a href="#cat_{i}" class="nav-link" onclick="closeMobileMenu()">
             <span class="store-label store-label-{cat['store']}">{cat['store']}</span>
             <span class="category-name">{cat['name']}</span>
         </a>'''
@@ -127,9 +127,64 @@ def build():
 <head>
     <title>Price Tracker</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         * {{ box-sizing: border-box; }}
         body {{ font-family: 'Segoe UI', sans-serif; background:#f0f2f5; margin:0; display: flex; color: #333; }}
+        
+        /* Hamburger Menu Button - Hidden on desktop */
+        .hamburger {{
+            display: none;
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            z-index: 1001;
+            background: #1a202c;
+            border: none;
+            border-radius: 8px;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            padding: 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }}
+        
+        .hamburger span {{
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: white;
+            border-radius: 2px;
+            transition: 0.3s;
+        }}
+        
+        .hamburger.active span:nth-child(1) {{
+            transform: rotate(45deg) translate(7px, 7px);
+        }}
+        
+        .hamburger.active span:nth-child(2) {{
+            opacity: 0;
+        }}
+        
+        .hamburger.active span:nth-child(3) {{
+            transform: rotate(-45deg) translate(7px, -7px);
+        }}
+        
+        /* Sidebar overlay for mobile */
+        .sidebar-overlay {{
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+        }}
         
         /* Sidebar stays fixed */
         .sidebar {{ width: 250px; background: #1a202c; color: #cbd5e0; height: 100vh; position: fixed; padding: 25px 20px; box-sizing: border-box; overflow-y: auto; z-index: 10; }}
@@ -257,12 +312,19 @@ def build():
         .carousel-container {{
             position: relative;
             overflow: hidden;
+            touch-action: pan-y pinch-zoom;
+            cursor: grab;
+        }}
+        
+        .carousel-container:active {{
+            cursor: grabbing;
         }}
         
         .carousel-track {{
             display: flex;
             gap: 15px;
             transition: transform 0.3s ease;
+            user-select: none;
         }}
         
         .carousel-card {{
@@ -460,10 +522,190 @@ def build():
         .expand-bar {{ grid-column: 1 / -1; background: #fff; border: 1px solid #e2e8f0; color: #4a5568; text-align: center; padding: 12px; border-radius: 8px; cursor: pointer; font-weight: bold; margin-top: 10px; }}
         .hidden {{ display: none; }}
         #search-results-title {{ display: none; margin-top: 40px; color: #2f855a; border-left: 5px solid #2f855a; padding-left: 15px; font-size: 22px; font-weight: 700; }}
+        
+        /* MOBILE RESPONSIVE STYLES */
+        @media (max-width: 768px) {{
+            body {{
+                display: block;
+            }}
+            
+            /* Show hamburger menu */
+            .hamburger {{
+                display: flex;
+            }}
+            
+            /* Sidebar slides in from left */
+            .sidebar {{
+                position: fixed;
+                left: -250px;
+                transition: left 0.3s ease;
+                z-index: 1000;
+            }}
+            
+            .sidebar.active {{
+                left: 0;
+            }}
+            
+            .sidebar-overlay.active {{
+                display: block;
+            }}
+            
+            /* Main content takes full width */
+            .main {{
+                margin-left: 0;
+                padding: 80px 15px 40px 15px;
+            }}
+            
+            /* Header adjustments */
+            .header {{
+                padding: 15px 0;
+            }}
+            
+            .controls {{
+                flex-direction: column;
+                gap: 12px;
+                padding: 15px;
+            }}
+            
+            .controls > div {{
+                width: 100%;
+                display: flex;
+                gap: 8px;
+            }}
+            
+            .btn {{
+                flex: 1;
+                padding: 12px 10px;
+                font-size: 15px;
+            }}
+            
+            .search-box {{
+                width: 100%;
+                padding: 12px 15px;
+                font-size: 16px;
+            }}
+            
+            /* Larger text for mobile */
+            .favorites-title {{
+                font-size: 24px;
+            }}
+            
+            .favorites-subtitle {{
+                font-size: 15px;
+            }}
+            
+            .sales-title {{
+                font-size: 20px;
+            }}
+            
+            .cat-title {{
+                font-size: 20px;
+                margin-bottom: 12px;
+            }}
+            
+            /* Grid adjustments */
+            .grid {{
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }}
+            
+            /* Card adjustments - bigger and easier to tap */
+            .card {{
+                height: 140px;
+                padding: 15px;
+                gap: 12px;
+            }}
+            
+            .card img {{
+                width: 80px;
+            }}
+            
+            .name {{
+                font-size: 14px;
+                line-height: 1.5;
+            }}
+            
+            .price {{
+                font-size: 24px;
+            }}
+            
+            .price-old {{
+                font-size: 16px;
+            }}
+            
+            .per-l {{
+                font-size: 14px;
+            }}
+            
+            .store-badge {{
+                font-size: 11px;
+                padding: 3px 8px;
+            }}
+            
+            .discount-badge {{
+                font-size: 16px;
+                padding: 8px 14px;
+            }}
+            
+            /* Favorite button bigger for easier tapping */
+            .fav-btn {{
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }}
+            
+            /* Carousel adjustments */
+            .carousel-card {{
+                min-width: calc(100% - 70px);
+                max-width: calc(100% - 70px);
+            }}
+            
+            .carousel-track {{
+                padding: 0 5px;
+            }}
+            
+            .carousel-btn {{
+                width: 35px;
+                height: 35px;
+                font-size: 18px;
+            }}
+            
+            .carousel-btn-left {{ left: 0; }}
+            .carousel-btn-right {{ right: 0; }}
+            
+            /* Sales section */
+            .sales-section {{
+                padding: 20px 15px;
+            }}
+            
+            .favorites-section {{
+                padding: 20px 15px;
+            }}
+            
+            .expand-sales-btn {{
+                padding: 10px 14px;
+                font-size: 14px;
+            }}
+            
+            /* Price trends more visible */
+            .price-trend-up,
+            .price-trend-down,
+            .price-trend-stable {{
+                font-size: 13px;
+            }}
+        }}
     </style>
 </head>
 <body>
-    <div class="sidebar">
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    
+    <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleMenu()"></div>
+    
+    <div class="sidebar" id="sidebar">
         <h2>📊 Tracker</h2>
         <span class="last-run">Last Update: {last_run}</span>
         {sidebar_links}
@@ -493,6 +735,63 @@ const saleProducts = {json.dumps(sale_products)};
 let currentSort = 'latest_price';
 let favorites = [];
 let carouselPosition = 0;
+let touchStartX = 0;
+let touchEndX = 0;
+
+// Toggle mobile menu
+function toggleMenu() {{
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebar-overlay');
+    const hamburger = document.getElementById('hamburger');
+    
+    sidebar.classList.toggle('active');
+    overlay.classList.toggle('active');
+    hamburger.classList.toggle('active');
+}}
+
+// Close menu when clicking a nav link on mobile
+function closeMobileMenu() {{
+    if (window.innerWidth <= 768) {{
+        toggleMenu();
+    }}
+}}
+
+// Touch swipe handling for carousel
+function handleTouchStart(e) {{
+    touchStartX = e.touches[0].clientX;
+}}
+
+function handleTouchMove(e) {{
+    touchEndX = e.touches[0].clientX;
+}}
+
+function handleTouchEnd() {{
+    const swipeThreshold = 50;
+    const diff = touchStartX - touchEndX;
+    
+    if (Math.abs(diff) > swipeThreshold) {{
+        if (diff > 0) {{
+            // Swiped left - move right
+            moveCarousel(1);
+        }} else {{
+            // Swiped right - move left
+            moveCarousel(-1);
+        }}
+    }}
+    
+    touchStartX = 0;
+    touchEndX = 0;
+}}
+
+// Initialize carousel touch events
+function initCarouselTouch() {{
+    const carouselContainer = document.querySelector('.carousel-container');
+    if (carouselContainer) {{
+        carouselContainer.addEventListener('touchstart', handleTouchStart, {{ passive: true }});
+        carouselContainer.addEventListener('touchmove', handleTouchMove, {{ passive: true }});
+        carouselContainer.addEventListener('touchend', handleTouchEnd);
+    }}
+}}
 
 // Load favorites from localStorage
 function loadFavorites() {{
@@ -545,19 +844,30 @@ function updateFavoritesUI() {{
 function moveCarousel(direction) {{
     const track = document.querySelector('.carousel-track');
     const cards = document.querySelectorAll('.carousel-card');
-    const cardWidth = 335; // 320px + 15px gap
+    if (!track || cards.length === 0) return;
+    
+    // Get actual card width including gap
+    const firstCard = cards[0];
+    const cardStyle = window.getComputedStyle(firstCard);
+    const cardWidth = firstCard.offsetWidth + 15; // Card width + gap
     
     carouselPosition += direction;
     
+    // Calculate how many cards fit on screen
+    const containerWidth = track.parentElement.offsetWidth;
+    const visibleCards = Math.floor(containerWidth / cardWidth) || 1;
+    
     // Clamp position
-    const maxPosition = Math.max(0, cards.length - 3);
+    const maxPosition = Math.max(0, cards.length - visibleCards);
     carouselPosition = Math.max(0, Math.min(carouselPosition, maxPosition));
     
     track.style.transform = `translateX(-${{carouselPosition * cardWidth}}px)`;
     
     // Update button states
-    document.querySelector('.carousel-btn-left').disabled = carouselPosition === 0;
-    document.querySelector('.carousel-btn-right').disabled = carouselPosition >= maxPosition;
+    const leftBtn = document.querySelector('.carousel-btn-left');
+    const rightBtn = document.querySelector('.carousel-btn-right');
+    if (leftBtn) leftBtn.disabled = carouselPosition === 0;
+    if (rightBtn) rightBtn.disabled = carouselPosition >= maxPosition;
 }}
 
 function setSort(key){{
@@ -616,11 +926,19 @@ function render() {{
     favSection.className = 'favorites-section';
     
     if (favorites.length > 0) {{
-        const favoriteProducts = products.filter(p => favorites.includes(p.name));
+        const favoriteProducts = products
+            .filter(p => favorites.includes(p.name))
+            .sort((a, b) => (a.latest_price || 999) - (b.latest_price || 999)); // Sort by cheapest price
+        
         const favCardsHtml = favoriteProducts.map(p => {{
             const trend = getPriceTrend(p);
             return `<div class="carousel-card">${{cardWithTrend(p, trend)}}</div>`;
         }}).join('');
+        
+        // Calculate cards that fit on screen for button state
+        const isMobile = window.innerWidth <= 768;
+        const cardsVisible = isMobile ? 1 : 3;
+        const hasMultiplePages = favoriteProducts.length > cardsVisible;
         
         favSection.innerHTML = `
             <div class="favorites-title">
@@ -628,17 +946,27 @@ function render() {{
                 My Favorites
             </div>
             <div class="favorites-subtitle">
-                ${{favorites.length}} products tracked | Quick view of your favorite items
+                ${{favorites.length}} products tracked | Sorted by price (cheapest first)
             </div>
             <div class="carousel-container">
                 <button class="carousel-btn carousel-btn-left" onclick="moveCarousel(-1)" disabled>←</button>
                 <div class="carousel-track">
                     ${{favCardsHtml}}
                 </div>
-                <button class="carousel-btn carousel-btn-right" onclick="moveCarousel(1)" ${{favoriteProducts.length <= 3 ? 'disabled' : ''}}>→</button>
+                <button class="carousel-btn carousel-btn-right" onclick="moveCarousel(1)" ${{hasMultiplePages ? '' : 'disabled'}}>→</button>
             </div>
         `;
         favSection.style.display = 'block';
+        
+        // Reset carousel position
+        carouselPosition = 0;
+        
+        // Initialize touch events after rendering
+        setTimeout(() => {{
+            initCarouselTouch();
+            // Update button states based on actual layout
+            moveCarousel(0);
+        }}, 100);
     }} else {{
         favSection.innerHTML = `
             <div class="favorites-title">
