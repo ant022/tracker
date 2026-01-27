@@ -189,12 +189,19 @@
         .carousel-container {
             position: relative;
             overflow: hidden;
+            touch-action: pan-y pinch-zoom;
+            cursor: grab;
+        }
+        
+        .carousel-container:active {
+            cursor: grabbing;
         }
         
         .carousel-track {
             display: flex;
             gap: 15px;
             transition: transform 0.3s ease;
+            user-select: none;
         }
         
         .carousel-card {
@@ -665,6 +672,8 @@ const saleProducts = [{"name": "Spagetid Nr.15 LA MOLISANA 500g", "category": "B
 let currentSort = 'latest_price';
 let favorites = [];
 let carouselPosition = 0;
+let touchStartX = 0;
+let touchEndX = 0;
 
 // Toggle mobile menu
 function toggleMenu() {
@@ -681,6 +690,43 @@ function toggleMenu() {
 function closeMobileMenu() {
     if (window.innerWidth <= 768) {
         toggleMenu();
+    }
+}
+
+// Touch swipe handling for carousel
+function handleTouchStart(e) {
+    touchStartX = e.touches[0].clientX;
+}
+
+function handleTouchMove(e) {
+    touchEndX = e.touches[0].clientX;
+}
+
+function handleTouchEnd() {
+    const swipeThreshold = 50;
+    const diff = touchStartX - touchEndX;
+    
+    if (Math.abs(diff) > swipeThreshold) {
+        if (diff > 0) {
+            // Swiped left - move right
+            moveCarousel(1);
+        } else {
+            // Swiped right - move left
+            moveCarousel(-1);
+        }
+    }
+    
+    touchStartX = 0;
+    touchEndX = 0;
+}
+
+// Initialize carousel touch events
+function initCarouselTouch() {
+    const carouselContainer = document.querySelector('.carousel-container');
+    if (carouselContainer) {
+        carouselContainer.addEventListener('touchstart', handleTouchStart, { passive: true });
+        carouselContainer.addEventListener('touchmove', handleTouchMove, { passive: true });
+        carouselContainer.addEventListener('touchend', handleTouchEnd);
     }
 }
 
@@ -806,7 +852,10 @@ function render() {
     favSection.className = 'favorites-section';
     
     if (favorites.length > 0) {
-        const favoriteProducts = products.filter(p => favorites.includes(p.name));
+        const favoriteProducts = products
+            .filter(p => favorites.includes(p.name))
+            .sort((a, b) => (a.latest_price || 999) - (b.latest_price || 999)); // Sort by cheapest price
+        
         const favCardsHtml = favoriteProducts.map(p => {
             const trend = getPriceTrend(p);
             return `<div class="carousel-card">${cardWithTrend(p, trend)}</div>`;
@@ -818,7 +867,7 @@ function render() {
                 My Favorites
             </div>
             <div class="favorites-subtitle">
-                ${favorites.length} products tracked | Quick view of your favorite items
+                ${favorites.length} products tracked | Sorted by price (cheapest first)
             </div>
             <div class="carousel-container">
                 <button class="carousel-btn carousel-btn-left" onclick="moveCarousel(-1)" disabled>←</button>
@@ -829,6 +878,9 @@ function render() {
             </div>
         `;
         favSection.style.display = 'block';
+        
+        // Initialize touch events after rendering
+        setTimeout(initCarouselTouch, 100);
     } else {
         favSection.innerHTML = `
             <div class="favorites-title">
