@@ -187,166 +187,125 @@
 <body>
     <div class="container">
         <h1>⚙️ Admin Panel</h1>
-        <p class="subtitle">Trigger scrapes and manage your price tracker</p>
+        <p class="subtitle">Manually trigger scrapes via GitHub Actions</p>
         
         <div class="info-box">
-            <strong>📝 Setup Required:</strong>
-            To enable automated scraping, you need to:
-            <ol style="margin: 10px 0 0 20px; padding: 0;">
-                <li>Go to your GitHub repository settings</li>
-                <li>Navigate to: Settings → Actions → General</li>
-                <li>Under "Workflow permissions", select "Read and write permissions"</li>
-                <li>Click "Save"</li>
-            </ol>
-            Then you can trigger scrapes from the GitHub Actions tab.
+            <strong>🔒 Secure Method</strong>
+            This page triggers workflows directly through GitHub Actions. You'll need to manually trigger the workflow from GitHub.
+            <br><br>
+            Go to: <strong>Actions → Scrape Prices and Build Site → Run workflow</strong>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">
+                <span>📋</span>
+                <span>Available Categories</span>
+            </div>
+            <div id="categoryList" style="max-height: 300px; overflow-y: auto;">
+                <p style="color: #718096;">Loading categories...</p>
+            </div>
         </div>
         
         <div class="section">
             <div class="section-title">
                 <span>🚀</span>
-                <span>Full Scrape</span>
+                <span>Quick Links</span>
             </div>
-            <p style="color: #718096; font-size: 14px; margin-bottom: 15px;">
-                Scrape all categories and rebuild the website
-            </p>
-            <button class="btn btn-primary" onclick="triggerFullScrape()" id="fullScrapeBtn">
-                Run Full Scrape
-            </button>
-            <div class="status" id="fullScrapeStatus"></div>
+            <a href="#" id="actionsLink" class="btn btn-primary" style="display: inline-block; text-align: center; text-decoration: none; margin-bottom: 10px;">
+                Open GitHub Actions
+            </a>
+            <a href="index.html" class="btn btn-secondary" style="display: inline-block; text-align: center; text-decoration: none;">
+                ← Back to Price Tracker
+            </a>
         </div>
         
-        <div class="section">
-            <div class="section-title">
-                <span>🎯</span>
-                <span>Single Category Scrape</span>
-            </div>
-            <p style="color: #718096; font-size: 14px; margin-bottom: 15px;">
-                Scrape only one specific category
-            </p>
-            <div class="input-group">
-                <label for="categoryInput">Category Key (format: Store:CategoryName)</label>
-                <input 
-                    type="text" 
-                    id="categoryInput" 
-                    placeholder="e.g., Barbora:Beer"
-                />
-            </div>
-            <button class="btn btn-secondary" onclick="triggerSingleScrape()" id="singleScrapeBtn">
-                Scrape Category
-            </button>
-            <div class="status" id="singleScrapeStatus"></div>
-        </div>
-        
-        <div style="text-align: center; margin-top: 30px;">
-            <a href="index.html" class="link">← Back to Price Tracker</a>
+        <div style="text-align: center; margin-top: 20px; padding: 15px; background: #edf2f7; border-radius: 8px;">
+            <strong style="display: block; margin-bottom: 10px;">How to Run a Scrape:</strong>
+            <ol style="text-align: left; margin: 0; padding-left: 25px; font-size: 13px;">
+                <li>Click "Open GitHub Actions" above</li>
+                <li>Click on "Scrape Prices and Build Site" workflow</li>
+                <li>Click "Run workflow" button</li>
+                <li>Optionally enter a category key (e.g., "Barbora:Beer")</li>
+                <li>Click "Run workflow" to confirm</li>
+            </ol>
         </div>
     </div>
 
     <script>
-        // GitHub configuration - UPDATE THESE VALUES
-        const GITHUB_USERNAME = 'ant022';
-        const GITHUB_REPO = 'tracker';
-        const GITHUB_TOKEN = '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';
+        // Configuration - UPDATE THESE
+        const GITHUB_USERNAME = 'YOUR_GITHUB_USERNAME';
+        const GITHUB_REPO = 'YOUR_REPO_NAME';
         
-        function showStatus(elementId, type, message) {
-            const element = document.getElementById(elementId);
-            element.className = `status status-${type} show`;
-            element.textContent = message;
+        let categories = [];
+        
+        // Update GitHub Actions link
+        if (GITHUB_USERNAME !== 'YOUR_GITHUB_USERNAME' && GITHUB_REPO !== 'YOUR_REPO_NAME') {
+            document.getElementById('actionsLink').href = 
+                `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO}/actions/workflows/scrape-and-build.yml`;
         }
         
-        function hideStatus(elementId) {
-            const element = document.getElementById(elementId);
-            element.classList.remove('show');
+        // Load and display categories
+        async function loadCategories() {
+            try {
+                const response = await fetch('categories.json');
+                if (response.ok) {
+                    categories = await response.json();
+                    displayCategories();
+                } else {
+                    document.getElementById('categoryList').innerHTML = 
+                        '<p style="color: #e53e3e;">Could not load categories.json</p>';
+                }
+            } catch (error) {
+                document.getElementById('categoryList').innerHTML = 
+                    '<p style="color: #e53e3e;">Error loading categories</p>';
+            }
         }
         
-        async function triggerWorkflow(inputs = {}) {
-            const url = `https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPO}/actions/workflows/scrape-and-build.yml/dispatches`;
+        function displayCategories() {
+            const container = document.getElementById('categoryList');
             
-            const response = await fetch(url, {
-                method: 'POST',
-                headers: {
-                    'Accept': 'application/vnd.github.v3+json',
-                    'Authorization': `token ${GITHUB_TOKEN}`,
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    ref: 'main',
-                    inputs: inputs
-                })
+            if (categories.length === 0) {
+                container.innerHTML = '<p style="color: #718096;">No categories configured</p>';
+                return;
+            }
+            
+            let html = '<div style="display: flex; flex-direction: column; gap: 8px;">';
+            
+            categories.forEach(cat => {
+                const store = getStoreFromUrl(cat.url);
+                const key = `${store}:${cat.name}`;
+                
+                const storeBadgeColor = {
+                    'Barbora': '#e53e3e',
+                    'Selver': '#d69e2e',
+                    'Rimi': '#e53e3e',
+                    'Coop': '#2b6cb0'
+                }[store] || '#718096';
+                
+                html += `
+                    <div style="background: white; padding: 12px; border-radius: 8px; border: 1px solid #e2e8f0; display: flex; align-items: center; gap: 10px;">
+                        <span style="background: ${storeBadgeColor}; color: white; padding: 3px 8px; border-radius: 4px; font-size: 11px; font-weight: bold;">${store}</span>
+                        <span style="flex: 1; font-weight: 600;">${cat.name}</span>
+                        <code style="background: #edf2f7; padding: 4px 8px; border-radius: 4px; font-size: 11px; color: #4a5568;">${key}</code>
+                    </div>
+                `;
             });
             
-            return response;
+            html += '</div>';
+            container.innerHTML = html;
         }
         
-        async function triggerFullScrape() {
-            const btn = document.getElementById('fullScrapeBtn');
-            const statusId = 'fullScrapeStatus';
-            
-            if (GITHUB_TOKEN === 'YOUR_GITHUB_PERSONAL_ACCESS_TOKEN') {
-                showStatus(statusId, 'error', '❌ Please configure your GitHub credentials in admin.html');
-                return;
-            }
-            
-            btn.disabled = true;
-            showStatus(statusId, 'loading', '⏳ Triggering full scrape...');
-            
-            try {
-                const response = await triggerWorkflow({});
-                
-                if (response.status === 204) {
-                    showStatus(statusId, 'success', '✅ Full scrape triggered! Check GitHub Actions tab for progress.');
-                    setTimeout(() => {
-                        window.open(`https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO}/actions`, '_blank');
-                    }, 2000);
-                } else {
-                    throw new Error(`GitHub API returned status ${response.status}`);
-                }
-            } catch (error) {
-                showStatus(statusId, 'error', `❌ Error: ${error.message}`);
-            } finally {
-                btn.disabled = false;
-            }
+        function getStoreFromUrl(url) {
+            const lower = url.toLowerCase();
+            if (lower.includes('barbora')) return 'Barbora';
+            if (lower.includes('selver')) return 'Selver';
+            if (lower.includes('rimi')) return 'Rimi';
+            if (lower.includes('coop')) return 'Coop';
+            return 'Unknown';
         }
         
-        async function triggerSingleScrape() {
-            const btn = document.getElementById('singleScrapeBtn');
-            const statusId = 'singleScrapeStatus';
-            const categoryInput = document.getElementById('categoryInput');
-            const category = categoryInput.value.trim();
-            
-            if (!category) {
-                showStatus(statusId, 'error', '❌ Please enter a category key');
-                return;
-            }
-            
-            if (GITHUB_TOKEN === 'YOUR_GITHUB_PERSONAL_ACCESS_TOKEN') {
-                showStatus(statusId, 'error', '❌ Please configure your GitHub credentials in admin.html');
-                return;
-            }
-            
-            btn.disabled = true;
-            showStatus(statusId, 'loading', `⏳ Scraping "${category}"...`);
-            
-            try {
-                const response = await triggerWorkflow({
-                    single_category: category
-                });
-                
-                if (response.status === 204) {
-                    showStatus(statusId, 'success', `✅ Scrape triggered for "${category}"! Check GitHub Actions.`);
-                    categoryInput.value = '';
-                    setTimeout(() => {
-                        window.open(`https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO}/actions`, '_blank');
-                    }, 2000);
-                } else {
-                    throw new Error(`GitHub API returned status ${response.status}`);
-                }
-            } catch (error) {
-                showStatus(statusId, 'error', `❌ Error: ${error.message}`);
-            } finally {
-                btn.disabled = false;
-            }
-        }
+        // Load categories when page loads
+        window.addEventListener('DOMContentLoaded', loadCategories);
     </script>
 </body>
 </html>
