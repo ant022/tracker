@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-01-27T21:37:05.317891"
+    "generated_at": "2026-01-27T21:50:41.846263"
   },
   "products": {
     "Hele õlu HEINEKEN 5% 0,568L prk": {
@@ -7010,7 +7010,7 @@
       "is_sale": false
     },
     "Viin ABSOLUT 40% 700ml": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
@@ -7022,55 +7022,71 @@
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-absolut-40-proc-700-ml",
       "img": "https://cdn.barbora.ee/products/7b7480a6-8c54-4010-91a4-afa0f9717140_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin ZUBROWKA Biala 40% 500 ml": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 10.99
+        },
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 8.99
         }
       ],
-      "latest_price": 10.99,
-      "price_per_unit": 21.98,
+      "latest_price": 8.99,
+      "price_per_unit": 17.98,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-zubrowka-biala-40-proc-500-ml",
       "img": "https://cdn.barbora.ee/products/f8e78970-c0e5-4db4-a3ae-47700691782d_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin VIRU VALGE VÄGEV 80% 0,5 L": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 18.29
+        },
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 20.99
         }
       ],
-      "latest_price": 18.29,
-      "price_per_unit": 36.58,
+      "latest_price": 20.99,
+      "price_per_unit": 41.98,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-viru-valge-vagev-80-proc-0-5-l",
       "img": "https://cdn.barbora.ee/products/ded89180-2b9d-46dd-b6ee-0954e249853f_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin HLIBNY DAR Klassika 40% 1.75L": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 23.99
+        },
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 25.99
         }
       ],
-      "latest_price": 23.99,
-      "price_per_unit": 13.71,
+      "latest_price": 25.99,
+      "price_per_unit": 14.85,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-hlibny-dar-klassika-40-proc-1-75-l",
       "img": "https://cdn.barbora.ee/products/3863deea-f341-466a-a615-cd2b3adfab57_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin VIRU VALGE 40% 1L": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
@@ -7082,10 +7098,11 @@
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-viru-valge-40-proc-1-l",
       "img": "https://cdn.barbora.ee/products/fd54d9de-ecc5-4053-8ba0-3eae81fb3105_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin VIRU VALGE 40% 500ml": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
@@ -7097,10 +7114,11 @@
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-viru-valge-40-proc-500-ml",
       "img": "https://cdn.barbora.ee/products/de701163-bc3a-4bf8-a671-6facd5585cfe_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin HEKLA 40% 1L": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
@@ -7112,10 +7130,11 @@
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-hekla-40-proc-1-l",
       "img": "https://cdn.barbora.ee/products/3e2d8795-a3c8-47e1-a2b4-4859b6ff17c1_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin LAUA 40% 500ml": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
@@ -7127,100 +7146,131 @@
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-laua-40-proc-500-ml",
       "img": "https://cdn.barbora.ee/products/df9b8ac7-793f-4c03-b54f-0ef9eb58e033_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin FINLANDIA 40% 500ml": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 14.69
+        },
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 15.55
         }
       ],
-      "latest_price": 14.69,
-      "price_per_unit": 29.38,
+      "latest_price": 15.55,
+      "price_per_unit": 31.1,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-finlandia-40-proc-500-ml",
       "img": "https://cdn.barbora.ee/products/a3f0fd37-9ee7-43ea-a37e-bfd4944690c8_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin ABSOLUT Vodka 40% 500 ml": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
+          "p": 9.99
+        },
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 11.99
+        }
+      ],
+      "latest_price": 11.99,
+      "price_per_unit": 23.98,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-absolut-vodka-40-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/f3586ab4-7b4e-4aca-8241-8fa15ba3d55e_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin ABSOLUT Vodka 40% 1L": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-19T23:06:30.489722",
+          "p": 28.99
+        },
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 18.99
+        }
+      ],
+      "latest_price": 18.99,
+      "price_per_unit": 18.99,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-absolut-vodka-40-proc-1-l",
+      "img": "https://cdn.barbora.ee/products/334091a8-dc48-4442-9422-d0c778cd6dba_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin FINLANDIA 40% 700ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-19T23:06:30.489722",
+          "p": 20.59
+        },
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 21.75
+        }
+      ],
+      "latest_price": 21.75,
+      "price_per_unit": 31.07,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-finlandia-40-proc-700-ml",
+      "img": "https://cdn.barbora.ee/products/ce4f8d10-6bde-41f3-9ebb-64e1a4738dba_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin FINLANDIA 40% 1L": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-19T23:06:30.489722",
+          "p": 27.49
+        },
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 29.99
+        }
+      ],
+      "latest_price": 29.99,
+      "price_per_unit": 29.99,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-finlandia-40-proc-1-l",
+      "img": "https://cdn.barbora.ee/products/d78d1892-10d8-4adc-87f6-7783a1502b5e_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin SMIRNOFF Red 37.5% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-19T23:06:30.489722",
+          "p": 15.29
+        },
+        {
+          "t": "2026-01-27T21:50:41.846263",
           "p": 9.99
         }
       ],
       "latest_price": 9.99,
       "price_per_unit": 19.98,
       "unit_label": "L",
-      "url": "https://barbora.ee/toode/viin-absolut-vodka-40-proc-500-ml",
-      "img": "https://cdn.barbora.ee/products/f3586ab4-7b4e-4aca-8241-8fa15ba3d55e_m.png",
-      "store": "Barbora"
-    },
-    "Viin ABSOLUT Vodka 40% 1L": {
-      "category": "Maxima Viinad",
-      "entries": [
-        {
-          "t": "2026-01-19T23:06:30.489722",
-          "p": 28.99
-        }
-      ],
-      "latest_price": 28.99,
-      "price_per_unit": 28.99,
-      "unit_label": "L",
-      "url": "https://barbora.ee/toode/viin-absolut-vodka-40-proc-1-l",
-      "img": "https://cdn.barbora.ee/products/334091a8-dc48-4442-9422-d0c778cd6dba_m.png",
-      "store": "Barbora"
-    },
-    "Viin FINLANDIA 40% 700ml": {
-      "category": "Maxima Viinad",
-      "entries": [
-        {
-          "t": "2026-01-19T23:06:30.489722",
-          "p": 20.59
-        }
-      ],
-      "latest_price": 20.59,
-      "price_per_unit": 29.41,
-      "unit_label": "L",
-      "url": "https://barbora.ee/toode/viin-finlandia-40-proc-700-ml",
-      "img": "https://cdn.barbora.ee/products/ce4f8d10-6bde-41f3-9ebb-64e1a4738dba_m.png",
-      "store": "Barbora"
-    },
-    "Viin FINLANDIA 40% 1L": {
-      "category": "Maxima Viinad",
-      "entries": [
-        {
-          "t": "2026-01-19T23:06:30.489722",
-          "p": 27.49
-        }
-      ],
-      "latest_price": 27.49,
-      "price_per_unit": 27.49,
-      "unit_label": "L",
-      "url": "https://barbora.ee/toode/viin-finlandia-40-proc-1-l",
-      "img": "https://cdn.barbora.ee/products/d78d1892-10d8-4adc-87f6-7783a1502b5e_m.png",
-      "store": "Barbora"
-    },
-    "Viin SMIRNOFF Red 37.5% 500ml": {
-      "category": "Maxima Viinad",
-      "entries": [
-        {
-          "t": "2026-01-19T23:06:30.489722",
-          "p": 15.29
-        }
-      ],
-      "latest_price": 15.29,
-      "price_per_unit": 30.58,
-      "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-smirnoff-red-37-5-proc-500-ml",
       "img": "https://cdn.barbora.ee/products/1414afdf-be48-4d49-a14f-7f1621fd55b6_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin SMIRNOFF Red 37.5% 700ml": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
@@ -7232,40 +7282,51 @@
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-smirnoff-red-37-5-proc-700-ml",
       "img": "https://cdn.barbora.ee/products/642ffaf4-1050-471d-b6d2-c7f3a207ac9e_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Maits.viin NEMIROFF Hon.Pepp. 40% 500ml": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 12.99
+        },
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 14.49
         }
       ],
-      "latest_price": 12.99,
-      "price_per_unit": 25.98,
+      "latest_price": 14.49,
+      "price_per_unit": 28.98,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/maits-viin-nemiroff-hon-pepp-40-proc-500-ml",
       "img": "https://cdn.barbora.ee/products/dd1d5b48-6789-4cb0-9629-3aef1024d5c4_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin VIRU VALGE 40% 350ml": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 7.69
+        },
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 9.29
         }
       ],
-      "latest_price": 7.69,
-      "price_per_unit": 21.97,
+      "latest_price": 9.29,
+      "price_per_unit": 26.54,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-viru-valge-40-proc-350-ml",
       "img": "https://cdn.barbora.ee/products/20e3d5ba-8dfe-4a42-9676-a7ad210c29a1_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin LAUA 40% 1L": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
@@ -7277,10 +7338,11 @@
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-laua-40-proc-1-l",
       "img": "https://cdn.barbora.ee/products/336321b9-f5da-40a0-bab2-899de94a1df6_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin LAUA 40% 700ml": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
@@ -7292,25 +7354,31 @@
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-laua-40-proc-700-ml",
       "img": "https://cdn.barbora.ee/products/a3f7dc01-2320-48dd-9c1e-adf9a6eee28c_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin SAAREMAA 40% 500ml": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 12.45
+        },
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 12.99
         }
       ],
-      "latest_price": 12.45,
-      "price_per_unit": 24.9,
+      "latest_price": 12.99,
+      "price_per_unit": 25.98,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-saaremaa-40-proc-500-ml",
       "img": "https://cdn.barbora.ee/products/daa30dc3-dd6b-4a89-aaf9-a7766647ffa3_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin SAAREMAA 40% 700ml": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
@@ -7322,10 +7390,11 @@
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-saaremaa-40-proc-700-ml",
       "img": "https://cdn.barbora.ee/products/2ad0e9d4-b549-4d1e-adcd-b7f333402175_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin NEMIROFF Original 40% 500ml": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
@@ -7337,55 +7406,71 @@
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-nemiroff-original-40-proc-500-ml",
       "img": "https://cdn.barbora.ee/products/7690fb53-4b79-46dc-8207-af0387f24578_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin SAAREMAA 40% 1L": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 21.19
+        },
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 22.95
         }
       ],
-      "latest_price": 21.19,
-      "price_per_unit": 21.19,
+      "latest_price": 22.95,
+      "price_per_unit": 22.95,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-saaremaa-40-proc-1-l",
       "img": "https://cdn.barbora.ee/products/168906bd-497c-467e-a82c-4c97721b28cb_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin NEMIROFF Birch 40% 500ml": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 11.49
+        },
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 12.45
         }
       ],
-      "latest_price": 11.49,
-      "price_per_unit": 22.98,
+      "latest_price": 12.45,
+      "price_per_unit": 24.9,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-nemiroff-birch-40-proc-500-ml",
       "img": "https://cdn.barbora.ee/products/e6ea85e6-e6e1-4024-932e-cb5d02749ff6_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin STUMBRAS 40% 700ml": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 18.35
+        },
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 13.99
         }
       ],
-      "latest_price": 18.35,
-      "price_per_unit": 26.21,
+      "latest_price": 13.99,
+      "price_per_unit": 19.98,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-stumbras-40-proc-700-ml",
       "img": "https://cdn.barbora.ee/products/dc28da53-4a5b-4efe-92b0-6821f856763c_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin STUMBRAS 40% 500ml": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
@@ -7397,25 +7482,31 @@
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-stumbras-40-proc-500-ml",
       "img": "https://cdn.barbora.ee/products/b771bb8f-4606-4f1e-9bcf-31a2edab593d_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin STUMBRAS 40% 350ml": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 8.49
+        },
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 6.79
         }
       ],
-      "latest_price": 8.49,
-      "price_per_unit": 24.26,
+      "latest_price": 6.79,
+      "price_per_unit": 19.4,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-stumbras-40-proc-350-ml",
       "img": "https://cdn.barbora.ee/products/050fb91e-f031-40d4-b2f4-7cb4290698f2_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin LAUA 40% 200ml": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
@@ -7427,40 +7518,51 @@
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-laua-40-proc-200-ml",
       "img": "https://cdn.barbora.ee/products/e36ad4f7-968f-4f78-9cdf-2744baa0b17a_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin VIRU VALGE 40% 700ml": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 15.25
+        },
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 16.39
         }
       ],
-      "latest_price": 15.25,
-      "price_per_unit": 21.79,
+      "latest_price": 16.39,
+      "price_per_unit": 23.41,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-viru-valge-40-proc-700-ml",
       "img": "https://cdn.barbora.ee/products/52a7f50c-0396-4e1c-93f2-45f5c12a3e47_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin KUPECKA 40% 500ml": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 7.99
+        },
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 8.49
         }
       ],
-      "latest_price": 7.99,
-      "price_per_unit": 15.98,
+      "latest_price": 8.49,
+      "price_per_unit": 16.98,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-kupecka-40-proc-500-ml",
       "img": "https://cdn.barbora.ee/products/b3641bda-13c3-4456-a6dc-bea53949aa9b_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin BERJOZOVAJA ROŠTŠA 40% 700ml": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
@@ -7472,22 +7574,28 @@
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-berjozovaja-rostsa-40-proc-700-ml",
       "img": "https://cdn.barbora.ee/products/9187b23f-68dd-41a9-8e18-36faec3d3b73_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin BERJOZOVAJA ROŠTŠA 40% 500ml": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 7.99
+        },
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 10.59
         }
       ],
-      "latest_price": 7.99,
-      "price_per_unit": 15.98,
+      "latest_price": 10.59,
+      "price_per_unit": 21.18,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-berjozovaja-rostsa-40-proc-500-ml",
       "img": "https://cdn.barbora.ee/products/713fdbc5-7f85-4760-aadc-e469d796cc5c_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin DANZKA 40% 500ml": {
       "category": "Maxima Viinad",
@@ -7505,7 +7613,7 @@
       "store": "Barbora"
     },
     "Viin HLIBNY DAR Classic 40% 500ml": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
@@ -7517,10 +7625,11 @@
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-hlibny-dar-classic-40-proc-500-ml",
       "img": "https://cdn.barbora.ee/products/b575a6b7-8f38-4fcc-8a0f-e4f9d6418c80_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin HLIBNY DAR Wheat 40% 500ml": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
@@ -7532,10 +7641,11 @@
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-hlibny-dar-wheat-40-proc-500-ml",
       "img": "https://cdn.barbora.ee/products/19680010-f74d-40c3-9d4c-1b62fc4c0198_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin HLIBNY DAR Winter Wheat 40% 500ml": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
@@ -7547,40 +7657,51 @@
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-hlibny-dar-winter-wheat-40-proc-500-ml",
       "img": "https://cdn.barbora.ee/products/ff283d07-547d-40ab-a551-95c6e3462756_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin HLIBNY DAR Classic 40% 700ml": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 15.99
+        },
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 11.99
         }
       ],
-      "latest_price": 15.99,
-      "price_per_unit": 22.84,
+      "latest_price": 11.99,
+      "price_per_unit": 17.13,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-hlibny-dar-classic-40-proc-700-ml",
       "img": "https://cdn.barbora.ee/products/44060a67-a811-4f30-8e42-c77ddba7e9d8_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin HLIBNY DAR Wheat 40% 700ml": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 15.99
+        },
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 11.99
         }
       ],
-      "latest_price": 15.99,
-      "price_per_unit": 22.84,
+      "latest_price": 11.99,
+      "price_per_unit": 17.13,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-hlibny-dar-wheat-40-proc-700-ml",
       "img": "https://cdn.barbora.ee/products/6271b073-00ef-4be7-a0cd-0e2ce1fdc139_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin HLIBNY DAR Classic 40% 200ml": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
@@ -7592,10 +7713,11 @@
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-hlibny-dar-classic-40-proc-200-ml",
       "img": "https://cdn.barbora.ee/products/ae0c50c6-900c-4b44-aef0-088f23c00aa9_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin HLIBNY DAR Wheat 40% 200ml": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
@@ -7607,10 +7729,11 @@
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-hlibny-dar-wheat-40-proc-200-ml",
       "img": "https://cdn.barbora.ee/products/88c3666a-f9cf-4f9f-8469-aace0d31a783_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin GREY GOOSE 40% 0.7L": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
@@ -7622,22 +7745,28 @@
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-grey-goose-40-proc-0-7-l",
       "img": "https://cdn.barbora.ee/products/7b9891e8-7913-4a42-8e6d-293662711901_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin STUMBRAS 40% 200ml": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 5.85
+        },
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 6.45
         }
       ],
-      "latest_price": 5.85,
-      "price_per_unit": 29.25,
+      "latest_price": 6.45,
+      "price_per_unit": 32.25,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-stumbras-40-proc-200-ml",
       "img": "https://cdn.barbora.ee/products/5f0662a7-215b-4a72-8efa-f7f834a9a298_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin BERLAT PŠENICHNAJA 40% 500ml": {
       "category": "Maxima Viinad",
@@ -7655,112 +7784,147 @@
       "store": "Barbora"
     },
     "Viin TALU 40% 10cl, tops": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 2.85
+        },
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 3.05
         }
       ],
-      "latest_price": 2.85,
-      "price_per_unit": 28.5,
+      "latest_price": 3.05,
+      "price_per_unit": 30.5,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-talu-40-proc-10-cl-tops",
       "img": "https://cdn.barbora.ee/products/696d1862-a244-4f28-97ff-520ffa3fc3f4_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin KOSKENKORVA 40% 700ml": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 19.79
+        },
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 20.95
         }
       ],
-      "latest_price": 19.79,
-      "price_per_unit": 28.27,
+      "latest_price": 20.95,
+      "price_per_unit": 29.93,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-koskenkorva-40-proc-700-ml",
       "img": "https://cdn.barbora.ee/products/2f77442a-d79c-4feb-9e56-2ed1bafea069_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin KOSKENKORVA 40% 1L": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 26.99
+        },
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 28.59
         }
       ],
-      "latest_price": 26.99,
-      "price_per_unit": 26.99,
+      "latest_price": 28.59,
+      "price_per_unit": 28.59,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-koskenkorva-40-proc-1-l",
       "img": "https://cdn.barbora.ee/products/ce68c141-c971-464f-944b-312e7c4f7d77_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin NEMIROFF Delikat 40% 500ml": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 11.69
+        },
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 12.45
         }
       ],
-      "latest_price": 11.69,
-      "price_per_unit": 23.38,
+      "latest_price": 12.45,
+      "price_per_unit": 24.9,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-nemiroff-delikat-40-proc-500-ml",
       "img": "https://cdn.barbora.ee/products/dae2c8d6-8068-4e66-8859-a2910971a948_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin STOLI 40% 500ml": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 17.79
+        },
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 18.69
         }
       ],
-      "latest_price": 17.79,
-      "price_per_unit": 35.58,
+      "latest_price": 18.69,
+      "price_per_unit": 37.38,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-stoli-40-proc-500-ml",
       "img": "https://cdn.barbora.ee/products/3bb852ed-1583-4e39-80ee-b04e67d66309_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin STOLI 40% 1.0L": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 31.69
+        },
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 33.39
         }
       ],
-      "latest_price": 31.69,
-      "price_per_unit": 31.69,
+      "latest_price": 33.39,
+      "price_per_unit": 33.39,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-stoli-40-proc-1-0-l",
       "img": "https://cdn.barbora.ee/products/7a3f4862-7a7d-4bc6-8ac4-8f31a86ffabb_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin SAAREMAA Rabarber 37.5% 500ml": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 12.49
+        },
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 13.29
         }
       ],
-      "latest_price": 12.49,
-      "price_per_unit": 24.98,
+      "latest_price": 13.29,
+      "price_per_unit": 26.58,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-saaremaa-rabarber-37-5-proc-500-ml",
       "img": "https://cdn.barbora.ee/products/d2fc16f4-5db1-433a-ae85-ceb47cfd8b8c_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin HLIBNY DAR Grain Sprouts 40% 500ml": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
@@ -7772,22 +7936,28 @@
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-hlibny-dar-grain-sprouts-40-proc-500-ml",
       "img": "https://cdn.barbora.ee/products/89b0e76e-6f6f-4bfc-8a33-905497af7f18_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Bitter PIPARU 35% 500ml": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 6.99
+        },
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 7.49
         }
       ],
-      "latest_price": 6.99,
-      "price_per_unit": 13.98,
+      "latest_price": 7.49,
+      "price_per_unit": 14.98,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/bitter-piparu-35-proc-500-ml",
       "img": "https://cdn.barbora.ee/products/4ed61f28-ca84-4bd1-8ec7-640a0ce81dee_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Pasta Chiffari Lisci Nr.183, PRESTO, 400 g": {
       "category": "Selver:Pasta",
@@ -21563,6 +21733,1798 @@
       "unit_label": "kg",
       "url": "https://barbora.ee/toode/makar-fusilli-integrali-la-molisana-500-g",
       "img": "https://cdn.barbora.ee/products/124eb708-e6ce-4b51-a086-4e0b448e09cb_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin Baltic Vodka 40% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 6.79
+        }
+      ],
+      "latest_price": 6.79,
+      "price_per_unit": 13.58,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-baltic-vodka-40-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/72ef6a77-d8cc-45ec-b273-b4831e32fc56_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin HLIBNY DAR Classic 40% 1L": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 15.99
+        }
+      ],
+      "latest_price": 15.99,
+      "price_per_unit": 15.99,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-hlibny-dar-classic-40-proc-1-l",
+      "img": "https://cdn.barbora.ee/products/d77ac10e-8c78-4367-bac3-8f8ac1d90fae_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin KOZATSKA RADA Klasichna 40% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 13.69
+        }
+      ],
+      "latest_price": 13.69,
+      "price_per_unit": 27.38,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-kozatska-rada-klasichna-40-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/b260ba90-5519-46ed-bb1c-641ddc707cc8_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin STUMBRAS Distinct W.Wheat 40% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 14.99
+        }
+      ],
+      "latest_price": 14.99,
+      "price_per_unit": 29.98,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-stumbras-distinct-w-wheat-40-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/3c98dc6f-b60f-4eb9-bad3-b771d0cfbc09_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Maits. viin ALMO Jõhvika 37.5%100ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 2.49
+        }
+      ],
+      "latest_price": 2.49,
+      "price_per_unit": 24.9,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/maits-viin-almo-johvika-37-5-proc-100-ml",
+      "img": "https://cdn.barbora.ee/products/04ce0601-6200-43e1-82d9-b10c41afc2f7_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Muu p.j. ALMO PipranapsMeega35%0.1l": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 2.49
+        }
+      ],
+      "latest_price": 2.49,
+      "price_per_unit": 24.9,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/muu-p-j-almo-pipranapsmeega-35-proc-0-1-l",
+      "img": "https://cdn.barbora.ee/products/709ca8b3-36ec-4124-bafd-27182e874e70_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin FINLANDIA Cranberry 37.5% 700ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 21.69
+        }
+      ],
+      "latest_price": 21.69,
+      "price_per_unit": 30.99,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-finlandia-cranberry-37-5-proc-700-ml",
+      "img": "https://cdn.barbora.ee/products/e7cbc598-c537-4459-a29c-ac953f5b6096_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin PEREPJOLKA Classic 40% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 12.15
+        }
+      ],
+      "latest_price": 12.15,
+      "price_per_unit": 24.3,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-perepjolka-classic-40-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/cb144293-2ec4-4c1b-8185-c609003ce305_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Maits.viin PEREPJOLKA Domashn. 40% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 11.09
+        }
+      ],
+      "latest_price": 11.09,
+      "price_per_unit": 22.18,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/maits-viin-perepjolka-domashn-40-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/09016a8a-2f55-40a1-a2f0-61107296e21e_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin PEREPJOLKA Carpathian 40% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 11.09
+        }
+      ],
+      "latest_price": 11.09,
+      "price_per_unit": 22.18,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-perepjolka-carpathian-40-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/0fe1b7aa-6497-4691-a257-61fce621a4ae_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin UKRAINKA 40% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 9.99
+        }
+      ],
+      "latest_price": 9.99,
+      "price_per_unit": 19.98,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-ukrainka-40-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/ea3c3679-ff01-4230-8ad1-7f376483683e_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Maits.viin UKRAINKA Mee-Pipra 40% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 12.89
+        }
+      ],
+      "latest_price": 12.89,
+      "price_per_unit": 25.78,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/maits-viin-ukrainka-mee-pipra-40-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/6b88c133-2ff3-4a90-a99c-69b64eb28670_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin UKRAINKA Platinum 40% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 9.99
+        }
+      ],
+      "latest_price": 9.99,
+      "price_per_unit": 19.98,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-ukrainka-platinum-40-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/32cea926-0fef-459e-bc7e-adcf834dbc59_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin FINLANDIA Cranberry 37.5% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 16.85
+        }
+      ],
+      "latest_price": 16.85,
+      "price_per_unit": 33.7,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-finlandia-cranberry-37-5-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/fa80621c-e05e-400a-82fe-bb3c0ba7a49a_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin STARQJ KNJAZ 40% 200ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 3.75
+        }
+      ],
+      "latest_price": 3.75,
+      "price_per_unit": 18.75,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-starqj-knjaz-40-proc-200-ml",
+      "img": "https://cdn.barbora.ee/products/c143a38a-3c5d-4b0d-83a6-397aefde5315_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin POOLIK 40% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 6.49
+        }
+      ],
+      "latest_price": 6.49,
+      "price_per_unit": 12.98,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-poolik-40-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/1c2e9e9d-cdd9-4161-8465-7b86c3b71b96_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin POOLIK 40% 200ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 3.25
+        }
+      ],
+      "latest_price": 3.25,
+      "price_per_unit": 16.25,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-poolik-40-proc-200-ml",
+      "img": "https://cdn.barbora.ee/products/c0bd2e19-5c41-4afd-bbd0-c7dab74be663_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin FINLANDIA Redberry 37.5% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 16.85
+        }
+      ],
+      "latest_price": 16.85,
+      "price_per_unit": 33.7,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-finlandia-redberry-37-5-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/172e4476-b272-41cb-ab27-a4d7a55c9ddb_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin VIRU VALGE 40% 200ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 5.29
+        }
+      ],
+      "latest_price": 5.29,
+      "price_per_unit": 26.45,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-viru-valge-40-proc-200-ml",
+      "img": "https://cdn.barbora.ee/products/8fee98f2-a7e2-48bd-84f6-23c1e595b668_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin PEREPJOLKA Classic 40% 700ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 10.99
+        }
+      ],
+      "latest_price": 10.99,
+      "price_per_unit": 15.7,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-perepjolka-classic-40-proc-700-ml",
+      "img": "https://cdn.barbora.ee/products/1ab49431-55b7-4f63-a515-b0be614fbc3b_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin STARIJ DRUZHE 40% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 6.99
+        }
+      ],
+      "latest_price": 6.99,
+      "price_per_unit": 13.98,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-starij-druzhe-40-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/28e73ef6-e60a-461b-97e6-19a7fa9a5762_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Maits. viin STUMBRAS Cranberry 40% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 9.49
+        }
+      ],
+      "latest_price": 9.49,
+      "price_per_unit": 18.98,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/maits-viin-stumbras-cranberry-40-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/f0b1050f-d523-48da-979d-8079e738b84e_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin FINLANDIA Blackcurrant 37.5% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 16.85
+        }
+      ],
+      "latest_price": 16.85,
+      "price_per_unit": 33.7,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-finlandia-blackcurrant-37-5-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/994b5ebb-3761-40c9-8c1f-2fe5af147415_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin HÕBE 39.2% 700ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 14.99
+        }
+      ],
+      "latest_price": 14.99,
+      "price_per_unit": 21.41,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-hobe-39-2-proc-700-ml",
+      "img": "https://cdn.barbora.ee/products/a6c242c1-81bb-4feb-98cd-7f9700cd3a48_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin ZUBROWKA Biala 40% 700ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 12.99
+        }
+      ],
+      "latest_price": 12.99,
+      "price_per_unit": 18.56,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-zubrowka-biala-40-proc-700-ml",
+      "img": "https://cdn.barbora.ee/products/cfd92b90-0d24-4dd9-819d-78413b50c021_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin ZUBROWKA Biala 40% 1l": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 29.09
+        }
+      ],
+      "latest_price": 29.09,
+      "price_per_unit": 29.09,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-zubrowka-biala-40-proc-1-l",
+      "img": "https://cdn.barbora.ee/products/5fc25ce4-a22a-4f1f-8aa2-f1151733b148_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin STARIJ TRAKTIR 40% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 12.45
+        }
+      ],
+      "latest_price": 12.45,
+      "price_per_unit": 24.9,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-starij-traktir-40-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/7c976132-032a-4619-b8d5-2b7e842c3f46_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin STARIJ TRAKTIR percovaja 40% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 12.45
+        }
+      ],
+      "latest_price": 12.45,
+      "price_per_unit": 24.9,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-starij-traktir-percovaja-40-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/fc56b1f8-7f26-48d7-84d6-f342df37f218_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Maits.Viin ZUBROWKA Bis.Grass 37.5% 0.5L": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 8.99
+        }
+      ],
+      "latest_price": 8.99,
+      "price_per_unit": 17.98,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/maits-viin-zubrowka-bis-grass-37-5-proc-0-5-l",
+      "img": "https://cdn.barbora.ee/products/1b3003e7-fb39-4909-8522-4d43effe43ad_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin VECHIRNJA CHARKA Birch 40% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 12.79
+        }
+      ],
+      "latest_price": 12.79,
+      "price_per_unit": 25.58,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-vechirnja-charka-birch-40-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/c1b22faa-3e3b-4f53-bb26-3d490a11b6f2_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin BELVEDERE Pure 40% 700ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 34.99
+        }
+      ],
+      "latest_price": 34.99,
+      "price_per_unit": 49.99,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-belvedere-pure-40-proc-700-ml",
+      "img": "https://cdn.barbora.ee/products/149866bd-a66a-492a-9af3-e7f207a93964_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin PSHENICHNAJA 40% 0.35L": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 8.75
+        }
+      ],
+      "latest_price": 8.75,
+      "price_per_unit": 25.0,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-pshenichnaja-40-proc-0-35-l",
+      "img": "https://cdn.barbora.ee/products/401cb3ee-0614-4c6f-a564-eb4b88475b23_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Maits.viin Jõhvika viin 37.5% 100ml tops": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 2.79
+        }
+      ],
+      "latest_price": 2.79,
+      "price_per_unit": 27.9,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/maits-viin-johvika-viin-37-5-proc-100-ml-tops",
+      "img": "https://cdn.barbora.ee/products/232d0aa8-17cb-4db4-bdcb-f5d17fa6ff48_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin HÕBE Mahe 39.2% 700ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 24.19
+        }
+      ],
+      "latest_price": 24.19,
+      "price_per_unit": 34.56,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-hobe-mahe-39-2-proc-700-ml",
+      "img": "https://cdn.barbora.ee/products/c184b8b4-1600-4d2e-a67e-d93a58ba6ac3_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Maits. viin ABSOLUT Lime 40% 700ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 16.99
+        }
+      ],
+      "latest_price": 16.99,
+      "price_per_unit": 24.27,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/maits-viin-absolut-lime-40-proc-700-ml",
+      "img": "https://cdn.barbora.ee/products/0d2a7db5-e199-43e9-a1c3-2b6e0bd48c77_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin HLIBNY DAR Ginger-Honey 40% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 13.49
+        }
+      ],
+      "latest_price": 13.49,
+      "price_per_unit": 26.98,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-hlibny-dar-ginger-honey-40-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/184c8ac6-c6cf-415a-b185-38709364bb2e_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin HLIBNY DAR Pr.Craft Corn 40% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 13.49
+        }
+      ],
+      "latest_price": 13.49,
+      "price_per_unit": 26.98,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-hlibny-dar-pr-craft-corn-40-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/e92eb8e6-7de2-4da2-82c2-f77949594f27_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin KETEL ONE 40% 700ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 24.99
+        }
+      ],
+      "latest_price": 24.99,
+      "price_per_unit": 35.7,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-ketel-one-40-proc-700-ml",
+      "img": "https://cdn.barbora.ee/products/a3e2ea16-99f1-43db-9ee1-82973653458e_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin STUMBRAS Ebaküdoonia 40% 0.5l": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 14.99
+        }
+      ],
+      "latest_price": 14.99,
+      "price_per_unit": 29.98,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-stumbras-ebakudoonia-40-proc-0-5-l",
+      "img": "https://cdn.barbora.ee/products/80109030-ff39-4f2f-86fa-907cfb2fd923_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin STUMBRAS Raspberry 40% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 14.99
+        }
+      ],
+      "latest_price": 14.99,
+      "price_per_unit": 29.98,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-stumbras-raspberry-40-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/bb5e62b4-441c-406f-a35f-b93a4f19c2c3_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin LAUA 40% 100ml Pet": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 2.49
+        }
+      ],
+      "latest_price": 2.49,
+      "price_per_unit": 24.9,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-laua-40-proc-100-ml-pet",
+      "img": "https://cdn.barbora.ee/products/84b99ad0-1511-479b-9732-16188bd2770a_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin VALGE VIIN 40% 200ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 4.35
+        }
+      ],
+      "latest_price": 4.35,
+      "price_per_unit": 21.75,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-valge-viin-40-proc-200-ml",
+      "img": "https://cdn.barbora.ee/products/e23034f3-2478-4edd-a2a4-d7a53fa24c8a_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin REYKA 40% 700ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 33.75
+        }
+      ],
+      "latest_price": 33.75,
+      "price_per_unit": 48.21,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-reyka-40-proc-700-ml",
+      "img": "https://cdn.barbora.ee/products/2a430066-fceb-4cca-9476-8f9fb808c8a5_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin KOSKENKORVA 40% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 10.79
+        }
+      ],
+      "latest_price": 10.79,
+      "price_per_unit": 21.58,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-koskenkorva-40-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/a641ce1b-09b4-4ce4-af16-154ba1982bc4_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin VIRU VALGE Green Apple 37,5% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 11.69
+        }
+      ],
+      "latest_price": 11.69,
+      "price_per_unit": 23.38,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-viru-valge-green-apple-37-5-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/cb51e792-141c-46ab-a0a4-92275075a14a_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Maits.viin VIRU VALGE Waterm. 37,5%500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 11.79
+        }
+      ],
+      "latest_price": 11.79,
+      "price_per_unit": 23.58,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/maits-viin-viru-valge-waterm-37-5-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/56a92bb1-2d04-4383-9dbc-8cd384b45dda_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin VIRU VALGE Cranberry 37,5% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 11.75
+        }
+      ],
+      "latest_price": 11.75,
+      "price_per_unit": 23.5,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-viru-valge-cranberry-37-5-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/a270b0a3-c955-4211-b24f-c74df98de005_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin POOLIK 40% 100ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 1.99
+        }
+      ],
+      "latest_price": 1.99,
+      "price_per_unit": 19.9,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-poolik-40-proc-100-ml",
+      "img": "https://cdn.barbora.ee/products/65124c10-ac17-4b99-a964-a8e3adc98518_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin VECHIRNJA CHARKA Milk 40% 0.7l": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 19.99
+        }
+      ],
+      "latest_price": 19.99,
+      "price_per_unit": 28.56,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-vechirnja-charka-milk-40-proc-0-7-l",
+      "img": "https://cdn.barbora.ee/products/f59a97cc-7420-49be-96a2-bb1d089e38b5_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin HÕBE 39.2% 700ml tuubis": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 24.99
+        }
+      ],
+      "latest_price": 24.99,
+      "price_per_unit": 35.7,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-hobe-39-2-proc-700-ml-tuubis",
+      "img": "https://cdn.barbora.ee/products/5d40df8d-7de6-466f-8c59-e186871097fa_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin STUMBRAS Cranberry 40% 700ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 13.99
+        }
+      ],
+      "latest_price": 13.99,
+      "price_per_unit": 19.99,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-stumbras-cranberry-40-proc-700-ml",
+      "img": "https://cdn.barbora.ee/products/9e656ca1-3805-4d40-a768-702576df397b_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin POOLIK 40%700 ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 9.99
+        }
+      ],
+      "latest_price": 9.99,
+      "price_per_unit": 14.27,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-poolik-40-proc-700-ml",
+      "img": "https://cdn.barbora.ee/products/4ab9fc8a-af0b-4f2f-8c0d-ecfa8e3409db_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin POOLIK 40% 1L": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 13.99
+        }
+      ],
+      "latest_price": 13.99,
+      "price_per_unit": 13.99,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-poolik-40-proc-1-l",
+      "img": "https://cdn.barbora.ee/products/1ff1a203-f131-4125-bc56-7b8d5191e406_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin STUMBRAS Jõhvikas 40% 200ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 6.19
+        }
+      ],
+      "latest_price": 6.19,
+      "price_per_unit": 30.95,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-stumbras-johvikas-40-proc-200-ml",
+      "img": "https://cdn.barbora.ee/products/9ce77cdb-84a7-4642-9c6b-4c0f43a3f1b2_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin STUMBRAS Pähkel 40% 0.5l": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 14.69
+        }
+      ],
+      "latest_price": 14.69,
+      "price_per_unit": 29.38,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-stumbras-pahkel-40-proc-0-5-l",
+      "img": "https://cdn.barbora.ee/products/7d61f165-683f-4b7d-b65f-14292fb6ec5e_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin KOZATSKA RADA Osobliva 40% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 13.69
+        }
+      ],
+      "latest_price": 13.69,
+      "price_per_unit": 27.38,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-kozatska-rada-osobliva-40-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/23abb1f0-b84c-49c4-b4bf-a11806645c42_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin KOZATSKA RADA Klasichna 40% 700ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 11.99
+        }
+      ],
+      "latest_price": 11.99,
+      "price_per_unit": 17.13,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-kozatska-rada-klasichna-40-proc-700-ml",
+      "img": "https://cdn.barbora.ee/products/68e0296b-f4d8-4d59-9661-68c23ca3af10_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin KOZATSKA RADA Osobliva 40% 700ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 11.99
+        }
+      ],
+      "latest_price": 11.99,
+      "price_per_unit": 17.13,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-kozatska-rada-osobliva-40-proc-700-ml",
+      "img": "https://cdn.barbora.ee/products/33138cc2-c3c2-4eed-ab69-bdeb6b21a19d_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin ABSOLUT Elyx 42.3% 700ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 38.99
+        }
+      ],
+      "latest_price": 38.99,
+      "price_per_unit": 55.7,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-absolut-elyx-42-3-proc-700-ml",
+      "img": "https://cdn.barbora.ee/products/38ac81ee-9781-4d23-b000-f3dd22eb534c_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin GRADUS 40% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 11.99
+        }
+      ],
+      "latest_price": 11.99,
+      "price_per_unit": 23.98,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-gradus-40-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/1cc63872-b02e-4823-8344-a61e4ea979c1_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin GRADUS 40% 700ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 15.99
+        }
+      ],
+      "latest_price": 15.99,
+      "price_per_unit": 22.84,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-gradus-40-proc-700-ml",
+      "img": "https://cdn.barbora.ee/products/f60a1581-f820-46db-81ce-213e0c643479_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin ABSOLUT Watermelon 38% 700ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 16.99
+        }
+      ],
+      "latest_price": 16.99,
+      "price_per_unit": 24.27,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-absolut-watermelon-38-proc-700-ml",
+      "img": "https://cdn.barbora.ee/products/3ca2aac9-1dfb-4172-affb-15abd6e42e48_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin HEKLA 40% 700ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 10.99
+        }
+      ],
+      "latest_price": 10.99,
+      "price_per_unit": 15.7,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-hekla-40-proc-700-ml",
+      "img": "https://cdn.barbora.ee/products/51016f80-6ebe-4b6e-8669-48d7982f8fb2_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin GRADUS 40% 1l": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 22.49
+        }
+      ],
+      "latest_price": 22.49,
+      "price_per_unit": 22.49,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-gradus-40-proc-1-l",
+      "img": "https://cdn.barbora.ee/products/945cf254-30d2-4f69-8800-118af4706774_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin MOROSHA Spring 40% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 13.79
+        }
+      ],
+      "latest_price": 13.79,
+      "price_per_unit": 27.58,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-morosha-spring-40-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/1b439e62-fbbf-4bd0-9d74-a34b507c35f6_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin MOROSHA Spring 40% 700ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 18.59
+        }
+      ],
+      "latest_price": 18.59,
+      "price_per_unit": 26.56,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-morosha-spring-40-proc-700-ml",
+      "img": "https://cdn.barbora.ee/products/78e46645-5fb3-43b8-a4c7-3f44fab0d769_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin UKRAINKA Platinum 40% 700ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 13.99
+        }
+      ],
+      "latest_price": 13.99,
+      "price_per_unit": 19.99,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-ukrainka-platinum-40-proc-700-ml",
+      "img": "https://cdn.barbora.ee/products/1877f55b-5193-4200-ba15-ab63713a122d_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin UKRAINKA 40% 700ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 18.59
+        }
+      ],
+      "latest_price": 18.59,
+      "price_per_unit": 26.56,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-ukrainka-40-proc-700-ml",
+      "img": "https://cdn.barbora.ee/products/7bde00e5-5944-44f2-8eab-d1a815f2ac85_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Maits. viin STUMBRAS Pipar 40% 0.5l": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 14.99
+        }
+      ],
+      "latest_price": 14.99,
+      "price_per_unit": 29.98,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/maits-viin-stumbras-pipar-40-proc-0-5-l",
+      "img": "https://cdn.barbora.ee/products/6d855b32-1943-4819-9b6a-6dd2e64fef9e_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin KHORTYTSA Platinum 40% 700ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 12.99
+        }
+      ],
+      "latest_price": 12.99,
+      "price_per_unit": 18.55,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-khortytsa-platinum-40-proc-700-ml",
+      "img": "https://cdn.barbora.ee/products/9c8d3fb5-1b98-42dd-9c19-9fe1f929d884_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin KHORTYTSA Platinum 40% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 9.49
+        }
+      ],
+      "latest_price": 9.49,
+      "price_per_unit": 18.98,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-khortytsa-platinum-40-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/3d813d79-9d2d-4859-8065-731239e518fc_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin MOSKO 40% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 12.49
+        }
+      ],
+      "latest_price": 12.49,
+      "price_per_unit": 24.98,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-mosko-40-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/acc0a9f9-d499-4ceb-8528-012580cb227c_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin MOSKO 40% 700ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 18.29
+        }
+      ],
+      "latest_price": 18.29,
+      "price_per_unit": 26.13,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-mosko-40-proc-700-ml",
+      "img": "https://cdn.barbora.ee/products/8311621e-7796-4dbe-9884-3c3eaf2e00dc_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin MOSKO 40% 200ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 5.99
+        }
+      ],
+      "latest_price": 5.99,
+      "price_per_unit": 29.95,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-mosko-40-proc-200-ml",
+      "img": "https://cdn.barbora.ee/products/146fc6d0-cac8-4b6b-aea6-ed4d38de9ec9_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin PEREPJOLKA Molochna 40% 700ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 10.99
+        }
+      ],
+      "latest_price": 10.99,
+      "price_per_unit": 15.7,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-perepjolka-molochna-40-proc-700-ml",
+      "img": "https://cdn.barbora.ee/products/786dafeb-7f97-4235-b0f3-4cc8aeb17902_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin VODKA HUNDIJALA VESI 40% 0.5l": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 8.49
+        }
+      ],
+      "latest_price": 8.49,
+      "price_per_unit": 16.98,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-vodka-hundijala-vesi-40-proc-0-5-l",
+      "img": "https://cdn.barbora.ee/products/65a326ab-7456-4191-8bce-ba4566babd67_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin Puhas 40% 0.5l": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 8.59
+        }
+      ],
+      "latest_price": 8.59,
+      "price_per_unit": 17.18,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-puhas-40-proc-0-5-l",
+      "img": "https://cdn.barbora.ee/products/0914d3e2-fa7e-455e-b838-b46e864c3d6d_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin TALU VIIN 40% 0.5l": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 8.89
+        }
+      ],
+      "latest_price": 8.89,
+      "price_per_unit": 17.78,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-talu-viin-40-proc-0-5-l",
+      "img": "https://cdn.barbora.ee/products/ac45ae21-4829-44b5-a989-c56e9aa0f8a8_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin KHORTYTSA Classic 40% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 9.49
+        }
+      ],
+      "latest_price": 9.49,
+      "price_per_unit": 18.98,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-khortytsa-classic-40-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/25faf1fb-d16e-460b-89b6-c7ebe3d39f47_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin MOROSHA Carpathian 40% 700ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 18.59
+        }
+      ],
+      "latest_price": 18.59,
+      "price_per_unit": 26.56,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-morosha-carpathian-40-proc-700-ml",
+      "img": "https://cdn.barbora.ee/products/c3f9f216-9c8a-4721-bcaa-66dcabaee8f7_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin KHORTYTSA Classic 40% 700ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 12.99
+        }
+      ],
+      "latest_price": 12.99,
+      "price_per_unit": 18.56,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-khortytsa-classic-40-proc-700-ml",
+      "img": "https://cdn.barbora.ee/products/75f92a53-0b8a-4d31-85df-d6286a3fc359_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin MOROSHA Carpathian 40% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 14.29
+        }
+      ],
+      "latest_price": 14.29,
+      "price_per_unit": 28.58,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-morosha-carpathian-40-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/06cae463-40e3-45c9-99d6-2b9cd1f746b2_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin KHORTYTSA Silver Cool 40% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 9.49
+        }
+      ],
+      "latest_price": 9.49,
+      "price_per_unit": 18.98,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-khortytsa-silver-cool-40-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/e00295a2-5063-40c1-8a5f-643a560d8efd_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin KHORTYTSA Silver Cool 40% 700ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 12.99
+        }
+      ],
+      "latest_price": 12.99,
+      "price_per_unit": 18.55,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-khortytsa-silver-cool-40-proc-700-ml",
+      "img": "https://cdn.barbora.ee/products/1e52b490-0711-4742-ba84-2220b06ed985_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin GORILKA Pšenitsnaja 40% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 12.25
+        }
+      ],
+      "latest_price": 12.25,
+      "price_per_unit": 24.5,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-gorilka-psenitsnaja-40-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/1934b887-ad93-4f08-8d15-bf01d3d0c001_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin VIRU VALGE Ploomi 37.5% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 11.69
+        }
+      ],
+      "latest_price": 11.69,
+      "price_per_unit": 23.38,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-viru-valge-ploomi-37-5-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/7e417fea-768a-4248-81bd-a965e1cfdc92_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin REVAL Särts. Jõhvikas 37.5% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 10.85
+        }
+      ],
+      "latest_price": 10.85,
+      "price_per_unit": 21.7,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-reval-sarts-johvikas-37-5-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/ba684bdb-89da-495e-acee-adca08c7cdee_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin REVAL 40% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 11.95
+        }
+      ],
+      "latest_price": 11.95,
+      "price_per_unit": 23.9,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-reval-40-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/bf41027f-3bee-4329-84d1-77cd721acd7d_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin REVAL Metsikud Ürdid 37.5% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 12.25
+        }
+      ],
+      "latest_price": 12.25,
+      "price_per_unit": 24.5,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-reval-metsikud-urdid-37-5-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/a2edb123-561a-4062-8744-6096ba0405db_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin ZUBROWKA Cranberry 37.5% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 8.99
+        }
+      ],
+      "latest_price": 8.99,
+      "price_per_unit": 17.98,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-zubrowka-cranberry-37-5-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/48d6f246-8710-42a2-9060-dd6ace1d8f47_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Maits.viin ABSOLUT Vanilje 38% 700ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 16.99
+        }
+      ],
+      "latest_price": 16.99,
+      "price_per_unit": 24.27,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/maits-viin-absolut-vanilje-38-proc-700-ml",
+      "img": "https://cdn.barbora.ee/products/0f9d0174-f8da-47b1-b795-085e1a6ca090_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "M.viin SAAREMAA Mustsõstar 37.5% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 9.49
+        }
+      ],
+      "latest_price": 9.49,
+      "price_per_unit": 18.98,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/m-viin-saaremaa-mustsostar-37-5-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/7b707427-1638-4573-b449-215a855908b5_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Maits.viin SAAREMAA Apelsin 37.5% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 12.59
+        }
+      ],
+      "latest_price": 12.59,
+      "price_per_unit": 25.18,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/maits-viin-saaremaa-apelsin-37-5-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/9746f3f5-50cb-4a1e-ba32-aa4e2c39eb09_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin Viin 40% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 8.49
+        }
+      ],
+      "latest_price": 8.49,
+      "price_per_unit": 16.98,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-viin-40-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/cf006879-369a-43e8-a8aa-927712404dc5_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin HÕBE Mild 39.2% 700ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 16.99
+        }
+      ],
+      "latest_price": 16.99,
+      "price_per_unit": 24.27,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-hobe-mild-39-2-proc-700-ml",
+      "img": "https://cdn.barbora.ee/products/723430b3-7d57-4752-b1c8-7fa65a06552b_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin STARQJ KNJAZ 40% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 7.15
+        }
+      ],
+      "latest_price": 7.15,
+      "price_per_unit": 14.3,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-starqj-knjaz-40-proc-500-ml-54809",
+      "img": "https://cdn.barbora.ee/products/ed7f3ba0-f974-4e8c-aab0-f358edf5ecbc_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Maits.viin NIPERNAADI jõhvika 37.5%500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 13.85
+        }
+      ],
+      "latest_price": 13.85,
+      "price_per_unit": 27.7,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/maits-viin-nipernaadi-johvika-37-5-proc-500-ml-57461",
+      "img": "https://cdn.barbora.ee/products/fa4aea07-3a0a-414a-94d4-2e09ebab8f37_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "M.viin HLIBNY DAR Sp.Vanilla 37.5% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 8.49
+        }
+      ],
+      "latest_price": 8.49,
+      "price_per_unit": 16.98,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/m-viin-hlibny-dar-sp-vanilla-37-5-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/633f8f20-35b7-4eb7-8dfc-a26607364d5a_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin PÖÖRIÖÖ 40% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 16.49
+        }
+      ],
+      "latest_price": 16.49,
+      "price_per_unit": 32.98,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-poorioo-40-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/b37df4e8-3905-44ed-94df-8318a2463f8e_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "M.viin HLIBNY DAR Wild Berry 37.5% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 8.49
+        }
+      ],
+      "latest_price": 8.49,
+      "price_per_unit": 16.98,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/m-viin-hlibny-dar-wild-berry-37-5-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/2ebfc739-6fcb-4b4d-a61a-1fd7ae2d2ed3_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Maits.viin AVOKADO VODKA 40% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 7.99
+        }
+      ],
+      "latest_price": 7.99,
+      "price_per_unit": 15.98,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/maits-viin-avokado-vodka-40-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/4dd9dc4f-45bf-4559-8e96-084e092adaa5_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin Stare Selo 500ml 40%": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 8.39
+        }
+      ],
+      "latest_price": 8.39,
+      "price_per_unit": 16.78,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-stare-selo-500-ml-40-proc",
+      "img": "https://cdn.barbora.ee/products/3d007374-2e1f-4685-8616-d60bee3f4eab_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Maitsest.viin NIPERNAADI Kirsi 30% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 13.59
+        }
+      ],
+      "latest_price": 13.59,
+      "price_per_unit": 27.18,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/maitsest-viin-nipernaadi-kirsi-30-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/29a76f91-7c10-4525-83c3-f0bb9ee02950_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin Polar Bear 37.5% 700ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 10.99
+        }
+      ],
+      "latest_price": 10.99,
+      "price_per_unit": 15.7,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-polar-bear-37-5-proc-700-ml",
+      "img": "https://cdn.barbora.ee/products/a802eda8-e0c2-452a-a036-6895a329416c_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin BERJOZOVAJA ROŠTŠA 40% 1L": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 14.99
+        }
+      ],
+      "latest_price": 14.99,
+      "price_per_unit": 14.99,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-berjozovaja-rostsa-40-proc-1-l",
+      "img": "https://cdn.barbora.ee/products/97e86e7b-fa06-4141-a64e-e3a07947838e_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin FINLANDIA Redberry 37.5% 700ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 21.69
+        }
+      ],
+      "latest_price": 21.69,
+      "price_per_unit": 30.99,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-finlandia-redberry-37-5-proc-700-ml",
+      "img": "https://cdn.barbora.ee/products/4ba275d1-dfc2-4eb1-9d62-d4117cf871d6_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin Hlibnij Kolos 40% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 12.79
+        }
+      ],
+      "latest_price": 12.79,
+      "price_per_unit": 25.58,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-hlibnij-kolos-40-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/bb77545b-8bd5-4779-a478-adc7ddf300d7_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin STUMBRAS Premium 40% 700ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 29.99
+        }
+      ],
+      "latest_price": 29.99,
+      "price_per_unit": 42.84,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-stumbras-premium-organic-40-proc-700-ml",
+      "img": "https://cdn.barbora.ee/products/85e93681-47a1-48d4-a78b-e4ad8176fdad_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin BELUGA Noble Vodka 40% 500ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 28.99
+        }
+      ],
+      "latest_price": 28.99,
+      "price_per_unit": 57.98,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-beluga-noble-vodka-40-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/aca24c07-5c04-4176-b178-3da55068df1a_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin BELUGA Celebration 40% 700ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 44.99
+        }
+      ],
+      "latest_price": 44.99,
+      "price_per_unit": 64.27,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-beluga-celebration-40-proc-700-ml",
+      "img": "https://cdn.barbora.ee/products/98bd8847-0652-435e-9064-249a92d318ac_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin BELUGA Transatlantic 40% 700ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 44.99
+        }
+      ],
+      "latest_price": 44.99,
+      "price_per_unit": 64.27,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-beluga-transatlantic-40-proc-700-ml-98993",
+      "img": "https://cdn.barbora.ee/products/21b1f19a-880c-473c-acac-e16cc28985cb_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Viin ZUBROWKA Vanilla 35% 700ml": {
+      "category": "Barbora:Viinad",
+      "entries": [
+        {
+          "t": "2026-01-27T21:50:41.846263",
+          "p": 12.99
+        }
+      ],
+      "latest_price": 12.99,
+      "price_per_unit": 18.56,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/viin-zubrowka-vanilla-35-proc-700-ml",
+      "img": "https://cdn.barbora.ee/products/9982b122-a26c-4814-aaa3-698da1a9ccea_m.png",
       "store": "Barbora",
       "is_sale": false
     }
