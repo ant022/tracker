@@ -4,9 +4,64 @@
 <head>
     <title>Price Tracker</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         * { box-sizing: border-box; }
         body { font-family: 'Segoe UI', sans-serif; background:#f0f2f5; margin:0; display: flex; color: #333; }
+        
+        /* Hamburger Menu Button - Hidden on desktop */
+        .hamburger {
+            display: none;
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            z-index: 1001;
+            background: #1a202c;
+            border: none;
+            border-radius: 8px;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            padding: 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+        
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: white;
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+        
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(45deg) translate(7px, 7px);
+        }
+        
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -7px);
+        }
+        
+        /* Sidebar overlay for mobile */
+        .sidebar-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+        }
         
         /* Sidebar stays fixed */
         .sidebar { width: 250px; background: #1a202c; color: #cbd5e0; height: 100vh; position: fixed; padding: 25px 20px; box-sizing: border-box; overflow-y: auto; z-index: 10; }
@@ -337,78 +392,250 @@
         .expand-bar { grid-column: 1 / -1; background: #fff; border: 1px solid #e2e8f0; color: #4a5568; text-align: center; padding: 12px; border-radius: 8px; cursor: pointer; font-weight: bold; margin-top: 10px; }
         .hidden { display: none; }
         #search-results-title { display: none; margin-top: 40px; color: #2f855a; border-left: 5px solid #2f855a; padding-left: 15px; font-size: 22px; font-weight: 700; }
+        
+        /* MOBILE RESPONSIVE STYLES */
+        @media (max-width: 768px) {
+            body {
+                display: block;
+            }
+            
+            /* Show hamburger menu */
+            .hamburger {
+                display: flex;
+            }
+            
+            /* Sidebar slides in from left */
+            .sidebar {
+                position: fixed;
+                left: -250px;
+                transition: left 0.3s ease;
+                z-index: 1000;
+            }
+            
+            .sidebar.active {
+                left: 0;
+            }
+            
+            .sidebar-overlay.active {
+                display: block;
+            }
+            
+            /* Main content takes full width */
+            .main {
+                margin-left: 0;
+                padding: 80px 15px 40px 15px;
+            }
+            
+            /* Header adjustments */
+            .header {
+                padding: 15px 0;
+            }
+            
+            .controls {
+                flex-direction: column;
+                gap: 12px;
+                padding: 15px;
+            }
+            
+            .controls > div {
+                width: 100%;
+                display: flex;
+                gap: 8px;
+            }
+            
+            .btn {
+                flex: 1;
+                padding: 12px 10px;
+                font-size: 15px;
+            }
+            
+            .search-box {
+                width: 100%;
+                padding: 12px 15px;
+                font-size: 16px;
+            }
+            
+            /* Larger text for mobile */
+            .favorites-title {
+                font-size: 24px;
+            }
+            
+            .favorites-subtitle {
+                font-size: 15px;
+            }
+            
+            .sales-title {
+                font-size: 20px;
+            }
+            
+            .cat-title {
+                font-size: 20px;
+                margin-bottom: 12px;
+            }
+            
+            /* Grid adjustments */
+            .grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            
+            /* Card adjustments - bigger and easier to tap */
+            .card {
+                height: 140px;
+                padding: 15px;
+                gap: 12px;
+            }
+            
+            .card img {
+                width: 80px;
+            }
+            
+            .name {
+                font-size: 14px;
+                line-height: 1.5;
+            }
+            
+            .price {
+                font-size: 24px;
+            }
+            
+            .price-old {
+                font-size: 16px;
+            }
+            
+            .per-l {
+                font-size: 14px;
+            }
+            
+            .store-badge {
+                font-size: 11px;
+                padding: 3px 8px;
+            }
+            
+            .discount-badge {
+                font-size: 16px;
+                padding: 8px 14px;
+            }
+            
+            /* Favorite button bigger for easier tapping */
+            .fav-btn {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+            
+            /* Carousel adjustments */
+            .carousel-card {
+                min-width: calc(100vw - 80px);
+            }
+            
+            .carousel-btn {
+                width: 35px;
+                height: 35px;
+                font-size: 18px;
+            }
+            
+            /* Sales section */
+            .sales-section {
+                padding: 20px 15px;
+            }
+            
+            .favorites-section {
+                padding: 20px 15px;
+            }
+            
+            .expand-sales-btn {
+                padding: 10px 14px;
+                font-size: 14px;
+            }
+            
+            /* Price trends more visible */
+            .price-trend-up,
+            .price-trend-down,
+            .price-trend-stable {
+                font-size: 13px;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="sidebar">
+    <button class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    
+    <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleMenu()"></div>
+    
+    <div class="sidebar" id="sidebar">
         <h2>📊 Tracker</h2>
         <span class="last-run">Last Update: 2026-01-27T11:07:15.014513</span>
         
-        <a href="#favorites-section" class="nav-link nav-link-special" id="favorites-nav-link" style="display:none;">
+        <a href="#favorites-section" class="nav-link nav-link-special" id="favorites-nav-link" style="display:none;" onclick="closeMobileMenu()">
             <span class="fav-icon">⭐</span>
             <span class="category-name">My Favorites (<span id="fav-count">0</span>)</span>
         </a>
-        <a href="#sales-section" class="nav-link nav-link-sale">
+        <a href="#sales-section" class="nav-link nav-link-sale" onclick="closeMobileMenu()">
             <span class="sale-icon">🔥</span>
             <span class="category-name">Sales (172)</span>
         </a><div style="border-bottom: 2px solid #2d3748; margin: 15px 0;"></div>
-        <a href="#cat_0" class="nav-link">
+        <a href="#cat_0" class="nav-link" onclick="closeMobileMenu()">
             <span class="store-label store-label-Barbora">Barbora</span>
             <span class="category-name">Autokeemia</span>
         </a>
-        <a href="#cat_1" class="nav-link">
+        <a href="#cat_1" class="nav-link" onclick="closeMobileMenu()">
             <span class="store-label store-label-Selver">Selver</span>
             <span class="category-name">Autokeemia</span>
         </a>
-        <a href="#cat_2" class="nav-link">
+        <a href="#cat_2" class="nav-link" onclick="closeMobileMenu()">
             <span class="store-label store-label-Barbora">Barbora</span>
             <span class="category-name">Heledad Õlled</span>
         </a>
-        <a href="#cat_3" class="nav-link">
+        <a href="#cat_3" class="nav-link" onclick="closeMobileMenu()">
             <span class="store-label store-label-Barbora">Barbora</span>
             <span class="category-name">Tumedad Õlled</span>
         </a>
-        <a href="#cat_4" class="nav-link">
+        <a href="#cat_4" class="nav-link" onclick="closeMobileMenu()">
             <span class="store-label store-label-Barbora">Barbora</span>
             <span class="category-name">Nisuõlled</span>
         </a>
-        <a href="#cat_5" class="nav-link">
+        <a href="#cat_5" class="nav-link" onclick="closeMobileMenu()">
             <span class="store-label store-label-Selver">Selver</span>
             <span class="category-name">Rummid</span>
         </a>
-        <a href="#cat_6" class="nav-link">
+        <a href="#cat_6" class="nav-link" onclick="closeMobileMenu()">
             <span class="store-label store-label-Barbora">Barbora</span>
             <span class="category-name">Rummid</span>
         </a>
-        <a href="#cat_7" class="nav-link">
+        <a href="#cat_7" class="nav-link" onclick="closeMobileMenu()">
             <span class="store-label store-label-Selver">Selver</span>
             <span class="category-name">Viinad</span>
         </a>
-        <a href="#cat_8" class="nav-link">
+        <a href="#cat_8" class="nav-link" onclick="closeMobileMenu()">
             <span class="store-label store-label-Selver">Selver</span>
             <span class="category-name">Makaronid</span>
         </a>
-        <a href="#cat_9" class="nav-link">
+        <a href="#cat_9" class="nav-link" onclick="closeMobileMenu()">
             <span class="store-label store-label-Selver">Selver</span>
             <span class="category-name">Lahja Alkohol</span>
         </a>
-        <a href="#cat_10" class="nav-link">
+        <a href="#cat_10" class="nav-link" onclick="closeMobileMenu()">
             <span class="store-label store-label-Barbora">Barbora</span>
             <span class="category-name">Ginid</span>
         </a>
-        <a href="#cat_11" class="nav-link">
+        <a href="#cat_11" class="nav-link" onclick="closeMobileMenu()">
             <span class="store-label store-label-Selver">Selver</span>
             <span class="category-name">Ginid</span>
         </a>
-        <a href="#cat_12" class="nav-link">
+        <a href="#cat_12" class="nav-link" onclick="closeMobileMenu()">
             <span class="store-label store-label-Barbora">Barbora</span>
             <span class="category-name">Pasta</span>
         </a>
-        <a href="#cat_13" class="nav-link">
+        <a href="#cat_13" class="nav-link" onclick="closeMobileMenu()">
             <span class="store-label store-label-Selver">Selver</span>
             <span class="category-name">Pasta</span>
         </a>
-        <a href="#cat_14" class="nav-link">
+        <a href="#cat_14" class="nav-link" onclick="closeMobileMenu()">
             <span class="store-label store-label-Rimi">Rimi</span>
             <span class="category-name">Pasta</span>
         </a>
@@ -438,6 +665,24 @@ const saleProducts = [{"name": "Spagetid Nr.15 LA MOLISANA 500g", "category": "B
 let currentSort = 'latest_price';
 let favorites = [];
 let carouselPosition = 0;
+
+// Toggle mobile menu
+function toggleMenu() {
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebar-overlay');
+    const hamburger = document.getElementById('hamburger');
+    
+    sidebar.classList.toggle('active');
+    overlay.classList.toggle('active');
+    hamburger.classList.toggle('active');
+}
+
+// Close menu when clicking a nav link on mobile
+function closeMobileMenu() {
+    if (window.innerWidth <= 768) {
+        toggleMenu();
+    }
+}
 
 // Load favorites from localStorage
 function loadFavorites() {
