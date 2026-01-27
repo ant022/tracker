@@ -533,7 +533,12 @@
             
             /* Carousel adjustments */
             .carousel-card {
-                min-width: calc(100vw - 80px);
+                min-width: calc(100% - 70px);
+                max-width: calc(100% - 70px);
+            }
+            
+            .carousel-track {
+                padding: 0 5px;
             }
             
             .carousel-btn {
@@ -541,6 +546,9 @@
                 height: 35px;
                 font-size: 18px;
             }
+            
+            .carousel-btn-left { left: 0; }
+            .carousel-btn-right { right: 0; }
             
             /* Sales section */
             .sales-section {
@@ -781,19 +789,30 @@ function updateFavoritesUI() {
 function moveCarousel(direction) {
     const track = document.querySelector('.carousel-track');
     const cards = document.querySelectorAll('.carousel-card');
-    const cardWidth = 335; // 320px + 15px gap
+    if (!track || cards.length === 0) return;
+    
+    // Get actual card width including gap
+    const firstCard = cards[0];
+    const cardStyle = window.getComputedStyle(firstCard);
+    const cardWidth = firstCard.offsetWidth + 15; // Card width + gap
     
     carouselPosition += direction;
     
+    // Calculate how many cards fit on screen
+    const containerWidth = track.parentElement.offsetWidth;
+    const visibleCards = Math.floor(containerWidth / cardWidth) || 1;
+    
     // Clamp position
-    const maxPosition = Math.max(0, cards.length - 3);
+    const maxPosition = Math.max(0, cards.length - visibleCards);
     carouselPosition = Math.max(0, Math.min(carouselPosition, maxPosition));
     
     track.style.transform = `translateX(-${carouselPosition * cardWidth}px)`;
     
     // Update button states
-    document.querySelector('.carousel-btn-left').disabled = carouselPosition === 0;
-    document.querySelector('.carousel-btn-right').disabled = carouselPosition >= maxPosition;
+    const leftBtn = document.querySelector('.carousel-btn-left');
+    const rightBtn = document.querySelector('.carousel-btn-right');
+    if (leftBtn) leftBtn.disabled = carouselPosition === 0;
+    if (rightBtn) rightBtn.disabled = carouselPosition >= maxPosition;
 }
 
 function setSort(key){
@@ -861,6 +880,11 @@ function render() {
             return `<div class="carousel-card">${cardWithTrend(p, trend)}</div>`;
         }).join('');
         
+        // Calculate cards that fit on screen for button state
+        const isMobile = window.innerWidth <= 768;
+        const cardsVisible = isMobile ? 1 : 3;
+        const hasMultiplePages = favoriteProducts.length > cardsVisible;
+        
         favSection.innerHTML = `
             <div class="favorites-title">
                 <span>⭐</span>
@@ -874,13 +898,20 @@ function render() {
                 <div class="carousel-track">
                     ${favCardsHtml}
                 </div>
-                <button class="carousel-btn carousel-btn-right" onclick="moveCarousel(1)" ${favoriteProducts.length <= 3 ? 'disabled' : ''}>→</button>
+                <button class="carousel-btn carousel-btn-right" onclick="moveCarousel(1)" ${hasMultiplePages ? '' : 'disabled'}>→</button>
             </div>
         `;
         favSection.style.display = 'block';
         
+        // Reset carousel position
+        carouselPosition = 0;
+        
         // Initialize touch events after rendering
-        setTimeout(initCarouselTouch, 100);
+        setTimeout(() => {
+            initCarouselTouch();
+            // Update button states based on actual layout
+            moveCarousel(0);
+        }, 100);
     } else {
         favSection.innerHTML = `
             <div class="favorites-title">
