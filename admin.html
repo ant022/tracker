@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Price Tracker - Admin</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * { box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0; 
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+        }
+        
+        h1 {
+            margin: 0 0 10px 0;
+            color: #2d3748;
+            font-size: 28px;
+        }
+        
+        .subtitle {
+            color: #718096;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        
+        .section {
+            background: #f7fafc;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+        
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .input-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            font-weight: 600;
+            color: #4a5568;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        
+        input, select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+        
+        input:focus, select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        .btn {
+            width: 100%;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.2s;
+            margin-top: 10px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-primary:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .btn-secondary {
+            background: #48bb78;
+            color: white;
+        }
+        
+        .btn-secondary:hover {
+            background: #38a169;
+            transform: translateY(-2px);
+        }
+        
+        .status {
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-weight: 600;
+            text-align: center;
+            display: none;
+        }
+        
+        .status.show {
+            display: block;
+        }
+        
+        .status-loading {
+            background: #bee3f8;
+            color: #2c5282;
+        }
+        
+        .status-success {
+            background: #c6f6d5;
+            color: #22543d;
+        }
+        
+        .status-error {
+            background: #fed7d7;
+            color: #c53030;
+        }
+        
+        .info-box {
+            background: #fffaf0;
+            border: 2px solid #f6ad55;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            font-size: 13px;
+            color: #744210;
+        }
+        
+        .info-box strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .link:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 25px;
+            }
+            
+            h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>⚙️ Admin Panel</h1>
+        <p class="subtitle">Trigger scrapes and manage your price tracker</p>
+        
+        <div class="info-box">
+            <strong>📝 Setup Required:</strong>
+            To enable automated scraping, you need to:
+            <ol style="margin: 10px 0 0 20px; padding: 0;">
+                <li>Go to your GitHub repository settings</li>
+                <li>Navigate to: Settings → Actions → General</li>
+                <li>Under "Workflow permissions", select "Read and write permissions"</li>
+                <li>Click "Save"</li>
+            </ol>
+            Then you can trigger scrapes from the GitHub Actions tab.
+        </div>
+        
+        <div class="section">
+            <div class="section-title">
+                <span>🚀</span>
+                <span>Full Scrape</span>
+            </div>
+            <p style="color: #718096; font-size: 14px; margin-bottom: 15px;">
+                Scrape all categories and rebuild the website
+            </p>
+            <button class="btn btn-primary" onclick="triggerFullScrape()" id="fullScrapeBtn">
+                Run Full Scrape
+            </button>
+            <div class="status" id="fullScrapeStatus"></div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">
+                <span>🎯</span>
+                <span>Single Category Scrape</span>
+            </div>
+            <p style="color: #718096; font-size: 14px; margin-bottom: 15px;">
+                Scrape only one specific category
+            </p>
+            <div class="input-group">
+                <label for="categoryInput">Category Key (format: Store:CategoryName)</label>
+                <input 
+                    type="text" 
+                    id="categoryInput" 
+                    placeholder="e.g., Barbora:Beer"
+                />
+            </div>
+            <button class="btn btn-secondary" onclick="triggerSingleScrape()" id="singleScrapeBtn">
+                Scrape Category
+            </button>
+            <div class="status" id="singleScrapeStatus"></div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="index.html" class="link">← Back to Price Tracker</a>
+        </div>
+    </div>
+
+    <script>
+        // GitHub configuration - UPDATE THESE VALUES
+        const GITHUB_USERNAME = 'ant022';
+        const GITHUB_REPO = 'tracker';
+        const GITHUB_TOKEN = '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';
+        
+        function showStatus(elementId, type, message) {
+            const element = document.getElementById(elementId);
+            element.className = `status status-${type} show`;
+            element.textContent = message;
+        }
+        
+        function hideStatus(elementId) {
+            const element = document.getElementById(elementId);
+            element.classList.remove('show');
+        }
+        
+        async function triggerWorkflow(inputs = {}) {
+            const url = `https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPO}/actions/workflows/scrape-and-build.yml/dispatches`;
+            
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/vnd.github.v3+json',
+                    'Authorization': `token ${GITHUB_TOKEN}`,
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    ref: 'main',
+                    inputs: inputs
+                })
+            });
+            
+            return response;
+        }
+        
+        async function triggerFullScrape() {
+            const btn = document.getElementById('fullScrapeBtn');
+            const statusId = 'fullScrapeStatus';
+            
+            if (GITHUB_TOKEN === 'YOUR_GITHUB_PERSONAL_ACCESS_TOKEN') {
+                showStatus(statusId, 'error', '❌ Please configure your GitHub credentials in admin.html');
+                return;
+            }
+            
+            btn.disabled = true;
+            showStatus(statusId, 'loading', '⏳ Triggering full scrape...');
+            
+            try {
+                const response = await triggerWorkflow({});
+                
+                if (response.status === 204) {
+                    showStatus(statusId, 'success', '✅ Full scrape triggered! Check GitHub Actions tab for progress.');
+                    setTimeout(() => {
+                        window.open(`https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO}/actions`, '_blank');
+                    }, 2000);
+                } else {
+                    throw new Error(`GitHub API returned status ${response.status}`);
+                }
+            } catch (error) {
+                showStatus(statusId, 'error', `❌ Error: ${error.message}`);
+            } finally {
+                btn.disabled = false;
+            }
+        }
+        
+        async function triggerSingleScrape() {
+            const btn = document.getElementById('singleScrapeBtn');
+            const statusId = 'singleScrapeStatus';
+            const categoryInput = document.getElementById('categoryInput');
+            const category = categoryInput.value.trim();
+            
+            if (!category) {
+                showStatus(statusId, 'error', '❌ Please enter a category key');
+                return;
+            }
+            
+            if (GITHUB_TOKEN === 'YOUR_GITHUB_PERSONAL_ACCESS_TOKEN') {
+                showStatus(statusId, 'error', '❌ Please configure your GitHub credentials in admin.html');
+                return;
+            }
+            
+            btn.disabled = true;
+            showStatus(statusId, 'loading', `⏳ Scraping "${category}"...`);
+            
+            try {
+                const response = await triggerWorkflow({
+                    single_category: category
+                });
+                
+                if (response.status === 204) {
+                    showStatus(statusId, 'success', `✅ Scrape triggered for "${category}"! Check GitHub Actions.`);
+                    categoryInput.value = '';
+                    setTimeout(() => {
+                        window.open(`https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO}/actions`, '_blank');
+                    }, 2000);
+                } else {
+                    throw new Error(`GitHub API returned status ${response.status}`);
+                }
+            } catch (error) {
+                showStatus(statusId, 'error', `❌ Error: ${error.message}`);
+            } finally {
+                btn.disabled = false;
+            }
+        }
+    </script>
+</body>
+</html>
