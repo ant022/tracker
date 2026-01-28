@@ -180,7 +180,7 @@ def build():
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         * {{ box-sizing: border-box; }}
-        body {{ font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background:#f8f9fa; margin:0; display: flex; color: #1a1a1a; }}
+        body {{ font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background:#f8f9fa; margin:0; display: flex; color: #1a1a1a; min-height: 100vh; }}
         
         /* Hamburger Menu */
         .hamburger {{
@@ -334,7 +334,14 @@ def build():
         .store-label-Coop {{ background: #dbeafe; color: #1e40af; }}
         .store-label-Unknown {{ background: #f3f4f6; color: #6b7280; }}
         
-        .main {{ margin-left: 260px; flex: 1; padding: 0 40px 40px 40px; max-width: 1600px; margin-right: auto; }}
+        .main {{ 
+            margin-left: 260px; 
+            flex: 1; 
+            padding: 0 40px 40px 40px; 
+            max-width: 100%;
+            width: calc(100% - 260px);
+            overflow-x: hidden;
+        }}
 
         /* STICKY HEADER */
         .header {{ 
@@ -396,6 +403,33 @@ def build():
         .search-box:focus {{ 
             border-color: #10b981; 
             box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1); 
+        }}
+
+        /* Filter Indicator */
+        .filter-indicator {{
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin-top: 20px;
+            font-size: 13px;
+            color: #6b7280;
+            display: none;
+        }}
+        
+        .filter-indicator.show {{
+            display: block;
+        }}
+        
+        .filter-tag {{
+            display: inline-flex;
+            align-items: center;
+            background: #f3f4f6;
+            padding: 4px 10px;
+            border-radius: 6px;
+            margin: 0 6px;
+            font-weight: 600;
+            color: #374151;
         }}
 
         /* FAVORITES/SALES SECTIONS */
@@ -536,7 +570,7 @@ def build():
             font-size: 20px; 
             font-weight: 700; 
             color: #111827; 
-            margin-bottom: 15px; 
+            margin-bottom: 20px; 
             padding-left: 12px;
             border-left: 4px solid #10b981; 
             display: flex;
@@ -544,23 +578,11 @@ def build():
             gap: 10px;
         }}
         
-        .cat-section {{ 
-            margin-top: 20px; 
-        }}
-        
-        .cat-title {{ 
-            font-size: 16px; 
-            font-weight: 600; 
-            color: #374151; 
-            margin-bottom: 12px; 
-            padding-left: 10px;
-            border-left: 3px solid #e5e7eb; 
-        }}
-        
         .grid {{ 
-            display:grid; 
-            grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
             gap: 15px; 
+            width: 100%;
         }}
         
         .card {{ 
@@ -707,6 +729,7 @@ def build():
             .main {{
                 margin-left: 0;
                 padding: 80px 15px 40px 15px;
+                width: 100%;
             }}
             
             .header {{ padding: 15px 0; }}
@@ -774,6 +797,23 @@ def build():
             .carousel-btn-left {{ left: 0; }}
             .carousel-btn-right {{ right: 0; }}
         }}
+        
+        /* Desktop responsiveness fixes */
+        @media (min-width: 769px) and (max-width: 1400px) {{
+            .main {{
+                padding: 0 30px 40px 30px;
+            }}
+            
+            .grid {{
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            }}
+        }}
+        
+        @media (min-width: 1401px) {{
+            .main {{
+                padding: 0 50px 40px 50px;
+            }}
+        }}
     </style>
 </head>
 <body>
@@ -802,6 +842,8 @@ def build():
             </div>
         </div>
         
+        <div class="filter-indicator" id="filter-indicator"></div>
+        
         <div id="search-results-title">Search Results</div>
         <div id="search-grid" class="grid" style="margin-top: 20px;"></div>
 
@@ -822,7 +864,6 @@ let touchEndX = 0;
 let activeStores = new Set({json.dumps([source['store'] for source in sources])});
 let activeProductCategories = new Set(productCategories);
 
-// Toggle mobile menu
 function toggleMenu() {{
     const sidebar = document.getElementById('sidebar');
     const overlay = document.getElementById('sidebar-overlay');
@@ -833,7 +874,6 @@ function toggleMenu() {{
     hamburger.classList.toggle('active');
 }}
 
-// Toggle product categories dropdown
 function toggleCategories() {{
     const categoriesDiv = document.getElementById('product-categories');
     const arrow = document.getElementById('categories-arrow');
@@ -841,7 +881,6 @@ function toggleCategories() {{
     arrow.textContent = categoriesDiv.classList.contains('collapsed') ? '▶' : '▼';
 }}
 
-// Touch swipe handling
 function handleTouchStart(e) {{ touchStartX = e.touches[0].clientX; }}
 function handleTouchMove(e) {{ touchEndX = e.touches[0].clientX; }}
 function handleTouchEnd() {{
@@ -863,7 +902,6 @@ function initCarouselTouch() {{
     }}
 }}
 
-// Load favorites
 function loadFavorites() {{
     const stored = localStorage.getItem('priceTrackerFavorites');
     if (stored) {{
@@ -888,7 +926,6 @@ function toggleFavorite(productName, event) {{
     return false;
 }}
 
-// Carousel navigation
 function moveCarousel(direction) {{
     const track = document.querySelector('.carousel-track');
     const cards = document.querySelectorAll('.carousel-card');
@@ -911,7 +948,6 @@ function moveCarousel(direction) {{
     if (rightBtn) rightBtn.disabled = carouselPosition >= maxPosition;
 }}
 
-// Filters
 function filterByStore() {{
     const checkboxes = document.querySelectorAll('input[data-store]');
     activeStores.clear();
@@ -939,42 +975,116 @@ function setSort(key){{
     render();
 }}
 
+function getActiveFilters() {{
+    const filters = {{}};
+    
+    // Get active product categories
+    const allCatsSelected = activeProductCategories.size === productCategories.length;
+    if (!allCatsSelected && activeProductCategories.size > 0) {{
+        filters.categories = Array.from(activeProductCategories);
+    }}
+    
+    // Get active stores
+    const allStores = new Set(sources.map(s => s.store));
+    const allStoresSelected = activeStores.size === allStores.size;
+    if (!allStoresSelected && activeStores.size > 0) {{
+        filters.stores = Array.from(activeStores);
+    }}
+    
+    // Get quick filters
+    filters.favorites = document.getElementById('filter-favorites')?.checked || false;
+    filters.sales = document.getElementById('filter-sales')?.checked || false;
+    
+    return filters;
+}}
+
+function updateFilterIndicator(isSearchActive = false) {{
+    const indicator = document.getElementById('filter-indicator');
+    const filters = getActiveFilters();
+    
+    const hasFilters = filters.categories || filters.stores || filters.favorites || filters.sales;
+    
+    if (!hasFilters && !isSearchActive) {{
+        indicator.classList.remove('show');
+        return;
+    }}
+    
+    let html = isSearchActive ? '<strong>Searching in:</strong> ' : '<strong>Active filters:</strong> ';
+    const tags = [];
+    
+    if (filters.categories) {{
+        tags.push(...filters.categories.map(c => `<span class="filter-tag">🏷️ ${{c}}</span>`));
+    }}
+    
+    if (filters.stores) {{
+        tags.push(...filters.stores.map(s => `<span class="filter-tag">${{s}}</span>`));
+    }}
+    
+    if (filters.favorites) {{
+        tags.push('<span class="filter-tag">⭐ Favorites</span>');
+    }}
+    
+    if (filters.sales) {{
+        tags.push('<span class="filter-tag">🔥 On Sale</span>');
+    }}
+    
+    if (tags.length === 0 && isSearchActive) {{
+        html += '<span class="filter-tag">All products</span>';
+    }} else {{
+        html += tags.join(' ');
+    }}
+    
+    indicator.innerHTML = html;
+    indicator.classList.add('show');
+}}
+
 function handleSearch() {{
     const query = document.getElementById('search').value.toLowerCase();
     const searchGrid = document.getElementById('search-grid');
     const searchTitle = document.getElementById('search-results-title');
     const content = document.getElementById('content');
+    const indicator = document.getElementById('filter-indicator');
 
     if (query.length < 2) {{
         searchGrid.innerHTML = "";
         searchTitle.style.display = "none";
         content.style.display = "block";
+        updateFilterIndicator(false);
         return;
     }}
 
-    const filtered = products.filter(p => p.name.toLowerCase().includes(query))
-                             .sort((a,b) => (a[currentSort] || 999) - (b[currentSort] || 999));
+    // Apply filters to search
+    let searchResults = products.filter(p => {{
+        // Text search
+        if (!p.name.toLowerCase().includes(query)) return false;
+        
+        // Filter by store
+        if (!activeStores.has(p.store)) return false;
+        
+        // Filter by product category
+        const source = sources.find(s => s.key === p.category);
+        if (source && source.productCategory) {{
+            if (!activeProductCategories.has(source.productCategory)) return false;
+        }}
+        
+        // Filter by favorites
+        const showFavoritesOnly = document.getElementById('filter-favorites')?.checked || false;
+        if (showFavoritesOnly && !favorites.includes(p.name)) return false;
+        
+        // Filter by sales
+        const showSalesOnly = document.getElementById('filter-sales')?.checked || false;
+        if (showSalesOnly) {{
+            const isOnSale = saleProducts.some(sp => sp.name === p.name);
+            if (!isOnSale) return false;
+        }}
+        
+        return true;
+    }}).sort((a,b) => (a[currentSort] || 999) - (b[currentSort] || 999));
 
     content.style.display = "none";
     searchTitle.style.display = "block";
-    searchGrid.innerHTML = filtered.map(p => card(p)).join('');
-}}
-
-function getPriceTrend(p) {{
-    const entries = p.entries || [];
-    if (entries.length < 2) return {{ trend: 'stable', symbol: '➡️', class: 'price-trend-stable' }};
-    
-    const current = p.latest_price;
-    const previous = entries[entries.length - 2].p;
-    
-    if (current < previous) {{
-        const pct = (((previous - current) / previous) * 100).toFixed(0);
-        return {{ trend: 'down', symbol: `🔻 -${{pct}}%`, class: 'price-trend-down' }};
-    }} else if (current > previous) {{
-        const pct = (((current - previous) / previous) * 100).toFixed(0);
-        return {{ trend: 'up', symbol: `🔺 +${{pct}}%`, class: 'price-trend-up' }};
-    }}
-    return {{ trend: 'stable', symbol: '➡️', class: 'price-trend-stable' }};
+    updateFilterIndicator(true);
+    searchGrid.innerHTML = searchResults.map(p => card(p)).join('');
 }}
 
 function render() {{
@@ -982,15 +1092,18 @@ function render() {{
     container.innerHTML = "";
     carouselPosition = 0;
     
-    // Apply filters
+    updateFilterIndicator(false);
+    
     const showFavoritesOnly = document.getElementById('filter-favorites')?.checked || false;
     const showSalesOnly = document.getElementById('filter-sales')?.checked || false;
     
+    // Check if any specific category is selected (not all)
+    const allCategoriesSelected = activeProductCategories.size === productCategories.length;
+    const hasCategoryFilter = !allCategoriesSelected && activeProductCategories.size > 0;
+    
     let filteredProducts = products.filter(p => {{
-        // Filter by store
         if (!activeStores.has(p.store)) return false;
         
-        // Filter by product category
         const source = sources.find(s => s.key === p.category);
         if (source && source.productCategory) {{
             if (!activeProductCategories.has(source.productCategory)) return false;
@@ -1011,9 +1124,9 @@ function render() {{
     // RENDER FAVORITES
     renderFavorites(container, filteredProducts);
     
-    // RENDER SALES
-    if (saleProducts.length > 0 && !showFavoritesOnly) {{
-        renderSales(container);
+    // RENDER SALES - Only show if no specific category filter is active
+    if (saleProducts.length > 0 && !showFavoritesOnly && !hasCategoryFilter && !showSalesOnly) {{
+        renderSales(container, filteredProducts);
     }}
     
     // RENDER BY PRODUCT CATEGORY
@@ -1021,7 +1134,6 @@ function render() {{
         productCategories.forEach(prodCat => {{
             if (!activeProductCategories.has(prodCat)) return;
             
-            // Get all products in this category
             const catProducts = filteredProducts.filter(p => {{
                 const source = sources.find(s => s.key === p.category);
                 return source && source.productCategory === prodCat;
@@ -1029,51 +1141,31 @@ function render() {{
             
             if (catProducts.length === 0) return;
             
-            // Group by source within category
-            const bySource = {{}};
-            catProducts.forEach(p => {{
-                if (!bySource[p.category]) bySource[p.category] = [];
-                bySource[p.category].push(p);
-            }});
+            // Sort all products together (no separation by store)
+            const sorted = catProducts.sort((a,b)=> (a[currentSort] || 999) - (b[currentSort] || 999));
+            const top10 = sorted.slice(0, 10);
+            const rest = sorted.slice(10);
+            const hiddenId = `hidden_${{prodCat}}`;
             
             let html = `<div class="product-cat-section">
                 <div class="product-cat-title">
                     <span>${{prodCat}}</span>
                     <span style="font-size:14px; font-weight:normal; color:#9ca3af">(${{catProducts.length}} products)</span>
-                </div>`;
+                </div>
+                <div class="grid">${{top10.map(p=>card(p)).join('')}}</div>`;
             
-            sources.forEach((source, idx) => {{
-                if (source.productCategory !== prodCat) return;
-                if (!bySource[source.key]) return;
-                if (!activeStores.has(source.store)) return;
-                
-                const sorted = bySource[source.key].sort((a,b)=> (a[currentSort] || 999) - (b[currentSort] || 999));
-                const top5 = sorted.slice(0, 5);
-                const rest = sorted.slice(5);
-                const hiddenId = `hidden_${{prodCat}}_${{idx}}`;
-                
-                html += `
-                    <div class="cat-section">
-                        <div class="cat-title">${{source.name}} <span style="font-size:12px; font-weight:normal; color:#9ca3af">(${{sorted.length}})</span></div>
-                        <div class="grid">${{top5.map(p=>card(p)).join('')}}</div>`;
-                
-                if (rest.length > 0) {{
-                    html += `<div id="${{hiddenId}}" class="grid hidden" style="margin-top:15px">${{rest.map(p=>card(p)).join('')}}</div>
-                             <div class="expand-bar" onclick="toggle('${{hiddenId}}', this)">Show ${{rest.length}} more ▾</div>`;
-                }}
-                
-                html += `</div>`;
-            }});
+            if (rest.length > 0) {{
+                html += `<div id="${{hiddenId}}" class="grid hidden" style="margin-top:15px">${{rest.map(p=>card(p)).join('')}}</div>
+                         <div class="expand-bar" onclick="toggle('${{hiddenId}}', this)">Show ${{rest.length}} more ▾</div>`;
+            }}
             
             html += `</div>`;
             container.innerHTML += html;
         }});
     }} else {{
-        // No product categories - render by source
         renderBySources(container, filteredProducts);
     }}
     
-    // Show empty state if no products
     if (filteredProducts.length === 0) {{
         container.innerHTML += `
             <div class="empty-state">
@@ -1096,10 +1188,7 @@ function renderFavorites(container, filteredProducts) {{
             .sort((a, b) => (a.latest_price || 999) - (b.latest_price || 999));
         
         if (favoriteProducts.length > 0) {{
-            const favCardsHtml = favoriteProducts.map(p => {{
-                const trend = getPriceTrend(p);
-                return `<div class="carousel-card">${{cardWithTrend(p, trend)}}</div>`;
-            }}).join('');
+            const favCardsHtml = favoriteProducts.map(p => `<div class="carousel-card">${{card(p)}}</div>`).join('');
             
             const isMobile = window.innerWidth <= 768;
             const cardsVisible = isMobile ? 1 : 3;
@@ -1137,8 +1226,10 @@ function renderFavorites(container, filteredProducts) {{
     container.appendChild(favSection);
 }}
 
-function renderSales(container) {{
-    const filteredSales = saleProducts.filter(p => activeStores.has(p.store));
+function renderSales(container, filteredProducts) {{
+    const filteredSaleNames = new Set(filteredProducts.map(p => p.name));
+    const filteredSales = saleProducts.filter(p => filteredSaleNames.has(p.name) && activeStores.has(p.store));
+    
     if (filteredSales.length === 0) return;
     
     const top3Sales = filteredSales.slice(0, 3);
@@ -1174,14 +1265,14 @@ function renderBySources(container, filteredProducts) {{
         if (!byCat[source.key] || !activeStores.has(source.store)) return;
         
         const sorted = byCat[source.key].sort((a,b)=> (a[currentSort] || 999) - (b[currentSort] || 999));
-        const top5 = sorted.slice(0, 5);
-        const rest = sorted.slice(5);
+        const top10 = sorted.slice(0, 10);
+        const rest = sorted.slice(10);
         const hiddenId = `hidden_source_${{index}}`;
 
         let html = `
-            <div class="cat-section">
-                <div class="cat-title">${{source.name}} <span style="font-size:13px; font-weight:normal; color:#9ca3af">(${{sorted.length}})</span></div>
-                <div class="grid">${{top5.map(p=>card(p)).join('')}}</div>
+            <div class="product-cat-section">
+                <div class="product-cat-title">${{source.name}} <span style="font-size:14px; font-weight:normal; color:#9ca3af">(${{sorted.length}})</span></div>
+                <div class="grid">${{top10.map(p=>card(p)).join('')}}</div>
         `;
         if (rest.length > 0) {{
             html += `<div id="${{hiddenId}}" class="grid hidden" style="margin-top:15px">${{rest.map(p=>card(p)).join('')}}</div>
@@ -1203,29 +1294,6 @@ function toggle(id, btn) {{
     const el = document.getElementById(id);
     const isHidden = el.classList.toggle('hidden');
     btn.innerHTML = isHidden ? `Show more ▾` : "Collapse ▴";
-}}
-
-function cardWithTrend(p, trend) {{
-    const unitLabel = p.unit_label || 'L';
-    const unitPrice = p.price_per_unit || p.price_per_litre || 0;
-    const isFav = favorites.includes(p.name);
-    const safeName = p.name.replace(/'/g, "\\\\'").replace(/"/g, '&quot;');
-    
-    return `<a href="${{p.url}}" target="_blank" class="card">
-        <span class="store-badge store-${{p.store}}">${{p.store}}</span>
-        <button class="fav-btn ${{isFav ? 'active' : ''}}" onclick="toggleFavorite('${{safeName}}', event); return false;">
-            ${{isFav ? '⭐' : '☆'}}
-        </button>
-        <img src="${{p.img}}" onerror="this.src='https://via.placeholder.com/60x90?text=No+Img'">
-        <div class="info">
-            <div class="name">${{p.name}}</div>
-            <div class="price-container">
-                <span class="price">€${{p.latest_price.toFixed(2)}}</span>
-                <span style="font-size: 11px; color: #9ca3af;">${{trend.symbol}}</span>
-            </div>
-            <div class="per-l">€${{unitPrice.toFixed(2)}} / ${{unitLabel}}</div>
-        </div>
-    </a>`;
 }}
 
 function cardWithDiscount(p) {{
