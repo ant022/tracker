@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-01-27T22:02:32.294961"
+    "generated_at": "2026-01-28T06:18:41.700242"
   },
   "products": {
     "Hele õlu HEINEKEN 5% 0,568L prk": {
@@ -498,6 +498,14 @@
         },
         {
           "t": "2026-01-27T21:37:05.317891",
+          "p": 1.79
+        },
+        {
+          "t": "2026-01-28T06:18:41.700242",
+          "p": 2.09
+        },
+        {
+          "t": "2026-01-28T06:18:41.700242",
           "p": 1.79
         }
       ],
@@ -2164,7 +2172,8 @@
       "img": "https://cdn.barbora.ee/products/162a9649-3da6-4877-9265-3b5702164e32_m.png",
       "store": "Barbora",
       "price_per_litre": null,
-      "price_per_kg": 4.58
+      "price_per_kg": 4.58,
+      "is_sale": false
     },
     "Lasanjeplaadid BARILLA 500g": {
       "category": "Barbora:Pasta",
@@ -11934,7 +11943,7 @@
       "price_per_unit": 3.86,
       "unit_label": "L",
       "url": "https://www.selver.ee/siider-sweet-pear-fizz-500-ml-purk",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/4/7/4740098079125.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -11950,7 +11959,7 @@
       "price_per_unit": 10.73,
       "unit_label": "L",
       "url": "https://www.selver.ee/kokteilijook-jack-daniels-coca-cola-jack-daniel-s-330-ml",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/5/4/5449000168481.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -11970,7 +11979,7 @@
       "price_per_unit": 4.5,
       "unit_label": "L",
       "url": "https://www.selver.ee/kirsiolu-karksi-500-ml-pudel",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/4/7/4740098094562.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -11986,7 +11995,7 @@
       "price_per_unit": 4.94,
       "unit_label": "L",
       "url": "https://www.selver.ee/long-drink-grapefruit-koff-330-ml",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/4/7/4740019003871.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -12017,7 +12026,7 @@
       "price_per_unit": 4.42,
       "unit_label": "L",
       "url": "https://www.selver.ee/siider-rhubarb-hoggy-s-355-ml",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/4/7/4740098094869.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -12037,7 +12046,7 @@
       "price_per_unit": 4.5,
       "unit_label": "L",
       "url": "https://www.selver.ee/tume-olu-must-nunn-karksi-500-ml-pudel",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/4/7/4740098090687.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -12053,7 +12062,7 @@
       "price_per_unit": 4.08,
       "unit_label": "L",
       "url": "https://www.selver.ee/tume-olu-a-le-coq-porter-500-ml-pudel",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/4/7/4740098076513.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -12088,7 +12097,7 @@
       "price_per_unit": 6.29,
       "unit_label": "L",
       "url": "https://www.selver.ee/long-drink-dark-cherry-cooler-275-ml",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/4/7/4740050004448.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -12268,7 +12277,7 @@
       "price_per_unit": 3.47,
       "unit_label": "L",
       "url": "https://www.selver.ee/siider-pear-somersby-1-l",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/4/7/4740019769623.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -13957,6 +13966,14 @@
         },
         {
           "t": "2026-01-27T21:37:05.317891",
+          "p": 8.99
+        },
+        {
+          "t": "2026-01-28T06:18:41.700242",
+          "p": 10.99
+        },
+        {
+          "t": "2026-01-28T06:18:41.700242",
           "p": 8.99
         }
       ],
@@ -16574,14 +16591,19 @@
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 19.99
+        },
+        {
+          "t": "2026-01-28T06:18:41.700242",
+          "p": 30.99
         }
       ],
-      "latest_price": 19.99,
-      "price_per_unit": 28.56,
+      "latest_price": 30.99,
+      "price_per_unit": 44.27,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/gin-bombay-sapphire-40-proc-0-7-l",
       "img": "https://cdn.barbora.ee/products/c7528250-27cf-495e-91d2-17a6cef4ba7f_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Gin PABLO 40% 700ml": {
       "category": "Barbora:Ginid",
@@ -16657,14 +16679,19 @@
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 13.99
+        },
+        {
+          "t": "2026-01-28T06:18:41.700242",
+          "p": 14.99
         }
       ],
-      "latest_price": 13.99,
-      "price_per_unit": 19.99,
+      "latest_price": 14.99,
+      "price_per_unit": 21.41,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/gin-beefeater-40-proc-700-ml",
       "img": "https://cdn.barbora.ee/products/1147d05a-4e20-4aa0-9103-9fafbda97af8_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Gin ARLINGTON 37.5% 700 ml": {
       "category": "Barbora:Ginid",
@@ -16704,14 +16731,19 @@
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 43.69
+        },
+        {
+          "t": "2026-01-28T06:18:41.700242",
+          "p": 44.99
         }
       ],
-      "latest_price": 43.69,
-      "price_per_unit": 62.41,
+      "latest_price": 44.99,
+      "price_per_unit": 64.27,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/gin-hendrick-s-gin-41-4-proc-700-ml",
       "img": "https://cdn.barbora.ee/products/5fa6eab8-dbb0-47da-8a4e-c8ebb5046fa5_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Gin SAARE 37.5% 0.5L": {
       "category": "Barbora:Ginid",
@@ -16719,14 +16751,19 @@
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 10.99
+        },
+        {
+          "t": "2026-01-28T06:18:41.700242",
+          "p": 11.99
         }
       ],
-      "latest_price": 10.99,
-      "price_per_unit": 21.98,
+      "latest_price": 11.99,
+      "price_per_unit": 23.98,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/gin-saare-37-5-proc-0-5-l",
       "img": "https://cdn.barbora.ee/products/e8afe5d9-cdfc-4e57-b2aa-583ba42bfe7a_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Gin HOGARTH Dry Gin37.5% 700ml": {
       "category": "Barbora:Ginid",
@@ -16742,14 +16779,19 @@
         {
           "t": "2026-01-26T23:38:52.095158",
           "p": 17.99
+        },
+        {
+          "t": "2026-01-28T06:18:41.700242",
+          "p": 19.45
         }
       ],
-      "latest_price": 17.99,
-      "price_per_unit": 25.7,
+      "latest_price": 19.45,
+      "price_per_unit": 27.79,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/gin-hogarth-dry-gin-37-5-proc-700-ml",
       "img": "https://cdn.barbora.ee/products/2da09fcb-59c8-4c1d-83c1-0929924ad180_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Gin TANQUERAY 43,1% 700ml": {
       "category": "Barbora:Ginid",
@@ -16773,14 +16815,19 @@
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 30.85
+        },
+        {
+          "t": "2026-01-28T06:18:41.700242",
+          "p": 31.99
         }
       ],
-      "latest_price": 30.85,
-      "price_per_unit": 44.07,
+      "latest_price": 31.99,
+      "price_per_unit": 45.7,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/gin-crafters-london-dry-43-proc-0-7-l",
       "img": "https://cdn.barbora.ee/products/9926fd6d-067f-4812-89b8-e422e18487f9_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Gin TANQUERAY Ten 47.3% 700ml": {
       "category": "Barbora:Ginid",
@@ -16788,14 +16835,19 @@
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 34.99
+        },
+        {
+          "t": "2026-01-28T06:18:41.700242",
+          "p": 36.49
         }
       ],
-      "latest_price": 34.99,
-      "price_per_unit": 49.99,
+      "latest_price": 36.49,
+      "price_per_unit": 52.13,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/gin-tanqueray-ten-47-3-proc-700-ml",
       "img": "https://cdn.barbora.ee/products/43a962b3-9e3b-4cba-a07f-29e589a8551c_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Gin LANGLEY London Gin 37.5% 700ml": {
       "category": "Barbora:Ginid",
@@ -16823,14 +16875,19 @@
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 31.59
+        },
+        {
+          "t": "2026-01-28T06:18:41.700242",
+          "p": 32.99
         }
       ],
-      "latest_price": 31.59,
-      "price_per_unit": 45.13,
+      "latest_price": 32.99,
+      "price_per_unit": 47.13,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/gin-crafters-aromatic-flower-44-3-proc-700-ml",
       "img": "https://cdn.barbora.ee/products/4569bb5d-7e5b-44b0-85af-77f8adfd4676_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Gin SAAREMAA 37,5% 500ml": {
       "category": "Barbora:Ginid",
@@ -16886,14 +16943,19 @@
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 26.99
+        },
+        {
+          "t": "2026-01-28T06:18:41.700242",
+          "p": 28.29
         }
       ],
-      "latest_price": 26.99,
-      "price_per_unit": 38.56,
+      "latest_price": 28.29,
+      "price_per_unit": 40.41,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/gin-cross-keys-41-proc-700-ml",
       "img": "https://cdn.barbora.ee/products/b464e652-0650-46d2-aeee-764e6bdd8c82_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Gin FREITAG 38% 500ml": {
       "category": "Barbora:Ginid",
@@ -16925,14 +16987,19 @@
         {
           "t": "2026-01-26T23:38:52.095158",
           "p": 42.99
+        },
+        {
+          "t": "2026-01-28T06:18:41.700242",
+          "p": 44.49
         }
       ],
-      "latest_price": 42.99,
-      "price_per_unit": 61.41,
+      "latest_price": 44.49,
+      "price_per_unit": 63.56,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/gin-portobello-road-42-proc-700-ml",
       "img": "https://cdn.barbora.ee/products/3573bb90-8ca7-41a4-a1a2-5ac431a4137d_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Gin Nordic Spirits Lab 41% 500ml": {
       "category": "Barbora:Ginid",
@@ -16940,14 +17007,19 @@
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 22.99
+        },
+        {
+          "t": "2026-01-28T06:18:41.700242",
+          "p": 23.99
         }
       ],
-      "latest_price": 22.99,
-      "price_per_unit": 45.98,
+      "latest_price": 23.99,
+      "price_per_unit": 47.98,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/gin-nordic-spirits-lab-41-proc-500-ml",
       "img": "https://cdn.barbora.ee/products/663fb5da-63a7-41f7-aa31-fcf7c8f3aacc_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Gin KINGSMILL 38% 500ml": {
       "category": "Barbora:Ginid",
@@ -16971,14 +17043,19 @@
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 4.45
+        },
+        {
+          "t": "2026-01-28T06:18:41.700242",
+          "p": 4.99
         }
       ],
-      "latest_price": 4.45,
-      "price_per_unit": 22.25,
+      "latest_price": 4.99,
+      "price_per_unit": 24.95,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/gin-kingsmill-38-proc-200-ml-pet",
       "img": "https://cdn.barbora.ee/products/53547922-17c5-4e54-9e85-49a277d462d7_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Gin KINGSMILL 38% 1L": {
       "category": "Barbora:Ginid",
@@ -17006,14 +17083,19 @@
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 11.99
+        },
+        {
+          "t": "2026-01-28T06:18:41.700242",
+          "p": 14.79
         }
       ],
-      "latest_price": 11.99,
-      "price_per_unit": 23.98,
+      "latest_price": 14.79,
+      "price_per_unit": 29.58,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/gin-kingsmill-pink-raspberry-38-proc-0-5-ml",
       "img": "https://cdn.barbora.ee/products/424c29da-319c-4191-bdc4-ded70338a46e_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Gin TANQUERAY Sevilla 41.3% 700ml": {
       "category": "Barbora:Ginid",
@@ -17037,14 +17119,19 @@
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 24.99
+        },
+        {
+          "t": "2026-01-28T06:18:41.700242",
+          "p": 26.99
         }
       ],
-      "latest_price": 24.99,
-      "price_per_unit": 35.7,
+      "latest_price": 26.99,
+      "price_per_unit": 38.56,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/gin-malfy-rosa-41-proc-700-ml",
       "img": "https://cdn.barbora.ee/products/8a8177d3-10eb-4d02-9fcd-ece755fd4d8b_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Gin BEEFEATER Blood Orange 37.5% 700ml": {
       "category": "Barbora:Ginid",
@@ -17100,14 +17187,19 @@
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 47.99
+        },
+        {
+          "t": "2026-01-28T06:18:41.700242",
+          "p": 49.99
         }
       ],
-      "latest_price": 47.99,
-      "price_per_unit": 68.56,
+      "latest_price": 49.99,
+      "price_per_unit": 71.41,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/gin-roku-gin-43-proc-700-ml",
       "img": "https://cdn.barbora.ee/products/bc831268-8320-463d-91b6-3983cd24d99f_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Gin CROSS KEYS Black Currant 38% 700ml": {
       "category": "Barbora:Ginid",
@@ -17115,14 +17207,19 @@
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 26.99
+        },
+        {
+          "t": "2026-01-28T06:18:41.700242",
+          "p": 28.29
         }
       ],
-      "latest_price": 26.99,
-      "price_per_unit": 38.56,
+      "latest_price": 28.29,
+      "price_per_unit": 40.41,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/gin-cross-keys-black-currant-38-proc-700-ml-63461",
       "img": "https://cdn.barbora.ee/products/4bfe54f4-f6b0-4a2a-9190-1494e26772f9_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Gin KINGSMILL 38% 700ml": {
       "category": "Barbora:Ginid",
@@ -17150,14 +17247,19 @@
         {
           "t": "2026-01-26T23:38:52.095158",
           "p": 20.99
+        },
+        {
+          "t": "2026-01-28T06:18:41.700242",
+          "p": 21.99
         }
       ],
-      "latest_price": 20.99,
-      "price_per_unit": 29.99,
+      "latest_price": 21.99,
+      "price_per_unit": 31.41,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/gin-finsbury-london-dry-37-5-proc-700-ml-63682",
       "img": "https://cdn.barbora.ee/products/04865827-83e3-4e5d-bf71-b000cb779346_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Gin FINSBURY Wild Strawberry 37.5% 700ml": {
       "category": "Barbora:Ginid",
@@ -17169,14 +17271,19 @@
         {
           "t": "2026-01-26T23:38:52.095158",
           "p": 20.99
+        },
+        {
+          "t": "2026-01-28T06:18:41.700242",
+          "p": 21.99
         }
       ],
-      "latest_price": 20.99,
-      "price_per_unit": 29.99,
+      "latest_price": 21.99,
+      "price_per_unit": 31.41,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/gin-finsbury-wild-strawberry-37-5-proc-700-ml",
       "img": "https://cdn.barbora.ee/products/d890960b-5d14-4ced-bbbb-c2c1c3b1feb8_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Gin SAARE Roosa 37.5% 500ml": {
       "category": "Barbora:Ginid",
@@ -17184,14 +17291,19 @@
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 11.69
+        },
+        {
+          "t": "2026-01-28T06:18:41.700242",
+          "p": 12.49
         }
       ],
-      "latest_price": 11.69,
-      "price_per_unit": 23.38,
+      "latest_price": 12.49,
+      "price_per_unit": 24.98,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/gin-saare-roosa-37-5-proc-500-ml-73505",
       "img": "https://cdn.barbora.ee/products/168fc416-7d1d-46e8-b3cf-7e4c602edd2b_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Gin MALFY Originale 41% 700ml": {
       "category": "Barbora:Ginid",
@@ -17199,14 +17311,19 @@
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 24.99
+        },
+        {
+          "t": "2026-01-28T06:18:41.700242",
+          "p": 26.99
         }
       ],
-      "latest_price": 24.99,
-      "price_per_unit": 35.7,
+      "latest_price": 26.99,
+      "price_per_unit": 38.56,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/gin-malfy-originale-41-proc-700-ml",
       "img": "https://cdn.barbora.ee/products/2284c392-0d3d-42a2-b9b4-df30feba92c2_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Gin SAAREMAA Ras 37.5% 500ml": {
       "category": "Barbora:Ginid",
@@ -17234,14 +17351,19 @@
         {
           "t": "2026-01-26T23:38:52.095158",
           "p": 32.55
+        },
+        {
+          "t": "2026-01-28T06:18:41.700242",
+          "p": 34.19
         }
       ],
-      "latest_price": 32.55,
-      "price_per_unit": 46.5,
+      "latest_price": 34.19,
+      "price_per_unit": 48.84,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/gin-bombay-sapphire-sunset-43-proc-700-ml",
       "img": "https://cdn.barbora.ee/products/cb4498a2-bb22-41a0-b0d1-d6cb5de23103_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Gin TANQUERAY Blackc. Royale 41.3% 700ml": {
       "category": "Barbora:Ginid",
@@ -17265,14 +17387,19 @@
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 11.19
+        },
+        {
+          "t": "2026-01-28T06:18:41.700242",
+          "p": 11.99
         }
       ],
-      "latest_price": 11.19,
-      "price_per_unit": 22.38,
+      "latest_price": 11.99,
+      "price_per_unit": 23.98,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/gin-midsomer-dry-gin-38-proc-0-5-l-pet",
       "img": "https://cdn.barbora.ee/products/73d4c1f2-09a8-4765-b714-cbfce2b10562_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Gin UKIYO Japanese Blossom 40% 700ml": {
       "category": "Barbora:Ginid",
@@ -17320,14 +17447,19 @@
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 12.69
+        },
+        {
+          "t": "2026-01-28T06:18:41.700242",
+          "p": 14.79
         }
       ],
-      "latest_price": 12.69,
-      "price_per_unit": 25.38,
+      "latest_price": 14.79,
+      "price_per_unit": 29.58,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/gin-kingsmill-rabarber-38-proc-0-5-l",
       "img": "https://cdn.barbora.ee/products/07206f61-7f8a-4b73-b4b5-513b92f540a4_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Gin HENDRICK'S Flora Adora 43.4% 700ml": {
       "category": "Barbora:Ginid",
@@ -17335,14 +17467,19 @@
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 52.99
+        },
+        {
+          "t": "2026-01-28T06:18:41.700242",
+          "p": 54.99
         }
       ],
-      "latest_price": 52.99,
-      "price_per_unit": 75.7,
+      "latest_price": 54.99,
+      "price_per_unit": 78.56,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/gin-hendrick-s-flora-adora-43-4-proc-700-ml",
       "img": "https://cdn.barbora.ee/products/4a71c62f-d5a3-42be-bc7d-b45ab47049e0_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Gin STRANGE LUVE Ebaküd. 40% 700ml": {
       "category": "Barbora:Ginid",
@@ -17390,14 +17527,19 @@
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 11.99
+        },
+        {
+          "t": "2026-01-28T06:18:41.700242",
+          "p": 12.59
         }
       ],
-      "latest_price": 11.99,
-      "price_per_unit": 23.98,
+      "latest_price": 12.59,
+      "price_per_unit": 25.18,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/gin-kada-kadaka-37-5-proc-500-ml",
       "img": "https://cdn.barbora.ee/products/809fb0bb-59e6-45a3-9d99-307137d6cd8e_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Gin JUNIMPERIUM Blended DryGin 45% 700ml": {
       "category": "Barbora:Ginid",
@@ -20187,14 +20329,19 @@
         {
           "t": "2026-01-27T10:38:06.647216",
           "p": 11.99
+        },
+        {
+          "t": "2026-01-28T06:18:41.700242",
+          "p": 12.59
         }
       ],
-      "latest_price": 11.99,
-      "price_per_unit": 23.98,
+      "latest_price": 12.59,
+      "price_per_unit": 25.18,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/gin-kada-rabarber-37-5-proc-500-ml",
       "img": "https://cdn.barbora.ee/products/5eafe462-49bb-446d-b980-68be924335c1_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Gin CRAFTERS Wild Forest 47% 700ml": {
       "category": "Barbora:Ginid",
@@ -20202,14 +20349,19 @@
         {
           "t": "2026-01-27T10:38:06.647216",
           "p": 41.99
+        },
+        {
+          "t": "2026-01-28T06:18:41.700242",
+          "p": 43.69
         }
       ],
-      "latest_price": 41.99,
-      "price_per_unit": 59.99,
+      "latest_price": 43.69,
+      "price_per_unit": 62.41,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/gin-crafters-wild-forest-47-proc-700-ml",
       "img": "https://cdn.barbora.ee/products/48d534c2-2f8b-4969-9607-47b747f27cda_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Gin JUNIPERIUM Rabarber 40% 700ml": {
       "category": "Barbora:Ginid",
@@ -20233,14 +20385,19 @@
         {
           "t": "2026-01-27T10:38:06.647216",
           "p": 26.99
+        },
+        {
+          "t": "2026-01-28T06:18:41.700242",
+          "p": 27.99
         }
       ],
-      "latest_price": 26.99,
-      "price_per_unit": 53.98,
+      "latest_price": 27.99,
+      "price_per_unit": 55.98,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/gin-bombay-sapphire-dry-gin-40-proc-500-ml",
       "img": "https://cdn.barbora.ee/products/608e1632-52e7-40b8-9f02-25c5a310afcc_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Gin SAARE Sõstar 37.5% 500ml": {
       "category": "Barbora:Ginid",
@@ -20248,14 +20405,19 @@
         {
           "t": "2026-01-27T10:38:06.647216",
           "p": 11.69
+        },
+        {
+          "t": "2026-01-28T06:18:41.700242",
+          "p": 12.49
         }
       ],
-      "latest_price": 11.69,
-      "price_per_unit": 23.38,
+      "latest_price": 12.49,
+      "price_per_unit": 24.98,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/gin-saare-sostar-37-5-proc-500-ml",
       "img": "https://cdn.barbora.ee/products/8d1a9a83-10bf-4db8-9aa8-197df5136ee7_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Gin TILLSTON Dry gin 37.5% 700ml": {
       "category": "Barbora:Ginid",
@@ -20295,14 +20457,19 @@
         {
           "t": "2026-01-27T10:38:06.647216",
           "p": 21.49
+        },
+        {
+          "t": "2026-01-28T06:18:41.700242",
+          "p": 22.99
         }
       ],
-      "latest_price": 21.49,
-      "price_per_unit": 30.7,
+      "latest_price": 22.99,
+      "price_per_unit": 32.84,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/gin-greenalls-original-40-proc-700-ml",
       "img": "https://cdn.barbora.ee/products/276e90e3-ed3a-4df8-8a6f-1e34514fee5b_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Gin MIDSOMER Cloudberry 38% 500ml": {
       "category": "Barbora:Ginid",
@@ -20310,14 +20477,19 @@
         {
           "t": "2026-01-27T10:38:06.647216",
           "p": 10.99
+        },
+        {
+          "t": "2026-01-28T06:18:41.700242",
+          "p": 11.79
         }
       ],
-      "latest_price": 10.99,
-      "price_per_unit": 21.98,
+      "latest_price": 11.79,
+      "price_per_unit": 23.58,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/gin-midsomer-cloudberry-38-proc-500-ml",
       "img": "https://cdn.barbora.ee/products/bd25cb98-d2c8-4259-97bb-716a7662698f_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Gin MIDSOMER Gooseberry 38% 500ml": {
       "category": "Barbora:Ginid",
@@ -20325,14 +20497,19 @@
         {
           "t": "2026-01-27T10:38:06.647216",
           "p": 10.99
+        },
+        {
+          "t": "2026-01-28T06:18:41.700242",
+          "p": 11.99
         }
       ],
-      "latest_price": 10.99,
-      "price_per_unit": 21.98,
+      "latest_price": 11.99,
+      "price_per_unit": 23.98,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/gin-midsomer-gooseberry-38-proc-500-ml",
       "img": "https://cdn.barbora.ee/products/919df0a2-b29c-4f36-8d26-6d7c081b5fdb_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Gin TILLSTON Pink 37.5% 700ml": {
       "category": "Barbora:Ginid",
@@ -20356,14 +20533,19 @@
         {
           "t": "2026-01-27T10:38:06.647216",
           "p": 29.99
+        },
+        {
+          "t": "2026-01-28T06:18:41.700242",
+          "p": 31.49
         }
       ],
-      "latest_price": 29.99,
-      "price_per_unit": 42.84,
+      "latest_price": 31.49,
+      "price_per_unit": 44.99,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/gin-24-herbs-gin-40-proc-700-ml",
       "img": "https://cdn.barbora.ee/products/54bc45b2-3b52-47cc-8a9a-cebfd24a1267_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Gin 24 HERBS GIN Cucumber&Mint 40% 700ml": {
       "category": "Barbora:Ginid",
@@ -20371,14 +20553,19 @@
         {
           "t": "2026-01-27T10:38:06.647216",
           "p": 29.99
+        },
+        {
+          "t": "2026-01-28T06:18:41.700242",
+          "p": 31.49
         }
       ],
-      "latest_price": 29.99,
-      "price_per_unit": 42.84,
+      "latest_price": 31.49,
+      "price_per_unit": 44.99,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/gin-24-herbs-gin-cucumber-mint-40-proc-700-ml",
       "img": "https://cdn.barbora.ee/products/f24ef226-232c-411c-ab5b-a60addfc620e_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Gin JUNIPER ISLAND London Dry 40% 700ml": {
       "category": "Barbora:Ginid",
