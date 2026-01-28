@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-01-28T06:18:41.700242"
+    "generated_at": "2026-01-28T19:51:24.600140"
   },
   "products": {
     "Hele õlu HEINEKEN 5% 0,568L prk": {
@@ -506,6 +506,14 @@
         },
         {
           "t": "2026-01-28T06:18:41.700242",
+          "p": 1.79
+        },
+        {
+          "t": "2026-01-28T19:51:24.600140",
+          "p": 2.09
+        },
+        {
+          "t": "2026-01-28T19:51:24.600140",
           "p": 1.79
         }
       ],
@@ -7607,7 +7615,7 @@
       "is_sale": false
     },
     "Viin DANZKA 40% 500ml": {
-      "category": "Maxima Viinad",
+      "category": "Barbora:Viinad",
       "entries": [
         {
           "t": "2026-01-19T23:06:30.489722",
@@ -7619,7 +7627,8 @@
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-danzka-40-proc-500-ml",
       "img": "https://cdn.barbora.ee/products/7b388178-99e5-469c-b38e-7e7239d26b8c_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Viin HLIBNY DAR Classic 40% 500ml": {
       "category": "Barbora:Viinad",
@@ -13228,7 +13237,7 @@
       "price_per_unit": 4.3,
       "unit_label": "L",
       "url": "https://www.selver.ee/olu-extra-ananass-le-coq-extra-330-ml",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/4/7/4740098003915.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -13260,7 +13269,7 @@
       "price_per_unit": 3.0,
       "unit_label": "L",
       "url": "https://www.selver.ee/olu-vaike-sass-alexander-330-ml",
-      "img": "https://www.selver.ee/img/450/440/resize/4/7/4740098003748.jpg",
+      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "store": "Selver",
       "is_sale": false
     },
@@ -13276,7 +13285,7 @@
       "price_per_unit": 3.68,
       "unit_label": "L",
       "url": "https://www.selver.ee/olu-vaike-sass-6-pakk-alexander-6x330-ml",
-      "img": "https://www.selver.ee/img/450/440/resize/4/7/4740098003755.jpg",
+      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "store": "Selver",
       "is_sale": false
     },
@@ -13292,7 +13301,7 @@
       "price_per_unit": 3.78,
       "unit_label": "L",
       "url": "https://www.selver.ee/olu-safiir-saku-500-ml",
-      "img": "https://www.selver.ee/img/450/440/resize/4/7/4740019004311.jpg",
+      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "store": "Selver",
       "is_sale": false
     },
@@ -13750,7 +13759,7 @@
       "price_per_unit": 3.33,
       "unit_label": "L",
       "url": "https://www.selver.ee/original-long-drink-hartwall-6-x-500ml",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/4/7/4744109012064.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -13781,7 +13790,7 @@
       "price_per_unit": 2.78,
       "unit_label": "L",
       "url": "https://www.selver.ee/saku-karl-friedrich-12-pakk",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/4/7/4740019014792.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -13974,6 +13983,14 @@
         },
         {
           "t": "2026-01-28T06:18:41.700242",
+          "p": 8.99
+        },
+        {
+          "t": "2026-01-28T19:51:24.600140",
+          "p": 10.99
+        },
+        {
+          "t": "2026-01-28T19:51:24.600140",
           "p": 8.99
         }
       ],
@@ -17633,7 +17650,7 @@
       "price_per_unit": 46.9,
       "unit_label": "kg",
       "url": "https://www.selver.ee/universaaloli-wd-40-100-ml",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/5/0/5032227440012.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -17701,7 +17718,7 @@
       "price_per_unit": 1.55,
       "unit_label": "kg",
       "url": "https://www.selver.ee/lohnakuusk-vanilje-wunder-baum-1tk",
-      "img": "https://www.selver.ee/img/450/440/resize/7/3/7315870070279.jpg",
+      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "store": "Selver",
       "is_sale": false
     },
@@ -17717,7 +17734,7 @@
       "price_per_unit": 8.49,
       "unit_label": "kg",
       "url": "https://www.selver.ee/vihmavee-eemaldi-invisible-wipers-500ml",
-      "img": "https://www.selver.ee/img/450/440/resize/4/7/4770202393588.jpg",
+      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "store": "Selver",
       "is_sale": false
     },
@@ -17733,7 +17750,7 @@
       "price_per_unit": 0.97,
       "unit_label": "kg",
       "url": "https://www.selver.ee/klaasipesuvedelik-4-etanooliga-pouch-bag-alfa-kem-2-88-l",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/6/4/6430034679363.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -18797,7 +18814,8 @@
       "unit_label": "L",
       "url": "https://barbora.ee/toode/muu-piir-jook-oakheart-original-32-5-proc-1-l",
       "img": "https://cdn.barbora.ee/products/0ddb53c8-65c6-452b-bc84-67ebe3813da3_m.png",
-      "store": "Barbora"
+      "store": "Barbora",
+      "is_sale": false
     },
     "Piir.jook CAPTAIN MORGAN Spiced 35% 1l": {
       "category": "Barbora:Rummid",
@@ -23712,6 +23730,22 @@
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-zubrowka-vanilla-35-proc-700-ml",
       "img": "https://cdn.barbora.ee/products/9982b122-a26c-4814-aaa3-698da1a9ccea_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Makaronid Farfalle LA MOLISANA 500g": {
+      "category": "Barbora:Pasta",
+      "entries": [
+        {
+          "t": "2026-01-28T19:51:24.600140",
+          "p": 1.19
+        }
+      ],
+      "latest_price": 1.19,
+      "price_per_unit": 2.38,
+      "unit_label": "kg",
+      "url": "https://barbora.ee/toode/makaronid-farfalle-la-molisana-500-g",
+      "img": "https://cdn.barbora.ee/products/a5e175d6-e92f-48e0-b4eb-829fb1f8dde7_m.png",
       "store": "Barbora",
       "is_sale": false
     }
