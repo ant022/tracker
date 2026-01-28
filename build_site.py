@@ -20,60 +20,72 @@ def get_store_from_url(url):
     return "Unknown"
 
 def get_category_key(name, url):
-    """Generate unique key for a category using store:name format"""
+    """Generate unique key for a source using store:name format"""
     store = get_store_from_url(url)
     return f"{store}:{name}"
 
 def load_data():
-    if not os.path.exists(HISTORY_FILE): return [], [], "Never"
+    if not os.path.exists(HISTORY_FILE): 
+        return [], [], [], "Never"
     
     with open(HISTORY_FILE, "r", encoding="utf-8") as f:
         data = json.load(f)
     
-    config = []
+    product_categories = []
+    sources = []
+    
     if os.path.exists(CONFIG_FILE):
         with open(CONFIG_FILE, "r", encoding="utf-8") as f:
             raw_config = json.load(f)
-            
-        # Convert old dict format to new list format if needed
-        if isinstance(raw_config, dict):
+        
+        # Handle new format (object with productCategories and sources)
+        if isinstance(raw_config, dict) and 'sources' in raw_config:
+            product_categories = raw_config.get('productCategories', [])
+            sources = raw_config.get('sources', [])
+        # Handle old format (array of sources)
+        elif isinstance(raw_config, list):
+            sources = raw_config
+            product_categories = []
+        # Handle very old dict format
+        elif isinstance(raw_config, dict):
             for name, info in raw_config.items():
                 if isinstance(info, dict):
-                    config.append({
+                    sources.append({
                         "name": name,
                         "url": info["url"],
-                        "unit": info.get("unit", "L")
+                        "unit": info.get("unit", "L"),
+                        "productCategory": ""
                     })
                 else:
-                    config.append({
+                    sources.append({
                         "name": name,
                         "url": info,
-                        "unit": "L"
+                        "unit": "L",
+                        "productCategory": ""
                     })
-        else:
-            config = raw_config
     
-    # Build categories with store info
-    categories_with_stores = []
+    # Build source info with keys
+    sources_with_stores = []
     valid_keys = set()
-    for cat in config:
-        store = get_store_from_url(cat.get("url", ""))
-        cat_key = get_category_key(cat["name"], cat["url"])
-        categories_with_stores.append({
-            "name": cat["name"],
+    for source in sources:
+        store = get_store_from_url(source.get("url", ""))
+        source_key = get_category_key(source["name"], source["url"])
+        sources_with_stores.append({
+            "name": source["name"],
             "store": store,
-            "key": cat_key
+            "key": source_key,
+            "productCategory": source.get("productCategory", "")
         })
-        valid_keys.add(cat_key)
+        valid_keys.add(source_key)
     
-    # Filter products by valid category keys
+    # Filter products by valid source keys
     raw_products = data.get("products", {})
     products = [{"name": k, **v} for k, v in raw_products.items() if v.get('category') in valid_keys]
     
-    return products, categories_with_stores, data.get("meta", {}).get("generated_at", "Unknown")
+    return products, sources_with_stores, product_categories, data.get("meta", {}).get("generated_at", "Unknown")
 
 def build():
-    products, categories, last_run = load_data()
+    products, sources, product_categories, last_run = load_data()
     
     # Calculate products on sale
     sale_products = []
@@ -94,11 +106,45 @@ def build():
     # Sort by discount percentage
     sale_products.sort(key=lambda x: x['discount_pct'], reverse=True)
     
-    # Generate sidebar links with checkboxes
+    # Build product category counts
+    product_category_counts = {}
+    for source in sources:
+        cat = source.get('productCategory', '')
+        if cat:
+            if cat not in product_category_counts:
+                product_category_counts[cat] = 0
+            # Count products in this source
+            source_products = [p for p in products if p.get('category') == source['key']]
+            product_category_counts[cat] += len(source_products)
+    
+    # Generate sidebar with collapsible categories
     sidebar_links = ""
     
-    # Add stores filter section
-    stores = list(set([cat['store'] for cat in categories]))
+    # Product Categories Section (collapsible)
+    if product_categories:
+        sidebar_links += '''
+        <div class="filter-section">
+            <div class="filter-title" onclick="toggleCategories()" style="cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                <span>🏷️ Categories</span>
+                <span id="categories-arrow">▼</span>
+            </div>
+            <div id="product-categories" class="product-categories">'''
+        
+        for cat in product_categories:
+            count = product_category_counts.get(cat, 0)
+            sidebar_links += f'''
+                <label class="filter-checkbox">
+                    <input type="checkbox" checked onchange="filterByProductCategory()" data-product-category="{cat}">
+                    <span>{cat}</span>
+                    <span class="count">({count})</span>
+                </label>'''
+        
+        sidebar_links += '''
+            </div>
+        </div>'''
+    
+    # Stores Filter Section
+    stores = list(set([source['store'] for source in sources]))
     stores.sort()
     
     sidebar_links += '<div class="filter-section">'
@@ -111,7 +157,7 @@ def build():
         </label>'''
     sidebar_links += '</div>'
     
-    # Add quick filters
+    # Quick Filters
     sidebar_links += '<div class="filter-section">'
     sidebar_links += '<div class="filter-title">Quick Filters</div>'
     sidebar_links += '''
@@ -136,7 +182,7 @@ def build():
         * {{ box-sizing: border-box; }}
         body {{ font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background:#f8f9fa; margin:0; display: flex; color: #1a1a1a; }}
         
-        /* Hamburger Menu Button - Hidden on desktop */
+        /* Hamburger Menu */
         .hamburger {{
             display: none;
             position: fixed;
@@ -178,7 +224,6 @@ def build():
             transform: rotate(-45deg) translate(6px, -6px);
         }}
         
-        /* Sidebar overlay for mobile */
         .sidebar-overlay {{
             display: none;
             position: fixed;
@@ -232,6 +277,17 @@ def build():
             letter-spacing: 0.5px;
         }}
         
+        .product-categories {{
+            max-height: 300px;
+            overflow-y: auto;
+            transition: max-height 0.3s ease;
+        }}
+        
+        .product-categories.collapsed {{
+            max-height: 0;
+            overflow: hidden;
+        }}
+        
         .filter-checkbox {{
             display: flex;
             align-items: center;
@@ -252,6 +308,12 @@ def build():
             margin-right: 10px;
             cursor: pointer;
             accent-color: #10b981;
+        }}
+        
+        .filter-checkbox .count {{
+            margin-left: auto;
+            font-size: 12px;
+            color: #9ca3af;
         }}
         
         .store-label-sm {{ 
@@ -322,7 +384,6 @@ def build():
             color: #374151;
         }}
         
-        /* SEARCH INPUT */
         .search-box {{ 
             padding: 10px 15px; 
             border-radius: 8px; 
@@ -337,8 +398,8 @@ def build():
             box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1); 
         }}
 
-        /* FAVORITES CAROUSEL - More Subtle */
-        .favorites-section {{
+        /* FAVORITES/SALES SECTIONS */
+        .favorites-section, .sales-section {{
             margin-top: 30px;
             scroll-margin-top: 100px;
             background: white;
@@ -346,10 +407,17 @@ def build():
             padding: 20px 25px;
             border: 1px solid #e5e7eb;
             box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }}
+        
+        .sales-section {{
+            border-color: #fee2e2;
+        }}
+        
+        .favorites-section {{
             display: none;
         }}
         
-        .favorites-title {{
+        .section-title {{
             font-size: 16px;
             font-weight: 700;
             color: #374151;
@@ -359,10 +427,19 @@ def build():
             gap: 8px;
         }}
         
-        .favorites-subtitle {{
+        .section-subtitle {{
             color: #9ca3af;
             font-size: 13px;
             margin-bottom: 20px;
+        }}
+        
+        .sale-badge {{
+            background: #fee2e2;
+            color: #991b1b;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 4px;
         }}
         
         .carousel-container {{
@@ -420,53 +497,6 @@ def build():
             cursor: not-allowed;
         }}
         
-        .empty-favorites {{
-            text-align: center;
-            padding: 30px;
-            color: #9ca3af;
-        }}
-        
-        .empty-favorites-icon {{
-            font-size: 36px;
-            margin-bottom: 8px;
-        }}
-
-        /* SALES SECTION - More Subtle */
-        .sales-section {{
-            margin-top: 30px;
-            scroll-margin-top: 100px;
-            background: white;
-            border-radius: 12px;
-            padding: 20px 25px;
-            border: 1px solid #fee2e2;
-            box-shadow: 0 1px 3px rgba(239, 68, 68, 0.08);
-        }}
-        
-        .sales-header {{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }}
-        
-        .sales-title {{
-            font-size: 16px;
-            font-weight: 700;
-            color: #374151;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }}
-        
-        .sale-badge {{
-            background: #fee2e2;
-            color: #991b1b;
-            font-size: 11px;
-            font-weight: 700;
-            padding: 3px 8px;
-            border-radius: 4px;
-        }}
-        
         .expand-sales-btn {{
             background: white;
             border: 1px solid #e5e7eb;
@@ -495,36 +525,43 @@ def build():
             padding: 4px 8px;
             border-radius: 6px;
         }}
-        
-        .price-trend-up {{
-            color: #ef4444;
-            font-size: 11px;
-            font-weight: 700;
-        }}
-        
-        .price-trend-down {{
-            color: #10b981;
-            font-size: 11px;
-            font-weight: 700;
-        }}
-        
-        .price-trend-stable {{
-            color: #9ca3af;
-            font-size: 11px;
-            font-weight: 700;
-        }}
 
-        .cat-section {{ margin-top: 30px; scroll-margin-top: 100px; }}
-        .cat-title {{ 
-            font-size: 18px; 
+        /* PRODUCT CATEGORY SECTIONS */
+        .product-cat-section {{ 
+            margin-top: 30px; 
+            scroll-margin-top: 100px; 
+        }}
+        
+        .product-cat-title {{ 
+            font-size: 20px; 
             font-weight: 700; 
             color: #111827; 
             margin-bottom: 15px; 
             padding-left: 12px;
+            border-left: 4px solid #10b981; 
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }}
+        
+        .cat-section {{ 
+            margin-top: 20px; 
+        }}
+        
+        .cat-title {{ 
+            font-size: 16px; 
+            font-weight: 600; 
+            color: #374151; 
+            margin-bottom: 12px; 
+            padding-left: 10px;
             border-left: 3px solid #e5e7eb; 
         }}
         
-        .grid {{ display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap: 15px; }}
+        .grid {{ 
+            display:grid; 
+            grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); 
+            gap: 15px; 
+        }}
         
         .card {{ 
             background:white; 
@@ -567,7 +604,6 @@ def build():
         .info {{ flex: 1; display: flex; flex-direction: column; justify-content: center; }}
         .name {{ font-size:13px; font-weight:600; line-height:1.4; max-height: 2.8em; overflow: hidden; margin-bottom: 5px; color: #1f2937; }}
         
-        /* FAVORITE STAR BUTTON */
         .fav-btn {{
             position: absolute;
             bottom: 8px;
@@ -598,7 +634,6 @@ def build():
             border-color: #f59e0b;
         }}
         
-        /* PRICE STYLING */
         .price-container {{ display: flex; align-items: baseline; gap: 6px; }}
         .price {{ font-size:20px; font-weight:700; color: #111827; }}
         .price-sale {{ 
@@ -610,7 +645,6 @@ def build():
         }}
         
         .price-old {{ font-size: 14px; color: #9ca3af; text-decoration: line-through; font-weight: 500; }}
-        
         .per-l {{ color:#059669; font-weight:600; font-size:12px; }}
         
         .expand-bar {{ 
@@ -633,20 +667,33 @@ def build():
         }}
         
         .hidden {{ display: none; }}
-        #search-results-title {{ display: none; margin-top: 30px; color: #374151; border-left: 3px solid #10b981; padding-left: 12px; font-size: 18px; font-weight: 700; }}
         
-        /* MOBILE RESPONSIVE STYLES */
+        #search-results-title {{ 
+            display: none; 
+            margin-top: 30px; 
+            color: #374151; 
+            border-left: 3px solid #10b981; 
+            padding-left: 12px; 
+            font-size: 18px; 
+            font-weight: 700; 
+        }}
+        
+        .empty-state {{
+            text-align: center;
+            padding: 60px 20px;
+            color: #9ca3af;
+        }}
+        
+        .empty-state-icon {{
+            font-size: 48px;
+            margin-bottom: 16px;
+        }}
+        
+        /* MOBILE RESPONSIVE */
         @media (max-width: 768px) {{
-            body {{
-                display: block;
-            }}
+            body {{ display: block; }}
+            .hamburger {{ display: flex; }}
             
-            /* Show hamburger menu */
-            .hamburger {{
-                display: flex;
-            }}
-            
-            /* Sidebar slides in from left */
             .sidebar {{
                 position: fixed;
                 left: -260px;
@@ -654,24 +701,15 @@ def build():
                 z-index: 1000;
             }}
             
-            .sidebar.active {{
-                left: 0;
-            }}
+            .sidebar.active {{ left: 0; }}
+            .sidebar-overlay.active {{ display: block; }}
             
-            .sidebar-overlay.active {{
-                display: block;
-            }}
-            
-            /* Main content takes full width */
             .main {{
                 margin-left: 0;
                 padding: 80px 15px 40px 15px;
             }}
             
-            /* Header adjustments */
-            .header {{
-                padding: 15px 0;
-            }}
+            .header {{ padding: 15px 0; }}
             
             .controls {{
                 flex-direction: column;
@@ -697,76 +735,35 @@ def build():
                 font-size: 16px;
             }}
             
-            /* Larger text for mobile */
-            .favorites-title, .sales-title {{
-                font-size: 17px;
-            }}
-            
-            .cat-title {{
-                font-size: 17px;
-                margin-bottom: 12px;
-            }}
-            
-            /* Grid adjustments */
             .grid {{
                 grid-template-columns: 1fr;
                 gap: 12px;
             }}
             
-            /* Card adjustments - bigger and easier to tap */
             .card {{
                 height: 140px;
                 padding: 15px;
                 gap: 12px;
             }}
             
-            .card img {{
-                width: 80px;
-            }}
+            .card img {{ width: 80px; }}
+            .name {{ font-size: 14px; line-height: 1.5; }}
+            .price {{ font-size: 22px; }}
+            .price-old {{ font-size: 16px; }}
+            .per-l {{ font-size: 13px; }}
             
-            .name {{
-                font-size: 14px;
-                line-height: 1.5;
-            }}
-            
-            .price {{
-                font-size: 22px;
-            }}
-            
-            .price-old {{
-                font-size: 16px;
-            }}
-            
-            .per-l {{
-                font-size: 13px;
-            }}
-            
-            .store-badge {{
-                font-size: 10px;
-                padding: 3px 7px;
-            }}
-            
-            .discount-badge {{
-                font-size: 13px;
-                padding: 5px 10px;
-            }}
-            
-            /* Favorite button bigger for easier tapping */
             .fav-btn {{
                 width: 38px;
                 height: 38px;
                 font-size: 16px;
             }}
             
-            /* Carousel adjustments */
             .carousel-card {{
                 min-width: calc(100% - 70px);
                 max-width: calc(100% - 70px);
             }}
             
-            .carousel-track {{
-                padding: 0 5px;
-            }}
+            .carousel-track {{ padding: 0 5px; }}
             
             .carousel-btn {{
                 width: 32px;
@@ -776,16 +773,6 @@ def build():
             
             .carousel-btn-left {{ left: 0; }}
             .carousel-btn-right {{ right: 0; }}
-            
-            /* Sales/Favorites sections */
-            .sales-section, .favorites-section {{
-                padding: 18px 15px;
-            }}
-            
-            .expand-sales-btn {{
-                padding: 10px 14px;
-                font-size: 14px;
-            }}
         }}
     </style>
 </head>
@@ -823,14 +810,17 @@ def build():
 
 <script>
 const products = {json.dumps(products)};
-const categories = {json.dumps(categories)};
+const sources = {json.dumps(sources)};
+const productCategories = {json.dumps(product_categories)};
 const saleProducts = {json.dumps(sale_products)};
+
 let currentSort = 'latest_price';
 let favorites = [];
 let carouselPosition = 0;
 let touchStartX = 0;
 let touchEndX = 0;
-let activeStores = new Set({json.dumps([cat['store'] for cat in categories])});
+let activeStores = new Set({json.dumps([source['store'] for source in sources])});
+let activeProductCategories = new Set(productCategories);
 
 // Toggle mobile menu
 function toggleMenu() {{
@@ -843,39 +833,27 @@ function toggleMenu() {{
     hamburger.classList.toggle('active');
 }}
 
-// Close menu when clicking a link on mobile
-function closeMobileMenu() {{
-    if (window.innerWidth <= 768) {{
-        toggleMenu();
-    }}
+// Toggle product categories dropdown
+function toggleCategories() {{
+    const categoriesDiv = document.getElementById('product-categories');
+    const arrow = document.getElementById('categories-arrow');
+    categoriesDiv.classList.toggle('collapsed');
+    arrow.textContent = categoriesDiv.classList.contains('collapsed') ? '▶' : '▼';
 }}
 
-// Touch swipe handling for carousel
-function handleTouchStart(e) {{
-    touchStartX = e.touches[0].clientX;
-}}
-
-function handleTouchMove(e) {{
-    touchEndX = e.touches[0].clientX;
-}}
-
+// Touch swipe handling
+function handleTouchStart(e) {{ touchStartX = e.touches[0].clientX; }}
+function handleTouchMove(e) {{ touchEndX = e.touches[0].clientX; }}
 function handleTouchEnd() {{
     const swipeThreshold = 50;
     const diff = touchStartX - touchEndX;
-    
     if (Math.abs(diff) > swipeThreshold) {{
-        if (diff > 0) {{
-            moveCarousel(1);
-        }} else {{
-            moveCarousel(-1);
-        }}
+        if (diff > 0) {{ moveCarousel(1); }} else {{ moveCarousel(-1); }}
     }}
-    
     touchStartX = 0;
     touchEndX = 0;
 }}
 
-// Initialize carousel touch events
 function initCarouselTouch() {{
     const carouselContainer = document.querySelector('.carousel-container');
     if (carouselContainer) {{
@@ -885,45 +863,29 @@ function initCarouselTouch() {{
     }}
 }}
 
-// Load favorites from localStorage
+// Load favorites
 function loadFavorites() {{
     const stored = localStorage.getItem('priceTrackerFavorites');
     if (stored) {{
-        try {{
-            favorites = JSON.parse(stored);
-            updateFavoritesUI();
-        }} catch(e) {{
-            console.error('Error loading favorites:', e);
-            favorites = [];
-        }}
+        try {{ favorites = JSON.parse(stored); }}
+        catch(e) {{ favorites = []; }}
     }}
 }}
 
-// Save favorites to localStorage
 function saveFavorites() {{
     localStorage.setItem('priceTrackerFavorites', JSON.stringify(favorites));
-    updateFavoritesUI();
 }}
 
-// Toggle favorite status
 function toggleFavorite(productName, event) {{
     event.preventDefault();
     event.stopPropagation();
     
     const index = favorites.indexOf(productName);
-    if (index > -1) {{
-        favorites.splice(index, 1);
-    }} else {{
-        favorites.push(productName);
-    }}
+    if (index > -1) {{ favorites.splice(index, 1); }} 
+    else {{ favorites.push(productName); }}
     saveFavorites();
     render();
     return false;
-}}
-
-// Update favorites UI
-function updateFavoritesUI() {{
-    // Update count if needed
 }}
 
 // Carousel navigation
@@ -934,12 +896,10 @@ function moveCarousel(direction) {{
     
     const firstCard = cards[0];
     const cardWidth = firstCard.offsetWidth + 15;
-    
     carouselPosition += direction;
     
     const containerWidth = track.parentElement.offsetWidth;
     const visibleCards = Math.floor(containerWidth / cardWidth) || 1;
-    
     const maxPosition = Math.max(0, cards.length - visibleCards);
     carouselPosition = Math.max(0, Math.min(carouselPosition, maxPosition));
     
@@ -951,7 +911,7 @@ function moveCarousel(direction) {{
     if (rightBtn) rightBtn.disabled = carouselPosition >= maxPosition;
 }}
 
-// Store filter
+// Filters
 function filterByStore() {{
     const checkboxes = document.querySelectorAll('input[data-store]');
     activeStores.clear();
@@ -961,10 +921,16 @@ function filterByStore() {{
     render();
 }}
 
-// Apply filters
-function applyFilters() {{
+function filterByProductCategory() {{
+    const checkboxes = document.querySelectorAll('input[data-product-category]');
+    activeProductCategories.clear();
+    checkboxes.forEach(cb => {{
+        if (cb.checked) activeProductCategories.add(cb.dataset.productCategory);
+    }});
     render();
 }}
+
+function applyFilters() {{ render(); }}
 
 function setSort(key){{
     currentSort = key;
@@ -1020,7 +986,18 @@ function render() {{
     const showFavoritesOnly = document.getElementById('filter-favorites')?.checked || false;
     const showSalesOnly = document.getElementById('filter-sales')?.checked || false;
     
-    let filteredProducts = products.filter(p => activeStores.has(p.store));
+    let filteredProducts = products.filter(p => {{
+        // Filter by store
+        if (!activeStores.has(p.store)) return false;
+        
+        // Filter by product category
+        const source = sources.find(s => s.key === p.category);
+        if (source && source.productCategory) {{
+            if (!activeProductCategories.has(source.productCategory)) return false;
+        }}
+        
+        return true;
+    }});
     
     if (showFavoritesOnly) {{
         filteredProducts = filteredProducts.filter(p => favorites.includes(p.name));
@@ -1031,7 +1008,84 @@ function render() {{
         filteredProducts = filteredProducts.filter(p => saleNames.has(p.name));
     }}
     
-    // RENDER FAVORITES CAROUSEL
+    // RENDER FAVORITES
+    renderFavorites(container, filteredProducts);
+    
+    // RENDER SALES
+    if (saleProducts.length > 0 && !showFavoritesOnly) {{
+        renderSales(container);
+    }}
+    
+    // RENDER BY PRODUCT CATEGORY
+    if (productCategories.length > 0) {{
+        productCategories.forEach(prodCat => {{
+            if (!activeProductCategories.has(prodCat)) return;
+            
+            // Get all products in this category
+            const catProducts = filteredProducts.filter(p => {{
+                const source = sources.find(s => s.key === p.category);
+                return source && source.productCategory === prodCat;
+            }});
+            
+            if (catProducts.length === 0) return;
+            
+            // Group by source within category
+            const bySource = {{}};
+            catProducts.forEach(p => {{
+                if (!bySource[p.category]) bySource[p.category] = [];
+                bySource[p.category].push(p);
+            }});
+            
+            let html = `<div class="product-cat-section">
+                <div class="product-cat-title">
+                    <span>${{prodCat}}</span>
+                    <span style="font-size:14px; font-weight:normal; color:#9ca3af">(${{catProducts.length}} products)</span>
+                </div>`;
+            
+            sources.forEach((source, idx) => {{
+                if (source.productCategory !== prodCat) return;
+                if (!bySource[source.key]) return;
+                if (!activeStores.has(source.store)) return;
+                
+                const sorted = bySource[source.key].sort((a,b)=> (a[currentSort] || 999) - (b[currentSort] || 999));
+                const top5 = sorted.slice(0, 5);
+                const rest = sorted.slice(5);
+                const hiddenId = `hidden_${{prodCat}}_${{idx}}`;
+                
+                html += `
+                    <div class="cat-section">
+                        <div class="cat-title">${{source.name}} <span style="font-size:12px; font-weight:normal; color:#9ca3af">(${{sorted.length}})</span></div>
+                        <div class="grid">${{top5.map(p=>card(p)).join('')}}</div>`;
+                
+                if (rest.length > 0) {{
+                    html += `<div id="${{hiddenId}}" class="grid hidden" style="margin-top:15px">${{rest.map(p=>card(p)).join('')}}</div>
+                             <div class="expand-bar" onclick="toggle('${{hiddenId}}', this)">Show ${{rest.length}} more ▾</div>`;
+                }}
+                
+                html += `</div>`;
+            }});
+            
+            html += `</div>`;
+            container.innerHTML += html;
+        }});
+    }} else {{
+        // No product categories - render by source
+        renderBySources(container, filteredProducts);
+    }}
+    
+    // Show empty state if no products
+    if (filteredProducts.length === 0) {{
+        container.innerHTML += `
+            <div class="empty-state">
+                <div class="empty-state-icon">🔍</div>
+                <p>No products match your filters</p>
+            </div>`;
+    }}
+    
+    if (document.getElementById('search').value.length >= 2) handleSearch();
+}}
+
+function renderFavorites(container, filteredProducts) {{
     const favSection = document.getElementById('favorites-section') || document.createElement('div');
     favSection.id = 'favorites-section';
     favSection.className = 'favorites-section';
@@ -1041,98 +1095,92 @@ function render() {{
             .filter(p => favorites.includes(p.name))
             .sort((a, b) => (a.latest_price || 999) - (b.latest_price || 999));
         
-        const favCardsHtml = favoriteProducts.map(p => {{
-            const trend = getPriceTrend(p);
-            return `<div class="carousel-card">${{cardWithTrend(p, trend)}}</div>`;
-        }}).join('');
-        
-        const isMobile = window.innerWidth <= 768;
-        const cardsVisible = isMobile ? 1 : 3;
-        const hasMultiplePages = favoriteProducts.length > cardsVisible;
-        
-        favSection.innerHTML = `
-            <div class="favorites-title">
-                <span>⭐</span>
-                Favorites
-            </div>
-            <div class="favorites-subtitle">
-                ${{favorites.length}} tracked · Sorted by price
-            </div>
-            <div class="carousel-container">
-                <button class="carousel-btn carousel-btn-left" onclick="moveCarousel(-1)" disabled>←</button>
-                <div class="carousel-track">
-                    ${{favCardsHtml}}
-                </div>
-                <button class="carousel-btn carousel-btn-right" onclick="moveCarousel(1)" ${{hasMultiplePages ? '' : 'disabled'}}>→</button>
-            </div>
-        `;
-        favSection.style.display = 'block';
-        
-        carouselPosition = 0;
-        setTimeout(() => {{
-            initCarouselTouch();
-            moveCarousel(0);
-        }}, 100);
-    }} else {{
-        favSection.innerHTML = `
-            <div class="favorites-title">
-                <span>⭐</span>
-                Favorites
-            </div>
-            <div class="empty-favorites">
-                <div class="empty-favorites-icon">⭐</div>
-                <p>Click the ⭐ on products to save your favorites</p>
-            </div>
-        `;
-        favSection.style.display = 'block';
-    }}
-    container.appendChild(favSection);
-    
-    // RENDER SALES SECTION
-    if (saleProducts.length > 0 && !showFavoritesOnly) {{
-        const filteredSales = saleProducts.filter(p => activeStores.has(p.store));
-        if (filteredSales.length > 0) {{
-            const top3Sales = filteredSales.slice(0, 3);
-            const restSales = filteredSales.slice(3);
+        if (favoriteProducts.length > 0) {{
+            const favCardsHtml = favoriteProducts.map(p => {{
+                const trend = getPriceTrend(p);
+                return `<div class="carousel-card">${{cardWithTrend(p, trend)}}</div>`;
+            }}).join('');
             
-            const salesHtml = `
-                <div class="sales-section" id="sales-section">
-                    <div class="sales-header">
-                        <div class="sales-title">
-                            <span>🔥</span>
-                            <span>On Sale</span>
-                            <span class="sale-badge">${{filteredSales.length}}</span>
-                        </div>
-                        ${{restSales.length > 0 ? 
-                            `<button class="expand-sales-btn" onclick="toggleAllSales()">Show all</button>` 
-                            : ''}}
+            const isMobile = window.innerWidth <= 768;
+            const cardsVisible = isMobile ? 1 : 3;
+            const hasMultiplePages = favoriteProducts.length > cardsVisible;
+            
+            favSection.innerHTML = `
+                <div class="section-title">
+                    <span>⭐</span>
+                    <span>Favorites</span>
+                </div>
+                <div class="section-subtitle">
+                    ${{favoriteProducts.length}} tracked · Sorted by price
+                </div>
+                <div class="carousel-container">
+                    <button class="carousel-btn carousel-btn-left" onclick="moveCarousel(-1)" disabled>←</button>
+                    <div class="carousel-track">
+                        ${{favCardsHtml}}
                     </div>
-                    <div class="grid" id="top-sales-grid">${{top3Sales.map(p => cardWithDiscount(p)).join('')}}</div>
-                    <div class="grid hidden" id="all-sales-grid" style="margin-top:15px">${{restSales.map(p => cardWithDiscount(p)).join('')}}</div>
+                    <button class="carousel-btn carousel-btn-right" onclick="moveCarousel(1)" ${{hasMultiplePages ? '' : 'disabled'}}>→</button>
                 </div>
             `;
-            container.innerHTML += salesHtml;
+            favSection.style.display = 'block';
+            
+            carouselPosition = 0;
+            setTimeout(() => {{
+                initCarouselTouch();
+                moveCarousel(0);
+            }}, 100);
+        }} else {{
+            favSection.style.display = 'none';
         }}
+    }} else {{
+        favSection.style.display = 'none';
     }}
+    container.appendChild(favSection);
+}}
+
+function renderSales(container) {{
+    const filteredSales = saleProducts.filter(p => activeStores.has(p.store));
+    if (filteredSales.length === 0) return;
     
-    // RENDER REGULAR CATEGORIES
+    const top3Sales = filteredSales.slice(0, 3);
+    const restSales = filteredSales.slice(3);
+    
+    const salesHtml = `
+        <div class="sales-section" id="sales-section">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <div class="section-title">
+                    <span>🔥</span>
+                    <span>On Sale</span>
+                    <span class="sale-badge">${{filteredSales.length}}</span>
+                </div>
+                ${{restSales.length > 0 ? 
+                    `<button class="expand-sales-btn" onclick="toggleAllSales()">Show all</button>` 
+                    : ''}}
+            </div>
+            <div class="grid" id="top-sales-grid">${{top3Sales.map(p => cardWithDiscount(p)).join('')}}</div>
+            <div class="grid hidden" id="all-sales-grid" style="margin-top:15px">${{restSales.map(p => cardWithDiscount(p)).join('')}}</div>
+        </div>
+    `;
+    container.innerHTML += salesHtml;
+}}
+
+function renderBySources(container, filteredProducts) {{
     const byCat = {{}};
     filteredProducts.forEach(p => {{
         if(!byCat[p.category]) byCat[p.category] = [];
         byCat[p.category].push(p);
     }});
 
-    categories.forEach((cat, index) => {{
-        if (!byCat[cat.key] || !activeStores.has(cat.store)) return;
-        const sorted = byCat[cat.key].sort((a,b)=> (a[currentSort] || 999) - (b[currentSort] || 999));
+    sources.forEach((source, index) => {{
+        if (!byCat[source.key] || !activeStores.has(source.store)) return;
+        
+        const sorted = byCat[source.key].sort((a,b)=> (a[currentSort] || 999) - (b[currentSort] || 999));
         const top5 = sorted.slice(0, 5);
         const rest = sorted.slice(5);
-        const sectionId = "cat_" + index;
-        const hiddenId = "hidden_" + index;
+        const hiddenId = `hidden_source_${{index}}`;
 
         let html = `
-            <div class="cat-section" id="${{sectionId}}">
-                <div class="cat-title">${{cat.name}} <span style="font-size:13px; font-weight:normal; color:#9ca3af">(${{sorted.length}})</span></div>
+            <div class="cat-section">
+                <div class="cat-title">${{source.name}} <span style="font-size:13px; font-weight:normal; color:#9ca3af">(${{sorted.length}})</span></div>
                 <div class="grid">${{top5.map(p=>card(p)).join('')}}</div>
         `;
         if (rest.length > 0) {{
@@ -1142,8 +1190,6 @@ function render() {{
         html += `</div>`;
         container.innerHTML += html;
     }});
-    
-    if (document.getElementById('search').value.length >= 2) handleSearch();
 }}
 
 function toggleAllSales() {{
@@ -1163,7 +1209,7 @@ function cardWithTrend(p, trend) {{
     const unitLabel = p.unit_label || 'L';
     const unitPrice = p.price_per_unit || p.price_per_litre || 0;
     const isFav = favorites.includes(p.name);
-    const safeName = p.name.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+    const safeName = p.name.replace(/'/g, "\\\\'").replace(/"/g, '&quot;');
     
     return `<a href="${{p.url}}" target="_blank" class="card">
         <span class="store-badge store-${{p.store}}">${{p.store}}</span>
@@ -1175,7 +1221,7 @@ function cardWithTrend(p, trend) {{
             <div class="name">${{p.name}}</div>
             <div class="price-container">
                 <span class="price">€${{p.latest_price.toFixed(2)}}</span>
-                <span class="${{trend.class}}">${{trend.symbol}}</span>
+                <span style="font-size: 11px; color: #9ca3af;">${{trend.symbol}}</span>
             </div>
             <div class="per-l">€${{unitPrice.toFixed(2)}} / ${{unitLabel}}</div>
         </div>
@@ -1187,7 +1233,7 @@ function cardWithDiscount(p) {{
     const unitPrice = p.price_per_unit || p.price_per_litre || 0;
     const discountPct = p.discount_pct || 0;
     const isFav = favorites.includes(p.name);
-    const safeName = p.name.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+    const safeName = p.name.replace(/'/g, "\\\\'").replace(/"/g, '&quot;');
     
     return `<a href="${{p.url}}" target="_blank" class="card">
         <span class="discount-badge">-${{discountPct.toFixed(0)}}%</span>
@@ -1212,7 +1258,7 @@ function card(p) {{
     const unitPrice = p.price_per_unit || p.price_per_litre || 0;
     const entries = p.entries || [];
     const isFav = favorites.includes(p.name);
-    const safeName = p.name.replace(/'/g, "\\'").replace(/"/g, '&quot;');
+    const safeName = p.name.replace(/'/g, "\\\\'").replace(/"/g, '&quot;');
     
     let priceDisplay = `<div class="price">€${{p.latest_price.toFixed(2)}}</div>`;
     
@@ -1259,6 +1305,7 @@ render();
         f.write(html_template)
     print(f"Static site built: {OUTPUT_FILE}")
     print(f"Found {len(sale_products)} products on sale")
+    print(f"Product categories: {', '.join(product_categories) if product_categories else 'None'}")
 
 if __name__ == "__main__":
     build()

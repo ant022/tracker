@@ -14,7 +14,7 @@
         }
         
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
             background: white;
             border-radius: 16px;
@@ -67,6 +67,43 @@
             font-style: italic;
         }
         
+        /* Category Pills */
+        .category-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .category-pill {
+            background: white;
+            border: 2px solid #e2e8f0;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #4a5568;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .category-pill.editable {
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        
+        .category-pill.editable:hover {
+            border-color: #3182ce;
+            color: #3182ce;
+        }
+        
+        .pill-delete {
+            cursor: pointer;
+            color: #e53e3e;
+            font-weight: bold;
+        }
+        
         /* Category Row Styles */
         .row {
             display: flex;
@@ -111,7 +148,7 @@
         }
         
         .cat-name {
-            width: 150px;
+            width: 180px;
         }
         
         .cat-url {
@@ -120,6 +157,10 @@
         
         .cat-unit {
             width: 80px;
+        }
+        
+        .cat-product-category {
+            width: 150px;
         }
         
         .btn-del {
@@ -233,6 +274,48 @@
             border-top: 1px solid #e2e8f0;
         }
         
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal.show {
+            display: flex;
+        }
+        
+        .modal-content {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            max-width: 400px;
+            width: 90%;
+        }
+        
+        .modal-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #2d3748;
+        }
+        
+        .modal-input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
         @media (max-width: 768px) {
             .container {
                 padding: 20px;
@@ -242,7 +325,7 @@
                 flex-wrap: wrap;
             }
             
-            .cat-name, .cat-url, .cat-unit {
+            .cat-name, .cat-url, .cat-unit, .cat-product-category {
                 width: 100%;
             }
             
@@ -261,26 +344,38 @@
         <a href="index.html" class="back-link">← Back to Price Tracker</a>
         
         <h1>⚙️ Admin Panel</h1>
-        <p class="subtitle">Manage categories and trigger scrapes</p>
+        <p class="subtitle">Manage product categories and scraper sources</p>
         
         <div class="info-box">
             <strong>📝 How to trigger scrapes:</strong>
-            After saving categories, commit the downloaded categories.json to your GitHub repo. Then go to:
+            After saving, commit the downloaded categories.json to your GitHub repo. Then go to:
             <strong>Actions → Scrape Prices and Build Site → Run workflow</strong>
         </div>
         
-        <!-- Categories Section -->
+        <!-- Product Categories Section -->
         <div class="section">
-            <div class="section-title">📋 Manage Categories</div>
-            <p class="hint">💡 Drag rows using the ☰ handle to reorder categories</p>
+            <div class="section-title">🏷️ Product Categories</div>
+            <p class="hint">These are the types of products (e.g., Beer, Wine, Spirits). You can filter by these on the main page.</p>
             
-            <div id="config-container">
+            <div class="category-pills" id="category-pills">
                 <!-- Categories will be loaded here -->
             </div>
             
+            <button class="btn btn-secondary" onclick="showAddCategoryModal()">+ Add Product Category</button>
+        </div>
+        
+        <!-- Scraper Sources Section -->
+        <div class="section">
+            <div class="section-title">📋 Scraper Sources</div>
+            <p class="hint">💡 Drag rows using the ☰ handle to reorder. Each source scrapes a specific category from a store.</p>
+            
+            <div id="config-container">
+                <!-- Sources will be loaded here -->
+            </div>
+            
             <div class="button-group" style="margin-top: 15px;">
-                <button class="btn btn-secondary" onclick="addRow()">+ Add New Category</button>
-                <button class="btn btn-primary" onclick="saveCategories()">💾 Save & Download JSON</button>
+                <button class="btn btn-secondary" onclick="addRow()">+ Add New Source</button>
+                <button class="btn btn-primary" onclick="saveConfig()">💾 Save & Download JSON</button>
             </div>
             
             <div class="status-msg" id="saveStatus"></div>
@@ -299,14 +394,36 @@
             <div style="margin-top: 20px; padding: 15px; background: white; border-radius: 8px; border: 1px solid #e2e8f0;">
                 <strong style="display: block; margin-bottom: 10px; color: #2d3748;">How to run a scrape:</strong>
                 <ol style="margin: 0; padding-left: 25px; font-size: 13px; color: #4a5568;">
-                    <li>Save your categories using the "Save & Download JSON" button above</li>
+                    <li>Save your configuration using the "Save & Download JSON" button</li>
                     <li>Commit the downloaded categories.json file to your GitHub repository</li>
                     <li>Click "Open GitHub Actions"</li>
                     <li>Click on "Scrape Prices and Build Site" workflow</li>
-                    <li>Click "Run workflow" button</li>
-                    <li>Optionally enter a category key (e.g., "Barbora:Beer")</li>
-                    <li>Click "Run workflow" to confirm</li>
+                    <li>Click "Run workflow" button and confirm</li>
                 </ol>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Category Modal -->
+    <div class="modal" id="categoryModal">
+        <div class="modal-content">
+            <div class="modal-title">Add Product Category</div>
+            <input type="text" class="modal-input" id="newCategoryName" placeholder="Category name (e.g., Beer)">
+            <div class="button-group">
+                <button class="btn btn-primary" onclick="addProductCategory()">Add</button>
+                <button class="btn btn-secondary" onclick="hideModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Edit Category Modal -->
+    <div class="modal" id="editCategoryModal">
+        <div class="modal-content">
+            <div class="modal-title">Edit Product Category</div>
+            <input type="text" class="modal-input" id="editCategoryName" placeholder="Category name">
+            <div class="button-group">
+                <button class="btn btn-primary" onclick="saveEditCategory()">Save</button>
+                <button class="btn btn-secondary" onclick="hideModal()">Cancel</button>
             </div>
         </div>
     </div>
@@ -316,58 +433,100 @@
         const GITHUB_USERNAME = 'ant022';
         const GITHUB_REPO = 'tracker';
         
-        let categories = [];
+        let config = {
+            productCategories: ['Beer', 'Wine', 'Spirits', 'Cider'],
+            sources: []
+        };
         let draggedElement = null;
+        let editingCategoryIndex = -1;
         
-        // Load categories from categories.json
-        async function loadCategories() {
+        // Load config from categories.json
+        async function loadConfig() {
             try {
                 const response = await fetch('categories.json');
                 if (response.ok) {
-                    categories = await response.json();
-                    displayCategories();
+                    const data = await response.json();
+                    
+                    // Handle old format (array) vs new format (object with productCategories)
+                    if (Array.isArray(data)) {
+                        // Old format - migrate to new
+                        config = {
+                            productCategories: ['Beer', 'Wine', 'Spirits', 'Cider'],
+                            sources: data
+                        };
+                    } else {
+                        config = data;
+                    }
+                    
+                    displayProductCategories();
+                    displaySources();
                 } else {
                     console.error('Could not load categories.json');
-                    categories = [];
-                    displayCategories();
+                    displayProductCategories();
+                    displaySources();
                 }
             } catch (error) {
-                console.error('Error loading categories:', error);
-                categories = [];
-                displayCategories();
+                console.error('Error loading config:', error);
+                displayProductCategories();
+                displaySources();
             }
         }
         
-        function displayCategories() {
+        function displayProductCategories() {
+            const container = document.getElementById('category-pills');
+            container.innerHTML = '';
+            
+            config.productCategories.forEach((cat, index) => {
+                const pill = document.createElement('div');
+                pill.className = 'category-pill editable';
+                pill.innerHTML = `
+                    <span onclick="editProductCategory(${index})">${cat}</span>
+                    <span class="pill-delete" onclick="deleteProductCategory(${index})">×</span>
+                `;
+                container.appendChild(pill);
+            });
+        }
+        
+        function displaySources() {
             const container = document.getElementById('config-container');
             container.innerHTML = '';
             
-            if (categories.length === 0) {
-                container.innerHTML = '<p style="color: #718096; text-align: center; padding: 20px;">No categories yet. Click "Add New Category" to get started!</p>';
+            if (config.sources.length === 0) {
+                container.innerHTML = '<p style="color: #718096; text-align: center; padding: 20px;">No sources yet. Click "Add New Source" to get started!</p>';
                 return;
             }
             
-            categories.forEach((cat, index) => {
-                const row = createCategoryRow(cat);
+            config.sources.forEach((source, index) => {
+                const row = createSourceRow(source);
                 container.appendChild(row);
             });
         }
         
-        function createCategoryRow(cat) {
+        function createSourceRow(source) {
             const div = document.createElement('div');
             div.className = 'row';
             div.draggable = true;
             
-            const name = (cat.name || '').replace(/"/g, '&quot;');
-            const url = (cat.url || '').replace(/"/g, '&quot;');
+            const name = (source.name || '').replace(/"/g, '&quot;');
+            const url = (source.url || '').replace(/"/g, '&quot;');
+            const productCategory = source.productCategory || '';
+            
+            // Create category dropdown options
+            const categoryOptions = config.productCategories.map(cat => 
+                `<option value="${cat}" ${cat === productCategory ? 'selected' : ''}>${cat}</option>`
+            ).join('');
             
             div.innerHTML = `
                 <span class="drag-handle">☰</span>
-                <input type="text" class="cat-name" value="${name}" placeholder="Category name">
-                <input type="text" class="cat-url" value="${url}" placeholder="Category URL">
+                <input type="text" class="cat-name" value="${name}" placeholder="Source name (e.g., Barbora Beer)">
+                <input type="text" class="cat-url" value="${url}" placeholder="URL">
+                <select class="cat-product-category">
+                    <option value="">-- Category --</option>
+                    ${categoryOptions}
+                </select>
                 <select class="cat-unit">
-                    <option value="L" ${cat.unit === 'L' ? 'selected' : ''}>€/L</option>
-                    <option value="kg" ${cat.unit === 'kg' ? 'selected' : ''}>€/kg</option>
+                    <option value="L" ${source.unit === 'L' ? 'selected' : ''}>€/L</option>
+                    <option value="kg" ${source.unit === 'kg' ? 'selected' : ''}>€/kg</option>
                 </select>
                 <button class="btn-del" onclick="deleteRow(this)">🗑️</button>
             `;
@@ -377,14 +536,98 @@
         }
         
         function addRow() {
-            categories.push({ name: '', url: '', unit: 'L' });
-            displayCategories();
+            config.sources.push({ 
+                name: '', 
+                url: '', 
+                unit: 'L',
+                productCategory: ''
+            });
+            displaySources();
         }
         
         function deleteRow(btn) {
-            if (confirm('Are you sure you want to delete this category?')) {
+            if (confirm('Are you sure you want to delete this source?')) {
                 btn.closest('.row').remove();
             }
+        }
+        
+        function showAddCategoryModal() {
+            document.getElementById('newCategoryName').value = '';
+            document.getElementById('categoryModal').classList.add('show');
+        }
+        
+        function editProductCategory(index) {
+            editingCategoryIndex = index;
+            document.getElementById('editCategoryName').value = config.productCategories[index];
+            document.getElementById('editCategoryModal').classList.add('show');
+        }
+        
+        function saveEditCategory() {
+            const newName = document.getElementById('editCategoryName').value.trim();
+            if (!newName) {
+                alert('Category name cannot be empty');
+                return;
+            }
+            
+            const oldName = config.productCategories[editingCategoryIndex];
+            config.productCategories[editingCategoryIndex] = newName;
+            
+            // Update all sources using this category
+            config.sources.forEach(source => {
+                if (source.productCategory === oldName) {
+                    source.productCategory = newName;
+                }
+            });
+            
+            displayProductCategories();
+            displaySources();
+            hideModal();
+        }
+        
+        function addProductCategory() {
+            const name = document.getElementById('newCategoryName').value.trim();
+            if (!name) {
+                alert('Category name cannot be empty');
+                return;
+            }
+            
+            if (config.productCategories.includes(name)) {
+                alert('Category already exists');
+                return;
+            }
+            
+            config.productCategories.push(name);
+            displayProductCategories();
+            displaySources(); // Refresh to update dropdowns
+            hideModal();
+        }
+        
+        function deleteProductCategory(index) {
+            const catName = config.productCategories[index];
+            const usageCount = config.sources.filter(s => s.productCategory === catName).length;
+            
+            if (usageCount > 0) {
+                if (!confirm(`This category is used by ${usageCount} source(s). Delete anyway?`)) {
+                    return;
+                }
+            }
+            
+            config.productCategories.splice(index, 1);
+            
+            // Remove category from sources
+            config.sources.forEach(source => {
+                if (source.productCategory === catName) {
+                    source.productCategory = '';
+                }
+            });
+            
+            displayProductCategories();
+            displaySources();
+        }
+        
+        function hideModal() {
+            document.getElementById('categoryModal').classList.remove('show');
+            document.getElementById('editCategoryModal').classList.remove('show');
         }
         
         function setupDragListeners(row) {
@@ -425,54 +668,47 @@
             }, { offset: Number.NEGATIVE_INFINITY }).element;
         }
         
-        function saveCategories() {
+        function saveConfig() {
             const rows = document.querySelectorAll('.row');
-            const newCategories = [];
+            const newSources = [];
             
             let hasErrors = false;
             rows.forEach(row => {
                 const name = row.querySelector('.cat-name').value.trim();
                 const url = row.querySelector('.cat-url').value.trim();
                 const unit = row.querySelector('.cat-unit').value;
+                const productCategory = row.querySelector('.cat-product-category').value;
                 
                 if (name && url) {
-                    newCategories.push({ name, url, unit });
+                    newSources.push({ 
+                        name, 
+                        url, 
+                        unit,
+                        productCategory 
+                    });
                 } else if (name || url) {
                     hasErrors = true;
                 }
             });
             
             if (hasErrors) {
-                showStatus('saveStatus', 'error', '❌ Please fill in both name and URL for all categories, or remove empty rows');
+                showStatus('saveStatus', 'error', '❌ Please fill in both name and URL for all sources, or remove empty rows');
                 return;
             }
             
-            categories = newCategories;
+            config.sources = newSources;
             
             // Save to localStorage as backup
-            localStorage.setItem('priceTrackerCategories', JSON.stringify(categories));
+            localStorage.setItem('priceTrackerConfig', JSON.stringify(config));
             
             // Download the file
             downloadJSON();
             
-            showStatus('saveStatus', 'success', '✅ Categories saved! Download started. Commit the file to your GitHub repo.');
+            showStatus('saveStatus', 'success', '✅ Configuration saved! Download started. Commit the file to your GitHub repo.');
         }
         
         function downloadJSON() {
-            const rows = document.querySelectorAll('.row');
-            const currentCategories = [];
-            
-            rows.forEach(row => {
-                const name = row.querySelector('.cat-name').value.trim();
-                const url = row.querySelector('.cat-url').value.trim();
-                const unit = row.querySelector('.cat-unit').value;
-                
-                if (name && url) {
-                    currentCategories.push({ name, url, unit });
-                }
-            });
-            
-            const dataStr = JSON.stringify(currentCategories, null, 2);
+            const dataStr = JSON.stringify(config, null, 2);
             const dataBlob = new Blob([dataStr], { type: 'application/json' });
             const url = URL.createObjectURL(dataBlob);
             
@@ -505,8 +741,15 @@
             }
         }
         
-        // Load categories on page load
-        window.addEventListener('DOMContentLoaded', loadCategories);
+        // Load config on page load
+        window.addEventListener('DOMContentLoaded', loadConfig);
+        
+        // Close modal when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target.classList.contains('modal')) {
+                hideModal();
+            }
+        });
     </script>
 </body>
 </html>
