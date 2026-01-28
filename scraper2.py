@@ -44,14 +44,24 @@ def get_category_key(name, url):
     store = get_store_from_url(url)
     return f"{store}:{name}"
 
+# Add this to the top of scraper2.py, replacing the old load_categories() function
+
 def load_categories():
-    """Load config - supports both old dict format and new list format"""
+    """Load config - supports both old and new formats"""
     if os.path.exists(CONFIG_FILE):
         with open(CONFIG_FILE, "r", encoding="utf-8") as f:
             data = json.load(f)
             
-        # Convert old dict format to new list format
-        if isinstance(data, dict):
+        # Handle new format (object with productCategories and sources)
+        if isinstance(data, dict) and 'sources' in data:
+            return data.get('sources', [])
+        
+        # Handle old format (array of sources)
+        elif isinstance(data, list):
+            return data
+        
+        # Handle very old dict format
+        elif isinstance(data, dict):
             new_format = []
             for name, info in data.items():
                 if isinstance(info, dict):
@@ -66,12 +76,9 @@ def load_categories():
                         "url": info,
                         "unit": "L"
                     })
-            # Save in new format
-            with open(CONFIG_FILE, "w", encoding="utf-8") as f:
-                json.dump(new_format, f, indent=2)
             return new_format
-        return data
     return []
+
 
 def extract_unit_value(text, target_type):
     if not text:
@@ -441,4 +448,5 @@ if __name__ == "__main__":
         build_site.build()
         print("Success: Website updated (index.html)")
     except ImportError:
+
         print("Error: build_site.py not found. Website not updated.")
