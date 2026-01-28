@@ -94,32 +94,36 @@ def build():
     # Sort by discount percentage
     sale_products.sort(key=lambda x: x['discount_pct'], reverse=True)
     
-    # Generate sidebar links with store badges
+    # Generate sidebar links with checkboxes
     sidebar_links = ""
     
-    # Add favorites section link
-    sidebar_links += f'''
-        <a href="#favorites-section" class="nav-link nav-link-special" id="favorites-nav-link" style="display:none;" onclick="closeMobileMenu()">
-            <span class="fav-icon">⭐</span>
-            <span class="category-name">My Favorites (<span id="fav-count">0</span>)</span>
-        </a>'''
+    # Add stores filter section
+    stores = list(set([cat['store'] for cat in categories]))
+    stores.sort()
     
-    # Add sales section link if there are sales
-    if sale_products:
+    sidebar_links += '<div class="filter-section">'
+    sidebar_links += '<div class="filter-title">Stores</div>'
+    for store in stores:
         sidebar_links += f'''
-        <a href="#sales-section" class="nav-link nav-link-sale" onclick="closeMobileMenu()">
-            <span class="sale-icon">🔥</span>
-            <span class="category-name">Sales ({len(sale_products)})</span>
-        </a>'''
+        <label class="filter-checkbox">
+            <input type="checkbox" checked onchange="filterByStore()" data-store="{store}">
+            <span class="store-label-sm store-label-{store}">{store}</span>
+        </label>'''
+    sidebar_links += '</div>'
     
-    sidebar_links += '<div style="border-bottom: 2px solid #2d3748; margin: 15px 0;"></div>'
-    
-    for i, cat in enumerate(categories):
-        sidebar_links += f'''
-        <a href="#cat_{i}" class="nav-link" onclick="closeMobileMenu()">
-            <span class="store-label store-label-{cat['store']}">{cat['store']}</span>
-            <span class="category-name">{cat['name']}</span>
-        </a>'''
+    # Add quick filters
+    sidebar_links += '<div class="filter-section">'
+    sidebar_links += '<div class="filter-title">Quick Filters</div>'
+    sidebar_links += '''
+        <label class="filter-checkbox">
+            <input type="checkbox" id="filter-favorites" onchange="applyFilters()">
+            <span>⭐ Favorites only</span>
+        </label>
+        <label class="filter-checkbox">
+            <input type="checkbox" id="filter-sales" onchange="applyFilters()">
+            <span>🔥 On sale</span>
+        </label>
+    </div>'''
     
     html_template = f"""
 <!DOCTYPE html>
@@ -130,7 +134,7 @@ def build():
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         * {{ box-sizing: border-box; }}
-        body {{ font-family: 'Segoe UI', sans-serif; background:#f0f2f5; margin:0; display: flex; color: #333; }}
+        body {{ font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background:#f8f9fa; margin:0; display: flex; color: #1a1a1a; }}
         
         /* Hamburger Menu Button - Hidden on desktop */
         .hamburger {{
@@ -139,31 +143,31 @@ def build():
             top: 15px;
             left: 15px;
             z-index: 1001;
-            background: #1a202c;
-            border: none;
+            background: white;
+            border: 1px solid #e5e7eb;
             border-radius: 8px;
-            width: 50px;
-            height: 50px;
+            width: 44px;
+            height: 44px;
             cursor: pointer;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 5px;
+            gap: 4px;
             padding: 0;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
         }}
         
         .hamburger span {{
             display: block;
-            width: 25px;
-            height: 3px;
-            background: white;
+            width: 20px;
+            height: 2px;
+            background: #374151;
             border-radius: 2px;
             transition: 0.3s;
         }}
         
         .hamburger.active span:nth-child(1) {{
-            transform: rotate(45deg) translate(7px, 7px);
+            transform: rotate(45deg) translate(5px, 5px);
         }}
         
         .hamburger.active span:nth-child(2) {{
@@ -171,7 +175,7 @@ def build():
         }}
         
         .hamburger.active span:nth-child(3) {{
-            transform: rotate(-45deg) translate(7px, -7px);
+            transform: rotate(-45deg) translate(6px, -6px);
         }}
         
         /* Sidebar overlay for mobile */
@@ -186,127 +190,179 @@ def build():
             z-index: 999;
         }}
         
-        /* Sidebar stays fixed */
-        .sidebar {{ width: 250px; background: #1a202c; color: #cbd5e0; height: 100vh; position: fixed; padding: 25px 20px; box-sizing: border-box; overflow-y: auto; z-index: 10; }}
-        .sidebar h2 {{ font-size: 20px; color: white; margin-bottom: 5px; }}
-        .last-run {{ font-size: 10px; color: #718096; margin-bottom: 25px; display:block; }}
-        .nav-link {{ 
+        /* Sidebar */
+        .sidebar {{ 
+            width: 260px; 
+            background: white; 
+            color: #374151; 
+            height: 100vh; 
+            position: fixed; 
+            padding: 25px 0; 
+            box-sizing: border-box; 
+            overflow-y: auto; 
+            z-index: 10;
+            border-right: 1px solid #e5e7eb;
+        }}
+        
+        .sidebar h2 {{ 
+            font-size: 18px; 
+            color: #111827; 
+            margin: 0 20px 5px; 
+            font-weight: 700;
+        }}
+        
+        .last-run {{ 
+            font-size: 11px; 
+            color: #9ca3af; 
+            margin: 0 20px 25px; 
+            display:block; 
+        }}
+        
+        .filter-section {{
+            padding: 15px 20px;
+            border-bottom: 1px solid #f3f4f6;
+        }}
+        
+        .filter-title {{
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #6b7280;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }}
+        
+        .filter-checkbox {{
             display: flex;
             align-items: center;
-            color: #a0aec0; 
-            text-decoration: none; 
-            padding: 12px 10px; 
-            border-bottom: 1px solid #2d3748; 
-            transition: 0.2s; 
-            font-size: 14px; 
-        }}
-        .nav-link:hover {{ color: white; transform: translateX(5px); }}
-        
-        .nav-link-special {{ 
-            background: linear-gradient(135deg, #805ad5 0%, #6b46c1 100%);
-            border-radius: 8px;
-            margin-bottom: 10px;
-            border: none;
-            color: white;
-        }}
-        .nav-link-special:hover {{ 
-            transform: translateX(5px) scale(1.02); 
-            box-shadow: 0 4px 12px rgba(128, 90, 213, 0.4);
+            padding: 8px 0;
+            cursor: pointer;
+            font-size: 14px;
+            color: #374151;
+            transition: 0.15s;
         }}
         
-        .nav-link-sale {{ 
-            background: linear-gradient(135deg, #e53e3e 0%, #d69e2e 100%);
-            border-radius: 8px;
-            margin-bottom: 10px;
-            border: none;
-            color: white;
-        }}
-        .nav-link-sale:hover {{ 
-            transform: translateX(5px) scale(1.02); 
-            box-shadow: 0 4px 12px rgba(229, 62, 62, 0.4);
+        .filter-checkbox:hover {{
+            color: #111827;
         }}
         
-        .fav-icon, .sale-icon {{
-            font-size: 18px;
-            margin-right: 8px;
+        .filter-checkbox input[type="checkbox"] {{
+            width: 18px;
+            height: 18px;
+            margin-right: 10px;
+            cursor: pointer;
+            accent-color: #10b981;
         }}
         
-        .store-label {{ 
+        .store-label-sm {{ 
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            font-size: 9px;
-            padding: 2px 6px;
-            border-radius: 3px;
-            font-weight: bold;
+            font-size: 10px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 600;
             text-transform: uppercase;
-            width: 65px;
-            text-align: center;
-            flex-shrink: 0;
-        }}
-        .store-label-Barbora {{ background: #e53e3e; color: white; }}
-        .store-label-Selver {{ background: #d69e2e; color: white; }}
-        .store-label-Rimi {{ background: #e53e3e; color: white; }}
-        .store-label-Coop {{ background: #2b6cb0; color: white; }}
-        .store-label-Unknown {{ background: #718096; color: white; }}
-        
-        .category-name {{
-            margin-left: 12px;
-            flex: 1;
+            margin-left: 4px;
         }}
         
-        .main {{ margin-left: 250px; flex: 1; padding: 0 40px 40px 40px; max-width: 1600px; margin-right: auto; }}
+        .store-label-Barbora {{ background: #fee2e2; color: #991b1b; }}
+        .store-label-Selver {{ background: #fef3c7; color: #92400e; }}
+        .store-label-Rimi {{ background: #fee2e2; color: #991b1b; }}
+        .store-label-Coop {{ background: #dbeafe; color: #1e40af; }}
+        .store-label-Unknown {{ background: #f3f4f6; color: #6b7280; }}
+        
+        .main {{ margin-left: 260px; flex: 1; padding: 0 40px 40px 40px; max-width: 1600px; margin-right: auto; }}
 
         /* STICKY HEADER */
         .header {{ 
             position: sticky; 
             top: 0; 
-            background: #f0f2f5; 
+            background: #f8f9fa; 
             padding: 20px 0; 
             z-index: 100; 
             display: flex; 
             justify-content: space-between; 
             align-items: center; 
-            border-bottom: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e5e7eb;
         }}
-        .controls {{ display: flex; gap: 10px; background: white; padding: 10px 20px; border-radius: 12px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); align-items: center; width: 100%; justify-content: space-between; }}
         
-        .btn {{ padding: 8px 16px; border-radius: 6px; border: 1px solid #e2e8f0; cursor: pointer; font-weight: 600; font-size: 14px; background: white; color: #4a5568; transition: 0.2s; }}
-        .btn-active {{ background: #2f855a; color: white; border-color: #2f855a; }}
+        .controls {{ 
+            display: flex; 
+            gap: 12px; 
+            background: white; 
+            padding: 6px; 
+            border-radius: 12px; 
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05); 
+            align-items: center; 
+            width: 100%; 
+            justify-content: space-between;
+            border: 1px solid #e5e7eb;
+        }}
+        
+        .btn {{ 
+            padding: 10px 18px; 
+            border-radius: 8px; 
+            border: none; 
+            cursor: pointer; 
+            font-weight: 600; 
+            font-size: 14px; 
+            background: transparent; 
+            color: #6b7280; 
+            transition: 0.15s; 
+        }}
+        
+        .btn-active {{ 
+            background: #10b981; 
+            color: white; 
+        }}
+        
+        .btn:hover:not(.btn-active) {{
+            background: #f3f4f6;
+            color: #374151;
+        }}
         
         /* SEARCH INPUT */
-        .search-box {{ padding: 8px 15px; border-radius: 6px; border: 1px solid #cbd5e0; width: 300px; font-size: 14px; outline: none; }}
-        .search-box:focus {{ border-color: #2f855a; box-shadow: 0 0 0 2px rgba(47, 133, 90, 0.2); }}
+        .search-box {{ 
+            padding: 10px 15px; 
+            border-radius: 8px; 
+            border: 1px solid #e5e7eb; 
+            width: 300px; 
+            font-size: 14px; 
+            outline: none; 
+        }}
+        
+        .search-box:focus {{ 
+            border-color: #10b981; 
+            box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1); 
+        }}
 
-        /* FAVORITES CAROUSEL SECTION */
+        /* FAVORITES CAROUSEL - More Subtle */
         .favorites-section {{
-            margin-top: 40px;
+            margin-top: 30px;
             scroll-margin-top: 100px;
-            background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
-            border-radius: 16px;
-            padding: 30px;
-            border: 2px solid #d6bcfa;
-            box-shadow: 0 4px 12px rgba(128, 90, 213, 0.1);
+            background: white;
+            border-radius: 12px;
+            padding: 20px 25px;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
             display: none;
         }}
         
         .favorites-title {{
-            font-size: 28px;
-            font-weight: 800;
-            background: linear-gradient(135deg, #805ad5 0%, #6b46c1 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 10px;
+            font-size: 16px;
+            font-weight: 700;
+            color: #374151;
+            margin-bottom: 5px;
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 8px;
         }}
         
         .favorites-subtitle {{
-            color: #553c9a;
-            font-size: 14px;
-            margin-bottom: 25px;
+            color: #9ca3af;
+            font-size: 13px;
+            margin-bottom: 20px;
         }}
         
         .carousel-container {{
@@ -328,7 +384,7 @@ def build():
         }}
         
         .carousel-card {{
-            min-width: 320px;
+            min-width: 300px;
             flex-shrink: 0;
         }}
         
@@ -336,24 +392,24 @@ def build():
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background: rgba(255, 255, 255, 0.9);
-            border: 2px solid #d6bcfa;
+            background: white;
+            border: 1px solid #e5e7eb;
             border-radius: 50%;
-            width: 40px;
-            height: 40px;
+            width: 36px;
+            height: 36px;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            font-size: 20px;
-            color: #6b46c1;
-            transition: 0.2s;
+            font-size: 18px;
+            color: #6b7280;
+            transition: 0.15s;
             z-index: 2;
         }}
         
         .carousel-btn:hover {{
-            background: white;
-            box-shadow: 0 4px 12px rgba(128, 90, 213, 0.3);
+            background: #f9fafb;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }}
         
         .carousel-btn-left {{ left: -15px; }}
@@ -366,24 +422,24 @@ def build():
         
         .empty-favorites {{
             text-align: center;
-            padding: 40px;
-            color: #805ad5;
+            padding: 30px;
+            color: #9ca3af;
         }}
         
         .empty-favorites-icon {{
-            font-size: 48px;
-            margin-bottom: 10px;
+            font-size: 36px;
+            margin-bottom: 8px;
         }}
 
-        /* SALES SECTION - Compact Top 3 */
+        /* SALES SECTION - More Subtle */
         .sales-section {{
-            margin-top: 40px;
+            margin-top: 30px;
             scroll-margin-top: 100px;
-            background: linear-gradient(135deg, #fff5f5 0%, #fffaf0 100%);
-            border-radius: 16px;
-            padding: 25px;
-            border: 2px solid #feb2b2;
-            box-shadow: 0 4px 12px rgba(229, 62, 62, 0.1);
+            background: white;
+            border-radius: 12px;
+            padding: 20px 25px;
+            border: 1px solid #fee2e2;
+            box-shadow: 0 1px 3px rgba(239, 68, 68, 0.08);
         }}
         
         .sales-header {{
@@ -394,93 +450,130 @@ def build():
         }}
         
         .sales-title {{
-            font-size: 24px;
-            font-weight: 800;
-            background: linear-gradient(135deg, #e53e3e 0%, #d69e2e 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-size: 16px;
+            font-weight: 700;
+            color: #374151;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
+        }}
+        
+        .sale-badge {{
+            background: #fee2e2;
+            color: #991b1b;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 4px;
         }}
         
         .expand-sales-btn {{
             background: white;
-            border: 2px solid #feb2b2;
-            color: #c53030;
-            padding: 8px 16px;
+            border: 1px solid #e5e7eb;
+            color: #6b7280;
+            padding: 8px 14px;
             border-radius: 8px;
             cursor: pointer;
             font-weight: 600;
             font-size: 13px;
-            transition: 0.2s;
+            transition: 0.15s;
         }}
         
         .expand-sales-btn:hover {{
-            background: #fff5f5;
-            transform: translateY(-1px);
+            background: #f9fafb;
+            color: #374151;
         }}
         
         .discount-badge {{
             position: absolute;
-            top: 10px;
-            left: 10px;
-            background: linear-gradient(135deg, #e53e3e 0%, #d69e2e 100%);
+            top: 8px;
+            left: 8px;
+            background: #ef4444;
             color: white;
-            font-size: 15px;
-            font-weight: 800;
-            padding: 6px 12px;
+            font-size: 12px;
+            font-weight: 700;
+            padding: 4px 8px;
             border-radius: 6px;
-            box-shadow: 0 2px 6px rgba(229, 62, 62, 0.3);
         }}
         
         .price-trend-up {{
-            color: #e53e3e;
-            font-size: 12px;
+            color: #ef4444;
+            font-size: 11px;
             font-weight: 700;
         }}
         
         .price-trend-down {{
-            color: #2f855a;
-            font-size: 12px;
+            color: #10b981;
+            font-size: 11px;
             font-weight: 700;
         }}
         
         .price-trend-stable {{
-            color: #718096;
-            font-size: 12px;
+            color: #9ca3af;
+            font-size: 11px;
             font-weight: 700;
         }}
 
-        .cat-section {{ margin-top: 40px; scroll-margin-top: 100px; }}
-        .cat-title {{ font-size: 22px; font-weight: 700; color: #2d3748; margin-bottom: 15px; padding-left: 15px; border-left: 5px solid #718096; }}
-        .cat-title-Barbora {{ border-left-color: #e53e3e; }}
-        .cat-title-Selver {{ border-left-color: #d69e2e; }}
-        .cat-title-Rimi {{ border-left-color: #e53e3e; }}
-        .cat-title-Coop {{ border-left-color: #2b6cb0; }}
-        .grid {{ display:grid; grid-template-columns:repeat(auto-fill,minmax(320px,1fr)); gap: 15px; }}
+        .cat-section {{ margin-top: 30px; scroll-margin-top: 100px; }}
+        .cat-title {{ 
+            font-size: 18px; 
+            font-weight: 700; 
+            color: #111827; 
+            margin-bottom: 15px; 
+            padding-left: 12px;
+            border-left: 3px solid #e5e7eb; 
+        }}
         
-        .card {{ background:white; border-radius:10px; padding:15px; box-shadow:0 2px 4px rgba(0,0,0,0.04); display:flex; gap:15px; text-decoration:none; color:inherit; height: 130px; position: relative; transition: 0.2s; border: 1px solid transparent; }}
-        .card:hover {{ transform: translateY(-2px); border-color: #cbd5e0; }}
+        .grid {{ display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap: 15px; }}
+        
+        .card {{ 
+            background:white; 
+            border-radius:10px; 
+            padding:15px; 
+            box-shadow:0 1px 3px rgba(0,0,0,0.05); 
+            display:flex; 
+            gap:15px; 
+            text-decoration:none; 
+            color:inherit; 
+            height: 130px; 
+            position: relative; 
+            transition: 0.15s; 
+            border: 1px solid #e5e7eb; 
+        }}
+        
+        .card:hover {{ 
+            transform: translateY(-2px); 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-color: #d1d5db;
+        }}
 
-        .store-badge {{ position: absolute; top: 10px; right: 10px; font-size: 10px; padding: 2px 6px; border-radius: 4px; font-weight: bold; text-transform: uppercase; color: white; }}
-        .store-Barbora {{ background: #e53e3e; }}
-        .store-Selver {{ background: #d69e2e; }}
-        .store-Rimi {{ background: #e53e3e; }}
-        .store-Coop {{ background: #2b6cb0; }}
+        .store-badge {{ 
+            position: absolute; 
+            top: 8px; 
+            right: 8px; 
+            font-size: 9px; 
+            padding: 3px 6px; 
+            border-radius: 4px; 
+            font-weight: 700; 
+            text-transform: uppercase; 
+        }}
+        
+        .store-Barbora {{ background: #fee2e2; color: #991b1b; }}
+        .store-Selver {{ background: #fef3c7; color: #92400e; }}
+        .store-Rimi {{ background: #fee2e2; color: #991b1b; }}
+        .store-Coop {{ background: #dbeafe; color: #1e40af; }}
 
         .card img {{ width:70px; height:100%; object-fit:contain; }}
         .info {{ flex: 1; display: flex; flex-direction: column; justify-content: center; }}
-        .name {{ font-size:12px; font-weight:700; line-height:1.4; max-height: 2.8em; overflow: hidden; margin-bottom: 5px; }}
+        .name {{ font-size:13px; font-weight:600; line-height:1.4; max-height: 2.8em; overflow: hidden; margin-bottom: 5px; color: #1f2937; }}
         
         /* FAVORITE STAR BUTTON */
         .fav-btn {{
             position: absolute;
-            bottom: 10px;
-            right: 10px;
+            bottom: 8px;
+            right: 8px;
             background: white;
-            border: 2px solid #e2e8f0;
+            border: 1px solid #e5e7eb;
             border-radius: 50%;
             width: 32px;
             height: 32px;
@@ -488,40 +581,59 @@ def build():
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            font-size: 16px;
-            transition: 0.2s;
+            font-size: 14px;
+            transition: 0.15s;
             z-index: 5;
             pointer-events: auto;
         }}
         
         .fav-btn:hover {{
-            border-color: #805ad5;
-            transform: scale(1.1);
+            border-color: #fbbf24;
+            background: #fffbeb;
+            transform: scale(1.05);
         }}
         
         .fav-btn.active {{
-            background: #805ad5;
-            border-color: #805ad5;
+            background: #fef3c7;
+            border-color: #f59e0b;
         }}
         
         /* PRICE STYLING */
         .price-container {{ display: flex; align-items: baseline; gap: 6px; }}
-        .price {{ font-size:22px; font-weight:800; color: #2d3748; }}
+        .price {{ font-size:20px; font-weight:700; color: #111827; }}
         .price-sale {{ 
-            background-color: #c6f6d5;
-            color: inherit;
-            padding: 3px 8px;
-            border-radius: 5px;
-            font-weight: 800;
+            background-color: #d1fae5;
+            color: #065f46;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 700;
         }}
         
-        .price-old {{ font-size: 15px; color: #a0aec0; text-decoration: line-through; font-weight: 600; }}
+        .price-old {{ font-size: 14px; color: #9ca3af; text-decoration: line-through; font-weight: 500; }}
         
-        .per-l {{ color:#2f855a; font-weight:600; font-size:13px; }}
+        .per-l {{ color:#059669; font-weight:600; font-size:12px; }}
         
-        .expand-bar {{ grid-column: 1 / -1; background: #fff; border: 1px solid #e2e8f0; color: #4a5568; text-align: center; padding: 12px; border-radius: 8px; cursor: pointer; font-weight: bold; margin-top: 10px; }}
+        .expand-bar {{ 
+            grid-column: 1 / -1; 
+            background: #f9fafb; 
+            border: 1px solid #e5e7eb; 
+            color: #6b7280; 
+            text-align: center; 
+            padding: 12px; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            font-weight: 600; 
+            margin-top: 10px; 
+            transition: 0.15s;
+        }}
+        
+        .expand-bar:hover {{
+            background: white;
+            color: #374151;
+        }}
+        
         .hidden {{ display: none; }}
-        #search-results-title {{ display: none; margin-top: 40px; color: #2f855a; border-left: 5px solid #2f855a; padding-left: 15px; font-size: 22px; font-weight: 700; }}
+        #search-results-title {{ display: none; margin-top: 30px; color: #374151; border-left: 3px solid #10b981; padding-left: 12px; font-size: 18px; font-weight: 700; }}
         
         /* MOBILE RESPONSIVE STYLES */
         @media (max-width: 768px) {{
@@ -537,7 +649,7 @@ def build():
             /* Sidebar slides in from left */
             .sidebar {{
                 position: fixed;
-                left: -250px;
+                left: -260px;
                 transition: left 0.3s ease;
                 z-index: 1000;
             }}
@@ -564,7 +676,7 @@ def build():
             .controls {{
                 flex-direction: column;
                 gap: 12px;
-                padding: 15px;
+                padding: 12px;
             }}
             
             .controls > div {{
@@ -586,20 +698,12 @@ def build():
             }}
             
             /* Larger text for mobile */
-            .favorites-title {{
-                font-size: 24px;
-            }}
-            
-            .favorites-subtitle {{
-                font-size: 15px;
-            }}
-            
-            .sales-title {{
-                font-size: 20px;
+            .favorites-title, .sales-title {{
+                font-size: 17px;
             }}
             
             .cat-title {{
-                font-size: 20px;
+                font-size: 17px;
                 margin-bottom: 12px;
             }}
             
@@ -626,7 +730,7 @@ def build():
             }}
             
             .price {{
-                font-size: 24px;
+                font-size: 22px;
             }}
             
             .price-old {{
@@ -634,24 +738,24 @@ def build():
             }}
             
             .per-l {{
-                font-size: 14px;
+                font-size: 13px;
             }}
             
             .store-badge {{
-                font-size: 11px;
-                padding: 3px 8px;
+                font-size: 10px;
+                padding: 3px 7px;
             }}
             
             .discount-badge {{
-                font-size: 16px;
-                padding: 8px 14px;
+                font-size: 13px;
+                padding: 5px 10px;
             }}
             
             /* Favorite button bigger for easier tapping */
             .fav-btn {{
-                width: 40px;
-                height: 40px;
-                font-size: 18px;
+                width: 38px;
+                height: 38px;
+                font-size: 16px;
             }}
             
             /* Carousel adjustments */
@@ -665,33 +769,22 @@ def build():
             }}
             
             .carousel-btn {{
-                width: 35px;
-                height: 35px;
-                font-size: 18px;
+                width: 32px;
+                height: 32px;
+                font-size: 16px;
             }}
             
             .carousel-btn-left {{ left: 0; }}
             .carousel-btn-right {{ right: 0; }}
             
-            /* Sales section */
-            .sales-section {{
-                padding: 20px 15px;
-            }}
-            
-            .favorites-section {{
-                padding: 20px 15px;
+            /* Sales/Favorites sections */
+            .sales-section, .favorites-section {{
+                padding: 18px 15px;
             }}
             
             .expand-sales-btn {{
                 padding: 10px 14px;
                 font-size: 14px;
-            }}
-            
-            /* Price trends more visible */
-            .price-trend-up,
-            .price-trend-down,
-            .price-trend-stable {{
-                font-size: 13px;
             }}
         }}
     </style>
@@ -706,8 +799,8 @@ def build():
     <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleMenu()"></div>
     
     <div class="sidebar" id="sidebar">
-        <h2>📊 Tracker</h2>
-        <span class="last-run">Last Update: {last_run}</span>
+        <h2>📊 Price Tracker</h2>
+        <span class="last-run">Updated: {last_run[:10]}</span>
         {sidebar_links}
     </div>
 
@@ -715,10 +808,10 @@ def build():
         <div class="header">
             <div class="controls">
                 <div>
-                    <button class="btn" id="sort-unit" onclick="setSort('price_per_unit')">Value (€/l v kg)</button>
-                    <button class="btn btn-active" id="sort-total" onclick="setSort('latest_price')">Tüki hind</button>
+                    <button class="btn" id="sort-unit" onclick="setSort('price_per_unit')">Best Value</button>
+                    <button class="btn btn-active" id="sort-total" onclick="setSort('latest_price')">Price</button>
                 </div>
-                <input type="text" id="search" class="search-box" placeholder="Search products (e.g. Heineken)..." oninput="handleSearch()">
+                <input type="text" id="search" class="search-box" placeholder="Search products..." oninput="handleSearch()">
             </div>
         </div>
         
@@ -737,6 +830,7 @@ let favorites = [];
 let carouselPosition = 0;
 let touchStartX = 0;
 let touchEndX = 0;
+let activeStores = new Set({json.dumps([cat['store'] for cat in categories])});
 
 // Toggle mobile menu
 function toggleMenu() {{
@@ -749,7 +843,7 @@ function toggleMenu() {{
     hamburger.classList.toggle('active');
 }}
 
-// Close menu when clicking a nav link on mobile
+// Close menu when clicking a link on mobile
 function closeMobileMenu() {{
     if (window.innerWidth <= 768) {{
         toggleMenu();
@@ -771,10 +865,8 @@ function handleTouchEnd() {{
     
     if (Math.abs(diff) > swipeThreshold) {{
         if (diff > 0) {{
-            // Swiped left - move right
             moveCarousel(1);
         }} else {{
-            // Swiped right - move left
             moveCarousel(-1);
         }}
     }}
@@ -831,13 +923,7 @@ function toggleFavorite(productName, event) {{
 
 // Update favorites UI
 function updateFavoritesUI() {{
-    const favCount = document.getElementById('fav-count');
-    const favNavLink = document.getElementById('favorites-nav-link');
-    
-    if (favCount) favCount.textContent = favorites.length;
-    if (favNavLink) {{
-        favNavLink.style.display = favorites.length > 0 ? 'flex' : 'none';
-    }}
+    // Update count if needed
 }}
 
 // Carousel navigation
@@ -846,28 +932,38 @@ function moveCarousel(direction) {{
     const cards = document.querySelectorAll('.carousel-card');
     if (!track || cards.length === 0) return;
     
-    // Get actual card width including gap
     const firstCard = cards[0];
-    const cardStyle = window.getComputedStyle(firstCard);
-    const cardWidth = firstCard.offsetWidth + 15; // Card width + gap
+    const cardWidth = firstCard.offsetWidth + 15;
     
     carouselPosition += direction;
     
-    // Calculate how many cards fit on screen
     const containerWidth = track.parentElement.offsetWidth;
     const visibleCards = Math.floor(containerWidth / cardWidth) || 1;
     
-    // Clamp position
     const maxPosition = Math.max(0, cards.length - visibleCards);
     carouselPosition = Math.max(0, Math.min(carouselPosition, maxPosition));
     
     track.style.transform = `translateX(-${{carouselPosition * cardWidth}}px)`;
     
-    // Update button states
     const leftBtn = document.querySelector('.carousel-btn-left');
     const rightBtn = document.querySelector('.carousel-btn-right');
     if (leftBtn) leftBtn.disabled = carouselPosition === 0;
     if (rightBtn) rightBtn.disabled = carouselPosition >= maxPosition;
+}}
+
+// Store filter
+function filterByStore() {{
+    const checkboxes = document.querySelectorAll('input[data-store]');
+    activeStores.clear();
+    checkboxes.forEach(cb => {{
+        if (cb.checked) activeStores.add(cb.dataset.store);
+    }});
+    render();
+}}
+
+// Apply filters
+function applyFilters() {{
+    render();
 }}
 
 function setSort(key){{
@@ -920,22 +1016,36 @@ function render() {{
     container.innerHTML = "";
     carouselPosition = 0;
     
+    // Apply filters
+    const showFavoritesOnly = document.getElementById('filter-favorites')?.checked || false;
+    const showSalesOnly = document.getElementById('filter-sales')?.checked || false;
+    
+    let filteredProducts = products.filter(p => activeStores.has(p.store));
+    
+    if (showFavoritesOnly) {{
+        filteredProducts = filteredProducts.filter(p => favorites.includes(p.name));
+    }}
+    
+    if (showSalesOnly) {{
+        const saleNames = new Set(saleProducts.map(p => p.name));
+        filteredProducts = filteredProducts.filter(p => saleNames.has(p.name));
+    }}
+    
     // RENDER FAVORITES CAROUSEL
     const favSection = document.getElementById('favorites-section') || document.createElement('div');
     favSection.id = 'favorites-section';
     favSection.className = 'favorites-section';
     
     if (favorites.length > 0) {{
-        const favoriteProducts = products
+        const favoriteProducts = filteredProducts
             .filter(p => favorites.includes(p.name))
-            .sort((a, b) => (a.latest_price || 999) - (b.latest_price || 999)); // Sort by cheapest price
+            .sort((a, b) => (a.latest_price || 999) - (b.latest_price || 999));
         
         const favCardsHtml = favoriteProducts.map(p => {{
             const trend = getPriceTrend(p);
             return `<div class="carousel-card">${{cardWithTrend(p, trend)}}</div>`;
         }}).join('');
         
-        // Calculate cards that fit on screen for button state
         const isMobile = window.innerWidth <= 768;
         const cardsVisible = isMobile ? 1 : 3;
         const hasMultiplePages = favoriteProducts.length > cardsVisible;
@@ -943,10 +1053,10 @@ function render() {{
         favSection.innerHTML = `
             <div class="favorites-title">
                 <span>⭐</span>
-                My Favorites
+                Favorites
             </div>
             <div class="favorites-subtitle">
-                ${{favorites.length}} products tracked | Sorted by price (cheapest first)
+                ${{favorites.length}} tracked · Sorted by price
             </div>
             <div class="carousel-container">
                 <button class="carousel-btn carousel-btn-left" onclick="moveCarousel(-1)" disabled>←</button>
@@ -958,62 +1068,62 @@ function render() {{
         `;
         favSection.style.display = 'block';
         
-        // Reset carousel position
         carouselPosition = 0;
-        
-        // Initialize touch events after rendering
         setTimeout(() => {{
             initCarouselTouch();
-            // Update button states based on actual layout
             moveCarousel(0);
         }}, 100);
     }} else {{
         favSection.innerHTML = `
             <div class="favorites-title">
                 <span>⭐</span>
-                My Favorites
+                Favorites
             </div>
             <div class="empty-favorites">
-                <div class="empty-favorites-icon">🌟</div>
-                <p>No favorites yet! Click the ⭐ button on any product to add it here.</p>
+                <div class="empty-favorites-icon">⭐</div>
+                <p>Click the ⭐ on products to save your favorites</p>
             </div>
         `;
         favSection.style.display = 'block';
     }}
     container.appendChild(favSection);
     
-    // RENDER SALES SECTION - Top 3 only
-    if (saleProducts.length > 0) {{
-        const top3Sales = saleProducts.slice(0, 3);
-        const restSales = saleProducts.slice(3);
-        
-        const salesHtml = `
-            <div class="sales-section" id="sales-section">
-                <div class="sales-header">
-                    <div class="sales-title">
-                        <span>🔥</span>
-                        Top Deals
+    // RENDER SALES SECTION
+    if (saleProducts.length > 0 && !showFavoritesOnly) {{
+        const filteredSales = saleProducts.filter(p => activeStores.has(p.store));
+        if (filteredSales.length > 0) {{
+            const top3Sales = filteredSales.slice(0, 3);
+            const restSales = filteredSales.slice(3);
+            
+            const salesHtml = `
+                <div class="sales-section" id="sales-section">
+                    <div class="sales-header">
+                        <div class="sales-title">
+                            <span>🔥</span>
+                            <span>On Sale</span>
+                            <span class="sale-badge">${{filteredSales.length}}</span>
+                        </div>
+                        ${{restSales.length > 0 ? 
+                            `<button class="expand-sales-btn" onclick="toggleAllSales()">Show all</button>` 
+                            : ''}}
                     </div>
-                    ${{restSales.length > 0 ? 
-                        `<button class="expand-sales-btn" onclick="toggleAllSales()">+${{restSales.length}} more deals</button>` 
-                        : ''}}
+                    <div class="grid" id="top-sales-grid">${{top3Sales.map(p => cardWithDiscount(p)).join('')}}</div>
+                    <div class="grid hidden" id="all-sales-grid" style="margin-top:15px">${{restSales.map(p => cardWithDiscount(p)).join('')}}</div>
                 </div>
-                <div class="grid" id="top-sales-grid">${{top3Sales.map(p => cardWithDiscount(p)).join('')}}</div>
-                <div class="grid hidden" id="all-sales-grid" style="margin-top:15px">${{restSales.map(p => cardWithDiscount(p)).join('')}}</div>
-            </div>
-        `;
-        container.innerHTML += salesHtml;
+            `;
+            container.innerHTML += salesHtml;
+        }}
     }}
     
     // RENDER REGULAR CATEGORIES
     const byCat = {{}};
-    products.forEach(p => {{
+    filteredProducts.forEach(p => {{
         if(!byCat[p.category]) byCat[p.category] = [];
         byCat[p.category].push(p);
     }});
 
     categories.forEach((cat, index) => {{
-        if (!byCat[cat.key]) return;
+        if (!byCat[cat.key] || !activeStores.has(cat.store)) return;
         const sorted = byCat[cat.key].sort((a,b)=> (a[currentSort] || 999) - (b[currentSort] || 999));
         const top5 = sorted.slice(0, 5);
         const rest = sorted.slice(5);
@@ -1022,12 +1132,12 @@ function render() {{
 
         let html = `
             <div class="cat-section" id="${{sectionId}}">
-                <div class="cat-title cat-title-${{cat.store}}">${{cat.name}} <span style="font-size:13px; font-weight:normal; color:#718096">(${{sorted.length}} items)</span></div>
+                <div class="cat-title">${{cat.name}} <span style="font-size:13px; font-weight:normal; color:#9ca3af">(${{sorted.length}})</span></div>
                 <div class="grid">${{top5.map(p=>card(p)).join('')}}</div>
         `;
         if (rest.length > 0) {{
             html += `<div id="${{hiddenId}}" class="grid hidden" style="margin-top:15px">${{rest.map(p=>card(p)).join('')}}</div>
-                     <div class="expand-bar" onclick="toggle('${{hiddenId}}', this)">Show ${{rest.length}} more deals ▾</div>`;
+                     <div class="expand-bar" onclick="toggle('${{hiddenId}}', this)">Show ${{rest.length}} more ▾</div>`;
         }}
         html += `</div>`;
         container.innerHTML += html;
@@ -1040,13 +1150,13 @@ function toggleAllSales() {{
     const allSalesGrid = document.getElementById('all-sales-grid');
     const btn = event.target;
     const isHidden = allSalesGrid.classList.toggle('hidden');
-    btn.textContent = isHidden ? `+${{saleProducts.length - 3}} more deals` : 'Show less';
+    btn.textContent = isHidden ? 'Show all' : 'Show less';
 }}
 
 function toggle(id, btn) {{
     const el = document.getElementById(id);
     const isHidden = el.classList.toggle('hidden');
-    btn.innerHTML = isHidden ? `Show more deals ▾` : "Collapse ▴";
+    btn.innerHTML = isHidden ? `Show more ▾` : "Collapse ▴";
 }}
 
 function cardWithTrend(p, trend) {{
@@ -1106,24 +1216,21 @@ function card(p) {{
     
     let priceDisplay = `<div class="price">€${{p.latest_price.toFixed(2)}}</div>`;
     
-    // LOGIC FOR PRICE CHANGES
     if (entries.length > 1) {{
         const currentP = p.latest_price;
         const previousP = entries[entries.length - 2].p;
         
         if (currentP < previousP) {{
-            // PRICE DROPPED (Sale)
             priceDisplay = `
                 <div class="price-container">
                     <span class="price price-sale">€${{currentP.toFixed(2)}}</span>
                     <span class="price-old">€${{previousP.toFixed(2)}}</span>
                 </div>`;
         }} else if (currentP > previousP) {{
-            // PRICE INCREASED
             priceDisplay = `
                 <div class="price-container">
                     <span class="price">€${{currentP.toFixed(2)}}</span>
-                    <span style="font-size: 10px; color: #e53e3e;">▲</span>
+                    <span style="font-size: 10px; color: #ef4444;">▲</span>
                 </div>`;
         }}
     }}
@@ -1142,7 +1249,6 @@ function card(p) {{
     </a>`;
 }}
 
-// Initialize
 loadFavorites();
 render();
 </script>
@@ -1153,7 +1259,6 @@ render();
         f.write(html_template)
     print(f"Static site built: {OUTPUT_FILE}")
     print(f"Found {len(sale_products)} products on sale")
-    print(f"Favorites feature enabled with localStorage")
 
 if __name__ == "__main__":
     build()
