@@ -76,9 +76,14 @@ def load_data():
             "productCategory": source.get("productCategory", "")
         })
     
-    # Load all products - removed the strict 'valid_keys' filter to prevent products disappearing
+    # Load all products and filter out unavailable ones (price = 0.10)
     raw_products = data.get("products", {})
-    products = [{"name": k, **v} for k, v in raw_products.items()]
+    products = []
+    for k, v in raw_products.items():
+        product = {"name": k, **v}
+        # Filter out products with price 0.10 (unavailable products)
+        if product.get('latest_price', 0) != 0.10:
+            products.append(product)
     
     return products, sources_with_stores, product_categories, data.get("meta", {}).get("generated_at", "Unknown")
 
