@@ -7,7 +7,7 @@ OUTPUT_FILE = "index.html"
 # Translations
 TRANSLATIONS = {
     "et": {
-        "title": "Hinnavahetus",
+        "title": "Hinnamõnu",
         "updated": "Uuendatud",
         "categories": "Kategooriad",
         "stores": "Poed",
@@ -27,7 +27,7 @@ TRANSLATIONS = {
         "show_less": "Näita vähem",
         "show_more": "Näita rohkem",
         "collapse": "Ahenda",
-        "uncategorized": "Kategoriseerimata / Vajalik Kaardistamine",
+        "uncategorized": "Kategoriseerimata",
         "tip_categories": "Vihje: Kontrolli categories.json, et veenduda, et neil allikatel on määratud productCategory.",
         "no_products": "Filtritele vastavaid tooteid ei leitud",
         "active_filters": "Aktiivsed filtrid",
@@ -1916,3 +1916,4 @@ render();
 
 if __name__ == "__main__":
     build()
+
