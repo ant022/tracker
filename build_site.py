@@ -10,7 +10,7 @@ def get_store_from_url(url):
         return "Unknown"
     url_lower = url.lower()
     if "barbora" in url_lower:
-        return "Barbora"
+        return "Maxima"
     elif "selver" in url_lower:
         return "Selver"
     elif "rimi" in url_lower:
@@ -344,7 +344,7 @@ def build():
             margin-left: 4px;
         }}
         
-        .store-label-Barbora {{ background: #fee2e2; color: #991b1b; }}
+        .store-label-Barbora {{ background: #1e3a8a; color: #ffffff; }}
         .store-label-Selver {{ background: #fef3c7; color: #92400e; }}
         .store-label-Rimi {{ background: #fee2e2; color: #991b1b; }}
         .store-label-Coop {{ background: #dbeafe; color: #1e40af; }}
@@ -697,7 +697,7 @@ def build():
             text-transform: uppercase; 
         }}
         
-        .store-Barbora {{ background: #fee2e2; color: #991b1b; }}
+        .store-Barbora {{ background: #1e3a8a; color: #ffffff; }}
         .store-Selver {{ background: #fef3c7; color: #92400e; }}
         .store-Rimi {{ background: #fee2e2; color: #991b1b; }}
         .store-Coop {{ background: #dbeafe; color: #1e40af; }}
@@ -1585,3 +1585,4 @@ render();
 
 if __name__ == "__main__":
     build()
+
