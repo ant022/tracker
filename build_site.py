@@ -4,6 +4,68 @@ HISTORY_FILE = "alcohol_history.json"
 CONFIG_FILE = "categories.json"
 OUTPUT_FILE = "index.html"
 
+# Translations
+TRANSLATIONS = {
+    "et": {
+        "title": "Hinnavahetus",
+        "updated": "Uuendatud",
+        "categories": "Kategooriad",
+        "stores": "Poed",
+        "quick_filters": "Kiirfiltrid",
+        "favorites_only": "Ainult lemmikud",
+        "on_sale": "Soodushinnaga",
+        "admin": "Admin",
+        "best_value": "Parim Väärtus",
+        "price": "Hind",
+        "search_placeholder": "Otsi tooteid...",
+        "search_results": "Otsingutulemused",
+        "favorites": "Lemmikud",
+        "tracked": "jälgitud",
+        "sorted_by_price": "Sorteeritud hinna järgi",
+        "products": "toodet",
+        "show_all": "Näita kõiki",
+        "show_less": "Näita vähem",
+        "show_more": "Näita rohkem",
+        "collapse": "Ahenda",
+        "uncategorized": "Kategoriseerimata / Vajalik Kaardistamine",
+        "tip_categories": "Vihje: Kontrolli categories.json, et veenduda, et neil allikatel on määratud productCategory.",
+        "no_products": "Filtritele vastavaid tooteid ei leitud",
+        "active_filters": "Aktiivsed filtrid",
+        "searching_in": "Otsimine",
+        "clear_all": "Tühjenda kõik",
+        "all_products": "Kõik tooted"
+    },
+    "en": {
+        "title": "Price Tracker",
+        "updated": "Updated",
+        "categories": "Categories",
+        "stores": "Stores",
+        "quick_filters": "Quick Filters",
+        "favorites_only": "Favorites only",
+        "on_sale": "On sale",
+        "admin": "Admin",
+        "best_value": "Best Value",
+        "price": "Price",
+        "search_placeholder": "Search products...",
+        "search_results": "Search Results",
+        "favorites": "Favorites",
+        "tracked": "tracked",
+        "sorted_by_price": "Sorted by price",
+        "products": "products",
+        "show_all": "Show all",
+        "show_less": "Show less",
+        "show_more": "Show more",
+        "collapse": "Collapse",
+        "uncategorized": "Uncategorized / Mapping Needed",
+        "tip_categories": "Tip: Check categories.json to ensure these sources have a productCategory assigned.",
+        "no_products": "No products match your filters",
+        "active_filters": "Active filters",
+        "searching_in": "Searching in",
+        "clear_all": "Clear All",
+        "all_products": "All products"
+    }
+}
+
 def get_store_from_url(url):
     """Detect store name from URL"""
     if not url:
@@ -128,7 +190,7 @@ def build():
         sidebar_links += '''
         <div class="filter-section">
             <div class="filter-title" onclick="toggleCategories()" style="cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
-                <span>🏷️ Categories</span>
+                <span data-i18n="categories">🏷️ Categories</span>
                 <span id="categories-arrow">▼</span>
             </div>
             <div id="product-categories" class="product-categories">'''
@@ -151,7 +213,7 @@ def build():
     stores.sort()
     
     sidebar_links += '<div class="filter-section">'
-    sidebar_links += '<div class="filter-title">Stores</div>'
+    sidebar_links += '<div class="filter-title" data-i18n="stores">Stores</div>'
     for store in stores:
         display_name = "Maxima" if store == "Barbora" else store
         sidebar_links += f'''
@@ -163,15 +225,15 @@ def build():
     
     # Quick Filters
     sidebar_links += '<div class="filter-section">'
-    sidebar_links += '<div class="filter-title">Quick Filters</div>'
+    sidebar_links += '<div class="filter-title" data-i18n="quick_filters">Quick Filters</div>'
     sidebar_links += '''
         <label class="filter-checkbox">
             <input type="checkbox" id="filter-favorites" onchange="applyFilters()">
-            <span>⭐ Favorites only</span>
+            <span data-i18n="favorites_only">⭐ Favorites only</span>
         </label>
         <label class="filter-checkbox">
             <input type="checkbox" id="filter-sales" onchange="applyFilters()">
-            <span>🔥 On sale</span>
+            <span data-i18n="on_sale">🔥 On sale</span>
         </label>
     </div>'''
     
@@ -180,7 +242,7 @@ def build():
     <div class="filter-section" style="border-bottom: none; padding-top: 20px;">
         <a href="admin.html" class="admin-link">
             <span style="font-size: 18px;">⚙️</span>
-            <span>Admin</span>
+            <span data-i18n="admin">Admin</span>
         </a>
     </div>'''
     
@@ -188,12 +250,42 @@ def build():
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Price Tracker</title>
+    <title data-i18n="title">Price Tracker</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         * {{ box-sizing: border-box; }}
         body {{ font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background:#f8f9fa; margin:0; display: flex; color: #1a1a1a; min-height: 100vh; }}
+        
+        /* Language Switcher */
+        .lang-switcher {{
+            display: flex;
+            gap: 8px;
+            padding: 15px 20px;
+            border-bottom: 1px solid #f3f4f6;
+        }}
+        
+        .lang-btn {{
+            background: none;
+            border: 2px solid transparent;
+            cursor: pointer;
+            font-size: 24px;
+            padding: 4px 8px;
+            border-radius: 6px;
+            transition: 0.15s;
+            opacity: 0.5;
+        }}
+        
+        .lang-btn:hover {{
+            opacity: 0.8;
+            background: #f9fafb;
+        }}
+        
+        .lang-btn.active {{
+            opacity: 1;
+            border-color: #10b981;
+            background: #f0fdf4;
+        }}
         
         /* Hamburger Menu */
         .hamburger {{
@@ -262,7 +354,7 @@ def build():
             color: #374151; 
             height: 100vh; 
             position: fixed; 
-            padding: 25px 0; 
+            padding: 25px 0 0 0; 
             box-sizing: border-box; 
             overflow-y: auto; 
             z-index: 10;
@@ -281,7 +373,7 @@ def build():
         .last-run {{ 
             font-size: 11px; 
             color: #9ca3af; 
-            margin: 0 20px 25px; 
+            margin: 0 20px 15px; 
             display:block; 
         }}
         
@@ -912,8 +1004,14 @@ def build():
     <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleMenu()"></div>
     
     <div class="sidebar" id="sidebar">
-        <h2>📊 Price Tracker</h2>
-        <span class="last-run">Updated: {last_run[:10]}</span>
+        <h2>📊 <span data-i18n="title">Price Tracker</span></h2>
+        <span class="last-run"><span data-i18n="updated">Updated</span>: {last_run[:10]}</span>
+        
+        <div class="lang-switcher">
+            <button class="lang-btn" data-lang="et" onclick="setLanguage('et')" title="Eesti">🇪🇪</button>
+            <button class="lang-btn" data-lang="en" onclick="setLanguage('en')" title="English">🇬🇧</button>
+        </div>
+        
         {sidebar_links}
     </div>
 
@@ -921,22 +1019,23 @@ def build():
         <div class="header" id="header">
             <div class="controls">
                 <div>
-                    <button class="btn" id="sort-unit" onclick="setSort('price_per_unit')">Best Value</button>
-                    <button class="btn btn-active" id="sort-total" onclick="setSort('latest_price')">Price</button>
+                    <button class="btn" id="sort-unit" onclick="setSort('price_per_unit')" data-i18n="best_value">Best Value</button>
+                    <button class="btn btn-active" id="sort-total" onclick="setSort('latest_price')" data-i18n="price">Price</button>
                 </div>
-                <input type="text" id="search" class="search-box" placeholder="Search products..." oninput="handleSearch()">
+                <input type="text" id="search" class="search-box" data-i18n-placeholder="search_placeholder" placeholder="Search products..." oninput="handleSearch()">
             </div>
         </div>
         
         <div class="filter-indicator" id="filter-indicator"></div>
         
-        <div id="search-results-title">Search Results</div>
+        <div id="search-results-title" data-i18n="search_results">Search Results</div>
         <div id="search-grid" class="grid" style="margin-top: 20px;"></div>
 
         <div id="content"></div>
     </div>
 
 <script>
+const translations = {json.dumps(TRANSLATIONS)};
 const products = {json.dumps(products)};
 const sources = {json.dumps(sources)};
 const productCategories = {json.dumps(product_categories)};
@@ -949,11 +1048,57 @@ let touchStartX = 0;
 let touchEndX = 0;
 let activeStores = new Set({json.dumps([source['store'] for source in sources])});
 let activeProductCategories = new Set(productCategories);
+let currentLang = 'et'; // Default language
 
 // Scroll behavior variables for mobile
 let lastScrollTop = 0;
 let scrollTimeout;
 let ticking = false;
+
+// Language functions
+function setLanguage(lang) {{
+    currentLang = lang;
+    localStorage.setItem('priceTrackerLang', lang);
+    
+    // Update active button
+    document.querySelectorAll('.lang-btn').forEach(btn => {{
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+    }});
+    
+    // Translate all elements
+    document.querySelectorAll('[data-i18n]').forEach(el => {{
+        const key = el.dataset.i18n;
+        if (translations[lang] && translations[lang][key]) {{
+            el.textContent = translations[lang][key];
+        }}
+    }});
+    
+    // Translate placeholders
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {{
+        const key = el.dataset.i18nPlaceholder;
+        if (translations[lang] && translations[lang][key]) {{
+            el.placeholder = translations[lang][key];
+        }}
+    }});
+    
+    // Re-render to update dynamic content
+    render();
+}}
+
+function t(key) {{
+    return translations[currentLang] && translations[currentLang][key] 
+        ? translations[currentLang][key] 
+        : key;
+}}
+
+function loadLanguage() {{
+    const savedLang = localStorage.getItem('priceTrackerLang');
+    if (savedLang && translations[savedLang]) {{
+        setLanguage(savedLang);
+    }} else {{
+        setLanguage('et');
+    }}
+}}
 
 // Helper function to display store name
 function getDisplayStoreName(store) {{
@@ -1163,7 +1308,7 @@ function updateFilterIndicator(isSearchActive = false) {{
         return;
     }}
     
-    let html = isSearchActive ? '<strong>Searching in:</strong> ' : '<strong>Active filters:</strong> ';
+    let html = isSearchActive ? `<strong>${{t('searching_in')}}:</strong> ` : `<strong>${{t('active_filters')}}:</strong> `;
     const tags = [];
     
     if (filters.categories) {{
@@ -1182,21 +1327,21 @@ function updateFilterIndicator(isSearchActive = false) {{
     }}
     
     if (filters.favorites) {{
-        tags.push('<span class="filter-tag">⭐ Favorites <span class="filter-tag-remove" onclick="removeFilter(\\'favorites\\')">×</span></span>');
+        tags.push(`<span class="filter-tag">⭐ ${{t('favorites')}} <span class="filter-tag-remove" onclick="removeFilter('favorites')">×</span></span>`);
     }}
     
     if (filters.sales) {{
-        tags.push('<span class="filter-tag">🔥 On Sale <span class="filter-tag-remove" onclick="removeFilter(\\'sales\\')">×</span></span>');
+        tags.push(`<span class="filter-tag">🔥 ${{t('on_sale')}} <span class="filter-tag-remove" onclick="removeFilter('sales')">×</span></span>`);
     }}
     
     if (tags.length === 0 && isSearchActive) {{
-        html += '<span class="filter-tag">All products</span>';
+        html += `<span class="filter-tag">${{t('all_products')}}</span>`;
     }} else {{
         html += tags.join(' ');
     }}
     
     if (hasFilters || isSearchActive) {{
-        html += '<button class="clear-all-btn" onclick="clearAllFilters()">Clear All</button>';
+        html += `<button class="clear-all-btn" onclick="clearAllFilters()">${{t('clear_all')}}</button>`;
     }}
     
     indicator.innerHTML = html;
@@ -1306,13 +1451,13 @@ function render() {{
             let html = `<div class="product-cat-section">
                 <div class="product-cat-title">
                     <span>${{prodCat}}</span>
-                    <span style="font-size:14px; font-weight:normal; color:#9ca3af">(${{catProducts.length}} products)</span>
+                    <span style="font-size:14px; font-weight:normal; color:#9ca3af">(${{catProducts.length}} ${{t('products')}})</span>
                 </div>
                 <div class="grid">${{top10.map(p=>card(p)).join('')}}</div>`;
             
             if (rest.length > 0) {{
                 html += `<div id="${{safeId}}" class="grid hidden" style="margin-top:15px">${{rest.map(p=>card(p)).join('')}}</div>
-                         <div class="expand-bar" onclick="toggle('${{safeId}}', this)">Show ${{rest.length}} more ▾</div>`;
+                         <div class="expand-bar" onclick="toggle('${{safeId}}', this)">${{t('show_more')}} ${{rest.length}} ▾</div>`;
             }}
             
             html += `</div>`;
@@ -1325,12 +1470,12 @@ function render() {{
             container.innerHTML += `
                 <div class="product-cat-section">
                     <div class="product-cat-title" style="border-left-color: #9ca3af;">
-                        <span>Uncategorized / Mapping Needed</span>
-                        <span style="font-size:14px; font-weight:normal; color:#9ca3af">(${{uncategorized.length}} products)</span>
+                        <span>${{t('uncategorized')}}</span>
+                        <span style="font-size:14px; font-weight:normal; color:#9ca3af">(${{uncategorized.length}} ${{t('products')}})</span>
                     </div>
                     <div class="grid">${{sorted.map(p=>card(p)).join('')}}</div>
                     <div style="font-size: 11px; color: #9ca3af; margin-top: 8px;">
-                        Tip: Check categories.json to ensure these sources have a productCategory assigned.
+                        ${{t('tip_categories')}}
                     </div>
                 </div>`;
         }}
@@ -1342,7 +1487,7 @@ function render() {{
         container.innerHTML += `
             <div class="empty-state">
                 <div class="empty-state-icon">🔍</div>
-                <p>No products match your filters</p>
+                <p>${{t('no_products')}}</p>
             </div>`;
     }}
     
@@ -1369,10 +1514,10 @@ function renderFavorites(container, filteredProducts) {{
             favSection.innerHTML = `
                 <div class="section-title">
                     <span>⭐</span>
-                    <span>Favorites</span>
+                    <span>${{t('favorites')}}</span>
                 </div>
                 <div class="section-subtitle">
-                    ${{favoriteProducts.length}} tracked · Sorted by price
+                    ${{favoriteProducts.length}} ${{t('tracked')}} · ${{t('sorted_by_price')}}
                 </div>
                 <div class="carousel-container">
                     <button class="carousel-btn carousel-btn-left" onclick="moveCarousel(-1)" disabled>←</button>
@@ -1412,11 +1557,11 @@ function renderSales(container, filteredProducts) {{
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
                 <div class="section-title">
                     <span>🔥</span>
-                    <span>On Sale</span>
+                    <span>${{t('on_sale')}}</span>
                     <span class="sale-badge">${{filteredSales.length}}</span>
                 </div>
                 ${{restSales.length > 0 ? 
-                    `<button class="expand-sales-btn" onclick="toggleAllSales()">Show all</button>` 
+                    `<button class="expand-sales-btn" onclick="toggleAllSales()">${{t('show_all')}}</button>` 
                     : ''}}
             </div>
             <div class="grid" id="top-sales-grid">${{top3Sales.map(p => cardWithDiscount(p)).join('')}}</div>
@@ -1448,7 +1593,7 @@ function renderBySources(container, filteredProducts) {{
         `;
         if (rest.length > 0) {{
             html += `<div id="${{hiddenId}}" class="grid hidden" style="margin-top:15px">${{rest.map(p=>card(p)).join('')}}</div>
-                     <div class="expand-bar" onclick="toggle('${{hiddenId}}', this)">Show ${{rest.length}} more ▾</div>`;
+                     <div class="expand-bar" onclick="toggle('${{hiddenId}}', this)">${{t('show_more')}} ${{rest.length}} ▾</div>`;
         }}
         html += `</div>`;
         container.innerHTML += html;
@@ -1459,13 +1604,13 @@ function toggleAllSales() {{
     const allSalesGrid = document.getElementById('all-sales-grid');
     const btn = event.target;
     const isHidden = allSalesGrid.classList.toggle('hidden');
-    btn.textContent = isHidden ? 'Show all' : 'Show less';
+    btn.textContent = isHidden ? t('show_all') : t('show_less');
 }}
 
 function toggle(id, btn) {{
     const el = document.getElementById(id);
     const isHidden = el.classList.toggle('hidden');
-    btn.innerHTML = isHidden ? `Show more ▾` : "Collapse ▴";
+    btn.innerHTML = isHidden ? `${{t('show_more')}} ▾` : `${{t('collapse')}} ▴`;
 }}
 
 function cardWithDiscount(p) {{
@@ -1585,6 +1730,7 @@ function handleScroll() {{
 // Initialize scroll listener
 window.addEventListener('scroll', handleScroll, {{ passive: true }});
 
+loadLanguage();
 loadFavorites();
 render();
 </script>
