@@ -1128,24 +1128,29 @@ function render() {{
     if (saleProducts.length > 0 && !showFavoritesOnly && !hasCategoryFilter && !showSalesOnly) {{
         renderSales(container, filteredProducts);
     }}
-    
     // RENDER BY PRODUCT CATEGORY
-    if (productCategories.length > 0) {{
+   if (productCategories.length > 0) {{
+        const categorizedNames = new Set();
+
         productCategories.forEach(prodCat => {{
             if (!activeProductCategories.has(prodCat)) return;
             
             const catProducts = filteredProducts.filter(p => {{
                 const source = sources.find(s => s.key === p.category);
-                return source && source.productCategory === prodCat;
+                const matches = source && source.productCategory === prodCat;
+                if (matches) categorizedNames.add(p.name);
+                return matches;
             }});
             
             if (catProducts.length === 0) return;
             
-            // Sort all products together (no separation by store)
+            // Sort all products together
             const sorted = catProducts.sort((a,b)=> (a[currentSort] || 999) - (b[currentSort] || 999));
             const top10 = sorted.slice(0, 10);
             const rest = sorted.slice(10);
-            const hiddenId = `hidden_${{prodCat}}`;
+            
+            // Use a safe ID for the "show more" section (handles spaces in names)
+            const safeId = "hidden_" + prodCat.replace(/\s+/g, '_');
             
             let html = `<div class="product-cat-section">
                 <div class="product-cat-title">
@@ -1155,17 +1160,31 @@ function render() {{
                 <div class="grid">${{top10.map(p=>card(p)).join('')}}</div>`;
             
             if (rest.length > 0) {{
-                html += `<div id="${{hiddenId}}" class="grid hidden" style="margin-top:15px">${{rest.map(p=>card(p)).join('')}}</div>
-                         <div class="expand-bar" onclick="toggle('${{hiddenId}}', this)">Show ${{rest.length}} more ▾</div>`;
+                html += `<div id="${{safeId}}" class="grid hidden" style="margin-top:15px">${{rest.map(p=>card(p)).join('')}}</div>
+                         <div class="expand-bar" onclick="toggle('${{safeId}}', this)">Show ${{rest.length}} more ▾</div>`;
             }}
             
             html += `</div>`;
             container.innerHTML += html;
         }});
+
+        // Handle products that didn't match any category (like your Rimi Pasta)
+        const uncategorized = filteredProducts.filter(p => !categorizedNames.has(p.name));
+        if (uncategorized.length > 0) {{
+            const sorted = uncategorized.sort((a,b)=> (a[currentSort] || 999) - (b[currentSort] || 999));
+            container.innerHTML += `
+                <div class="product-cat-section">
+                    <div class="product-cat-title" style="border-left-color: #9ca3af;">
+                        <span>Uncategorized / New Stores</span>
+                        <span style="font-size:14px; font-weight:normal; color:#9ca3af">(${{uncategorized.length}} products)</span>
+                    </div>
+                    <div class="grid">${{sorted.map(p=>card(p)).join('')}}</div>
+                </div>`;
+        }}
     }} else {{
         renderBySources(container, filteredProducts);
     }}
-    
+
     if (filteredProducts.length === 0) {{
         container.innerHTML += `
             <div class="empty-state">
