@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-01-28T19:51:24.600140"
+    "generated_at": "2026-01-29T06:31:02.344420"
   },
   "products": {
     "Hele õlu HEINEKEN 5% 0,568L prk": {
@@ -514,6 +514,14 @@
         },
         {
           "t": "2026-01-28T19:51:24.600140",
+          "p": 1.79
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
+          "p": 2.09
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
           "p": 1.79
         }
       ],
@@ -2417,10 +2425,14 @@
         {
           "t": "2026-01-27T10:31:51.707194",
           "p": 17.47
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
+          "p": 18.17
         }
       ],
-      "latest_price": 17.47,
-      "price_per_unit": 34.94,
+      "latest_price": 18.17,
+      "price_per_unit": 36.34,
       "unit_label": "L",
       "url": "https://www.selver.ee/rumm-bacardi-carta-blanca-50-cl",
       "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
@@ -2479,10 +2491,14 @@
         {
           "t": "2026-01-27T10:31:51.707194",
           "p": 17.47
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
+          "p": 18.17
         }
       ],
-      "latest_price": 17.47,
-      "price_per_unit": 34.94,
+      "latest_price": 18.17,
+      "price_per_unit": 36.34,
       "unit_label": "L",
       "url": "https://www.selver.ee/rumm-bacardi-carta-negra-50-cl",
       "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
@@ -2921,10 +2937,14 @@
         {
           "t": "2026-01-27T10:31:51.707194",
           "p": 26.99
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
+          "p": 28.09
         }
       ],
-      "latest_price": 26.99,
-      "price_per_unit": 38.56,
+      "latest_price": 28.09,
+      "price_per_unit": 40.13,
       "unit_label": "L",
       "url": "https://www.selver.ee/rumm-planteray-original-dark-70-cl",
       "img": "https://www.selver.ee/img/450/440/resize/3/4/3460410538499.jpg",
@@ -8242,7 +8262,8 @@
       "unit_label": "kg",
       "url": "https://www.selver.ee/pasta-durum-linquine-tartu-mill-500-g",
       "img": "https://www.selver.ee/img/450/440/resize/4/7/4750020051914.jpg",
-      "store": "Selver"
+      "store": "Selver",
+      "is_sale": false
     },
     "Merekarbid, PRESTO, 400 g": {
       "category": "Selver:Pasta",
@@ -8352,7 +8373,8 @@
       "unit_label": "kg",
       "url": "https://www.selver.ee/lasanje-plaadid-barilla-500-g",
       "img": "https://www.selver.ee/img/450/440/resize/8/0/8076809523738.jpg",
-      "store": "Selver"
+      "store": "Selver",
+      "is_sale": false
     },
     "Pasta Fusilli (spiraal), BARILLA, 500 g": {
       "category": "Selver:Pasta",
@@ -8574,7 +8596,7 @@
       "price_per_unit": 4.58,
       "unit_label": "kg",
       "url": "https://www.selver.ee/laastmakaron-nouilles-fines-panzani-500-g",
-      "img": "https://www.selver.ee/img/450/440/resize/3/0/3038350013200.jpg",
+      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "store": "Selver",
       "is_sale": false
     },
@@ -8590,7 +8612,7 @@
       "price_per_unit": 3.74,
       "unit_label": "kg",
       "url": "https://www.selver.ee/makaron-stortini-piccolo-reggia-500-g",
-      "img": "https://www.selver.ee/img/450/440/resize/8/0/8008857300030.jpg",
+      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "store": "Selver",
       "is_sale": false
     },
@@ -8638,7 +8660,7 @@
       "price_per_unit": 3.74,
       "unit_label": "kg",
       "url": "https://www.selver.ee/makaron-ditalini-reggia-500-g",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/8/0/8008857300559.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -8654,7 +8676,7 @@
       "price_per_unit": 8.25,
       "unit_label": "kg",
       "url": "https://www.selver.ee/makaronid-penne-gluteenivabad-panzani-400-g",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/3/0/3038359004513.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -8962,7 +8984,7 @@
       "price_per_unit": 2.94,
       "unit_label": "kg",
       "url": "https://www.selver.ee/durumjahust-taistera-penned-tartu-mill-500-g",
-      "img": "https://www.selver.ee/img/450/440/resize/4/7/4750020053147.jpg",
+      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "store": "Selver",
       "is_sale": false
     },
@@ -8978,7 +9000,7 @@
       "price_per_unit": 9.18,
       "unit_label": "kg",
       "url": "https://www.selver.ee/pasta-tagliatelle-barilla-500-g",
-      "img": "https://www.selver.ee/img/450/440/resize/8/0/8076809580731.jpg",
+      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "store": "Selver",
       "is_sale": false
     },
@@ -9045,7 +9067,7 @@
       "price_per_unit": 8.63,
       "unit_label": "kg",
       "url": "https://www.selver.ee/selezione-di-chef-collerette-pasta-varske-munaga-panzani-400-g",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/3/0/3038359010118.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -9061,7 +9083,7 @@
       "price_per_unit": 3.5,
       "unit_label": "kg",
       "url": "https://www.selver.ee/lastemakaronid-paw-patrol-melissa-500-g",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/5/2/5201193206551.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -9460,7 +9482,7 @@
       "price_per_unit": 7.8,
       "unit_label": "kg",
       "url": "https://www.selver.ee/nutri-mio-gluteenivaba-pasta-spaghetti-reggia-400-g",
-      "img": "https://www.selver.ee/img/450/440/resize/8/0/8008857114194.jpg",
+      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "store": "Selver",
       "is_sale": false
     },
@@ -9476,7 +9498,7 @@
       "price_per_unit": 2.34,
       "unit_label": "kg",
       "url": "https://www.selver.ee/pastariis-orzo-campagna-500-g",
-      "img": "https://www.selver.ee/img/450/440/resize/8/0/8005391161431.jpg",
+      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "store": "Selver",
       "is_sale": false
     },
@@ -9528,7 +9550,7 @@
       "price_per_unit": 4.98,
       "unit_label": "kg",
       "url": "https://www.selver.ee/organic-penne-rigate-bronze-nr-244-casa-rinaldi-500-g",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/8/0/8006165407915.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -9544,7 +9566,7 @@
       "price_per_unit": 7.77,
       "unit_label": "kg",
       "url": "https://www.selver.ee/durumnisumannast-pasta-printsess-tomati-ja-spinatiga-dalla-300-g",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/8/0/8016419400371.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -11578,10 +11600,14 @@
         {
           "t": "2026-01-27T10:31:51.707194",
           "p": 1.73
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
+          "p": 1.95
         }
       ],
-      "latest_price": 1.73,
-      "price_per_unit": 6.29,
+      "latest_price": 1.95,
+      "price_per_unit": 7.09,
       "unit_label": "L",
       "url": "https://www.selver.ee/passion-fruit-cooler-275-ml",
       "img": "https://www.selver.ee/img/450/440/resize/4/7/4740050005278.jpg",
@@ -12100,10 +12126,14 @@
         {
           "t": "2026-01-27T10:31:51.707194",
           "p": 1.73
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
+          "p": 1.95
         }
       ],
-      "latest_price": 1.73,
-      "price_per_unit": 6.29,
+      "latest_price": 1.95,
+      "price_per_unit": 7.09,
       "unit_label": "L",
       "url": "https://www.selver.ee/long-drink-dark-cherry-cooler-275-ml",
       "img": "https://www.selver.ee/img/450/440/resize/4/7/4740050004448.jpg",
@@ -12360,10 +12390,14 @@
         {
           "t": "2026-01-27T10:31:51.707194",
           "p": 1.73
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
+          "p": 1.95
         }
       ],
-      "latest_price": 1.73,
-      "price_per_unit": 6.29,
+      "latest_price": 1.95,
+      "price_per_unit": 7.09,
       "unit_label": "L",
       "url": "https://www.selver.ee/cooler-green-apple-cooler-275-ml",
       "img": "https://www.selver.ee/img/450/440/resize/4/7/4740050004417.jpg",
@@ -12904,10 +12938,14 @@
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 2.29
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
+          "p": 2.35
         }
       ],
-      "latest_price": 2.29,
-      "price_per_unit": 6.94,
+      "latest_price": 2.35,
+      "price_per_unit": 7.12,
       "unit_label": "L",
       "url": "https://www.selver.ee/kokteil-gin-passion-fruit-mix-330-ml-pudel",
       "img": "https://www.selver.ee/img/450/440/resize/4/7/4770047236361.jpg",
@@ -13237,7 +13275,7 @@
       "price_per_unit": 4.3,
       "unit_label": "L",
       "url": "https://www.selver.ee/olu-extra-ananass-le-coq-extra-330-ml",
-      "img": "https://www.selver.ee/img/450/440/resize/4/7/4740098003915.jpg",
+      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "store": "Selver",
       "is_sale": false
     },
@@ -13269,7 +13307,7 @@
       "price_per_unit": 3.0,
       "unit_label": "L",
       "url": "https://www.selver.ee/olu-vaike-sass-alexander-330-ml",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/4/7/4740098003748.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -13285,7 +13323,7 @@
       "price_per_unit": 3.68,
       "unit_label": "L",
       "url": "https://www.selver.ee/olu-vaike-sass-6-pakk-alexander-6x330-ml",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/4/7/4740098003755.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -13301,7 +13339,7 @@
       "price_per_unit": 3.78,
       "unit_label": "L",
       "url": "https://www.selver.ee/olu-safiir-saku-500-ml",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/4/7/4740019004311.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -13387,10 +13425,14 @@
         {
           "t": "2026-01-27T10:31:51.707194",
           "p": 1.73
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
+          "p": 1.95
         }
       ],
-      "latest_price": 1.73,
-      "price_per_unit": 6.29,
+      "latest_price": 1.95,
+      "price_per_unit": 7.09,
       "unit_label": "L",
       "url": "https://www.selver.ee/mellow-peach-cooler-275-ml",
       "img": "https://www.selver.ee/img/450/440/resize/4/7/4740050005308.jpg",
@@ -13407,10 +13449,14 @@
         {
           "t": "2026-01-27T10:31:51.707194",
           "p": 1.92
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
+          "p": 2.15
         }
       ],
-      "latest_price": 1.92,
-      "price_per_unit": 6.98,
+      "latest_price": 2.15,
+      "price_per_unit": 7.82,
       "unit_label": "L",
       "url": "https://www.selver.ee/caribba-rum-cola-cooler-275-ml",
       "img": "https://www.selver.ee/img/450/440/resize/4/7/4740050005339.jpg",
@@ -13423,10 +13469,14 @@
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 3.09
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
+          "p": 1.99
         }
       ],
-      "latest_price": 3.09,
-      "price_per_unit": 12.36,
+      "latest_price": 1.99,
+      "price_per_unit": 7.96,
       "unit_label": "L",
       "url": "https://www.selver.ee/peach-spritz-metaxa-250-ml",
       "img": "https://www.selver.ee/img/450/440/resize/5/2/5202795210779.jpg",
@@ -13759,7 +13809,7 @@
       "price_per_unit": 3.33,
       "unit_label": "L",
       "url": "https://www.selver.ee/original-long-drink-hartwall-6-x-500ml",
-      "img": "https://www.selver.ee/img/450/440/resize/4/7/4744109012064.jpg",
+      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "store": "Selver",
       "is_sale": false
     },
@@ -13790,7 +13840,7 @@
       "price_per_unit": 2.78,
       "unit_label": "L",
       "url": "https://www.selver.ee/saku-karl-friedrich-12-pakk",
-      "img": "https://www.selver.ee/img/450/440/resize/4/7/4740019014792.jpg",
+      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "store": "Selver",
       "is_sale": false
     },
@@ -13992,6 +14042,14 @@
         {
           "t": "2026-01-28T19:51:24.600140",
           "p": 8.99
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
+          "p": 11.72
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
+          "p": 8.99
         }
       ],
       "latest_price": 8.99,
@@ -14048,10 +14106,14 @@
         {
           "t": "2026-01-27T10:31:51.707194",
           "p": 5.03
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
+          "p": 5.32
         }
       ],
-      "latest_price": 5.03,
-      "price_per_unit": 25.15,
+      "latest_price": 5.32,
+      "price_per_unit": 26.6,
       "unit_label": "L",
       "url": "https://www.selver.ee/viin-viru-valge-20-cl",
       "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
@@ -14180,10 +14242,14 @@
         {
           "t": "2026-01-27T10:31:51.707194",
           "p": 4.26
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
+          "p": 4.51
         }
       ],
-      "latest_price": 4.26,
-      "price_per_unit": 21.3,
+      "latest_price": 4.51,
+      "price_per_unit": 22.55,
       "unit_label": "L",
       "url": "https://www.selver.ee/pipra-naps-liviko-20-cl",
       "img": "https://www.selver.ee/img/450/440/resize/4/7/4740050001898.jpg",
@@ -14220,10 +14286,14 @@
         {
           "t": "2026-01-27T10:31:51.707194",
           "p": 7.92
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
+          "p": 8.39
         }
       ],
-      "latest_price": 7.92,
-      "price_per_unit": 22.63,
+      "latest_price": 8.39,
+      "price_per_unit": 23.97,
       "unit_label": "L",
       "url": "https://www.selver.ee/pipra-naps-liviko-35-cl",
       "img": "https://www.selver.ee/img/450/440/resize/4/7/4740050001218.jpg",
@@ -14292,10 +14362,14 @@
         {
           "t": "2026-01-27T10:31:51.707194",
           "p": 7.82
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
+          "p": 8.33
         }
       ],
-      "latest_price": 7.82,
-      "price_per_unit": 22.34,
+      "latest_price": 8.33,
+      "price_per_unit": 23.8,
       "unit_label": "L",
       "url": "https://www.selver.ee/viin-viru-valge-35-cl",
       "img": "https://www.selver.ee/img/450/440/resize/4/7/4740050002284.jpg",
@@ -14328,10 +14402,14 @@
         {
           "t": "2026-01-27T10:31:51.707194",
           "p": 10.46
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
+          "p": 11.59
         }
       ],
-      "latest_price": 10.46,
-      "price_per_unit": 20.92,
+      "latest_price": 11.59,
+      "price_per_unit": 23.18,
       "unit_label": "L",
       "url": "https://www.selver.ee/pipra-naps-meega-liviko-50-cl",
       "img": "https://www.selver.ee/img/450/440/resize/4/7/4740050003830.jpg",
@@ -14380,10 +14458,14 @@
         {
           "t": "2026-01-27T10:31:51.707194",
           "p": 2.33
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
+          "p": 2.46
         }
       ],
-      "latest_price": 2.33,
-      "price_per_unit": 23.3,
+      "latest_price": 2.46,
+      "price_per_unit": 24.6,
       "unit_label": "L",
       "url": "https://www.selver.ee/muu-piiritusjook-liviko-pipra-naps-10-cl",
       "img": "https://www.selver.ee/img/450/440/resize/4/7/4740050006626.jpg",
@@ -14416,10 +14498,14 @@
         {
           "t": "2026-01-27T10:31:51.707194",
           "p": 7.92
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
+          "p": 8.39
         }
       ],
-      "latest_price": 7.92,
-      "price_per_unit": 22.63,
+      "latest_price": 8.39,
+      "price_per_unit": 23.97,
       "unit_label": "L",
       "url": "https://www.selver.ee/pipra-naps-ingveriga-liviko-35-cl",
       "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
@@ -14452,10 +14538,14 @@
         {
           "t": "2026-01-27T10:31:51.707194",
           "p": 10.95
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
+          "p": 11.64
         }
       ],
-      "latest_price": 10.95,
-      "price_per_unit": 21.9,
+      "latest_price": 11.64,
+      "price_per_unit": 23.28,
       "unit_label": "L",
       "url": "https://www.selver.ee/viin-viru-valge-cranberry-50-cl",
       "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
@@ -14540,10 +14630,14 @@
         {
           "t": "2026-01-27T10:31:51.707194",
           "p": 15.13
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
+          "p": 13.99
         }
       ],
-      "latest_price": 15.13,
-      "price_per_unit": 30.26,
+      "latest_price": 13.99,
+      "price_per_unit": 27.98,
       "unit_label": "L",
       "url": "https://www.selver.ee/viin-smirnoff-red-50-cl",
       "img": "https://www.selver.ee/img/450/440/resize/5/4/5410316072014.jpg",
@@ -14576,10 +14670,14 @@
         {
           "t": "2026-01-27T10:31:51.707194",
           "p": 14.22
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
+          "p": 15.35
         }
       ],
-      "latest_price": 14.22,
-      "price_per_unit": 20.31,
+      "latest_price": 15.35,
+      "price_per_unit": 21.93,
       "unit_label": "L",
       "url": "https://www.selver.ee/viin-khortytsa-classic-70-cl",
       "img": "https://www.selver.ee/img/450/440/resize/4/8/4820229031281.jpg",
@@ -14684,10 +14782,14 @@
         {
           "t": "2026-01-27T10:31:51.707194",
           "p": 10.95
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
+          "p": 11.64
         }
       ],
-      "latest_price": 10.95,
-      "price_per_unit": 21.9,
+      "latest_price": 11.64,
+      "price_per_unit": 23.28,
       "unit_label": "L",
       "url": "https://www.selver.ee/viin-viru-valge-rhubarb-50-cl",
       "img": "https://www.selver.ee/img/450/440/resize/4/7/4740050007593.jpg",
@@ -14872,10 +14974,14 @@
         {
           "t": "2026-01-27T10:31:51.707194",
           "p": 10.95
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
+          "p": 11.64
         }
       ],
-      "latest_price": 10.95,
-      "price_per_unit": 21.9,
+      "latest_price": 11.64,
+      "price_per_unit": 23.28,
       "unit_label": "L",
       "url": "https://www.selver.ee/viin-viru-valge-plum-50-cl",
       "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
@@ -14892,10 +14998,14 @@
         {
           "t": "2026-01-27T10:31:51.707194",
           "p": 12.19
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
+          "p": 13.15
         }
       ],
-      "latest_price": 12.19,
-      "price_per_unit": 24.38,
+      "latest_price": 13.15,
+      "price_per_unit": 26.3,
       "unit_label": "L",
       "url": "https://www.selver.ee/viin-khortytsa-platinum-50-cl",
       "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
@@ -14944,10 +15054,14 @@
         {
           "t": "2026-01-27T10:31:51.707194",
           "p": 12.19
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
+          "p": 13.15
         }
       ],
-      "latest_price": 12.19,
-      "price_per_unit": 24.38,
+      "latest_price": 13.15,
+      "price_per_unit": 26.3,
       "unit_label": "L",
       "url": "https://www.selver.ee/viin-khortytsa-silver-cool-50cl",
       "img": "https://www.selver.ee/img/450/440/resize/4/8/4820229031212.jpg",
@@ -15004,10 +15118,14 @@
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 5.78
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
+          "p": 6.25
         }
       ],
-      "latest_price": 5.78,
-      "price_per_unit": 28.9,
+      "latest_price": 6.25,
+      "price_per_unit": 31.25,
       "unit_label": "L",
       "url": "https://www.selver.ee/viin-morosha-spring-20-cl",
       "img": "https://www.selver.ee/img/450/440/resize/4/8/4820229030413.jpg",
@@ -15024,10 +15142,14 @@
         {
           "t": "2026-01-27T10:31:51.707194",
           "p": 10.97
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
+          "p": 11.85
         }
       ],
-      "latest_price": 10.97,
-      "price_per_unit": 21.94,
+      "latest_price": 11.85,
+      "price_per_unit": 23.7,
       "unit_label": "L",
       "url": "https://www.selver.ee/viin-khortytsa-classic-50-cl",
       "img": "https://www.selver.ee/img/450/440/resize/4/8/4820229031274.jpg",
@@ -15072,10 +15194,14 @@
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 11.68
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
+          "p": 12.8
         }
       ],
-      "latest_price": 11.68,
-      "price_per_unit": 23.36,
+      "latest_price": 12.8,
+      "price_per_unit": 25.6,
       "unit_label": "L",
       "url": "https://www.selver.ee/viin-morosha-spring-50-cl",
       "img": "https://www.selver.ee/img/450/440/resize/4/8/4820229030420.jpg",
@@ -15340,10 +15466,14 @@
         {
           "t": "2026-01-27T10:31:51.707194",
           "p": 11.0
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
+          "p": 11.55
         }
       ],
-      "latest_price": 11.0,
-      "price_per_unit": 22.0,
+      "latest_price": 11.55,
+      "price_per_unit": 23.1,
       "unit_label": "L",
       "url": "https://www.selver.ee/viin-nipernaadi-kirsi-50-cl",
       "img": "https://www.selver.ee/img/450/440/resize/4/7/4740158011263.jpg",
@@ -15444,10 +15574,14 @@
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 13.2
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
+          "p": 13.79
         }
       ],
-      "latest_price": 13.2,
-      "price_per_unit": 26.4,
+      "latest_price": 13.79,
+      "price_per_unit": 27.58,
       "unit_label": "L",
       "url": "https://www.selver.ee/viin-zubrowka-cranberry-50cl",
       "img": "https://www.selver.ee/img/450/440/resize/5/9/5900343011877.jpg",
@@ -15528,10 +15662,14 @@
         {
           "t": "2026-01-27T10:31:51.707194",
           "p": 4.99
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
+          "p": 5.27
         }
       ],
-      "latest_price": 4.99,
-      "price_per_unit": 24.95,
+      "latest_price": 5.27,
+      "price_per_unit": 26.35,
       "unit_label": "L",
       "url": "https://www.selver.ee/viin-viru-valge-cranberry-20-cl",
       "img": "https://www.selver.ee/img/450/440/resize/4/7/4740050007548.jpg",
@@ -15564,10 +15702,14 @@
         {
           "t": "2026-01-27T10:31:51.707194",
           "p": 3.99
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
+          "p": 4.29
         }
       ],
-      "latest_price": 3.99,
-      "price_per_unit": 19.95,
+      "latest_price": 4.29,
+      "price_per_unit": 21.45,
       "unit_label": "L",
       "url": "https://www.selver.ee/viin-moskovskaya-osobaya-20-cl",
       "img": "https://www.selver.ee/img/450/440/resize/4/7/4750021210914.jpg",
@@ -15580,10 +15722,14 @@
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 12.49
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
+          "p": 13.41
         }
       ],
-      "latest_price": 12.49,
-      "price_per_unit": 24.98,
+      "latest_price": 13.41,
+      "price_per_unit": 26.82,
       "unit_label": "L",
       "url": "https://www.selver.ee/stumbras-pure-50-cl",
       "img": "https://www.selver.ee/img/450/440/resize/4/7/4770033228073.jpg",
@@ -15596,10 +15742,14 @@
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 9.99
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
+          "p": 10.69
         }
       ],
-      "latest_price": 9.99,
-      "price_per_unit": 28.54,
+      "latest_price": 10.69,
+      "price_per_unit": 30.54,
       "unit_label": "L",
       "url": "https://www.selver.ee/viin-stumbras-35-cl",
       "img": "https://www.selver.ee/img/450/440/resize/4/7/4770033224723.jpg",
@@ -15744,10 +15894,14 @@
         {
           "t": "2026-01-27T10:31:51.707194",
           "p": 18.28
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
+          "p": 19.25
         }
       ],
-      "latest_price": 18.28,
-      "price_per_unit": 26.11,
+      "latest_price": 19.25,
+      "price_per_unit": 27.5,
       "unit_label": "L",
       "url": "https://www.selver.ee/dzinn-hogarth-70-cl",
       "img": "https://www.selver.ee/img/450/440/resize/5/0/5011166019176.jpg",
@@ -15932,10 +16086,14 @@
         {
           "t": "2026-01-27T10:31:51.707194",
           "p": 31.41
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
+          "p": 31.99
         }
       ],
-      "latest_price": 31.41,
-      "price_per_unit": 31.41,
+      "latest_price": 31.99,
+      "price_per_unit": 31.99,
       "unit_label": "L",
       "url": "https://www.selver.ee/dzinn-gordon-s-100-cl",
       "img": "https://www.selver.ee/img/450/440/resize/5/0/5000289020800.jpg",
@@ -15972,10 +16130,14 @@
         {
           "t": "2026-01-27T10:31:51.707194",
           "p": 29.47
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
+          "p": 30.5
         }
       ],
-      "latest_price": 29.47,
-      "price_per_unit": 42.1,
+      "latest_price": 30.5,
+      "price_per_unit": 43.57,
       "unit_label": "L",
       "url": "https://www.selver.ee/dzinn-crafters-london-dry-70-cl",
       "img": "https://www.selver.ee/img/450/440/resize/4/7/4740050004899.jpg",
@@ -15992,10 +16154,14 @@
         {
           "t": "2026-01-27T10:31:51.707194",
           "p": 13.71
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
+          "p": 15.19
         }
       ],
-      "latest_price": 13.71,
-      "price_per_unit": 27.42,
+      "latest_price": 15.19,
+      "price_per_unit": 30.38,
       "unit_label": "L",
       "url": "https://www.selver.ee/dzinn-saaremaa-kurk-ingver-50-cl",
       "img": "https://www.selver.ee/img/450/440/resize/4/7/4740054362018.jpg",
@@ -16028,10 +16194,14 @@
         {
           "t": "2026-01-27T10:31:51.707194",
           "p": 13.71
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
+          "p": 15.19
         }
       ],
-      "latest_price": 13.71,
-      "price_per_unit": 27.42,
+      "latest_price": 15.19,
+      "price_per_unit": 30.38,
       "unit_label": "L",
       "url": "https://www.selver.ee/dzinn-saaremaa-ore-50-cl",
       "img": "https://www.selver.ee/img/450/440/resize/4/7/4740054364715.jpg",
@@ -16080,10 +16250,14 @@
         {
           "t": "2026-01-27T10:31:51.707194",
           "p": 38.61
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
+          "p": 32.59
         }
       ],
-      "latest_price": 38.61,
-      "price_per_unit": 55.16,
+      "latest_price": 32.59,
+      "price_per_unit": 46.56,
       "unit_label": "L",
       "url": "https://www.selver.ee/dzinn-crafters-wild-forest-70-cl",
       "img": "https://www.selver.ee/img/450/440/resize/4/7/4740050005131.jpg",
@@ -16184,10 +16358,14 @@
         {
           "t": "2026-01-27T10:31:51.707194",
           "p": 31.5
+        },
+        {
+          "t": "2026-01-29T06:31:02.344420",
+          "p": 32.59
         }
       ],
-      "latest_price": 31.5,
-      "price_per_unit": 45.0,
+      "latest_price": 32.59,
+      "price_per_unit": 46.56,
       "unit_label": "L",
       "url": "https://www.selver.ee/dzinn-crafters-aromatic-flower-70-cl",
       "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
@@ -17682,7 +17860,7 @@
       "price_per_unit": 1.55,
       "unit_label": "kg",
       "url": "https://www.selver.ee/lohnakuusk-stars-n-stripes-wunder-baum-1tk",
-      "img": "https://www.selver.ee/img/450/440/resize/7/3/7315870070385.jpg",
+      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "store": "Selver",
       "is_sale": false
     },
@@ -17702,7 +17880,7 @@
       "price_per_unit": 1.4,
       "unit_label": "kg",
       "url": "https://www.selver.ee/klaasipesuvedelik-20c-etanooliga-mayeri-4-l",
-      "img": "https://www.selver.ee/img/450/440/resize/4/7/4740060004759.jpg",
+      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "store": "Selver",
       "is_sale": false
     },
@@ -17718,7 +17896,7 @@
       "price_per_unit": 1.55,
       "unit_label": "kg",
       "url": "https://www.selver.ee/lohnakuusk-vanilje-wunder-baum-1tk",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/7/3/7315870070279.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -17734,7 +17912,7 @@
       "price_per_unit": 8.49,
       "unit_label": "kg",
       "url": "https://www.selver.ee/vihmavee-eemaldi-invisible-wipers-500ml",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/4/7/4770202393588.jpg",
       "store": "Selver",
       "is_sale": false
     },
