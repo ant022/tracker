@@ -545,35 +545,41 @@ def run_scraper():
                         continue
                     
                     price = parse_price(pdt.get("price_text", ""))
-                    
                     if price == 0:
                         continue
                     
-                    # Track if this is a sale price
-                    is_sale = pdt.get("is_sale", False)
-                    if is_sale:
-                        sale_count += 1
-                    
-                    unit_text = pdt.get("unit_text", "")
-                    unit_price_val = parse_price_per_unit(unit_text)
-                    
-                    size_val = extract_unit_value(name, target_unit)
-                    ppu = unit_price_val if unit_price_val > 0 else (price / size_val if size_val else 0)
-                    
+                    # 1. Initialize product and ENSURE 'entries' exists
                     if name not in data["products"]:
                         data["products"][name] = {"category": category_key, "entries": []}
                     
                     prod = data["products"][name]
                     
-                    # Check if price changed and log it
-                    if prod["entries"] and prod["entries"][-1]["p"] != price:
-                        old_price = prod["entries"][-1]["p"]
+                    # Self-healing: if the product existed but had no 'entries' key
+                    if "entries" not in prod or not isinstance(prod["entries"], list):
+                        prod["entries"] = []
+
+                    # 2. Track sale info
+                    is_sale = pdt.get("is_sale", False)
+                    if is_sale:
+                        sale_count += 1
+                    
+                    # 3. Handle Unit Price / Size
+                    unit_text = pdt.get("unit_text", "")
+                    unit_price_val = parse_price_per_unit(unit_text)
+                    size_val = extract_unit_value(name, target_unit)
+                    ppu = unit_price_val if unit_price_val > 0 else (price / size_val if size_val else 0)
+                    
+                    # 4. Check if price changed (logging only)
+                    if prod["entries"] and prod["entries"][-1].get("p") != price:
+                        old_price = prod["entries"][-1].get("p", 0)
                         sale_marker = " 🏷️ SALE" if is_sale else ""
                         print(f"  💰 {name[:50]}... {old_price:.2f} → {price:.2f}{sale_marker}")
                     
-                    if not prod["entries"] or prod["entries"][-1]["p"] != price:
+                    # 5. Add history entry only if price is new or different
+                    if not prod["entries"] or prod["entries"][-1].get("p") != price:
                         prod["entries"].append({"t": data["meta"]["generated_at"], "p": price})
                     
+                    # 6. Update general product info
                     prod.update({
                         "latest_price": price,
                         "price_per_unit": ppu,
@@ -586,6 +592,8 @@ def run_scraper():
                     })
                     count += 1
                 
+                # --- Replacement ends here ---
+                sale_info = f" ({sale_count} on sale)" if sale_count > 0 else ""
                 sale_info = f" ({sale_count} on sale)" if sale_count > 0 else ""
                 print(f"  ✓ {count} products{sale_info}")
                 
@@ -611,4 +619,5 @@ if __name__ == "__main__":
         build_site.build()
         print("Success: Website updated (index.html)")
     except ImportError:
+
         print("Error: build_site.py not found. Website not updated.")
