@@ -973,12 +973,10 @@ function getActiveFilters() {
 function removeFilter(type, value) {
     if (type === 'category') {
         activeProductCategories.delete(value);
-        // Update checkbox
         const checkbox = document.querySelector(`input[data-product-category="${value}"]`);
         if (checkbox) checkbox.checked = false;
     } else if (type === 'store') {
         activeStores.delete(value);
-        // Update checkbox
         const checkbox = document.querySelector(`input[data-store="${value}"]`);
         if (checkbox) checkbox.checked = false;
     } else if (type === 'favorites') {
@@ -991,33 +989,27 @@ function removeFilter(type, value) {
     
     render();
     
-    // Re-run search if active
     if (document.getElementById('search').value.length >= 2) {
         handleSearch();
     }
 }
 
 function clearAllFilters() {
-    // Clear search
     document.getElementById('search').value = '';
     
-    // Reset all categories
     activeProductCategories = new Set(productCategories);
     document.querySelectorAll('input[data-product-category]').forEach(cb => cb.checked = true);
     
-    // Reset all stores
     const allStores = sources.map(s => s.store);
     activeStores = new Set(allStores);
     document.querySelectorAll('input[data-store]').forEach(cb => cb.checked = true);
     
-    // Reset quick filters
     const favCheckbox = document.getElementById('filter-favorites');
     if (favCheckbox) favCheckbox.checked = false;
     
     const salesCheckbox = document.getElementById('filter-sales');
     if (salesCheckbox) salesCheckbox.checked = false;
     
-    // Hide search results
     const searchGrid = document.getElementById('search-grid');
     const searchTitle = document.getElementById('search-results-title');
     const content = document.getElementById('content');
@@ -1044,23 +1036,25 @@ function updateFilterIndicator(isSearchActive = false) {
     const tags = [];
     
     if (filters.categories) {
-        tags.push(...filters.categories.map(c => 
-            `<span class="filter-tag">🏷️ ${c} <span class="filter-tag-remove" onclick="removeFilter('category', '${c}')">×</span></span>`
-        ));
+        tags.push(...filters.categories.map(c => {
+            const escaped = c.replace(/'/g, "\\'");
+            return `<span class="filter-tag">🏷️ ${c} <span class="filter-tag-remove" onclick="removeFilter('category', '${escaped}')">×</span></span>`;
+        }));
     }
     
     if (filters.stores) {
-        tags.push(...filters.stores.map(s => 
-            `<span class="filter-tag">${s} <span class="filter-tag-remove" onclick="removeFilter('store', '${s}')">×</span></span>`
-        ));
+        tags.push(...filters.stores.map(s => {
+            const escaped = s.replace(/'/g, "\\'");
+            return `<span class="filter-tag">${s} <span class="filter-tag-remove" onclick="removeFilter('store', '${escaped}')">×</span></span>`;
+        }));
     }
     
     if (filters.favorites) {
-        tags.push('<span class="filter-tag">⭐ Favorites <span class="filter-tag-remove" onclick="removeFilter('favorites')">×</span></span>');
+        tags.push('<span class="filter-tag">⭐ Favorites <span class="filter-tag-remove" onclick="removeFilter(\'favorites\')">×</span></span>');
     }
     
     if (filters.sales) {
-        tags.push('<span class="filter-tag">🔥 On Sale <span class="filter-tag-remove" onclick="removeFilter('sales')">×</span></span>');
+        tags.push('<span class="filter-tag">🔥 On Sale <span class="filter-tag-remove" onclick="removeFilter(\'sales\')">×</span></span>');
     }
     
     if (tags.length === 0 && isSearchActive) {
@@ -1069,7 +1063,6 @@ function updateFilterIndicator(isSearchActive = false) {
         html += tags.join(' ');
     }
     
-    // Add Clear All button if there are filters or search
     if (hasFilters || isSearchActive) {
         html += '<button class="clear-all-btn" onclick="clearAllFilters()">Clear All</button>';
     }
@@ -1083,7 +1076,6 @@ function handleSearch() {
     const searchGrid = document.getElementById('search-grid');
     const searchTitle = document.getElementById('search-results-title');
     const content = document.getElementById('content');
-    const indicator = document.getElementById('filter-indicator');
 
     if (query.length < 2) {
         searchGrid.innerHTML = "";
@@ -1093,25 +1085,18 @@ function handleSearch() {
         return;
     }
 
-    // Apply filters to search
     let searchResults = products.filter(p => {
-        // Text search
         if (!p.name.toLowerCase().includes(query)) return false;
-        
-        // Filter by store
         if (!activeStores.has(p.store)) return false;
         
-        // Filter by product category (robust matching)
         const source = findSource(p.category);
         if (source && source.productCategory) {
             if (!activeProductCategories.has(source.productCategory)) return false;
         }
         
-        // Filter by favorites
         const showFavoritesOnly = document.getElementById('filter-favorites')?.checked || false;
         if (showFavoritesOnly && !favorites.includes(p.name)) return false;
         
-        // Filter by sales
         const showSalesOnly = document.getElementById('filter-sales')?.checked || false;
         if (showSalesOnly) {
             const isOnSale = saleProducts.some(sp => sp.name === p.name);
@@ -1137,7 +1122,6 @@ function render() {
     const showFavoritesOnly = document.getElementById('filter-favorites')?.checked || false;
     const showSalesOnly = document.getElementById('filter-sales')?.checked || false;
     
-    // Check if any specific category is selected (not all)
     const allCategoriesSelected = activeProductCategories.size === productCategories.length;
     const hasCategoryFilter = !allCategoriesSelected && activeProductCategories.size > 0;
     
@@ -1161,25 +1145,20 @@ function render() {
         filteredProducts = filteredProducts.filter(p => saleNames.has(p.name));
     }
     
-    // RENDER FAVORITES
     renderFavorites(container, filteredProducts);
     
-    // RENDER SALES - Only show if no specific category filter is active
     if (saleProducts.length > 0 && !showFavoritesOnly && !hasCategoryFilter && !showSalesOnly) {
         renderSales(container, filteredProducts);
     }
     
-    // Track which products have been displayed in a category to prevent duplicates in 'Uncategorized'
     const categorizedProductNames = new Set();
 
-    // RENDER BY PRODUCT CATEGORY
     if (productCategories.length > 0) {
         productCategories.forEach(prodCat => {
             if (!activeProductCategories.has(prodCat)) return;
             
             const catProducts = filteredProducts.filter(p => {
                 const source = findSource(p.category);
-                // Robust comparison for the grouping logic
                 const matches = source && source.productCategory.trim().toLowerCase() === prodCat.trim().toLowerCase();
                 if (matches) categorizedProductNames.add(p.name);
                 return matches;
@@ -1187,11 +1166,9 @@ function render() {
             
             if (catProducts.length === 0) return;
             
-            // Sort all products together (no separation by store)
             const sorted = catProducts.sort((a,b)=> (a[currentSort] || 999) - (b[currentSort] || 999));
             const top10 = sorted.slice(0, 10);
             const rest = sorted.slice(10);
-            // Replace unsafe characters in category name for HTML ID
             const safeId = "hidden_" + prodCat.replace(/[^a-z0-9]/gi, '_');
             
             let html = `<div class="product-cat-section">
@@ -1210,7 +1187,6 @@ function render() {
             container.innerHTML += html;
         });
 
-        // FALLBACK: Anything that didn't match a defined category (like the Rimi Pasta issue)
         const uncategorized = filteredProducts.filter(p => !categorizedProductNames.has(p.name));
         if (uncategorized.length > 0 && !hasCategoryFilter) {
             const sorted = uncategorized.sort((a,b)=> (a[currentSort] || 999) - (b[currentSort] || 999));
@@ -1427,9 +1403,8 @@ function card(p) {
     </a>`;
 }
 
-// Scroll behavior for mobile
 function handleScroll() {
-    if (window.innerWidth > 768) return; // Only for mobile
+    if (window.innerWidth > 768) return;
     
     const header = document.getElementById('header');
     const hamburger = document.getElementById('hamburger');
@@ -1438,7 +1413,6 @@ function handleScroll() {
     clearTimeout(scrollTimeout);
     
     if (currentScroll <= 0) {
-        // At top
         header.classList.remove('hide');
         hamburger.classList.remove('hide');
         lastScrollTop = currentScroll;
@@ -1446,11 +1420,9 @@ function handleScroll() {
     }
     
     if (currentScroll > lastScrollTop && currentScroll > 100) {
-        // Scrolling down
         header.classList.add('hide');
         hamburger.classList.add('hide');
     } else {
-        // Scrolling up
         header.classList.remove('hide');
         hamburger.classList.remove('hide');
     }
@@ -1458,7 +1430,6 @@ function handleScroll() {
     lastScrollTop = currentScroll;
 }
 
-// Initialize scroll listener
 window.addEventListener('scroll', handleScroll, { passive: true });
 
 loadFavorites();
