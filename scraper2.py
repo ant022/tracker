@@ -26,8 +26,9 @@ def get_store_name(url):
 
 def get_store_from_url(url):
     """Detect store name from URL"""
-    if not url:
+    if not url or not isinstance(url, str):
         return "Unknown"
+    
     url_lower = url.lower()
     if "barbora" in url_lower:
         return "Barbora"
@@ -43,8 +44,6 @@ def get_category_key(name, url):
     """Generate unique key for a category using store:name format"""
     store = get_store_from_url(url)
     return f"{store}:{name}"
-
-# Add this to the top of scraper2.py, replacing the old load_categories() function
 
 def load_categories():
     """Load config - supports both old and new formats"""
@@ -77,8 +76,8 @@ def load_categories():
                         "unit": "L"
                     })
             return new_format
+    
     return []
-
 
 def extract_unit_value(text, target_type):
     if not text:
@@ -206,71 +205,194 @@ def scrape_selver_page(page):
         })
     """)
 
-# ---------------- RIMI (UPDATED FOR SALE PRICES) ----------------
-def scrape_rimi_page(page):
+# ---------------- RIMI (UPDATED WITH DEBUG) ----------------
+def debug_rimi_page(page):
+    """Debug function to see what's actually on the page"""
+    print("\n=== RIMI DEBUG ===")
+    
+    # Save screenshot
     try:
-        page.wait_for_selector('.card', state='visible', timeout=20000)
-    except:
-        print("Rimi: .card not visible")
+        page.screenshot(path="rimi_debug.png")
+        print("Screenshot saved to rimi_debug.png")
+    except Exception as e:
+        print(f"Could not save screenshot: {e}")
+    
+    # Check for common selectors
+    selectors_to_check = [
+        '.card',
+        '.product-card',
+        '[data-testid="product-card"]',
+        '.product',
+        '.product-grid',
+        '.js-product-container',
+        '[class*="product"]',
+        '[class*="card"]'
+    ]
+    
+    for selector in selectors_to_check:
+        count = page.locator(selector).count()
+        if count > 0:
+            print(f"  ✓ {selector}: {count} elements found")
+        else:
+            print(f"  ✗ {selector}: 0 elements")
+    
+    # Get page HTML snippet
+    try:
+        html_snippet = page.evaluate("() => document.body.innerHTML.substring(0, 3000)")
+        print(f"\nFirst 3000 chars of HTML:\n{html_snippet}\n")
+        
+        # Save full HTML for inspection
+        with open("rimi_debug.html", "w", encoding="utf-8") as f:
+            f.write(page.content())
+        print("Full HTML saved to rimi_debug.html")
+    except Exception as e:
+        print(f"Could not get HTML: {e}")
+    
+    return True
+
+def scrape_rimi_page(page, debug_mode=False):
+    """Updated Rimi scraper with better error handling and debug mode"""
+    if debug_mode:
+        debug_rimi_page(page)
+    
+    print("  [Rimi] Waiting for content...")
+    
+    # Try multiple possible selectors
+    selectors = [
+        '.card',
+        '[data-testid="product-card"]',
+        '.product-card',
+        '.product-item',
+        '[class*="ProductCard"]'
+    ]
+    
+    found_selector = None
+    for selector in selectors:
+        try:
+            page.wait_for_selector(selector, state='visible', timeout=5000)
+            count = page.locator(selector).count()
+            if count > 0:
+                found_selector = selector
+                print(f"  [Rimi] Found {count} products using selector: {selector}")
+                break
+        except:
+            continue
+    
+    if not found_selector:
+        print("  [Rimi] ERROR: No product cards found with any known selector")
+        # Save debug info
+        try:
+            page.screenshot(path="rimi_error.png")
+            with open("rimi_error.html", "w", encoding="utf-8") as f:
+                f.write(page.content())
+            print("  [Rimi] Saved rimi_error.png and rimi_error.html for debugging")
+        except:
+            pass
         return []
     
     # Accept cookies if present
     try:
-        if page.is_visible('button:has-text("Nõustu vajalike")', timeout=2000):
-            page.click('button:has-text("Nõustu vajalike")')
+        cookie_buttons = [
+            'button:has-text("Nõustu")',
+            'button:has-text("Nõustun")',
+            'button:has-text("Accept")',
+            '[data-testid="cookie-accept"]'
+        ]
+        for btn in cookie_buttons:
+            if page.is_visible(btn, timeout=2000):
+                page.click(btn)
+                time.sleep(1)
+                break
     except:
         pass
     
-    for _ in range(6):
+    # Scroll to load lazy content
+    for i in range(6):
         page.mouse.wheel(0, 2500)
         time.sleep(0.4)
     
     time.sleep(1)
     
-    return page.evaluate("""
-        () => Array.from(document.querySelectorAll('.card')).map(card => {
-            const name = card.querySelector('.card__name')?.innerText.trim() || "Unknown";
-            const url = card.querySelector('a')?.href || "";
-            const img = card.querySelector('img')?.src || "";
+    # Use the found selector
+    return page.evaluate(f"""
+        () => {{
+            const cards = Array.from(document.querySelectorAll('{found_selector}'));
+            console.log('Found cards:', cards.length);
             
-            // Check for sale price first (in price-label overlay)
-            let price = 0;
-            let isSalePrice = false;
-            
-            const priceLabel = card.querySelector('.price-label__price');
-            if (priceLabel) {
-                // Sale price exists - extract from major/cents structure
-                const major = priceLabel.querySelector('.major')?.innerText.trim() || "0";
-                const cents = priceLabel.querySelector('.cents')?.innerText.trim() || "00";
-                price = parseFloat(major + "." + cents);
-                isSalePrice = true;
-            } else {
-                // No sale - use regular price from price-tag
-                const main = card.querySelector('.price-tag > span')?.innerText.trim().replace(',', '.') || "0";
-                const frac = card.querySelector('.price-tag sup')?.innerText.trim() || "00";
-                price = parseFloat(main + "." + frac.replace(/\\D/g,'')) || 0;
-            }
-            
-            // Get unit price - try both sale and regular unit price locations
-            let unitText = "";
-            const saleUnitPrice = card.querySelector('.price-per-unit');
-            const regularUnitPrice = card.querySelector('.card__price-per');
-            
-            if (isSalePrice && saleUnitPrice) {
-                unitText = saleUnitPrice.innerText?.replace(/\\s+/g, ' ').trim() || "";
-            } else if (regularUnitPrice) {
-                unitText = regularUnitPrice.innerText?.replace(/\\s+/g, ' ').trim() || "";
-            }
-            
-            return {
-                name,
-                url,
-                img,
-                price_text: price.toString(),
-                unit_text: unitText,
-                is_sale: isSalePrice
-            };
-        }).filter(p => p.name && p.price_text !== "0");
+            return cards.map(card => {{
+                // Try multiple ways to get the name
+                const name = card.querySelector('.card__name')?.innerText.trim() ||
+                             card.querySelector('[data-testid="product-name"]')?.innerText.trim() ||
+                             card.querySelector('h3')?.innerText.trim() ||
+                             card.querySelector('.product-name')?.innerText.trim() ||
+                             card.querySelector('[class*="name"]')?.innerText.trim() ||
+                             "Unknown";
+                
+                const url = card.querySelector('a')?.href || "";
+                const img = card.querySelector('img')?.src || "";
+                
+                // Price extraction - try multiple methods
+                let price = 0;
+                let isSalePrice = false;
+                
+                // Method 1: Sale price in price-label
+                const priceLabel = card.querySelector('.price-label__price');
+                if (priceLabel) {{
+                    const major = priceLabel.querySelector('.major')?.innerText.trim() || "0";
+                    const cents = priceLabel.querySelector('.cents')?.innerText.trim() || "00";
+                    price = parseFloat(major + "." + cents);
+                    isSalePrice = true;
+                }}
+                
+                // Method 2: Regular price-tag
+                if (price === 0) {{
+                    const priceTag = card.querySelector('.price-tag');
+                    if (priceTag) {{
+                        const main = priceTag.querySelector('span')?.innerText.trim().replace(',', '.') || "0";
+                        const frac = priceTag.querySelector('sup')?.innerText.trim() || "00";
+                        price = parseFloat(main + "." + frac.replace(/\\D/g,'')) || 0;
+                    }}
+                }}
+                
+                // Method 3: Any element with price-like class
+                if (price === 0) {{
+                    const priceEl = card.querySelector('[class*="price"]');
+                    if (priceEl) {{
+                        const priceText = priceEl.innerText.replace(/[^0-9.,]/g, '').replace(',', '.');
+                        price = parseFloat(priceText) || 0;
+                    }}
+                }}
+                
+                // Method 4: Look for any number that looks like a price
+                if (price === 0) {{
+                    const allText = card.innerText;
+                    const priceMatch = allText.match(/€?\\s*(\\d+)[.,](\\d{{2}})/);
+                    if (priceMatch) {{
+                        price = parseFloat(priceMatch[1] + '.' + priceMatch[2]);
+                    }}
+                }}
+                
+                // Unit price
+                let unitText = "";
+                const saleUnitPrice = card.querySelector('.price-per-unit');
+                const regularUnitPrice = card.querySelector('.card__price-per');
+                
+                if (isSalePrice && saleUnitPrice) {{
+                    unitText = saleUnitPrice.innerText?.replace(/\\s+/g, ' ').trim() || "";
+                }} else if (regularUnitPrice) {{
+                    unitText = regularUnitPrice.innerText?.replace(/\\s+/g, ' ').trim() || "";
+                }}
+                
+                return {{
+                    name,
+                    url,
+                    img,
+                    price_text: price.toString(),
+                    unit_text: unitText,
+                    is_sale: isSalePrice
+                }};
+            }}).filter(p => p.name !== "Unknown" && p.price_text !== "0");
+        }}
     """)
 
 # ---------------- general helpers ----------------
@@ -287,6 +409,19 @@ def parse_price_per_unit(text):
 def run_scraper():
     CATEGORIES = load_categories()
     
+    if not CATEGORIES:
+        print("❌ No categories found in categories.json")
+        return
+    
+    print(f"📋 Loaded {len(CATEGORIES)} categories")
+    
+    # Check if running in GitHub Actions or locally
+    is_github = os.environ.get("GITHUB_ACTIONS") == "true"
+    debug_mode = os.environ.get("DEBUG_MODE") == "true" or not is_github
+    
+    if debug_mode:
+        print("🔍 Running in DEBUG mode (will save screenshots and HTML)")
+    
     single_category_key = os.environ.get("SCRAPE_SINGLE_CATEGORY")
     if single_category_key:
         matching = [cat for cat in CATEGORIES if get_category_key(cat["name"], cat["url"]) == single_category_key]
@@ -299,8 +434,28 @@ def run_scraper():
     
     with sync_playwright() as p:
         print("Starting browser...")
-        browser = p.chromium.launch(headless=True)
-        context = browser.new_context(viewport={"width":1280, "height":800})
+        
+        # Configure browser for both local and GitHub Actions
+        launch_options = {
+            "headless": True
+        }
+        
+        # Add args for GitHub Actions environment
+        if is_github:
+            launch_options["args"] = [
+                "--no-sandbox",
+                "--disable-setuid-sandbox",
+                "--disable-dev-shm-usage",
+                "--disable-gpu"
+            ]
+        
+        browser = p.chromium.launch(**launch_options)
+        
+        context = browser.new_context(
+            viewport={"width": 1280, "height": 800},
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+        )
+        
         page = context.new_page()
         
         if os.path.exists(HISTORY_FILE):
@@ -348,14 +503,22 @@ def run_scraper():
                 
                 try:
                     page.goto(target_url, wait_until="networkidle", timeout=60000)
-                    if page.is_visible('button:has-text("Nõustun")'):
-                        page.click('button:has-text("Nõustun")')
+                    
+                    # Try to accept cookies for all stores
+                    try:
+                        if page.is_visible('button:has-text("Nõustun")', timeout=2000):
+                            page.click('button:has-text("Nõustun")')
+                            time.sleep(1)
+                    except:
+                        pass
+                        
                 except Exception as e:
                     print(f"  Navigation failed: {e}")
                     break
                 
                 if store_name == "Rimi":
-                    raw_products = scrape_rimi_page(page)
+                    # Enable debug mode for first page of Rimi
+                    raw_products = scrape_rimi_page(page, debug_mode=(page_num == 1 and debug_mode))
                 elif store_name == "Selver":
                     raw_products = scrape_selver_page(page)
                 elif store_name == "Barbora":
@@ -419,7 +582,7 @@ def run_scraper():
                         "img": pdt.get("img", ""),
                         "category": category_key,
                         "store": store_name,
-                        "is_sale": is_sale  # Track sale status
+                        "is_sale": is_sale
                     })
                     count += 1
                 
@@ -448,5 +611,4 @@ if __name__ == "__main__":
         build_site.build()
         print("Success: Website updated (index.html)")
     except ImportError:
-
         print("Error: build_site.py not found. Website not updated.")
