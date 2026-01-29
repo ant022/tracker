@@ -1128,7 +1128,7 @@ def build():
                 </thead>
                 <tbody id="historyBody"></tbody>
             </table>
-            <a id="modalStoreLink" href="#" target="_blank" class="view-store-btn" data-i18n="view_store">View on Store Site</a>
+            <a id="modalStoreLink" href="#" target="_blank" class="view-store-btn" data-i18n="view_store">View on Store</a>
         </div>
     </div>
 
@@ -1467,7 +1467,7 @@ function showHistory(productName, event) {{
 
     body.innerHTML = '';
     
-    // entries are objects {{d: "YYYY-MM-DD", p: 12.34}}
+    // entries are objects {{t: "YYYY-MM-DDTHH:MM:SS", p: 12.34}}
     // show newest first
     const reversedEntries = [...p.entries].reverse();
     
@@ -1487,8 +1487,19 @@ function showHistory(productName, event) {{
             }}
         }}
 
+        // Format timestamp to DD-MM-YYYY
+        const timestamp = entry.t || entry.d; // Support both 't' and 'd' for backwards compatibility
+        let formattedDate = 'Unknown';
+        if (timestamp) {{
+            const date = new Date(timestamp);
+            const day = String(date.getDate()).padStart(2, '0');
+            const month = String(date.getMonth() + 1).padStart(2, '0');
+            const year = date.getFullYear();
+            formattedDate = `${{day}}-${{month}}-${{year}}`;
+        }}
+
         const row = `<tr>
-            <td>${{entry.d}}</td>
+            <td>${{formattedDate}}</td>
             <td class="${{priceClass}}">€${{price.toFixed(2)}}${{indicator}}</td>
         </tr>`;
         body.innerHTML += row;
