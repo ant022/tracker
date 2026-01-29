@@ -379,7 +379,7 @@ def build():
             overflow-x: hidden;
         }}
 
-        /* STICKY HEADER */
+        /* STICKY HEADER - Always sticky on desktop, smart hide on mobile */
         .header {{ 
             position: sticky; 
             top: 0; 
@@ -393,8 +393,11 @@ def build():
             transition: transform 0.3s ease;
         }}
         
-        .header.hide {{
-            transform: translateY(-100%);
+        /* Mobile only: hide on scroll down */
+        @media (max-width: 768px) {{
+            .header.hide {{
+                transform: translateY(-100%);
+            }}
         }}
         
         .controls {{ 
@@ -940,7 +943,7 @@ let touchEndX = 0;
 let activeStores = new Set({json.dumps([source['store'] for source in sources])});
 let activeProductCategories = new Set(productCategories);
 
-// Scroll behavior variables
+// Scroll behavior variables for mobile
 let lastScrollTop = 0;
 let scrollTimeout;
 
@@ -1518,15 +1521,16 @@ function card(p) {{
     </a>`;
 }}
 
+// Mobile scroll behavior: hide header when scrolling down, show when scrolling up
 function handleScroll() {{
+    // Only apply this behavior on mobile
     if (window.innerWidth > 768) return;
     
     const header = document.getElementById('header');
     const hamburger = document.getElementById('hamburger');
     const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
     
-    clearTimeout(scrollTimeout);
-    
+    // Prevent negative scrolling
     if (currentScroll <= 0) {{
         header.classList.remove('hide');
         hamburger.classList.remove('hide');
@@ -1534,10 +1538,13 @@ function handleScroll() {{
         return;
     }}
     
+    // Scrolling down - hide header
     if (currentScroll > lastScrollTop && currentScroll > 100) {{
         header.classList.add('hide');
         hamburger.classList.add('hide');
-    }} else {{
+    }} 
+    // Scrolling up - show header
+    else if (currentScroll < lastScrollTop) {{
         header.classList.remove('hide');
         hamburger.classList.remove('hide');
     }}
@@ -1545,6 +1552,7 @@ function handleScroll() {{
     lastScrollTop = currentScroll;
 }}
 
+// Initialize scroll listener
 window.addEventListener('scroll', handleScroll, {{ passive: true }});
 
 loadFavorites();
