@@ -8,6 +8,10 @@ on:
         description: 'Single category to scrape (optional, format: Store:CategoryName)'
         required: false
         type: string
+      build_only:
+        description: 'Build site only (skip scraping, type: BuildSite)'
+        required: false
+        type: string
   
   # Run automatically every day at 6 AM UTC
   schedule:
@@ -27,12 +31,14 @@ jobs:
         python-version: '3.11'
         
     - name: Install dependencies
+      if: github.event.inputs.build_only != 'BuildSite'
       run: |
         python -m pip install --upgrade pip
         pip install playwright
         playwright install chromium
         
     - name: Run scraper
+      if: github.event.inputs.build_only != 'BuildSite'
       env:
         SCRAPE_SINGLE_CATEGORY: ${{ github.event.inputs.single_category }}
       run: |
@@ -47,4 +53,4 @@ jobs:
         git config --global user.name 'GitHub Actions Bot'
         git config --global user.email 'actions@github.com'
         git add alcohol_history.json index.html
-        git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update: Scraped prices $(date +'%Y-%m-%d %H:%M')" && git push)
+        git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update: $(if [ "${{ github.event.inputs.build_only }}" = "BuildSite" ]; then echo "Rebuilt site"; else echo "Scraped prices"; fi) $(date +'%Y-%m-%d %H:%M')" && git push)
