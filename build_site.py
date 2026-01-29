@@ -169,6 +169,15 @@ def build():
         </label>
     </div>'''
     
+    # Admin link at bottom
+    sidebar_links += '''
+    <div class="filter-section" style="border-bottom: none; padding-top: 20px;">
+        <a href="admin.html" class="admin-link">
+            <span style="font-size: 18px;">⚙️</span>
+            <span>Admin</span>
+        </a>
+    </div>'''
+    
     html_template = f"""
 <!DOCTYPE html>
 <html>
@@ -199,6 +208,12 @@ def build():
             gap: 4px;
             padding: 0;
             box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }}
+        
+        .hamburger.hide {{
+            transform: translateY(-80px);
+            opacity: 0;
         }}
         
         .hamburger span {{
@@ -245,6 +260,8 @@ def build():
             overflow-y: auto; 
             z-index: 10;
             border-right: 1px solid #e5e7eb;
+            display: flex;
+            flex-direction: column;
         }}
         
         .sidebar h2 {{ 
@@ -332,6 +349,27 @@ def build():
         .store-label-Coop {{ background: #dbeafe; color: #1e40af; }}
         .store-label-Unknown {{ background: #f3f4f6; color: #6b7280; }}
         
+        .admin-link {{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 15px;
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #374151;
+            font-weight: 600;
+            font-size: 14px;
+            transition: 0.15s;
+        }}
+        
+        .admin-link:hover {{
+            background: #f3f4f6;
+            color: #111827;
+            border-color: #d1d5db;
+        }}
+        
         .main {{ 
             margin-left: 260px; 
             flex: 1; 
@@ -352,6 +390,11 @@ def build():
             justify-content: space-between; 
             align-items: center; 
             border-bottom: 1px solid #e5e7eb;
+            transition: transform 0.3s ease;
+        }}
+        
+        .header.hide {{
+            transform: translateY(-100%);
         }}
         
         .controls {{ 
@@ -413,21 +456,56 @@ def build():
             font-size: 13px;
             color: #6b7280;
             display: none;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
         }}
         
         .filter-indicator.show {{
-            display: block;
+            display: flex;
         }}
         
         .filter-tag {{
             display: inline-flex;
             align-items: center;
+            gap: 6px;
             background: #f3f4f6;
-            padding: 4px 10px;
+            padding: 6px 10px;
             border-radius: 6px;
-            margin: 0 6px;
             font-weight: 600;
             color: #374151;
+            font-size: 13px;
+        }}
+        
+        .filter-tag-remove {{
+            cursor: pointer;
+            color: #6b7280;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 1;
+            transition: 0.15s;
+            margin-left: 2px;
+        }}
+        
+        .filter-tag-remove:hover {{
+            color: #ef4444;
+        }}
+        
+        .clear-all-btn {{
+            background: #ef4444;
+            color: white;
+            border: none;
+            padding: 6px 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 13px;
+            transition: 0.15s;
+            margin-left: auto;
+        }}
+        
+        .clear-all-btn:hover {{
+            background: #dc2626;
         }}
 
         /* FAVORITES/SALES SECTIONS */
@@ -830,7 +908,7 @@ def build():
     </div>
 
     <div class="main">
-        <div class="header">
+        <div class="header" id="header">
             <div class="controls">
                 <div>
                     <button class="btn" id="sort-unit" onclick="setSort('price_per_unit')">Best Value</button>
@@ -861,6 +939,10 @@ let touchStartX = 0;
 let touchEndX = 0;
 let activeStores = new Set({json.dumps([source['store'] for source in sources])});
 let activeProductCategories = new Set(productCategories);
+
+// Scroll behavior variables
+let lastScrollTop = 0;
+let scrollTimeout;
 
 // Robust helper to find source info for a product's category key
 function findSource(catKey) {{
@@ -1003,6 +1085,65 @@ function getActiveFilters() {{
     return filters;
 }}
 
+function removeFilter(type, value) {{
+    if (type === 'category') {{
+        activeProductCategories.delete(value);
+        // Update checkbox
+        const checkbox = document.querySelector(`input[data-product-category="${{value}}"]`);
+        if (checkbox) checkbox.checked = false;
+    }} else if (type === 'store') {{
+        activeStores.delete(value);
+        // Update checkbox
+        const checkbox = document.querySelector(`input[data-store="${{value}}"]`);
+        if (checkbox) checkbox.checked = false;
+    }} else if (type === 'favorites') {{
+        const checkbox = document.getElementById('filter-favorites');
+        if (checkbox) checkbox.checked = false;
+    }} else if (type === 'sales') {{
+        const checkbox = document.getElementById('filter-sales');
+        if (checkbox) checkbox.checked = false;
+    }}
+    
+    render();
+    
+    // Re-run search if active
+    if (document.getElementById('search').value.length >= 2) {{
+        handleSearch();
+    }}
+}}
+
+function clearAllFilters() {{
+    // Clear search
+    document.getElementById('search').value = '';
+    
+    // Reset all categories
+    activeProductCategories = new Set(productCategories);
+    document.querySelectorAll('input[data-product-category]').forEach(cb => cb.checked = true);
+    
+    // Reset all stores
+    const allStores = sources.map(s => s.store);
+    activeStores = new Set(allStores);
+    document.querySelectorAll('input[data-store]').forEach(cb => cb.checked = true);
+    
+    // Reset quick filters
+    const favCheckbox = document.getElementById('filter-favorites');
+    if (favCheckbox) favCheckbox.checked = false;
+    
+    const salesCheckbox = document.getElementById('filter-sales');
+    if (salesCheckbox) salesCheckbox.checked = false;
+    
+    // Hide search results
+    const searchGrid = document.getElementById('search-grid');
+    const searchTitle = document.getElementById('search-results-title');
+    const content = document.getElementById('content');
+    
+    searchGrid.innerHTML = "";
+    searchTitle.style.display = "none";
+    content.style.display = "block";
+    
+    render();
+}}
+
 function updateFilterIndicator(isSearchActive = false) {{
     const indicator = document.getElementById('filter-indicator');
     const filters = getActiveFilters();
@@ -1018,25 +1159,34 @@ function updateFilterIndicator(isSearchActive = false) {{
     const tags = [];
     
     if (filters.categories) {{
-        tags.push(...filters.categories.map(c => `<span class="filter-tag">🏷️ ${{c}}</span>`));
+        tags.push(...filters.categories.map(c => 
+            `<span class="filter-tag">🏷️ ${{c}} <span class="filter-tag-remove" onclick="removeFilter('category', '${{c}}')">×</span></span>`
+        ));
     }}
     
     if (filters.stores) {{
-        tags.push(...filters.stores.map(s => `<span class="filter-tag">${{s}}</span>`));
+        tags.push(...filters.stores.map(s => 
+            `<span class="filter-tag">${{s}} <span class="filter-tag-remove" onclick="removeFilter('store', '${{s}}')">×</span></span>`
+        ));
     }}
     
     if (filters.favorites) {{
-        tags.push('<span class="filter-tag">⭐ Favorites</span>');
+        tags.push('<span class="filter-tag">⭐ Favorites <span class="filter-tag-remove" onclick="removeFilter(\'favorites\')">×</span></span>');
     }}
     
     if (filters.sales) {{
-        tags.push('<span class="filter-tag">🔥 On Sale</span>');
+        tags.push('<span class="filter-tag">🔥 On Sale <span class="filter-tag-remove" onclick="removeFilter(\'sales\')">×</span></span>');
     }}
     
     if (tags.length === 0 && isSearchActive) {{
         html += '<span class="filter-tag">All products</span>';
     }} else {{
         html += tags.join(' ');
+    }}
+    
+    // Add Clear All button if there are filters or search
+    if (hasFilters || isSearchActive) {{
+        html += '<button class="clear-all-btn" onclick="clearAllFilters()">Clear All</button>';
     }}
     
     indicator.innerHTML = html;
@@ -1391,6 +1541,40 @@ function card(p) {{
         </div>
     </a>`;
 }}
+
+// Scroll behavior for mobile
+function handleScroll() {{
+    if (window.innerWidth > 768) return; // Only for mobile
+    
+    const header = document.getElementById('header');
+    const hamburger = document.getElementById('hamburger');
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+    
+    clearTimeout(scrollTimeout);
+    
+    if (currentScroll <= 0) {{
+        // At top
+        header.classList.remove('hide');
+        hamburger.classList.remove('hide');
+        lastScrollTop = currentScroll;
+        return;
+    }}
+    
+    if (currentScroll > lastScrollTop && currentScroll > 100) {{
+        // Scrolling down
+        header.classList.add('hide');
+        hamburger.classList.add('hide');
+    }} else {{
+        // Scrolling up
+        header.classList.remove('hide');
+        hamburger.classList.remove('hide');
+    }}
+    
+    lastScrollTop = currentScroll;
+}}
+
+// Initialize scroll listener
+window.addEventListener('scroll', handleScroll, {{ passive: true }});
 
 loadFavorites();
 render();
