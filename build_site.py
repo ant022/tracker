@@ -10,7 +10,7 @@ def get_store_from_url(url):
         return "Unknown"
     url_lower = url.lower()
     if "barbora" in url_lower:
-        return "Maxima"
+        return "Barbora"
     elif "selver" in url_lower:
         return "Selver"
     elif "rimi" in url_lower:
@@ -148,10 +148,11 @@ def build():
     sidebar_links += '<div class="filter-section">'
     sidebar_links += '<div class="filter-title">Stores</div>'
     for store in stores:
+        display_name = "Maxima" if store == "Barbora" else store
         sidebar_links += f'''
         <label class="filter-checkbox">
             <input type="checkbox" checked onchange="filterByStore()" data-store="{store}">
-            <span class="store-label-sm store-label-{store}">{store}</span>
+            <span class="store-label-sm store-label-{store}">{display_name}</span>
         </label>'''
     sidebar_links += '</div>'
     
@@ -949,6 +950,11 @@ let lastScrollTop = 0;
 let scrollTimeout;
 let ticking = false;
 
+// Helper function to display store name
+function getDisplayStoreName(store) {{
+    return store === 'Barbora' ? 'Maxima' : store;
+}}
+
 // Robust helper to find source info for a product's category key
 function findSource(catKey) {{
     if (!catKey) return null;
@@ -1165,7 +1171,8 @@ function updateFilterIndicator(isSearchActive = false) {{
     if (filters.stores) {{
         tags.push(...filters.stores.map(s => {{
             const escaped = s.replace(/'/g, "\\\\'");
-            return `<span class="filter-tag">${{s}} <span class="filter-tag-remove" onclick="removeFilter('store', '${{escaped}}')">×</span></span>`;
+            const displayName = getDisplayStoreName(s);
+            return `<span class="filter-tag">${{displayName}} <span class="filter-tag-remove" onclick="removeFilter('store', '${{escaped}}')">×</span></span>`;
         }}));
     }}
     
@@ -1462,10 +1469,11 @@ function cardWithDiscount(p) {{
     const discountPct = p.discount_pct || 0;
     const isFav = favorites.includes(p.name);
     const safeName = p.name.replace(/'/g, "\\\\'").replace(/"/g, '&quot;');
+    const displayStore = getDisplayStoreName(p.store);
     
     return `<a href="${{p.url}}" target="_blank" class="card">
         <span class="discount-badge">-${{discountPct.toFixed(0)}}%</span>
-        <span class="store-badge store-${{p.store}}">${{p.store}}</span>
+        <span class="store-badge store-${{p.store}}">${{displayStore}}</span>
         <button class="fav-btn ${{isFav ? 'active' : ''}}" onclick="toggleFavorite('${{safeName}}', event); return false;">
             ${{isFav ? '⭐' : '☆'}}
         </button>
@@ -1487,6 +1495,7 @@ function card(p) {{
     const entries = p.entries || [];
     const isFav = favorites.includes(p.name);
     const safeName = p.name.replace(/'/g, "\\\\'").replace(/"/g, '&quot;');
+    const displayStore = getDisplayStoreName(p.store);
     
     let priceDisplay = `<div class="price">€${{p.latest_price.toFixed(2)}}</div>`;
     
@@ -1510,7 +1519,7 @@ function card(p) {{
     }}
 
     return `<a href="${{p.url}}" target="_blank" class="card">
-        <span class="store-badge store-${{p.store}}">${{p.store}}</span>
+        <span class="store-badge store-${{p.store}}">${{displayStore}}</span>
         <button class="fav-btn ${{isFav ? 'active' : ''}}" onclick="toggleFavorite('${{safeName}}', event); return false;">
             ${{isFav ? '⭐' : '☆'}}
         </button>
@@ -1585,4 +1594,3 @@ render();
 
 if __name__ == "__main__":
     build()
-
