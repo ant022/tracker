@@ -5,7 +5,9 @@
     "Rummid",
     "Viinad",
     "Ginid",
-    "Pasta"
+    "Pasta",
+    "Energiajoogid",
+    "Karastusjoogid"
   ],
   "sources": [
     {
@@ -97,20 +99,54 @@
       "url": "https://www.rimi.ee/epood/ee/tooted/kauasailivad-toidukaubad/makaronid-ja-riis/makaronid-pasta/c/SH-13-14-20",
       "unit": "kg",
       "productCategory": "Pasta"
-    }
-    ,
+    },
     {
       "name": "Lahja Alkohol",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/c/SH-1-6",
       "unit": "L",
       "productCategory": "Lahja Alkohol"
-    }
-    ,
+    },
     {
       "name": "Rummid",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/kange-alkohol/rumm/c/SH-1-7",
       "unit": "L",
       "productCategory": "Rummid"
+    },
+    {
+      "name": "Energiajoogid",
+      "url": "https://barbora.ee/joogid/karastusjoogid/energiajoogid",
+      "unit": "L",
+      "productCategory": "Energiajoogid"
+    },
+    {
+      "name": "Energiajoogid",
+      "url": "https://www.rimi.ee/epood/ee/tooted/joogid/energiajook/c/SH-3-4",
+      "unit": "L",
+      "productCategory": "Energiajoogid"
+    },
+    {
+      "name": "Energiajoogid",
+      "url": "https://www.selver.ee/joogid/karastus-ja-energiajoogid-toonikud/energiajoogid",
+      "unit": "L",
+      "productCategory": "Energiajoogid"
+    },
+    {
+      "name": "Karastusjoogid",
+      "url": "https://www.selver.ee/joogid/karastus-ja-energiajoogid-toonikud/karastusjoogid-toonikud",
+      "unit": "L",
+      "productCategory": "Karastusjoogid"
+    },
+    {
+      "name": "Karastusjoogid",
+      "url": "https://barbora.ee/joogid/karastusjoogid/limonaadid",
+      "unit": "L",
+      "productCategory": "Karastusjoogid"
+    },
+    {
+      "name": "Karastusjoogid",
+      "url": "https://www.rimi.ee/epood/ee/tooted/joogid/karastusjoogid/limonaad-karastusjook/c/SH-3-7",
+      "unit": "L",
+      "productCategory": "Karastusjoogid"
     }
   ]
 }
