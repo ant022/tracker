@@ -7,7 +7,7 @@ OUTPUT_FILE = "index.html"
 # Translations
 TRANSLATIONS = {
     "et": {
-        "title": "Hinnarahuldus",
+        "title": "Hinnavahetus",
         "updated": "Uuendatud",
         "categories": "Kategooriad",
         "stores": "Poed",
@@ -15,7 +15,7 @@ TRANSLATIONS = {
         "favorites_only": "Ainult lemmikud",
         "on_sale": "Soodushinnaga",
         "admin": "Admin",
-        "best_value": "Parim Väärtus (l/kg)",
+        "best_value": "Parim Väärtus",
         "price": "Hind",
         "search_placeholder": "Otsi tooteid...",
         "search_results": "Otsingutulemused",
@@ -27,13 +27,16 @@ TRANSLATIONS = {
         "show_less": "Näita vähem",
         "show_more": "Näita rohkem",
         "collapse": "Ahenda",
-        "uncategorized": "Kategoriseerimata",
+        "uncategorized": "Kategoriseerimata / Vajalik Kaardistamine",
         "tip_categories": "Vihje: Kontrolli categories.json, et veenduda, et neil allikatel on määratud productCategory.",
         "no_products": "Filtritele vastavaid tooteid ei leitud",
         "active_filters": "Aktiivsed filtrid",
         "searching_in": "Otsimine",
         "clear_all": "Tühjenda kõik",
-        "all_products": "Kõik tooted"
+        "all_products": "Kõik tooted",
+        "history": "Hinna ajalugu",
+        "date": "Kuupäev",
+        "view_store": "Vaata poes"
     },
     "en": {
         "title": "Price Tracker",
@@ -62,7 +65,10 @@ TRANSLATIONS = {
         "active_filters": "Active filters",
         "searching_in": "Searching in",
         "clear_all": "Clear All",
-        "all_products": "All products"
+        "all_products": "All products",
+        "history": "Price History",
+        "date": "Date",
+        "view_store": "View on Store"
     }
 }
 
@@ -776,6 +782,7 @@ def build():
             position: relative; 
             transition: 0.15s; 
             border: 1px solid #e5e7eb; 
+            cursor: pointer;
         }}
         
         .card:hover {{ 
@@ -888,6 +895,73 @@ def build():
             font-size: 48px;
             margin-bottom: 16px;
         }}
+
+        /* MODAL STYLES */
+        .modal {{
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.8);
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(4px);
+        }}
+        .modal-content {{
+            width: 90%;
+            max-width: 500px;
+            background: white;
+            padding: 25px;
+            border-radius: 16px;
+            position: relative;
+            max-height: 85vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }}
+        .modal-close {{
+            position: absolute;
+            top: 15px; right: 20px;
+            font-size: 28px;
+            cursor: pointer;
+            color: #9ca3af;
+            transition: 0.15s;
+        }}
+        .modal-close:hover {{ color: #111827; }}
+        .history-table {{
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }}
+        .history-table th {{
+            text-align: left;
+            font-size: 12px;
+            text-transform: uppercase;
+            color: #6b7280;
+            padding: 10px;
+            border-bottom: 2px solid #f3f4f6;
+        }}
+        .history-table td {{
+            padding: 12px 10px;
+            border-bottom: 1px solid #f3f4f6;
+            font-size: 14px;
+        }}
+        .price-up {{ color: #ef4444; font-weight: 600; }}
+        .price-down {{ color: #10b981; font-weight: 600; }}
+        .view-store-btn {{
+            display: block;
+            width: 100%;
+            text-align: center;
+            background: #111827;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 600;
+            margin-top: 25px;
+            transition: 0.15s;
+        }}
+        .view-store-btn:hover {{ background: #374151; }}
         
         /* MOBILE RESPONSIVE */
         @media (max-width: 768px) {{
@@ -1032,6 +1106,30 @@ def build():
         <div id="search-grid" class="grid" style="margin-top: 20px;"></div>
 
         <div id="content"></div>
+    </div>
+
+    <div id="historyModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeHistory()">&times;</span>
+            <h3 id="modalTitle" style="margin-top: 0; padding-right: 30px;">Product History</h3>
+            <div style="display: flex; align-items: center; gap: 15px; margin: 15px 0;">
+                <img id="modalImg" src="" style="width: 80px; height: 80px; object-fit: contain;">
+                <div>
+                    <div id="modalStore" class="store-label-sm" style="margin-left: 0; margin-bottom: 5px;"></div>
+                    <div id="modalCurrentPrice" style="font-size: 20px; font-weight: 700;"></div>
+                </div>
+            </div>
+            <table class="history-table">
+                <thead>
+                    <tr>
+                        <th data-i18n="date">Date</th>
+                        <th data-i18n="price">Price</th>
+                    </tr>
+                </thead>
+                <tbody id="historyBody"></tbody>
+            </table>
+            <a id="modalStoreLink" href="#" target="_blank" class="view-store-btn" data-i18n="view_store">View on Store Site</a>
+        </div>
     </div>
 
 <script>
@@ -1348,6 +1446,68 @@ function updateFilterIndicator(isSearchActive = false) {{
     indicator.classList.add('show');
 }}
 
+// HISTORY MODAL FUNCTIONS
+function showHistory(productName, event) {{
+    if (event.target.closest('.fav-btn')) return;
+
+    const p = products.find(prod => prod.name === productName);
+    if (!p) return;
+
+    const modal = document.getElementById('historyModal');
+    const body = document.getElementById('historyBody');
+    
+    document.getElementById('modalTitle').innerText = p.name;
+    document.getElementById('modalImg').src = p.img;
+    document.getElementById('modalCurrentPrice').innerText = `€${{p.latest_price.toFixed(2)}}`;
+    document.getElementById('modalStoreLink').href = p.url;
+    
+    const storeLabel = document.getElementById('modalStore');
+    storeLabel.className = `store-label-sm store-label-${{p.store}}`;
+    storeLabel.innerText = getDisplayStoreName(p.store);
+
+    body.innerHTML = '';
+    
+    // entries are objects {{d: "YYYY-MM-DD", p: 12.34}}
+    // show newest first
+    const reversedEntries = [...p.entries].reverse();
+    
+    reversedEntries.forEach((entry, index) => {{
+        const price = entry.p;
+        const prevEntry = reversedEntries[index + 1];
+        let priceClass = '';
+        let indicator = '';
+
+        if (prevEntry) {{
+            if (price > prevEntry.p) {{
+                priceClass = 'price-up';
+                indicator = ' ▲';
+            }} else if (price < prevEntry.p) {{
+                priceClass = 'price-down';
+                indicator = ' ▼';
+            }}
+        }}
+
+        const row = `<tr>
+            <td>${{entry.d}}</td>
+            <td class="${{priceClass}}">€${{price.toFixed(2)}}${{indicator}}</td>
+        </tr>`;
+        body.innerHTML += row;
+    }});
+
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}}
+
+function closeHistory() {{
+    document.getElementById('historyModal').style.display = 'none';
+    document.body.style.overflow = 'auto';
+}}
+
+window.onclick = function(event) {{
+    const modal = document.getElementById('historyModal');
+    if (event.target == modal) closeHistory();
+}}
+
 function handleSearch() {{
     const query = document.getElementById('search').value.toLowerCase();
     const searchGrid = document.getElementById('search-grid');
@@ -1621,7 +1781,7 @@ function cardWithDiscount(p) {{
     const safeName = p.name.replace(/'/g, "\\\\'").replace(/"/g, '&quot;');
     const displayStore = getDisplayStoreName(p.store);
     
-    return `<a href="${{p.url}}" target="_blank" class="card">
+    return `<div class="card" onclick="showHistory('${{safeName}}', event)">
         <span class="discount-badge">-${{discountPct.toFixed(0)}}%</span>
         <span class="store-badge store-${{p.store}}">${{displayStore}}</span>
         <button class="fav-btn ${{isFav ? 'active' : ''}}" onclick="toggleFavorite('${{safeName}}', event); return false;">
@@ -1636,7 +1796,7 @@ function cardWithDiscount(p) {{
             </div>
             <div class="per-l">€${{unitPrice.toFixed(2)}} / ${{unitLabel}}</div>
         </div>
-    </a>`;
+    </div>`;
 }}
 
 function card(p) {{
@@ -1668,7 +1828,7 @@ function card(p) {{
         }}
     }}
 
-    return `<a href="${{p.url}}" target="_blank" class="card">
+    return `<div class="card" onclick="showHistory('${{safeName}}', event)">
         <span class="store-badge store-${{p.store}}">${{displayStore}}</span>
         <button class="fav-btn ${{isFav ? 'active' : ''}}" onclick="toggleFavorite('${{safeName}}', event); return false;">
             ${{isFav ? '⭐' : '☆'}}
@@ -1679,7 +1839,7 @@ function card(p) {{
             ${{priceDisplay}}
             <div class="per-l">€${{unitPrice.toFixed(2)}} / ${{unitLabel}}</div>
         </div>
-    </a>`;
+    </div>`;
 }}
 
 // Mobile scroll behavior: hide header when scrolling down, show when scrolling up
@@ -1745,4 +1905,3 @@ render();
 
 if __name__ == "__main__":
     build()
-
