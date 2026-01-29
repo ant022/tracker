@@ -66,7 +66,6 @@ def load_data():
     
     # Build source info with keys
     sources_with_stores = []
-    valid_keys = set()
     for source in sources:
         store = get_store_from_url(source.get("url", ""))
         source_key = get_category_key(source["name"], source["url"])
@@ -76,11 +75,10 @@ def load_data():
             "key": source_key,
             "productCategory": source.get("productCategory", "")
         })
-        valid_keys.add(source_key)
     
-    # Filter products by valid source keys
+    # Load all products - removed the strict 'valid_keys' filter to prevent products disappearing
     raw_products = data.get("products", {})
-    products = [{"name": k, **v} for k, v in raw_products.items() if v.get('category') in valid_keys]
+    products = [{"name": k, **v} for k, v in raw_products.items()]
     
     return products, sources_with_stores, product_categories, data.get("meta", {}).get("generated_at", "Unknown")
 
@@ -864,6 +862,13 @@ let touchEndX = 0;
 let activeStores = new Set({json.dumps([source['store'] for source in sources])});
 let activeProductCategories = new Set(productCategories);
 
+// Robust helper to find source info for a product's category key
+function findSource(catKey) {{
+    if (!catKey) return null;
+    const searchKey = catKey.toLowerCase().trim();
+    return sources.find(s => s.key.toLowerCase().trim() === searchKey);
+}}
+
 function toggleMenu() {{
     const sidebar = document.getElementById('sidebar');
     const overlay = document.getElementById('sidebar-overlay');
@@ -1061,8 +1066,8 @@ function handleSearch() {{
         // Filter by store
         if (!activeStores.has(p.store)) return false;
         
-        // Filter by product category
-        const source = sources.find(s => s.key === p.category);
+        // Filter by product category (robust matching)
+        const source = findSource(p.category);
         if (source && source.productCategory) {{
             if (!activeProductCategories.has(source.productCategory)) return false;
         }}
@@ -1104,7 +1109,7 @@ function render() {{
     let filteredProducts = products.filter(p => {{
         if (!activeStores.has(p.store)) return false;
         
-        const source = sources.find(s => s.key === p.category);
+        const source = findSource(p.category);
         if (source && source.productCategory) {{
             if (!activeProductCategories.has(source.productCategory)) return false;
         }}
@@ -1128,29 +1133,31 @@ function render() {{
     if (saleProducts.length > 0 && !showFavoritesOnly && !hasCategoryFilter && !showSalesOnly) {{
         renderSales(container, filteredProducts);
     }}
-    // RENDER BY PRODUCT CATEGORY
-   if (productCategories.length > 0) {{
-        const categorizedNames = new Set();
+    
+    // Track which products have been displayed in a category to prevent duplicates in 'Uncategorized'
+    const categorizedProductNames = new Set();
 
+    // RENDER BY PRODUCT CATEGORY
+    if (productCategories.length > 0) {{
         productCategories.forEach(prodCat => {{
             if (!activeProductCategories.has(prodCat)) return;
             
             const catProducts = filteredProducts.filter(p => {{
-                const source = sources.find(s => s.key === p.category);
-                const matches = source && source.productCategory === prodCat;
-                if (matches) categorizedNames.add(p.name);
+                const source = findSource(p.category);
+                // Robust comparison for the grouping logic
+                const matches = source && source.productCategory.trim().toLowerCase() === prodCat.trim().toLowerCase();
+                if (matches) categorizedProductNames.add(p.name);
                 return matches;
             }});
             
             if (catProducts.length === 0) return;
             
-            // Sort all products together
+            // Sort all products together (no separation by store)
             const sorted = catProducts.sort((a,b)=> (a[currentSort] || 999) - (b[currentSort] || 999));
             const top10 = sorted.slice(0, 10);
             const rest = sorted.slice(10);
-            
-            // Use a safe ID for the "show more" section (handles spaces in names)
-            const safeId = "hidden_" + prodCat.replace(/\s+/g, '_');
+            // Replace unsafe characters in category name for HTML ID
+            const safeId = "hidden_" + prodCat.replace(/[^a-z0-9]/gi, '_');
             
             let html = `<div class="product-cat-section">
                 <div class="product-cat-title">
@@ -1168,23 +1175,26 @@ function render() {{
             container.innerHTML += html;
         }});
 
-        // Handle products that didn't match any category (like your Rimi Pasta)
-        const uncategorized = filteredProducts.filter(p => !categorizedNames.has(p.name));
-        if (uncategorized.length > 0) {{
+        // FALLBACK: Anything that didn't match a defined category (like the Rimi Pasta issue)
+        const uncategorized = filteredProducts.filter(p => !categorizedProductNames.has(p.name));
+        if (uncategorized.length > 0 && !hasCategoryFilter) {{
             const sorted = uncategorized.sort((a,b)=> (a[currentSort] || 999) - (b[currentSort] || 999));
             container.innerHTML += `
                 <div class="product-cat-section">
                     <div class="product-cat-title" style="border-left-color: #9ca3af;">
-                        <span>Uncategorized / New Stores</span>
+                        <span>Uncategorized / Mapping Needed</span>
                         <span style="font-size:14px; font-weight:normal; color:#9ca3af">(${{uncategorized.length}} products)</span>
                     </div>
                     <div class="grid">${{sorted.map(p=>card(p)).join('')}}</div>
+                    <div style="font-size: 11px; color: #9ca3af; margin-top: 8px;">
+                        Tip: Check categories.json to ensure these sources have a productCategory assigned.
+                    </div>
                 </div>`;
         }}
     }} else {{
         renderBySources(container, filteredProducts);
     }}
-
+    
     if (filteredProducts.length === 0) {{
         container.innerHTML += `
             <div class="empty-state">
