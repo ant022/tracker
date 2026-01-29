@@ -34,6 +34,7 @@
         .hamburger.hide {
             transform: translateY(-80px);
             opacity: 0;
+            pointer-events: none;
         }
         
         .hamburger span {
@@ -831,6 +832,7 @@ let activeProductCategories = new Set(productCategories);
 // Scroll behavior variables for mobile
 let lastScrollTop = 0;
 let scrollTimeout;
+let ticking = false;
 
 // Robust helper to find source info for a product's category key
 function findSource(catKey) {
@@ -1411,30 +1413,44 @@ function handleScroll() {
     // Only apply this behavior on mobile
     if (window.innerWidth > 768) return;
     
-    const header = document.getElementById('header');
-    const hamburger = document.getElementById('hamburger');
-    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-    
-    // Prevent negative scrolling
-    if (currentScroll <= 0) {
-        header.classList.remove('hide');
-        hamburger.classList.remove('hide');
-        lastScrollTop = currentScroll;
-        return;
+    if (!ticking) {
+        window.requestAnimationFrame(() => {
+            const header = document.getElementById('header');
+            const hamburger = document.getElementById('hamburger');
+            const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            
+            // Prevent negative scrolling
+            if (currentScroll <= 0) {
+                header.classList.remove('hide');
+                hamburger.classList.remove('hide');
+                lastScrollTop = currentScroll;
+                ticking = false;
+                return;
+            }
+            
+            const scrollDifference = Math.abs(currentScroll - lastScrollTop);
+            
+            // Only trigger if scrolled more than 5px (reduces jitter)
+            if (scrollDifference > 5) {
+                // Scrolling down - hide header
+                if (currentScroll > lastScrollTop && currentScroll > 80) {
+                    header.classList.add('hide');
+                    hamburger.classList.add('hide');
+                } 
+                // Scrolling up - show header
+                else if (currentScroll < lastScrollTop) {
+                    header.classList.remove('hide');
+                    hamburger.classList.remove('hide');
+                }
+                
+                lastScrollTop = currentScroll;
+            }
+            
+            ticking = false;
+        });
+        
+        ticking = true;
     }
-    
-    // Scrolling down - hide header
-    if (currentScroll > lastScrollTop && currentScroll > 100) {
-        header.classList.add('hide');
-        hamburger.classList.add('hide');
-    } 
-    // Scrolling up - show header
-    else if (currentScroll < lastScrollTop) {
-        header.classList.remove('hide');
-        hamburger.classList.remove('hide');
-    }
-    
-    lastScrollTop = currentScroll;
 }
 
 // Initialize scroll listener
