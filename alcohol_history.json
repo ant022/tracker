@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-02-06T06:37:27.882410"
+    "generated_at": "2026-02-07T06:26:40.082712"
   },
   "products": {
     "Hele õlu HEINEKEN 5% 0,568L prk": {
@@ -622,6 +622,14 @@
         },
         {
           "t": "2026-02-06T06:37:27.882410",
+          "p": 1.79
+        },
+        {
+          "t": "2026-02-07T06:26:40.082712",
+          "p": 2.79
+        },
+        {
+          "t": "2026-02-07T06:26:40.082712",
           "p": 1.79
         }
       ],
@@ -3454,7 +3462,7 @@
       "store": "Rimi",
       "category": "Rimi:Pasta",
       "url": "https://www.rimi.ee/epood/ee/tooted/kauasailivad-toidukaubad/makaronid-ja-riis/makaronid-pasta/makaronid-fusilli-panzani-1kg/p/170123",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_170123_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_170123_PCE_EE",
       "latest_price": 4.29,
       "price_per_unit": 4.29,
       "unit_label": "kg",
@@ -4159,7 +4167,7 @@
       "store": "Rimi",
       "category": "Rimi:Pasta",
       "url": "https://www.rimi.ee/epood/ee/tooted/kauasailivad-toidukaubad/makaronid-ja-riis/makaronid-pasta/liitnuudlid-linguine-pasta-reggia-500g/p/153369",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_153369_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_153369_PCE_EE",
       "latest_price": 1.65,
       "price_per_unit": 3.3,
       "unit_label": "kg",
@@ -4390,7 +4398,7 @@
       "store": "Rimi",
       "category": "Rimi:Pasta",
       "url": "https://www.rimi.ee/epood/ee/tooted/kauasailivad-toidukaubad/makaronid-ja-riis/makaronid-pasta/makaronid-fusilli-panzani-500g/p/118577",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_118577_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_118577_PCE_EE",
       "latest_price": 1.89,
       "price_per_unit": 3.78,
       "unit_label": "kg",
@@ -4691,7 +4699,7 @@
       "store": "Rimi",
       "category": "Rimi:Pasta",
       "url": "https://www.rimi.ee/epood/ee/tooted/kauasailivad-toidukaubad/makaronid-ja-riis/makaronid-pasta/makaronid-spaghetti-n-15-la-molisana-500g/p/181959",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_181959_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_181959_PCE_EE",
       "latest_price": 2.05,
       "price_per_unit": 4.1,
       "unit_label": "kg",
@@ -7301,10 +7309,14 @@
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 19.99
+        },
+        {
+          "t": "2026-02-07T06:26:40.082712",
+          "p": 22.99
         }
       ],
-      "latest_price": 19.99,
-      "price_per_unit": 19.99,
+      "latest_price": 22.99,
+      "price_per_unit": 22.99,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/rumm-bacardi-carta-blanca-37-5-proc-1-l",
       "img": "https://cdn.barbora.ee/products/3eeb8a25-fd14-46d3-aee4-0d5bcd8f0998_m.png",
@@ -7661,10 +7673,14 @@
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 49.99
+        },
+        {
+          "t": "2026-02-07T06:26:40.082712",
+          "p": 54.99
         }
       ],
-      "latest_price": 49.99,
-      "price_per_unit": 71.41,
+      "latest_price": 54.99,
+      "price_per_unit": 78.56,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/rumm-zacapa-23-y-solera-40-proc-700-ml",
       "img": "https://cdn.barbora.ee/products/d1e6d0b5-3f94-401a-a471-fe35e1803f9f_m.png",
@@ -8045,10 +8061,14 @@
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 19.99
+        },
+        {
+          "t": "2026-02-07T06:26:40.082712",
+          "p": 22.99
         }
       ],
-      "latest_price": 19.99,
-      "price_per_unit": 19.99,
+      "latest_price": 22.99,
+      "price_per_unit": 22.99,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/rumm-bacardi-carta-negra-37-5-proc-1-l",
       "img": "https://cdn.barbora.ee/products/660ad2cf-3779-431e-b0dd-30d644901922_m.png",
@@ -8317,10 +8337,14 @@
         {
           "t": "2026-01-27T21:50:41.846263",
           "p": 25.99
+        },
+        {
+          "t": "2026-02-07T06:26:40.082712",
+          "p": 27.99
         }
       ],
-      "latest_price": 25.99,
-      "price_per_unit": 14.85,
+      "latest_price": 27.99,
+      "price_per_unit": 15.99,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-hlibny-dar-klassika-40-proc-1-75-l",
       "img": "https://cdn.barbora.ee/products/3863deea-f341-466a-a615-cd2b3adfab57_m.png",
@@ -8593,10 +8617,14 @@
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 10.39
+        },
+        {
+          "t": "2026-02-07T06:26:40.082712",
+          "p": 10.49
         }
       ],
-      "latest_price": 10.39,
-      "price_per_unit": 14.84,
+      "latest_price": 10.49,
+      "price_per_unit": 14.99,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-laua-40-proc-700-ml",
       "img": "https://cdn.barbora.ee/products/a3f7dc01-2320-48dd-9c1e-adf9a6eee28c_m.png",
@@ -8645,10 +8673,14 @@
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 8.49
+        },
+        {
+          "t": "2026-02-07T06:26:40.082712",
+          "p": 9.49
         }
       ],
-      "latest_price": 8.49,
-      "price_per_unit": 16.98,
+      "latest_price": 9.49,
+      "price_per_unit": 18.98,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-nemiroff-original-40-proc-500-ml",
       "img": "https://cdn.barbora.ee/products/7690fb53-4b79-46dc-8207-af0387f24578_m.png",
@@ -8929,10 +8961,14 @@
         {
           "t": "2026-01-27T21:50:41.846263",
           "p": 11.99
+        },
+        {
+          "t": "2026-02-07T06:26:40.082712",
+          "p": 12.49
         }
       ],
-      "latest_price": 11.99,
-      "price_per_unit": 17.13,
+      "latest_price": 12.49,
+      "price_per_unit": 17.84,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-hlibny-dar-classic-40-proc-700-ml",
       "img": "https://cdn.barbora.ee/products/44060a67-a811-4f30-8e42-c77ddba7e9d8_m.png",
@@ -8949,10 +8985,14 @@
         {
           "t": "2026-01-27T21:50:41.846263",
           "p": 11.99
+        },
+        {
+          "t": "2026-02-07T06:26:40.082712",
+          "p": 12.49
         }
       ],
-      "latest_price": 11.99,
-      "price_per_unit": 17.13,
+      "latest_price": 12.49,
+      "price_per_unit": 17.84,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-hlibny-dar-wheat-40-proc-700-ml",
       "img": "https://cdn.barbora.ee/products/6271b073-00ef-4be7-a0cd-0e2ce1fdc139_m.png",
@@ -8997,10 +9037,14 @@
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 39.99
+        },
+        {
+          "t": "2026-02-07T06:26:40.082712",
+          "p": 44.99
         }
       ],
-      "latest_price": 39.99,
-      "price_per_unit": 57.13,
+      "latest_price": 44.99,
+      "price_per_unit": 64.27,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-grey-goose-40-proc-0-7-l",
       "img": "https://cdn.barbora.ee/products/7b9891e8-7913-4a42-8e6d-293662711901_m.png",
@@ -9806,7 +9850,7 @@
       "price_per_unit": 4.29,
       "unit_label": "kg",
       "url": "https://www.selver.ee/spagett-spaghetti-panzani-1-kg",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/3/0/3038359002120.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -9838,7 +9882,7 @@
       "price_per_unit": 3.74,
       "unit_label": "kg",
       "url": "https://www.selver.ee/makaron-stortini-piccolo-reggia-500-g",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/8/0/8008857300030.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -9886,7 +9930,7 @@
       "price_per_unit": 3.74,
       "unit_label": "kg",
       "url": "https://www.selver.ee/makaron-ditalini-reggia-500-g",
-      "img": "https://www.selver.ee/img/450/440/resize/8/0/8008857300559.jpg",
+      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "store": "Selver",
       "is_sale": false
     },
@@ -9902,7 +9946,7 @@
       "price_per_unit": 8.25,
       "unit_label": "kg",
       "url": "https://www.selver.ee/makaronid-penne-gluteenivabad-panzani-400-g",
-      "img": "https://www.selver.ee/img/450/440/resize/3/0/3038359004513.jpg",
+      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "store": "Selver",
       "is_sale": false
     },
@@ -10194,7 +10238,7 @@
       "price_per_unit": 3.16,
       "unit_label": "kg",
       "url": "https://www.selver.ee/taisterajahu-spiraal-melissa-500g",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/5/2/5201193180424.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -10210,7 +10254,7 @@
       "price_per_unit": 2.94,
       "unit_label": "kg",
       "url": "https://www.selver.ee/durumjahust-taistera-penned-tartu-mill-500-g",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/4/7/4750020053147.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -10226,7 +10270,7 @@
       "price_per_unit": 9.18,
       "unit_label": "kg",
       "url": "https://www.selver.ee/pasta-tagliatelle-barilla-500-g",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/8/0/8076809580731.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -10293,7 +10337,7 @@
       "price_per_unit": 8.63,
       "unit_label": "kg",
       "url": "https://www.selver.ee/selezione-di-chef-collerette-pasta-varske-munaga-panzani-400-g",
-      "img": "https://www.selver.ee/img/450/440/resize/3/0/3038359010118.jpg",
+      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "store": "Selver",
       "is_sale": false
     },
@@ -10309,7 +10353,7 @@
       "price_per_unit": 3.5,
       "unit_label": "kg",
       "url": "https://www.selver.ee/lastemakaronid-paw-patrol-melissa-500-g",
-      "img": "https://www.selver.ee/img/450/440/resize/5/2/5201193206551.jpg",
+      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "store": "Selver",
       "is_sale": false
     },
@@ -10325,7 +10369,7 @@
       "price_per_unit": 5.46,
       "unit_label": "kg",
       "url": "https://www.selver.ee/lumache-rigate-nr-39-delverde-500-g",
-      "img": "https://www.selver.ee/img/450/440/resize/8/0/8006680040390.jpg",
+      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "store": "Selver",
       "is_sale": false
     },
@@ -10724,7 +10768,7 @@
       "price_per_unit": 2.34,
       "unit_label": "kg",
       "url": "https://www.selver.ee/pastariis-orzo-campagna-500-g",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/8/0/8005391161431.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -10744,7 +10788,7 @@
       "price_per_unit": 3.66,
       "unit_label": "kg",
       "url": "https://www.selver.ee/torti-spiraalid-panzani-3-kg-ettetellimisel",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/3/0/3038359009655.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -10760,7 +10804,7 @@
       "price_per_unit": 7.77,
       "unit_label": "kg",
       "url": "https://www.selver.ee/durumnisumannast-pasta-autod-tomati-ja-spinatiga-dalla-300-g",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/8/0/8016419400395.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -10808,7 +10852,7 @@
       "price_per_unit": 3.25,
       "unit_label": "kg",
       "url": "https://www.selver.ee/hulgi-spagetid-spaghetti-4-tk-panzani-4-x-500-g",
-      "img": "https://www.selver.ee/img/450/440/resize/0/2/0213000001216.jpg",
+      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "store": "Selver",
       "is_sale": false
     },
@@ -10840,7 +10884,7 @@
       "price_per_unit": 2.23,
       "unit_label": "kg",
       "url": "https://www.selver.ee/spagetid-first-price-1-kg",
-      "img": "https://www.selver.ee/img/450/440/resize/7/3/7311041085912.jpg",
+      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "store": "Selver",
       "is_sale": false
     },
@@ -10856,7 +10900,7 @@
       "price_per_unit": 2.62,
       "unit_label": "kg",
       "url": "https://www.selver.ee/fusilli-first-price-500-g",
-      "img": "https://www.selver.ee/img/450/440/resize/7/3/7311041085929.jpg",
+      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "store": "Selver",
       "is_sale": false
     },
@@ -10872,7 +10916,7 @@
       "price_per_unit": 2.62,
       "unit_label": "kg",
       "url": "https://www.selver.ee/makaronid-first-price-500-g",
-      "img": "https://www.selver.ee/img/450/440/resize/7/3/7311041085936.jpg",
+      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "store": "Selver",
       "is_sale": false
     },
@@ -13790,7 +13834,7 @@
       "price_per_unit": 7.67,
       "unit_label": "L",
       "url": "https://www.selver.ee/olu-ginger-joe-stone-s-330-ml-pudel",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/5/0/5010134008426.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -13854,7 +13898,7 @@
       "price_per_unit": 4.03,
       "unit_label": "L",
       "url": "https://www.selver.ee/siider-original-dry-apple-fizz-330-ml-purk",
-      "img": "https://www.selver.ee/img/450/440/resize/4/7/4740098016908.jpg",
+      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "store": "Selver",
       "is_sale": false
     },
@@ -13886,7 +13930,7 @@
       "price_per_unit": 5.12,
       "unit_label": "L",
       "url": "https://www.selver.ee/hele-olu-kuld-saku-330-ml-pudel",
-      "img": "https://www.selver.ee/img/450/440/resize/4/7/4740019782103.jpg",
+      "img": "https://www.selver.ee/img/450/440/resize/4/7/4740019645644.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -14102,7 +14146,7 @@
       "price_per_unit": 3.91,
       "unit_label": "L",
       "url": "https://www.selver.ee/olu-originaal-saku-330-ml-purk",
-      "img": "https://www.selver.ee/img/450/440/resize/4/7/4740019769456.jpg",
+      "img": "https://www.selver.ee/img/450/440/resize/4/7/4740019001662.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -14166,7 +14210,7 @@
       "price_per_unit": 5.6,
       "unit_label": "L",
       "url": "https://www.selver.ee/siider-kopparberg-metsamarja-500-ml-purk",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/7/3/7393714377012.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -14186,7 +14230,7 @@
       "price_per_unit": 7.12,
       "unit_label": "L",
       "url": "https://www.selver.ee/kokteil-gin-passion-fruit-mix-330-ml-pudel",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/4/7/4770047236361.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -14234,7 +14278,7 @@
       "price_per_unit": 6.5,
       "unit_label": "L",
       "url": "https://www.selver.ee/olu-hefe-weissbier-franziskaner-500-ml-pudel",
-      "img": "https://www.selver.ee/img/450/440/resize/4/7/4744485010388.jpg",
+      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "store": "Selver",
       "is_sale": false
     },
@@ -14250,7 +14294,7 @@
       "price_per_unit": 9.58,
       "unit_label": "L",
       "url": "https://www.selver.ee/siider-british-vintage-henry-westons-500-ml",
-      "img": "https://www.selver.ee/img/450/440/resize/5/0/5014201701852.jpg",
+      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "store": "Selver",
       "is_sale": false
     },
@@ -14517,7 +14561,7 @@
       "price_per_unit": 2.7,
       "unit_label": "L",
       "url": "https://www.selver.ee/olu-extra-ananass-le-coq-extra-330-ml",
-      "img": "https://www.selver.ee/img/450/440/resize/4/7/4740098003915.jpg",
+      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "store": "Selver",
       "is_sale": false
     },
@@ -14533,7 +14577,7 @@
       "price_per_unit": 5.06,
       "unit_label": "L",
       "url": "https://www.selver.ee/long-drink-passionfruit-a-le-coq-330-ml",
-      "img": "https://www.selver.ee/img/450/440/resize/4/7/4740098003779.jpg",
+      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "store": "Selver",
       "is_sale": false
     },
@@ -14995,7 +15039,7 @@
       "price_per_unit": 4.5,
       "unit_label": "L",
       "url": "https://www.selver.ee/olu-talveporter-4-pakk-saku-4-x-500ml",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/4/7/4740019004755.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -15015,7 +15059,7 @@
       "price_per_unit": 3.91,
       "unit_label": "L",
       "url": "https://www.selver.ee/muu-alkohoolne-jook-cocktail-pornstar-martini-kiss-330-ml",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/4/7/4740019004595.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -15035,7 +15079,7 @@
       "price_per_unit": 3.91,
       "unit_label": "L",
       "url": "https://www.selver.ee/muu-alkohoolne-jook-cocktail-strawberry-daiquiri-kiss-330-ml",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/4/7/4740019004588.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -15086,7 +15130,7 @@
       "price_per_unit": 2.78,
       "unit_label": "L",
       "url": "https://www.selver.ee/saku-karl-friedrich-12-pakk",
-      "img": "https://www.selver.ee/img/450/440/resize/4/7/4740019014792.jpg",
+      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "store": "Selver",
       "is_sale": false
     },
@@ -15375,6 +15419,14 @@
         },
         {
           "t": "2026-02-06T06:37:27.882410",
+          "p": 8.99
+        },
+        {
+          "t": "2026-02-07T06:26:40.082712",
+          "p": 11.72
+        },
+        {
+          "t": "2026-02-07T06:26:40.082712",
           "p": 8.99
         }
       ],
@@ -16758,7 +16810,7 @@
       "price_per_unit": 46.38,
       "unit_label": "L",
       "url": "https://www.selver.ee/viin-j-j-kurberg-moe-kuldjuur-50-cl",
-      "img": "https://www.selver.ee/img/450/440/resize/4/7/4742716001235.jpg",
+      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "store": "Selver",
       "is_sale": false
     },
@@ -17982,7 +18034,7 @@
       "price_per_unit": 25.18,
       "unit_label": "L",
       "url": "https://www.selver.ee/dzinn-kada-pihlaka-50-cl",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/4/7/4742883015646.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -18176,10 +18228,14 @@
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 9.99
+        },
+        {
+          "t": "2026-02-07T06:26:40.082712",
+          "p": 10.49
         }
       ],
-      "latest_price": 9.99,
-      "price_per_unit": 19.98,
+      "latest_price": 10.49,
+      "price_per_unit": 20.98,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/gin-saaremaa-ore-38-proc-500-ml",
       "img": "https://cdn.barbora.ee/products/1178aaeb-3519-4ae9-84af-184bac7818c2_m.png",
@@ -18212,10 +18268,14 @@
         {
           "t": "2026-01-28T06:18:41.700242",
           "p": 14.99
+        },
+        {
+          "t": "2026-02-07T06:26:40.082712",
+          "p": 15.49
         }
       ],
-      "latest_price": 14.99,
-      "price_per_unit": 21.41,
+      "latest_price": 15.49,
+      "price_per_unit": 22.13,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/gin-beefeater-40-proc-700-ml",
       "img": "https://cdn.barbora.ee/products/1147d05a-4e20-4aa0-9103-9fafbda97af8_m.png",
@@ -18652,10 +18712,14 @@
         {
           "t": "2026-01-28T06:18:41.700242",
           "p": 26.99
+        },
+        {
+          "t": "2026-02-07T06:26:40.082712",
+          "p": 27.99
         }
       ],
-      "latest_price": 26.99,
-      "price_per_unit": 38.56,
+      "latest_price": 27.99,
+      "price_per_unit": 39.99,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/gin-malfy-rosa-41-proc-700-ml",
       "img": "https://cdn.barbora.ee/products/8a8177d3-10eb-4d02-9fcd-ece755fd4d8b_m.png",
@@ -18852,10 +18916,14 @@
         {
           "t": "2026-01-28T06:18:41.700242",
           "p": 26.99
+        },
+        {
+          "t": "2026-02-07T06:26:40.082712",
+          "p": 27.99
         }
       ],
-      "latest_price": 26.99,
-      "price_per_unit": 38.56,
+      "latest_price": 27.99,
+      "price_per_unit": 39.99,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/gin-malfy-originale-41-proc-700-ml",
       "img": "https://cdn.barbora.ee/products/2284c392-0d3d-42a2-b9b4-df30feba92c2_m.png",
@@ -19088,10 +19156,14 @@
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 39.99
+        },
+        {
+          "t": "2026-02-07T06:26:40.082712",
+          "p": 44.99
         }
       ],
-      "latest_price": 39.99,
-      "price_per_unit": 57.13,
+      "latest_price": 44.99,
+      "price_per_unit": 64.27,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/gin-junimperium-blended-drygin-45-proc-700-ml",
       "img": "https://cdn.barbora.ee/products/54bbc614-706a-4fa5-9c21-ac3d239fd489_m.png",
@@ -20153,7 +20225,7 @@
       "price_per_unit": 4.69,
       "unit_label": "kg",
       "url": "https://www.selver.ee/autopesuhari-onroad-1-tk",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/5/9/5904720090486.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -20335,10 +20407,14 @@
         {
           "t": "2026-01-20T20:19:16.356742",
           "p": 17.99
+        },
+        {
+          "t": "2026-02-07T06:26:40.082712",
+          "p": 18.99
         }
       ],
-      "latest_price": 17.99,
-      "price_per_unit": 17.99,
+      "latest_price": 18.99,
+      "price_per_unit": 18.99,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/muu-piir-jook-oakheart-original-32-5-proc-1-l",
       "img": "https://cdn.barbora.ee/products/0ddb53c8-65c6-452b-bc84-67ebe3813da3_m.png",
@@ -22003,10 +22079,14 @@
         {
           "t": "2026-01-27T10:38:06.647216",
           "p": 34.99
+        },
+        {
+          "t": "2026-02-07T06:26:40.082712",
+          "p": 39.99
         }
       ],
-      "latest_price": 34.99,
-      "price_per_unit": 49.99,
+      "latest_price": 39.99,
+      "price_per_unit": 57.13,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/rumm-don-papa-40-proc-700-ml",
       "img": "https://cdn.barbora.ee/products/70213267-fe55-4dfa-8e25-b534458a6c5a_m.png",
@@ -22019,10 +22099,14 @@
         {
           "t": "2026-01-27T10:38:06.647216",
           "p": 34.99
+        },
+        {
+          "t": "2026-02-07T06:26:40.082712",
+          "p": 39.99
         }
       ],
-      "latest_price": 34.99,
-      "price_per_unit": 49.99,
+      "latest_price": 39.99,
+      "price_per_unit": 57.13,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/rumm-don-papa-baroko-40-proc-700-ml",
       "img": "https://cdn.barbora.ee/products/16313a80-4f02-4145-ac1e-022fdc7a121a_m.png",
@@ -22035,10 +22119,14 @@
         {
           "t": "2026-01-27T10:38:06.647216",
           "p": 34.99
+        },
+        {
+          "t": "2026-02-07T06:26:40.082712",
+          "p": 39.99
         }
       ],
-      "latest_price": 34.99,
-      "price_per_unit": 49.99,
+      "latest_price": 39.99,
+      "price_per_unit": 57.13,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/rumm-don-papa-masskara-40-proc-700-ml",
       "img": "https://cdn.barbora.ee/products/9b94e897-5a7a-4f75-9951-13986e7a6c48_m.png",
@@ -23839,10 +23927,14 @@
         {
           "t": "2026-01-27T21:50:41.846263",
           "p": 15.99
+        },
+        {
+          "t": "2026-02-07T06:26:40.082712",
+          "p": 16.99
         }
       ],
-      "latest_price": 15.99,
-      "price_per_unit": 15.99,
+      "latest_price": 16.99,
+      "price_per_unit": 16.99,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-hlibny-dar-classic-40-proc-1-l",
       "img": "https://cdn.barbora.ee/products/d77ac10e-8c78-4367-bac3-8f8ac1d90fae_m.png",
@@ -24307,10 +24399,14 @@
         {
           "t": "2026-01-27T21:50:41.846263",
           "p": 34.99
+        },
+        {
+          "t": "2026-02-07T06:26:40.082712",
+          "p": 37.99
         }
       ],
-      "latest_price": 34.99,
-      "price_per_unit": 49.99,
+      "latest_price": 37.99,
+      "price_per_unit": 54.27,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-belvedere-pure-40-proc-700-ml",
       "img": "https://cdn.barbora.ee/products/149866bd-a66a-492a-9af3-e7f207a93964_m.png",
@@ -24419,10 +24515,14 @@
         {
           "t": "2026-01-27T21:50:41.846263",
           "p": 24.99
+        },
+        {
+          "t": "2026-02-07T06:26:40.082712",
+          "p": 27.99
         }
       ],
-      "latest_price": 24.99,
-      "price_per_unit": 35.7,
+      "latest_price": 27.99,
+      "price_per_unit": 39.99,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-ketel-one-40-proc-700-ml",
       "img": "https://cdn.barbora.ee/products/a3e2ea16-99f1-43db-9ee1-82973653458e_m.png",
@@ -24755,10 +24855,14 @@
         {
           "t": "2026-01-27T21:50:41.846263",
           "p": 38.99
+        },
+        {
+          "t": "2026-02-07T06:26:40.082712",
+          "p": 39.99
         }
       ],
-      "latest_price": 38.99,
-      "price_per_unit": 55.7,
+      "latest_price": 39.99,
+      "price_per_unit": 57.13,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/viin-absolut-elyx-42-3-proc-700-ml",
       "img": "https://cdn.barbora.ee/products/38ac81ee-9781-4d23-b000-f3dd22eb534c_m.png",
@@ -25391,10 +25495,14 @@
         {
           "t": "2026-01-27T21:50:41.846263",
           "p": 8.49
+        },
+        {
+          "t": "2026-02-07T06:26:40.082712",
+          "p": 8.99
         }
       ],
-      "latest_price": 8.49,
-      "price_per_unit": 16.98,
+      "latest_price": 8.99,
+      "price_per_unit": 17.98,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/m-viin-hlibny-dar-sp-vanilla-37-5-proc-500-ml",
       "img": "https://cdn.barbora.ee/products/633f8f20-35b7-4eb7-8dfc-a26607364d5a_m.png",
@@ -25423,10 +25531,14 @@
         {
           "t": "2026-01-27T21:50:41.846263",
           "p": 8.49
+        },
+        {
+          "t": "2026-02-07T06:26:40.082712",
+          "p": 8.99
         }
       ],
-      "latest_price": 8.49,
-      "price_per_unit": 16.98,
+      "latest_price": 8.99,
+      "price_per_unit": 17.98,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/m-viin-hlibny-dar-wild-berry-37-5-proc-500-ml",
       "img": "https://cdn.barbora.ee/products/2ebfc739-6fcb-4b4d-a61a-1fd7ae2d2ed3_m.png",
@@ -25677,7 +25789,7 @@
       "price_per_unit": 2.34,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/multipakid/olu-alexander-5-2-0-568l-prk-6-pakk/p/1354310",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1354310_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1354310_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -25817,7 +25929,7 @@
       "price_per_unit": 2.46,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/multipakid/olu-saku-rock-5-3-0-568l-prk-6-pakk/p/1354393",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1354393_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1354393_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -25833,7 +25945,7 @@
       "price_per_unit": 4.3,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/tume-olu/olu-saku-porter-6-9-0-5l/p/1351260",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1351260_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1351260_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -25881,7 +25993,7 @@
       "price_per_unit": 3.7,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-a-le-coq-premium-4-7-vol-0-5l-prk/p/1350343",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1350343_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1350343_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -26037,7 +26149,7 @@
       "price_per_unit": 5.32,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/import-olu/olu-corona-extra-4-5-vol-0-355l/p/1371038",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1371038_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1371038_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -26083,13 +26195,17 @@
         {
           "t": "2026-01-29T12:50:30.009711",
           "p": 1.89
+        },
+        {
+          "t": "2026-02-07T06:26:40.082712",
+          "p": 0.1
         }
       ],
-      "latest_price": 1.89,
-      "price_per_unit": 3.78,
+      "latest_price": 0.1,
+      "price_per_unit": 0.2,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-kerge-ipa-tanker-5-2-0-5l-purk/p/1370521",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1370521_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1370521_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -26189,7 +26305,7 @@
       "price_per_unit": 3.43,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-karl-friedrich-marzen-5-0-vol-0-568l/p/1363502",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1363502_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1363502_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -26241,7 +26357,7 @@
       "price_per_unit": 3.58,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/import-olu/olu-lapin-kulta-5-2-vol-0-5l/p/1355092",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1355092_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1355092_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -26273,7 +26389,7 @@
       "price_per_unit": 4.3,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/tume-olu/olu-saku-tume-6-7-vol-0-5l-pudel/p/1350228",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1350228_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1350228_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -26465,7 +26581,7 @@
       "price_per_unit": 4.58,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/tume-olu/olu-karksi-must-nunn-6-vol-0-5l-pdl/p/1357606",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1357606_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1357606_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -26549,7 +26665,7 @@
       "price_per_unit": 2.58,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-walter-kange-7-vol-0-5l/p/1354317",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1354317_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1354317_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -26585,7 +26701,7 @@
       "price_per_unit": 3.38,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/import-olu/olu-kronenbourg-1664-lager-5-vol-0-5l/p/1359508",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1359508_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1359508_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -26621,7 +26737,7 @@
       "price_per_unit": 3.98,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/import-olu/olu-leffe-blonde-6-6-0-5l-purk/p/1364036",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1364036_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1364036_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -26809,7 +26925,7 @@
       "price_per_unit": 4.1,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/import-olu/olu-carlsberg-hele-5-vol-0-5l-prk/p/1350035",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1350035_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1350035_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -26857,7 +26973,7 @@
       "price_per_unit": 4.98,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/import-olu/olu-krusovice-imperial-5-vol-0-5l-pdl/p/1351130",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1351130_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1351130_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -27241,7 +27357,7 @@
       "price_per_unit": 4.39,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/ollekokteilid/muu-alk-j-oun-munt-on-ice-saku-4-vol-0-33l/p/1375158",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1375158_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1375158_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -27329,7 +27445,7 @@
       "price_per_unit": 3.78,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-saku-rubiin-5-5-vol-0-5l-purk/p/1375297",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1375297_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1375297_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -27345,7 +27461,7 @@
       "price_per_unit": 3.5,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/tume-olu/olu-saare-taar-4-2-vol-0-5l-purk/p/1366922",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1366922_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1366922_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -27381,7 +27497,7 @@
       "price_per_unit": 4.39,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/ollekokteilid/muu-alk-jook-saku-on-ice-ploom-4-0-33l/p/1370681",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1370681_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1370681_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -27429,7 +27545,7 @@
       "price_per_unit": 3.78,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/tume-olu/olu-tume-lager-tanker-5-0-5l-purk/p/1370517",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1370517_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1370517_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -27453,7 +27569,7 @@
       "price_per_unit": 4.04,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-vaike-sass-4-8-vol-0-33l-6-pakk/p/1375343",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1375343_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1375343_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -27509,7 +27625,7 @@
       "price_per_unit": 2.58,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-tanker-select-lager-5-vol-0-5l-prk/p/1374074",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1374074_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1374074_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -27529,7 +27645,7 @@
       "price_per_unit": 5.57,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-pohjala-punane-laager-4-9-vol-0-44l-prk/p/1374188",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1374188_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1374188_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -27561,7 +27677,7 @@
       "price_per_unit": 2.18,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/kange-hele-olu-walter-7-0-5l/p/1369182",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1369182_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1369182_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -27625,7 +27741,7 @@
       "price_per_unit": 3.38,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/import-olu/olu-zubr-gold-4-6-vol-0-5l-purk/p/1371277",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1371277_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1371277_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -27645,7 +27761,7 @@
       "price_per_unit": 7.25,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-pohjala-saturnus-5-vol-0-440l-purk/p/1372969",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1372969_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1372969_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -27717,7 +27833,7 @@
       "price_per_unit": 5.89,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-paradiis-hiiumaa-pruulikoda-4-6-vol-0-44l/p/1375856",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1375856_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1375856_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -27733,7 +27849,7 @@
       "price_per_unit": 5.89,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-ehapuna-hiiumaa-pruulikoda-4-5-vol-0-44l/p/1375859",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1375859_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1375859_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -27781,7 +27897,7 @@
       "price_per_unit": 4.52,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-extra-lime-4-0-vol-0-33l-pudel/p/1372678",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1372678_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1372678_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -27973,7 +28089,7 @@
       "price_per_unit": 3.38,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/import-olu/olu-kronenbourg-1664-rose-4-5-vol-0-5l-prk/p/1362215",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1362215_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1362215_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -28037,7 +28153,7 @@
       "price_per_unit": 3.7,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-tervetes-sencu-4-5-vol-0-5l/p/1373488",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1373488_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1373488_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -28089,7 +28205,7 @@
       "price_per_unit": 4.52,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-extra-ginger-4-0-vol-0-33l-pudel/p/1372700",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1372700_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1372700_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -28141,7 +28257,7 @@
       "price_per_unit": 3.18,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-zlaty-klicek-4-5-vol-0-33l-purk/p/1373279",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1373279_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1373279_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -28157,7 +28273,7 @@
       "price_per_unit": 4.18,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/import-olu/olu-staropramen-premium-5-vol-0-5l-prk/p/1350748",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1350748_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1350748_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -28209,7 +28325,7 @@
       "price_per_unit": 4.39,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-vaike-sass-4-8-vol-0-33l-purk/p/1375552",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1375552_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1375552_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -28257,7 +28373,7 @@
       "price_per_unit": 4.5,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/import-olu/olu-staropramen-unfiltered-5-vol-0-5l-purk/p/1371844",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1371844_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1371844_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -28289,7 +28405,7 @@
       "price_per_unit": 3.09,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/import-olu/olu-obolon-svetloje-4-5-vol-1l/p/1372255",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1372255_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1372255_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -28305,7 +28421,7 @@
       "price_per_unit": 5.9,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/import-olu/olu-spaten-hell-5-2-vol-0-5l-purk/p/1373322",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1373322_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1373322_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -28373,7 +28489,7 @@
       "price_per_unit": 9.67,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/import-olu/olu-hoppy-flower-7-5-vol-0-33l/p/1374198",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1374198_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1374198_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -28441,7 +28557,7 @@
       "price_per_unit": 5.98,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/import-olu/muu-alk-jook-salitos-original-5-9-vol-0-5l/p/1370994",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1370994_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1370994_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -28457,7 +28573,7 @@
       "price_per_unit": 6.03,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/import-olu/olu-heineken-5-vol-0-33l-pudel/p/1359482",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1359482_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1359482_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -28521,7 +28637,7 @@
       "price_per_unit": 6.78,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/import-olu/olu-monchshof-hell-4-9-vol-0-5l-pudel/p/1373026",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1373026_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1373026_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -28541,7 +28657,7 @@
       "price_per_unit": 3.5,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/import-olu/olu-velkopopovicky-kozel-dark-3-8-0-5l-purk/p/1359991",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1359991_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1359991_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -28557,7 +28673,7 @@
       "price_per_unit": 5.42,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/import-olu/olu-solveza-agave-lemon-beer-6-0-33l-pdl/p/1373900",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1373900_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1373900_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -28573,7 +28689,7 @@
       "price_per_unit": 4.18,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/import-olu/olu-estrella-de-levante-4-8-vol-0-5l-prk/p/1374107",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1374107_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1374107_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -28589,7 +28705,7 @@
       "price_per_unit": 4.5,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/import-olu/olu-heineken-5-vol-0-5l-pdl/p/1374397",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1374397_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1374397_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -28605,7 +28721,7 @@
       "price_per_unit": 3.43,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/multipakid/olu-tanker-select-lager-5-vol-0-5l-6-pakk/p/1374064",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1374064_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1374064_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -28653,7 +28769,7 @@
       "price_per_unit": 4.58,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-karksi-kloostriolu-5-vol-0-5l-pdl/p/1374205",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1374205_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1374205_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -29049,7 +29165,7 @@
       "price_per_unit": 37.07,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/kange-alkohol/rumm/rumm-captain-morgan-dark-rum-40-0-7l/p/688622",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_688622_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_688622_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -29177,7 +29293,7 @@
       "price_per_unit": 25.98,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/kange-alkohol/rumm/rumm-bacardi-carta-blanca-37-5-0-5l/p/7103991",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_7103991_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_7103991_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -29325,7 +29441,7 @@
       "price_per_unit": 82.99,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/kange-alkohol/rumm/rumm-diplomatico-reserva-exclusiva-40-0-7l/p/7113076",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_7113076_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_7113076_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -29433,7 +29549,7 @@
       "price_per_unit": 29.79,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/kange-alkohol/rumm/rumm-havana-club-especial-cuban-37-5-0-7l/p/7262725",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_7262725_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_7262725_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -29505,7 +29621,7 @@
       "price_per_unit": 22.84,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/kange-alkohol/rumm/piir-jook-oakheart-original-spiced-32-5-0-7l/p/1017238",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1017238_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1017238_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -29525,7 +29641,7 @@
       "price_per_unit": 19.99,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/kange-alkohol/rumm/piiritusjook-colonist-pr-spiced-bl-40-0-7l/p/7298410",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_7298410_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_7298410_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -31133,7 +31249,7 @@
       "price_per_unit": 3.61,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/energiajook/energiajook-battery-0-33l/p/1350416",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1350416_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1350416_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -31175,13 +31291,17 @@
         {
           "t": "2026-02-06T06:37:27.882410",
           "p": 1.39
+        },
+        {
+          "t": "2026-02-07T06:26:40.082712",
+          "p": 1.68
         }
       ],
-      "latest_price": 1.39,
-      "price_per_unit": 5.56,
+      "latest_price": 1.68,
+      "price_per_unit": 6.72,
       "unit_label": "L",
-      "url": "https://www.rimi.ee/epood/ee/tooted/joogid/energiajook/energiajook-red-bull-peach-edition-0-25l/p/1374547",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1374547_PCE_EE",
+      "url": "https://www.rimi.ee/epood/ee/tooted/joogid/energiajook/energiajook-red-bull-peach-edition-0-25l/p/1376263",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1376263_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -31285,7 +31405,7 @@
       "price_per_unit": 6.76,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/energiajook/energiajook-red-bull-apricot-edition-0-25l/p/1370138",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1370138_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1370138_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -31357,7 +31477,7 @@
       "price_per_unit": 3.5,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/energiajook/en-jook-monster-aussie-lemonade-m-ain-0-5l/p/1374661",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1374661_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1374661_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -31437,7 +31557,7 @@
       "price_per_unit": 3.5,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/energiajook/energiajook-monster-ultra-rosa-mag-ain-0-5l/p/1374656",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1374656_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1374656_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -31577,7 +31697,7 @@
       "price_per_unit": 7.85,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/energiajook/funktsion-jook-nocco-blood-orange-0-33l/p/1368648",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1368648_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1368648_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -32791,6 +32911,14 @@
         {
           "t": "2026-02-06T06:37:27.882410",
           "p": 1.29
+        },
+        {
+          "t": "2026-02-07T06:26:40.082712",
+          "p": 1.21
+        },
+        {
+          "t": "2026-02-07T06:26:40.082712",
+          "p": 1.29
         }
       ],
       "latest_price": 1.29,
@@ -33679,6 +33807,14 @@
         {
           "t": "2026-02-06T06:37:27.882410",
           "p": 1.29
+        },
+        {
+          "t": "2026-02-07T06:26:40.082712",
+          "p": 1.21
+        },
+        {
+          "t": "2026-02-07T06:26:40.082712",
+          "p": 1.29
         }
       ],
       "latest_price": 1.29,
@@ -34357,7 +34493,7 @@
       "price_per_unit": 4.58,
       "unit_label": "L",
       "url": "https://www.selver.ee/limonaad-passioni-mango-maitseline-heavenly-330-ml",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/4/7/4744433010156.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -34373,7 +34509,7 @@
       "price_per_unit": 3.4,
       "unit_label": "L",
       "url": "https://www.selver.ee/karastusjook-coca-cola-4x330-coca-cola-4x330-l",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/5/0/5000112678147.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -34389,7 +34525,7 @@
       "price_per_unit": 3.67,
       "unit_label": "L",
       "url": "https://www.selver.ee/karastusjook-coca-cola-cherry-coca-cola-330-ml",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/5/0/5000112677829.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -34405,7 +34541,7 @@
       "price_per_unit": 3.4,
       "unit_label": "L",
       "url": "https://www.selver.ee/karastusjook-coca-cola-zero-4x330-coca-cola-zero-1-tk",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/img/450/440/resize/5/0/5000112680263.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -34517,7 +34653,7 @@
       "price_per_unit": 2.42,
       "unit_label": "L",
       "url": "https://www.selver.ee/pepsi-cola-pepsi-330-ml",
-      "img": "https://www.selver.ee/img/450/440/resize/4/7/4770477231516.jpg",
+      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "store": "Selver",
       "is_sale": false
     },
@@ -34533,7 +34669,7 @@
       "price_per_unit": 4.58,
       "unit_label": "L",
       "url": "https://www.selver.ee/limonaad-maasikamaitseline-heavenly-330-ml",
-      "img": "https://www.selver.ee/img/450/440/resize/4/7/4744433010132.jpg",
+      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "store": "Selver",
       "is_sale": false
     },
@@ -34549,7 +34685,7 @@
       "price_per_unit": 1.94,
       "unit_label": "L",
       "url": "https://www.selver.ee/limonaad-vaarikamaitseline-kelluke-500-ml",
-      "img": "https://www.selver.ee/img/450/440/resize/4/7/4740051001514.jpg",
+      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "store": "Selver",
       "is_sale": false
     },
@@ -34565,7 +34701,7 @@
       "price_per_unit": 1.08,
       "unit_label": "L",
       "url": "https://www.selver.ee/limonaad-vaarikamaitseline-kelluke-1-5-l",
-      "img": "https://www.selver.ee/img/450/440/resize/4/7/4740051001507.jpg",
+      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "store": "Selver",
       "is_sale": false
     },
@@ -36873,7 +37009,7 @@
       "price_per_unit": 0.73,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/karastusjoogid/limonaad-karastusjook/karastusjook-rimi-apelsinilimonaad-2l/p/1360830",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1360830_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1360830_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -37133,7 +37269,7 @@
       "price_per_unit": 0.79,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/karastusjoogid/limonaad-karastusjook/karastusjook-coca-cola-1-5l/p/1360279",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1360279_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1360279_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -37149,7 +37285,7 @@
       "price_per_unit": 2.58,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/karastusjoogid/limonaad-karastusjook/karastusjook-coca-cola-0-5l/p/1350156",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1350156_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1350156_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -37237,7 +37373,7 @@
       "price_per_unit": 1.43,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/karastusjoogid/limonaad-karastusjook/karastusjook-fanta-apelsini-2l/p/1352600",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1352600_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1352600_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -37677,7 +37813,7 @@
       "price_per_unit": 1.85,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/karastusjoogid/limonaad-karastusjook/karastusjook-coca-cola-zero-1l/p/1360569",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1360569_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1360569_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -37693,7 +37829,7 @@
       "price_per_unit": 1.03,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/karastusjoogid/limonaad-karastusjook/karb-kar-jook-sid-selita-1-5l-magusainega/p/1375809",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1375809_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1375809_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -37789,7 +37925,7 @@
       "price_per_unit": 4.39,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/karastusjoogid/limonaad-karastusjook/kar-jook-s-pellegrino-na-aranciata-0-33l-prk/p/1359586",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1359586_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1359586_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -37865,7 +38001,7 @@
       "price_per_unit": 3.91,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/karastusjoogid/limonaad-karastusjook/kar-jook-tsitruse-limonati-borjomi-0-33l/p/1375918",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1375918_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1375918_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -38433,7 +38569,7 @@
       "price_per_unit": 7.96,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/karastusjoogid/limonaad-karastusjook/karastusjook-rabarber-mull-null-250ml/p/1375753",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1375753_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1375753_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -38533,7 +38669,7 @@
       "price_per_unit": 1.58,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/karastusjoogid/limonaad-karastusjook/karb-kar-jook-limonaad-null-magusainet-0-5l/p/1373909",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_300/d_ecommerce:backend-fallback.png/MAT_1373909_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1373909_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
