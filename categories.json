@@ -7,7 +7,8 @@
     "Ginid",
     "Pasta",
     "Energiajoogid",
-    "Karastusjoogid"
+    "Karastusjoogid",
+    "Kohv, tee, kakao"
   ],
   "sources": [
     {
@@ -147,6 +148,24 @@
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/karastusjoogid/limonaad-karastusjook/c/SH-3-7",
       "unit": "L",
       "productCategory": "Karastusjoogid"
+    },
+    {
+      "name": "Kohv, tee, kakao",
+      "url": "https://barbora.ee/joogid/kohv-tee-kakao",
+      "unit": "kg",
+      "productCategory": "Kohv, tee, kakao"
+    },
+    {
+      "name": "Kohv, tee, kakao",
+      "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/c/SH-13-9",
+      "unit": "kg",
+      "productCategory": "Kohv, tee, kakao"
+    },
+    {
+      "name": "Kohv, tee, kakao",
+      "url": "https://www.selver.ee/joogid/kohv-tee-kakao",
+      "unit": "kg",
+      "productCategory": "Kohv, tee, kakao"
     }
   ]
 }
