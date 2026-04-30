@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated_at": "2026-04-29T07:54:02.953294"
+    "generated_at": "2026-04-30T07:56:19.697189"
   },
   "products": {
     "Hele õlu HEINEKEN 5% 0,568L prk": {
@@ -1418,6 +1418,14 @@
         },
         {
           "t": "2026-04-29T07:54:02.953294",
+          "p": 1.89
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 2.79
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
           "p": 1.89
         }
       ],
@@ -6503,7 +6511,7 @@
       "store": "Rimi",
       "category": "Rimi:Pasta",
       "url": "https://www.rimi.ee/epood/ee/tooted/kauasailivad-toidukaubad/makaronid-ja-riis/makaronid-pasta/makaronid-tomati-basiilikuga-selection-500g/p/806904",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_806904_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_806904_PCE_EE",
       "latest_price": 1.89,
       "price_per_unit": 3.78,
       "unit_label": "kg",
@@ -6962,7 +6970,7 @@
       "store": "Rimi",
       "category": "Rimi:Pasta",
       "url": "https://www.rimi.ee/epood/ee/tooted/kauasailivad-toidukaubad/makaronid-ja-riis/makaronid-pasta/pasta-lamolisana-fusilli-500g/p/189817",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_189817_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_189817_PCE_EE",
       "latest_price": 1.99,
       "price_per_unit": 3.98,
       "unit_label": "kg",
@@ -17687,10 +17695,14 @@
         {
           "t": "2026-01-19T23:06:30.489722",
           "p": 2.02
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 1.99
         }
       ],
-      "latest_price": 2.02,
-      "price_per_unit": 4.04,
+      "latest_price": 1.99,
+      "price_per_unit": 3.98,
       "unit_label": "kg",
       "url": "https://www.selver.ee/lasanjelehed-first-price-500-g",
       "img": "https://www.selver.ee/cdn-cgi/image/quality=80,width=450,format=auto/img/450/440/resize/7/3/7311041085905.jpg",
@@ -30142,7 +30154,7 @@
       "price_per_unit": 1.55,
       "unit_label": "kg",
       "url": "https://www.selver.ee/lohnakuusk-new-car-scent-wunder-baum-1tk",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/cdn-cgi/image/quality=80,width=450,format=auto/img/450/440/resize/7/3/7315870070347.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -30158,7 +30170,7 @@
       "price_per_unit": 1.55,
       "unit_label": "kg",
       "url": "https://www.selver.ee/lohnakuusk-black-classic-wunder-baum-1tk",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/cdn-cgi/image/quality=80,width=450,format=auto/img/450/440/resize/7/3/7315870470345.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -30513,7 +30525,7 @@
       "price_per_unit": 1.55,
       "unit_label": "kg",
       "url": "https://www.selver.ee/lohnakuusk-virsik-wunderbaum-1-tk",
-      "img": "https://www.selver.ee/cdn-cgi/image/quality=80,width=450,format=auto/img/450/440/resize/7/3/7315870270266.jpg",
+      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "store": "Selver",
       "is_sale": false
     },
@@ -30529,7 +30541,7 @@
       "price_per_unit": 4.35,
       "unit_label": "kg",
       "url": "https://www.selver.ee/autolohn-imao-paris-imao-1-tk",
-      "img": "https://www.selver.ee/cdn-cgi/image/quality=80,width=450,format=auto/img/450/440/resize/3/7/3701419574003.jpg",
+      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "store": "Selver",
       "is_sale": false
     },
@@ -30577,7 +30589,7 @@
       "price_per_unit": 4.35,
       "unit_label": "kg",
       "url": "https://www.selver.ee/autolohn-imao-tokyo-imao-1-tk",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/cdn-cgi/image/quality=80,width=450,format=auto/img/450/440/resize/3/7/3700652900426.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -30593,7 +30605,7 @@
       "price_per_unit": 4.35,
       "unit_label": "kg",
       "url": "https://www.selver.ee/autolohn-imao-sri-lanka-imao-1-tk",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/cdn-cgi/image/quality=80,width=450,format=auto/img/450/440/resize/3/7/3700652901072.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -30641,7 +30653,7 @@
       "price_per_unit": 6.09,
       "unit_label": "kg",
       "url": "https://www.selver.ee/autolohn-aqua-marine-vent-avale-dr-marcus-1-tk",
-      "img": "https://www.selver.ee/cdn-cgi/image/quality=80,width=450,format=auto/img/450/440/resize/5/9/5903686505539.jpg",
+      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "store": "Selver",
       "is_sale": false
     },
@@ -42561,7 +42573,7 @@
       "price_per_unit": 3.98,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/tume-olu/muu-alkohoolne-jook-saku-modu-4-vol-0-5l/p/1354923",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1354923_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1354923_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -43005,7 +43017,7 @@
       "price_per_unit": 6.64,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-pohjala-uus-maailm-4-7-0-33l-purk/p/1369091",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1369091_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1369091_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -43091,13 +43103,17 @@
         {
           "t": "2026-04-29T07:54:02.953294",
           "p": 0.1
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 1.75
         }
       ],
-      "latest_price": 0.1,
-      "price_per_unit": 0.2,
+      "latest_price": 1.75,
+      "price_per_unit": 3.5,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-kerge-ipa-tanker-5-2-0-5l-purk/p/1370521",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1370521_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1370521_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -43169,7 +43185,7 @@
       "price_per_unit": 1.7,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-walter-originaal-4-2-vol-0-5l/p/1351779",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1351779_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1351779_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -43289,7 +43305,7 @@
       "price_per_unit": 3.43,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-karl-friedrich-marzen-5-0-vol-0-568l/p/1363502",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1363502_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1363502_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -43341,7 +43357,7 @@
       "price_per_unit": 2.7,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-saku-originaal-4-7-vol-0-5l-purk/p/1359902",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1359902_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1359902_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -43405,7 +43421,7 @@
       "price_per_unit": 4.1,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/tume-olu/olu-saku-tume-6-7-vol-0-5l-pudel/p/1350228",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1350228_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1350228_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -43557,7 +43573,7 @@
       "price_per_unit": 2.55,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-saku-rock-5-3-vol-2l/p/1358710",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1358710_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1358710_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -43649,7 +43665,7 @@
       "price_per_unit": 2.65,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/tume-olu/olu-double-bock-6-0-vol-2l/p/1363094",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1363094_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1363094_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -43659,10 +43675,14 @@
         {
           "t": "2026-01-29T12:50:30.009711",
           "p": 2.29
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 2.25
         }
       ],
-      "latest_price": 2.29,
-      "price_per_unit": 4.58,
+      "latest_price": 2.25,
+      "price_per_unit": 4.5,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/tume-olu/olu-karksi-must-nunn-6-vol-0-5l-pdl/p/1357606",
       "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1357606_PCE_EE",
@@ -43685,7 +43705,7 @@
       "price_per_unit": 2.58,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/import-olu/olu-paderborner-hell-5-1-vol-0-5l/p/1375725",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1375725_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1375725_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -43719,13 +43739,17 @@
         {
           "t": "2026-04-28T07:59:39.687594",
           "p": 1.79
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 1.85
         }
       ],
-      "latest_price": 1.79,
-      "price_per_unit": 3.58,
+      "latest_price": 1.85,
+      "price_per_unit": 3.7,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-karl-friedrich-5-vol-0-5l-pdl/p/1355464",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1355464_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1355464_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -43801,7 +43825,7 @@
       "price_per_unit": 4.49,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/import-olu/olu-tuborg-4-6-vol-0-33l-pdl-6-pakk/p/1354628",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1354628_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1354628_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -43837,7 +43861,7 @@
       "price_per_unit": 3.58,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/import-olu/olu-kronenbourg-1664-lager-5-vol-0-5l/p/1359508",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1359508_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1359508_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -44033,7 +44057,7 @@
       "price_per_unit": 5.11,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-pohjala-laager-4-7-vol-0-44l-purk/p/1368600",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1368600_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1368600_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -44121,7 +44145,7 @@
       "price_per_unit": 3.1,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-saku-kuld-5-2-vol-0-5l-purk/p/1352483",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1352483_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1352483_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -44171,13 +44195,17 @@
         {
           "t": "2026-01-29T12:50:30.009711",
           "p": 2.29
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 2.25
         }
       ],
-      "latest_price": 2.29,
-      "price_per_unit": 4.58,
+      "latest_price": 2.25,
+      "price_per_unit": 4.5,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-karksi-blond-munk-6-vol-0-5l-pdl/p/1357605",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1357605_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1357605_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -44281,7 +44309,7 @@
       "price_per_unit": 8.45,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/import-olu/olu-kirin-ichiban-5-vol-0-33l/p/1354982",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1354982_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1354982_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -44393,7 +44421,7 @@
       "price_per_unit": 4.1,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/import-olu/olu-warsteiner-brewers-gold-5-2-vol-0-5l-purk/p/1368237",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1368237_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1368237_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -44435,10 +44463,14 @@
         {
           "t": "2026-04-14T07:13:56.143696",
           "p": 1.29
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 1.39
         }
       ],
-      "latest_price": 1.29,
-      "price_per_unit": 2.58,
+      "latest_price": 1.39,
+      "price_per_unit": 2.78,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/import-olu/olu-paderborner-pilger-5-vol-0-5l/p/1375724",
       "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1375724_PCE_EE",
@@ -44457,7 +44489,7 @@
       "price_per_unit": 3.79,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/import-olu/olu-obolon-velvet-5-3-vol-1l/p/1369117",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1369117_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1369117_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -44785,7 +44817,7 @@
       "price_per_unit": 4.21,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/ollekokteilid/muu-alk-j-oun-munt-on-ice-saku-4-vol-0-33l/p/1375158",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1375158_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1375158_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -44973,7 +45005,7 @@
       "price_per_unit": 3.5,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/tume-olu/olu-saare-taar-4-2-vol-0-5l-purk/p/1366922",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1366922_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1366922_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -45289,7 +45321,7 @@
       "price_per_unit": 5.11,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-pohjala-punane-laager-4-9-vol-0-44l-prk/p/1374188",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1374188_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1374188_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -45329,7 +45361,7 @@
       "price_per_unit": 2.38,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/kange-hele-olu-walter-7-0-5l/p/1369182",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1369182_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1369182_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -45369,7 +45401,7 @@
       "price_per_unit": 3.5,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/multipakid/olu-tanker-kerge-ipa-5-2-vol-0-5l-6-pakk/p/1373055",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1373055_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1373055_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -45441,7 +45473,7 @@
       "price_per_unit": 4.75,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-pohjala-saturnus-5-vol-0-440l-purk/p/1372969",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1372969_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1372969_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -45557,7 +45589,7 @@
       "price_per_unit": 5.66,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-ehapuna-hiiumaa-pruulikoda-4-5-vol-0-44l/p/1375859",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1375859_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1375859_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -45581,7 +45613,7 @@
       "price_per_unit": 2.98,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-holsten-4-5-vol-0-5l-pdl/p/1376121",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1376121_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1376121_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -45613,7 +45645,7 @@
       "price_per_unit": 4.82,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-rock-ipa-6-vol-0-33l-purk/p/1372473",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1372473_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1372473_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -45713,7 +45745,7 @@
       "price_per_unit": 4.1,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-ollenaut-hele-4-9-vol-0-5l-prk/p/1371139",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1371139_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1371139_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -45769,7 +45801,7 @@
       "price_per_unit": 3.38,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-holsten-saku-4-5-vol-0-5l-purk/p/1375546",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1375546_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1375546_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -45793,7 +45825,7 @@
       "price_per_unit": 3.38,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/tume-olu/olu-holsten-strong-6-vol-0-5l-pdl/p/1376142",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1376142_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1376142_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -45809,7 +45841,7 @@
       "price_per_unit": 3.18,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-a-le-coq-premium-export-5-2-0-33l-purk/p/1350070",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1350070_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1350070_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -45933,7 +45965,7 @@
       "price_per_unit": 5.91,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/import-olu/olu-sol-4-5-0-33l/p/1350772",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1350772_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1350772_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -46121,7 +46153,7 @@
       "price_per_unit": 3.61,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-zlaty-klicek-4-5-vol-0-33l-purk/p/1373279",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1373279_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1373279_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -46165,7 +46197,7 @@
       "price_per_unit": 5.18,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/import-olu/olu-st-pierre-wit-5-vol-0-5l-prk/p/1371520",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1371520_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1371520_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -46209,7 +46241,7 @@
       "price_per_unit": 4.09,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-vaike-sass-4-8-vol-0-33l-purk/p/1375552",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1375552_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1375552_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -46229,7 +46261,7 @@
       "price_per_unit": 4.39,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-saku-on-ice-5-vol-0-33l-purk/p/1371456",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1371456_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1371456_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -46285,7 +46317,7 @@
       "price_per_unit": 7.42,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-purtse-pale-ale-5-5-vol-0-33l-purk/p/1372912",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1372912_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1372912_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -46309,7 +46341,7 @@
       "price_per_unit": 3.09,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/import-olu/olu-obolon-svetloje-4-5-vol-1l/p/1372255",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1372255_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1372255_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -46389,7 +46421,7 @@
       "price_per_unit": 4.2,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/import-olu/olu-kronenbourg-1664-blanc-5-vol-0-5l-prk-6pk/p/1373958",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1373958_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1373958_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -46453,7 +46485,7 @@
       "price_per_unit": 4.98,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/import-olu/olu-krombacher-weizen-5-3-vol-0-5l-prk/p/1374153",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1374153_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1374153_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -46477,7 +46509,7 @@
       "price_per_unit": 3.3,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-tervete-original-5-4-vol-0-5l/p/1375502",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1375502_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1375502_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -46665,7 +46697,7 @@
       "price_per_unit": 5.73,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/import-olu/olu-solveza-agave-lemon-beer-6-0-33l-pdl/p/1373900",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1373900_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1373900_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -46873,7 +46905,7 @@
       "price_per_unit": 5.12,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/import-olu/muu-alk-jook-tuborg-lime-cut-4-5-0-33l-pdl/p/1373177",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1373177_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1373177_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -47769,7 +47801,7 @@
       "price_per_unit": 64.99,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/kange-alkohol/rumm/rumm-diplomatico-reserva-exclusiva-40-0-7l/p/7113076",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_7113076_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_7113076_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -48181,7 +48213,7 @@
       "price_per_unit": 57.13,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/kange-alkohol/rumm/rumm-don-papa-40-0-7l/p/7299695",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_7299695_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_7299695_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -48547,10 +48579,14 @@
         {
           "t": "2026-01-30T06:32:22.958995",
           "p": 0.79
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 1.29
         }
       ],
-      "latest_price": 0.79,
-      "price_per_unit": 1.98,
+      "latest_price": 1.29,
+      "price_per_unit": 3.23,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/energiajook-battery-400-ml",
       "img": "https://cdn.barbora.ee/products/1356f7f9-8ef0-41f8-831c-cacd3c0cfd43_m.png",
@@ -48755,10 +48791,14 @@
         {
           "t": "2026-01-30T06:32:22.958995",
           "p": 0.79
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 1.29
         }
       ],
-      "latest_price": 0.79,
-      "price_per_unit": 2.39,
+      "latest_price": 1.29,
+      "price_per_unit": 3.91,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/energiajook-battery-330-ml-88797",
       "img": "https://cdn.barbora.ee/products/83124dd4-1172-4389-890a-041f606b865c_m.png",
@@ -49067,10 +49107,14 @@
         {
           "t": "2026-01-30T06:32:22.958995",
           "p": 0.99
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 1.69
         }
       ],
-      "latest_price": 0.99,
-      "price_per_unit": 1.98,
+      "latest_price": 1.69,
+      "price_per_unit": 3.38,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/energiajook-battery-fresh-500-ml",
       "img": "https://cdn.barbora.ee/products/75e56859-26a7-4db6-85fa-fb1af01419e2_m.png",
@@ -49095,10 +49139,14 @@
         {
           "t": "2026-03-24T06:48:19.141276",
           "p": 0.99
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 1.59
         }
       ],
-      "latest_price": 0.99,
-      "price_per_unit": 1.98,
+      "latest_price": 1.59,
+      "price_per_unit": 3.18,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/energiajook-battery-strawberry-lime-500-ml",
       "img": "https://cdn.barbora.ee/products/f0adfa1a-a44a-4646-b854-447d9abfc7d9_m.png",
@@ -49483,10 +49531,14 @@
         {
           "t": "2026-03-24T06:48:19.141276",
           "p": 0.99
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 1.69
         }
       ],
-      "latest_price": 0.99,
-      "price_per_unit": 3.0,
+      "latest_price": 1.69,
+      "price_per_unit": 5.12,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/energiajook-battery-juiced-breeze-330-ml",
       "img": "https://cdn.barbora.ee/products/a3260404-e9ad-46c7-a104-161365815b06_m.png",
@@ -49931,10 +49983,14 @@
         {
           "t": "2026-01-30T06:32:22.958995",
           "p": 0.99
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 1.69
         }
       ],
-      "latest_price": 0.99,
-      "price_per_unit": 1.98,
+      "latest_price": 1.69,
+      "price_per_unit": 3.38,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/energiajook-battery-vaarikamaits-500-ml",
       "img": "https://cdn.barbora.ee/products/528d4cf7-8087-48eb-8781-cad21c54f983_m.png",
@@ -49963,10 +50019,14 @@
         {
           "t": "2026-03-24T06:48:19.141276",
           "p": 0.99
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 1.59
         }
       ],
-      "latest_price": 0.99,
-      "price_per_unit": 3.0,
+      "latest_price": 1.59,
+      "price_per_unit": 4.82,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/energiajook-battery-ounamaitseline-330-ml",
       "img": "https://cdn.barbora.ee/products/544316c5-ea68-4b90-967a-3f24adb48eb1_m.png",
@@ -50313,7 +50373,7 @@
       "price_per_unit": 3.5,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/energiajook/energiajook-monster-energy-0-5l/p/1355076",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1355076_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1355076_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -50397,7 +50457,7 @@
       "price_per_unit": 3.5,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/energiajook/energiajook-monster-juice-mango-loco-0-5l/p/1365350",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1365350_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1365350_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -50949,7 +51009,7 @@
       "price_per_unit": 1.98,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/energiajook/energiajook-hustler-500ml-purk/p/1375854",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1375854_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1375854_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -51541,7 +51601,7 @@
       "price_per_unit": 3.18,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/energiajook/energiajook-virsiku-vaarika-battery-0-5l/p/1371022",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1371022_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1371022_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -52793,7 +52853,7 @@
       "price_per_unit": 1.37,
       "unit_label": "L",
       "url": "https://www.selver.ee/karastusjook-coca-cola-coca-cola-2-l",
-      "img": "https://www.selver.ee/cdn-cgi/image/quality=80,width=450,format=auto/img/450/440/resize/4/7/4743050000045.jpg",
+      "img": "https://www.selver.ee/cdn-cgi/image/quality=80,width=450,format=auto/img/450/440/resize/5/0/5000112651355.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -53431,6 +53491,14 @@
         {
           "t": "2026-04-29T07:54:02.953294",
           "p": 1.29
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 1.21
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 1.29
         }
       ],
       "latest_price": 1.29,
@@ -53989,7 +54057,7 @@
       "price_per_unit": 2.54,
       "unit_label": "L",
       "url": "https://www.selver.ee/karastusjook-sprite-kalorivaba-magusainetega-sprite-500-ml",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/cdn-cgi/image/quality=80,width=450,format=auto/img/450/440/resize/5/4/5449000109613.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -54021,7 +54089,7 @@
       "price_per_unit": 5.18,
       "unit_label": "L",
       "url": "https://www.selver.ee/toonik-indian-tonic-water-fever-tree-500-ml",
-      "img": "https://www.selver.ee/cdn-cgi/image/quality=80,width=450,format=auto/img/450/440/resize/5/0/5060108450263.jpg",
+      "img": "https://www.selver.ee/cdn-cgi/image/quality=80,width=450,format=auto/img/450/440/resize/4/7/4751017240977.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -54325,7 +54393,7 @@
       "price_per_unit": 2.14,
       "unit_label": "L",
       "url": "https://www.selver.ee/karastusjook-jaffa-hartwall-500-ml",
-      "img": "https://www.selver.ee/cdn-cgi/image/quality=80,width=450,format=auto/img/450/440/resize/6/4/6413600003007.jpg",
+      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "store": "Selver",
       "is_sale": false
     },
@@ -54903,13 +54971,17 @@
         {
           "t": "2026-04-29T07:54:02.953294",
           "p": 1.29
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 1.21
         }
       ],
-      "latest_price": 1.29,
-      "price_per_unit": 3.91,
+      "latest_price": 1.21,
+      "price_per_unit": 3.67,
       "unit_label": "L",
-      "url": "https://www.selver.ee/karastusjook-coca-cola-zero-magusainetega-coca-cola-330-ml-t000055599",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "url": "https://www.selver.ee/karastusjook-coca-cola-zero-magusainetega-coca-cola-330-ml",
+      "img": "https://www.selver.ee/cdn-cgi/image/quality=80,width=450,format=auto/img/450/440/resize/5/4/5449000214799.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -55069,7 +55141,7 @@
       "price_per_unit": 7.1,
       "unit_label": "L",
       "url": "https://www.selver.ee/toonik-ginger-ale-fever-tree-500-ml",
-      "img": "https://www.selver.ee/cdn-cgi/image/quality=80,width=450,format=auto/img/450/440/resize/5/0/5060108450287.jpg",
+      "img": "https://www.selver.ee/cdn-cgi/image/quality=80,width=450,format=auto/img/450/440/resize/4/7/4751017241028.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -59333,7 +59405,7 @@
       "price_per_unit": 3.67,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/karastusjoogid/limonaad-karastusjook/karastusjook-coca-cola-zero-sugar-caff-0-33l/p/1373207",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1373207_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1373207_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -59441,7 +59513,7 @@
       "price_per_unit": 1.06,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/karastusjoogid/limonaad-karastusjook/karastusjook-kelluke-1-5l/p/1351802",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1351802_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1351802_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -59661,7 +59733,7 @@
       "price_per_unit": 0.73,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/karastusjoogid/limonaad-karastusjook/jook-sidruni-laimi-karb-tud-rimi-2l/p/1361161",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1361161_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1361161_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -59851,13 +59923,17 @@
         {
           "t": "2026-04-23T07:18:27.502253",
           "p": 2.29
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 0.1
         }
       ],
-      "latest_price": 2.29,
-      "price_per_unit": 1.53,
+      "latest_price": 0.1,
+      "price_per_unit": 0.06666666666666667,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/karastusjoogid/limonaad-karastusjook/karastusjook-sprite-zero-1-5l/p/1368094",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1368094_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1368094_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -59917,7 +59993,7 @@
       "price_per_unit": 2.58,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/karastusjoogid/limonaad-karastusjook/karastusjook-coca-cola-0-5l/p/1350156",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1350156_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1350156_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -60053,7 +60129,7 @@
       "price_per_unit": 2.52,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/karastusjoogid/limonaad-karastusjook/karastusjook-coca-cola-zero-6x0-33l/p/1371696",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1371696_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1371696_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -60105,7 +60181,7 @@
       "price_per_unit": 2.58,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/karastusjoogid/limonaad-karastusjook/karastusjook-coca-cola-zero-0-5l/p/1353151",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1353151_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1353151_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -60157,7 +60233,7 @@
       "price_per_unit": 1.03,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/karastusjoogid/limonaad-karastusjook/kar-kar-jook-selita-tarhun-m-ain-1-5l/p/1359605",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1359605_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1359605_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -60465,7 +60541,7 @@
       "price_per_unit": 0.73,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/karastusjoogid/limonaad-karastusjook/karb-kar-jook-limonaad-null-magusainet-1-5l/p/1373930",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1373930_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1373930_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -60665,7 +60741,7 @@
       "price_per_unit": 2.18,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/karastusjoogid/limonaad-karastusjook/karb-kar-jook-magusainetega-pepsi-max-0-5l/p/1362573",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1362573_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1362573_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -60813,7 +60889,7 @@
       "price_per_unit": 2.1,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/karastusjoogid/limonaad-karastusjook/karboniseeritud-karastusjook-lemon-rimi-0-5l/p/1360582",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1360582_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1360582_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -60921,7 +60997,7 @@
       "price_per_unit": 4.39,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/karastusjoogid/limonaad-karastusjook/kar-jook-s-pellegrino-na-aranciata-0-33l-prk/p/1359586",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1359586_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1359586_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -61205,7 +61281,7 @@
       "price_per_unit": 2.3,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/karastusjoogid/limonaad-karastusjook/karastusjook-pepsi-cola-0-5l/p/1360392",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1360392_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1360392_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -61261,7 +61337,7 @@
       "price_per_unit": 4.09,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/karastusjoogid/limonaad-karastusjook/kar-jook-apelsini-orn-craft-0-33l-prk/p/1375367",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1375367_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1375367_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -61287,10 +61363,14 @@
         {
           "t": "2026-04-14T07:13:56.143696",
           "p": 1.49
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 1.55
         }
       ],
-      "latest_price": 1.49,
-      "price_per_unit": 0.99,
+      "latest_price": 1.55,
+      "price_per_unit": 1.03,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/karastusjoogid/limonaad-karastusjook/karb-kar-jook-urd-selita-m-ainega-1-5l/p/1367699",
       "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1367699_PCE_EE",
@@ -61349,7 +61429,7 @@
       "price_per_unit": 4.09,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/karastusjoogid/limonaad-karastusjook/kar-jook-coca-cola-zero-magusainet-0-33l-pdl/p/1366677",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1366677_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1366677_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -61865,7 +61945,7 @@
       "price_per_unit": 1.39,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/karastusjoogid/limonaad-karastusjook/karastusjook-traditsioo-limonaad-a-le-coq-1l/p/1375683",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1375683_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1375683_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -61937,7 +62017,7 @@
       "price_per_unit": 1.58,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/karastusjoogid/limonaad-karastusjook/karb-kar-jook-limonaad-null-magusainet-0-5l/p/1373909",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1373909_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1373909_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -61953,7 +62033,7 @@
       "price_per_unit": 4.52,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/karastusjoogid/limonaad-karastusjook/karastusjook-troop-puuv-exotic-fanta-0-33l/p/1375416",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1375416_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1375416_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -62049,7 +62129,7 @@
       "price_per_unit": 1.8,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/karastusjoogid/limonaad-karastusjook/karastusjook-barbariss-0-5l/p/1370100",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1370100_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1370100_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -62105,7 +62185,7 @@
       "price_per_unit": 4.32,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/karastusjoogid/limonaad-karastusjook/kar-jook-hapu-rohel-ouna-chupa-chups-0-345l/p/1375888",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1375888_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1375888_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -62161,7 +62241,7 @@
       "price_per_unit": 4.32,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/karastusjoogid/limonaad-karastusjook/kar-jook-maasika-koore-chupa-chups-0-345l/p/1373595",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1373595_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1373595_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -62209,7 +62289,7 @@
       "price_per_unit": 6.82,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/karastusjoogid/limonaad-karastusjook/karastusjook-rabarberilimonaad-oun-mahe-0-33l/p/1365170",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1365170_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1365170_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -62241,7 +62321,7 @@
       "price_per_unit": 6.82,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/karastusjoogid/limonaad-karastusjook/karastusjook-kirsilimonaad-oun-mahe-0-33l/p/1370787",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1370787_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1370787_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -62265,7 +62345,7 @@
       "price_per_unit": 0.2,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/karastusjoogid/limonaad-karastusjook/karastusjook-vaarikamaitseline-kelluke-0-5l/p/1375891",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1375891_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1375891_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -62997,7 +63077,7 @@
       "price_per_unit": 12.98,
       "unit_label": "kg",
       "url": "https://www.selver.ee/pasta-cappello-da-chef-vegetariano-al-bronzo-gourmante-500-g",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/cdn-cgi/image/quality=80,width=450,format=auto/img/450/440/resize/5/2/5200110733873.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -63057,7 +63137,7 @@
       "price_per_unit": 3.66,
       "unit_label": "L",
       "url": "https://www.selver.ee/karastusjook-coca-cola-zero-24-kast-coca-cola-24-x-330-ml",
-      "img": "https://www.selver.ee/cdn-cgi/image/quality=80,width=450,format=auto/img/450/440/resize/0/2/0216000000487.jpg",
+      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "store": "Selver",
       "is_sale": false
     },
@@ -65131,10 +65211,14 @@
         {
           "t": "2026-04-21T07:17:46.181255",
           "p": 3.59
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 6.99
         }
       ],
-      "latest_price": 3.59,
-      "price_per_unit": 35.9,
+      "latest_price": 6.99,
+      "price_per_unit": 69.9,
       "unit_label": "kg",
       "url": "https://barbora.ee/toode/lah-kohv-nescafe-classic-100-g-kl-prk",
       "img": "https://cdn.barbora.ee/products/cf4a0367-c9a3-45cf-a2db-0cc71f01cd4d_m.png",
@@ -67855,10 +67939,14 @@
         {
           "t": "2026-04-21T07:17:46.181255",
           "p": 3.59
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 7.49
         }
       ],
-      "latest_price": 3.59,
-      "price_per_unit": 35.9,
+      "latest_price": 7.49,
+      "price_per_unit": 74.9,
       "unit_label": "kg",
       "url": "https://barbora.ee/toode/lahust-kohv-classic-crema-nescafe-100-g",
       "img": "https://cdn.barbora.ee/products/b8004212-958f-43ae-a91b-294dda85bec9_m.png",
@@ -69315,6 +69403,14 @@
         {
           "t": "2026-04-29T07:54:02.953294",
           "p": 8.99
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 6.89
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 8.99
         }
       ],
       "latest_price": 8.99,
@@ -69679,10 +69775,14 @@
         {
           "t": "2026-04-21T07:17:46.181255",
           "p": 5.79
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 11.99
         }
       ],
-      "latest_price": 5.79,
-      "price_per_unit": 28.95,
+      "latest_price": 11.99,
+      "price_per_unit": 59.95,
       "unit_label": "kg",
       "url": "https://barbora.ee/toode/lahustuv-kohv-classic-nescafe-200-g",
       "img": "https://cdn.barbora.ee/products/d5eae789-cbb9-4d4f-aa7b-54f5825055c1_m.png",
@@ -69895,10 +69995,14 @@
         {
           "t": "2026-04-21T07:17:46.181255",
           "p": 6.39
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 12.19
         }
       ],
-      "latest_price": 6.39,
-      "price_per_unit": 25.56,
+      "latest_price": 12.19,
+      "price_per_unit": 48.76,
       "unit_label": "kg",
       "url": "https://barbora.ee/toode/lahustuv-kohv-nescafe-strong-250-g",
       "img": "https://cdn.barbora.ee/products/dfee5f3c-926e-4b53-b3a9-17dd85f949d3_m.png",
@@ -70047,10 +70151,14 @@
         {
           "t": "2026-03-03T06:34:57.106910",
           "p": 4.99
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 8.99
         }
       ],
-      "latest_price": 4.99,
-      "price_per_unit": 10.8,
+      "latest_price": 8.99,
+      "price_per_unit": 19.46,
       "unit_label": "kg",
       "url": "https://barbora.ee/toode/koh-jook-classic-3-in-1-nescafekarp-28-x-16-5-g",
       "img": "https://cdn.barbora.ee/products/0803a73d-c25e-4ace-9ce9-ac880f1df4a1_m.png",
@@ -70083,10 +70191,14 @@
         {
           "t": "2026-03-03T06:34:57.106910",
           "p": 4.99
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 8.99
         }
       ],
-      "latest_price": 4.99,
-      "price_per_unit": 10.8,
+      "latest_price": 8.99,
+      "price_per_unit": 19.46,
       "unit_label": "kg",
       "url": "https://barbora.ee/toode/lah-kohvij-pr-suh-ganescafe-3-in-1-28-x-16-5-g",
       "img": "https://cdn.barbora.ee/products/ee4896e6-38a8-4333-a2c2-17694c5075c7_m.png",
@@ -70147,10 +70259,14 @@
         {
           "t": "2026-02-18T20:17:01.649394",
           "p": 2.99
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 6.09
         }
       ],
-      "latest_price": 2.99,
-      "price_per_unit": 9.06,
+      "latest_price": 6.09,
+      "price_per_unit": 18.45,
       "unit_label": "kg",
       "url": "https://barbora.ee/toode/lah-kohvij-classic-3-in-1-nescafe-20-x-16-5-g",
       "img": "https://cdn.barbora.ee/products/b366a6f2-3641-4039-b3d4-cb3f04a005cf_m.png",
@@ -71535,10 +71651,14 @@
         {
           "t": "2026-02-28T06:21:08.824497",
           "p": 4.99
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 4.19
         }
       ],
-      "latest_price": 4.99,
-      "price_per_unit": 90.73,
+      "latest_price": 4.19,
+      "price_per_unit": 76.18,
       "unit_label": "kg",
       "url": "https://barbora.ee/toode/kohvikapslid-aroma-gold-crema-10-tkx-5-5-g",
       "img": "https://cdn.barbora.ee/products/bc10eb93-ec34-4ed9-ae95-7f9ef3a8ef8f_m.png",
@@ -71555,10 +71675,14 @@
         {
           "t": "2026-02-28T06:21:08.824497",
           "p": 4.99
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 4.19
         }
       ],
-      "latest_price": 4.99,
-      "price_per_unit": 90.73,
+      "latest_price": 4.19,
+      "price_per_unit": 76.18,
       "unit_label": "kg",
       "url": "https://barbora.ee/toode/kohvikap-aroma-gold-nota-viola-10-tkx-5-5-g",
       "img": "https://cdn.barbora.ee/products/c9a9d44a-a31d-4e01-96f2-35264559867d_m.png",
@@ -71575,10 +71699,14 @@
         {
           "t": "2026-02-28T06:21:08.824497",
           "p": 4.99
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 4.19
         }
       ],
-      "latest_price": 4.99,
-      "price_per_unit": 89.11,
+      "latest_price": 4.19,
+      "price_per_unit": 74.82,
       "unit_label": "kg",
       "url": "https://barbora.ee/toode/kohvikapslid-aroma-gold-oro-10-pcsx-5-6-g",
       "img": "https://cdn.barbora.ee/products/f26b2082-e7d2-4043-bf77-6654d3cef0ec_m.png",
@@ -71835,10 +71963,14 @@
         {
           "t": "2026-02-28T06:21:08.824497",
           "p": 4.99
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 4.19
         }
       ],
-      "latest_price": 4.99,
-      "price_per_unit": 86.03,
+      "latest_price": 4.19,
+      "price_per_unit": 72.24,
       "unit_label": "kg",
       "url": "https://barbora.ee/toode/kohvikaps-aroma-gold-fiori-lungo-10-x-5-8-g",
       "img": "https://cdn.barbora.ee/products/34cdc259-088c-4c75-8429-5df1bdaf6037_m.png",
@@ -72215,10 +72347,14 @@
         {
           "t": "2026-02-18T20:17:01.649394",
           "p": 1.99
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 2.95
         }
       ],
-      "latest_price": 1.99,
-      "price_per_unit": 13.27,
+      "latest_price": 2.95,
+      "price_per_unit": 19.67,
       "unit_label": "kg",
       "url": "https://barbora.ee/toode/kohvij-creamy-latte-3-in-1-nescafe-10-x-15-g",
       "img": "https://cdn.barbora.ee/products/122007be-c016-413f-8511-8c4caeb37884_m.png",
@@ -73215,10 +73351,14 @@
         {
           "t": "2026-04-21T07:17:46.181255",
           "p": 6.29
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 11.99
         }
       ],
-      "latest_price": 6.29,
-      "price_per_unit": 31.45,
+      "latest_price": 11.99,
+      "price_per_unit": 59.95,
       "unit_label": "kg",
       "url": "https://barbora.ee/toode/lahust-kohv-crema-nescafe-200-g",
       "img": "https://cdn.barbora.ee/products/b049bc84-6999-4db7-9bfb-573098ccca89_m.png",
@@ -74823,10 +74963,14 @@
         {
           "t": "2026-03-03T06:34:57.106910",
           "p": 4.99
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 8.99
         }
       ],
-      "latest_price": 4.99,
-      "price_per_unit": 11.14,
+      "latest_price": 8.99,
+      "price_per_unit": 20.07,
       "unit_label": "kg",
       "url": "https://barbora.ee/toode/kohvijook-nescafe-3-in-1-strong-karp-28-x-16-g",
       "img": "https://cdn.barbora.ee/products/772ed45e-844d-4df8-b5d3-b1ef765a65f5_m.png",
@@ -74847,10 +74991,14 @@
         {
           "t": "2026-03-24T06:48:19.141276",
           "p": 1.59
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 2.95
         }
       ],
-      "latest_price": 1.59,
-      "price_per_unit": 9.94,
+      "latest_price": 2.95,
+      "price_per_unit": 18.44,
       "unit_label": "kg",
       "url": "https://barbora.ee/toode/lah-kohvijook-nescafe-3-in-1-strong-10-x-16-g",
       "img": "https://cdn.barbora.ee/products/fd91a9ad-75fa-4695-9c3d-cf928f025b74_m.png",
@@ -75823,10 +75971,14 @@
         {
           "t": "2026-04-16T07:15:08.848153",
           "p": 5.39
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 3.99
         }
       ],
-      "latest_price": 5.39,
-      "price_per_unit": 21.39,
+      "latest_price": 3.99,
+      "price_per_unit": 15.83,
       "unit_label": "kg",
       "url": "https://barbora.ee/toode/lah-kohvijook-jacobs-3-in-1-20-x-12-6-g",
       "img": "https://cdn.barbora.ee/products/deeb980c-6dbb-4129-a5f3-ca72eb311a5f_m.png",
@@ -76039,10 +76191,14 @@
         {
           "t": "2026-03-03T06:34:57.106910",
           "p": 4.99
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 8.99
         }
       ],
-      "latest_price": 4.99,
-      "price_per_unit": 11.88,
+      "latest_price": 8.99,
+      "price_per_unit": 21.4,
       "unit_label": "kg",
       "url": "https://barbora.ee/toode/kohvijook-nescafe-3-in-1-creamylatte-28-x-15-g",
       "img": "https://cdn.barbora.ee/products/6f3b975d-0738-49a2-9666-29bd3d8ef79c_m.png",
@@ -77451,10 +77607,14 @@
         {
           "t": "2026-02-18T20:17:01.649394",
           "p": 1.49
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 2.29
         }
       ],
-      "latest_price": 1.49,
-      "price_per_unit": 13.79,
+      "latest_price": 2.29,
+      "price_per_unit": 21.2,
       "unit_label": "kg",
       "url": "https://barbora.ee/toode/kohvijook-nescafe-3-in-1-cappucino-8-x-13-5-g",
       "img": "https://cdn.barbora.ee/products/87fe8bad-3c5b-4f62-9f29-d3d3dd3a5b0a_m.png",
@@ -77467,10 +77627,14 @@
         {
           "t": "2026-02-18T20:17:01.649394",
           "p": 1.49
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 2.29
         }
       ],
-      "latest_price": 1.49,
-      "price_per_unit": 13.31,
+      "latest_price": 2.29,
+      "price_per_unit": 20.45,
       "unit_label": "kg",
       "url": "https://barbora.ee/toode/kohvijook-nescafe-3-in-1-irish-8-x-14-g",
       "img": "https://cdn.barbora.ee/products/a34afe0b-1ee5-453f-807c-94131b2e4919_m.png",
@@ -77775,10 +77939,14 @@
         {
           "t": "2026-03-24T06:48:19.141276",
           "p": 2.99
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 6.09
         }
       ],
-      "latest_price": 2.99,
-      "price_per_unit": 9.97,
+      "latest_price": 6.09,
+      "price_per_unit": 20.3,
       "unit_label": "kg",
       "url": "https://barbora.ee/toode/kohvijook-3-in-1-nescafe-20-x-15-g",
       "img": "https://cdn.barbora.ee/products/7a652fda-a9b5-49fa-ba86-3d87b30ab75a_m.png",
@@ -78853,7 +79021,7 @@
       "price_per_unit": 46.77,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/taimetee/tee-kummeli-herba-25x1-25g/p/1003128",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1003128_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1003128_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -79065,7 +79233,7 @@
       "price_per_unit": 82.57,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/taimetee/tee-urdi-ingver-sidrun-teekanne-20x1-75g/p/164285",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_164285_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_164285_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -79125,7 +79293,7 @@
       "price_per_unit": 69.75,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/puuviljatee/tee-puuvilja-metsamarja-loyd-20x2g/p/171957",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_171957_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_171957_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -79301,7 +79469,7 @@
       "price_per_unit": 14.99,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/kohvioad/kohvioad-keskmine-rost-lofbergs-1kg/p/177824",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_177824_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_177824_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -79681,7 +79849,7 @@
       "price_per_unit": 28.33,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/puuviljatee/hibiskioietee-rimi-smart-20-x-1-5g/p/812078",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_812078_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_812078_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -79877,7 +80045,7 @@
       "price_per_unit": 29.99,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/kohvioad/kohvioad-lavazza-rossa-1kg/p/136990",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_136990_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_136990_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -80025,7 +80193,7 @@
       "price_per_unit": 21.3,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/jahvatatud-kohv/kohv-jahvatatud-classic-cremoso-paulig-500g/p/1000697",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1000697_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1000697_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -80143,10 +80311,14 @@
         {
           "t": "2026-04-28T07:59:39.687594",
           "p": 6.59
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 5.99
         }
       ],
-      "latest_price": 6.59,
-      "price_per_unit": 26.36,
+      "latest_price": 5.99,
+      "price_per_unit": 23.96,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/jahvatatud-kohv/kohv-rostit-jahvatatud-brazil-selection-250g/p/804468",
       "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_804468_PCE_EE",
@@ -80343,10 +80515,14 @@
         {
           "t": "2026-04-28T07:59:39.687594",
           "p": 6.59
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 5.99
         }
       ],
-      "latest_price": 6.59,
-      "price_per_unit": 26.36,
+      "latest_price": 5.99,
+      "price_per_unit": 23.96,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/jahvatatud-kohv/kohv-rost-jahvatatud-colombia-selection-250g/p/804467",
       "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_804467_PCE_EE",
@@ -80489,7 +80665,7 @@
       "price_per_unit": 86.33,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/must-tee/tee-must-karamellimaitseline-dilmah-20x1-5g/p/154070",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_154070_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_154070_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -80813,7 +80989,7 @@
       "price_per_unit": 41.9,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/must-tee/tee-must-leaf-of-ceylon-basilur-100g/p/158124",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_158124_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_158124_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -80893,7 +81069,7 @@
       "price_per_unit": 21.03,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/jahvatatud-kohv/kohv-jahvatatud-paulig-mokka-475g/p/1012369",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1012369_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1012369_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -80937,7 +81113,7 @@
       "price_per_unit": 34.9,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/must-tee/must-tee-english-tea-no-1-ahmad-100g/p/103499",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_103499_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_103499_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -80957,7 +81133,7 @@
       "price_per_unit": 0.4,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/kohvikapslid/kohvikapslid-profondo-lor-10tk/p/186430",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_186430_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_186430_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -81041,7 +81217,7 @@
       "price_per_unit": 21.38,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/jahvatatud-kohv/kohv-jahv-keskmine-rost-lofbergs-in-cup-500g/p/186362",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_186362_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_186362_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -81161,7 +81337,7 @@
       "price_per_unit": 39.95,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/lahustuv-kohv/kohv-lahustuv-fd-rimi-200g/p/801149",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_801149_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_801149_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -81273,7 +81449,7 @@
       "price_per_unit": 71.9,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/lahustuv-kohv/lahustuv-kohv-selection-brazil-100g/p/811293",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_811293_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_811293_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -81329,7 +81505,7 @@
       "price_per_unit": 59.75,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/must-tee/tee-must-ceylon-rimi-20x2g/p/804424",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_804424_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_804424_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -81385,7 +81561,7 @@
       "price_per_unit": 102.25,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/must-tee/must-tee-virsiku-ja-granadilli-ahmad-20x2g/p/163903",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_163903_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_163903_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -81661,7 +81837,7 @@
       "price_per_unit": 35.9,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/roheline-tee/roheline-tee-gunpowder-ahmad-100g/p/112540",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_112540_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_112540_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -81801,7 +81977,7 @@
       "price_per_unit": 23.99,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/kohvioad/kohvioad-selection-by-rimi-colombia-1kg/p/811579",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_811579_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_811579_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -81889,7 +82065,7 @@
       "price_per_unit": 42.9,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/must-tee/tee-must-dilmah-premium-50x2g/p/179720",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_179720_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_179720_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -81957,7 +82133,7 @@
       "price_per_unit": 88.33,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/taimetee/tee-piparmundi-ja-sidruni-ahmad-20x1-5g/p/154834",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_154834_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_154834_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -81985,7 +82161,7 @@
       "price_per_unit": 47.9,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/must-tee/tee-must-yellow-label-lipton-50pk/p/129777",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_129777_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_129777_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -82077,7 +82253,7 @@
       "price_per_unit": 14.49,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/kohvioad/kohvioad-arabica-espresso-paulig-1kg/p/185554",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_185554_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_185554_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -82213,7 +82389,7 @@
       "price_per_unit": 59.9,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/roheline-tee/roheline-tee-jasmine-green-basilur-100g/p/197264",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_197264_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_197264_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -82277,7 +82453,7 @@
       "price_per_unit": 71.5,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/roheline-tee/tee-roheline-magic-fruits-basilur-100g/p/183521",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_183521_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_183521_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -82313,7 +82489,7 @@
       "price_per_unit": 20.0,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/lahustuv-kohv/kohv-lahustuv-3in1-pruun-suhkur-nescafe-16-5g/p/193845",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_193845_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_193845_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -82357,7 +82533,7 @@
       "price_per_unit": 93.0,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/roheline-tee/tee-roh-sidruni-ja-sidrunheinaga-loyd-20x1-5g/p/191385",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_191385_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_191385_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -82381,7 +82557,7 @@
       "price_per_unit": 14.21,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/lahustuv-kohv/kohv-cappuccino-classic-salling-10tk-140g/p/816835",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_816835_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_816835_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -82541,7 +82717,7 @@
       "price_per_unit": 0.53,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/kohvikapslid/kohvikapslid-au-lait-intenso-dolce-gusto-160g/p/193836",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_193836_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_193836_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -82569,7 +82745,7 @@
       "price_per_unit": 1.06,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/kohvikapslid/kohvikapslid-caramel-latte-dolce-gusto-145-6g/p/199824",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_199824_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_199824_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -82701,7 +82877,7 @@
       "price_per_unit": 39.95,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/must-tee/tee-must-yellow-label-lipton-100pk/p/129776",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_129776_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_129776_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -82791,10 +82967,14 @@
         {
           "t": "2026-04-28T07:59:39.687594",
           "p": 5.79
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 7.99
         }
       ],
-      "latest_price": 5.79,
-      "price_per_unit": 0.36,
+      "latest_price": 7.99,
+      "price_per_unit": 0.5,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/kohvikapslid/kohvikap-lavazza-amm-oro-16tk-120g/p/1012444",
       "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1012444_PCE_EE",
@@ -82903,13 +83083,17 @@
         {
           "t": "2026-04-28T07:59:39.687594",
           "p": 5.79
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 7.99
         }
       ],
-      "latest_price": 5.79,
-      "price_per_unit": 0.36,
+      "latest_price": 7.99,
+      "price_per_unit": 0.5,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/kohvikapslid/kohvikap-lavazza-amm-intenso-16tk-120g/p/1012445",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1012445_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1012445_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -83057,7 +83241,7 @@
       "price_per_unit": 91.07,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/roheline-tee/tee-roheline-punaste-marjade-lipton-20x1-75g/p/180912",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_180912_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_180912_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -83169,7 +83353,7 @@
       "price_per_unit": 92.25,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/taimetee/taimetee-be-happy-cupper-oko-20x2g/p/1007997",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1007997_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1007997_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -83187,10 +83371,14 @@
         {
           "t": "2026-04-28T07:59:39.687594",
           "p": 5.79
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 7.99
         }
       ],
-      "latest_price": 5.79,
-      "price_per_unit": 0.36,
+      "latest_price": 7.99,
+      "price_per_unit": 0.5,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/kohvikapslid/kohvikap-lavazza-amm-lungo-dolce-16tk-128g/p/1012454",
       "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1012454_PCE_EE",
@@ -83225,7 +83413,7 @@
       "price_per_unit": 24.75,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/puuviljatee/tee-puuvilja-rimi-smart-rooibos-20x2g/p/815515",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_815515_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_815515_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -83293,7 +83481,7 @@
       "price_per_unit": 34.76,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/jahvatatud-kohv/kohv-jahvatatud-lavazza-rossa-250g/p/120328",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_120328_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_120328_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -83373,7 +83561,7 @@
       "price_per_unit": 27.47,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/jahvatatud-kohv/kohv-jahvatatud-salling-eko-oko-400g/p/816779",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_816779_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_816779_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -83423,10 +83611,14 @@
         {
           "t": "2026-04-28T07:59:39.687594",
           "p": 5.79
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 7.99
         }
       ],
-      "latest_price": 5.79,
-      "price_per_unit": 0.36,
+      "latest_price": 7.99,
+      "price_per_unit": 0.5,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/kohvikapslid/kohvikapslid-lavazza-amm-mountain-grown-120g/p/1018545",
       "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1018545_DPA_EE",
@@ -83549,7 +83741,7 @@
       "price_per_unit": 93.0,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/puuviljatee/melissi-tee-sidruni-ja-apelsini-loyd-20x1-5g/p/1008848",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1008848_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1008848_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -83777,7 +83969,7 @@
       "price_per_unit": 24.89,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/kohvioad/kohvioad-paulig-classic-aromatico-1kg/p/1016887",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1016887_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1016887_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -84061,7 +84253,7 @@
       "price_per_unit": 27.96,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/jahvatatud-kohv/jahvat-kohv-lavazza-caffe-decaffeinato-250g/p/1021642",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1021642_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1021642_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -84161,7 +84353,7 @@
       "price_per_unit": 51.9,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/must-tee/must-tee-earl-grey-basilur-spec-class-100g/p/187260",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_187260_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_187260_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -84297,7 +84489,7 @@
       "price_per_unit": 69.75,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/puuviljatee/tee-marja-maasika-ja-rabarberimait-loyd-20x2g/p/163136",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_163136_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_163136_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -84315,10 +84507,14 @@
         {
           "t": "2026-04-28T07:59:39.687594",
           "p": 5.79
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 7.99
         }
       ],
-      "latest_price": 5.79,
-      "price_per_unit": 0.36,
+      "latest_price": 7.99,
+      "price_per_unit": 0.5,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/kohvikapslid/kohvikap-lavazza-amm-delizioso-16tk-120g/p/1012455",
       "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1012455_PCE_EE",
@@ -84357,7 +84553,7 @@
       "price_per_unit": 33.49,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/kohvioad/kohvioad-lavazza-oro-1kg/p/111034",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_111034_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_111034_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -84541,7 +84737,7 @@
       "price_per_unit": 0.55,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/kohvikapslid/koh-kap-starbucks-blonde-espr-roast-10tk-53g/p/1018858",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1018858_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1018858_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -84589,7 +84785,7 @@
       "price_per_unit": 74.75,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/puuviljatee/tee-puuvilja-sunny-orange-loyd-20x2g/p/163632",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_163632_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_163632_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -84749,7 +84945,7 @@
       "price_per_unit": 12.99,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/kohvioad/kohvioad-rostitud-vespucci-1kg/p/815715",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_815715_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_815715_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -84783,10 +84979,14 @@
         {
           "t": "2026-04-28T07:59:39.687594",
           "p": 5.79
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 7.99
         }
       ],
-      "latest_price": 5.79,
-      "price_per_unit": 0.36,
+      "latest_price": 7.99,
+      "price_per_unit": 0.5,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/kohvikapslid/kohvikapslid-lavazza-amm-dek-cremoso-120g/p/1018539",
       "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1018539_DPA_EE",
@@ -84897,7 +85097,7 @@
       "price_per_unit": 0.39,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/kohvikapslid/kohvikap-nescafe-dolce-gusto-doro-16x7-5g/p/1017413",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1017413_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1017413_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -84925,7 +85125,7 @@
       "price_per_unit": 102.65,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/must-tee/must-tee-virsiku-mango-lipton-20x1-7g/p/1019619",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1019619_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1019619_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -85313,7 +85513,7 @@
       "price_per_unit": 21.98,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/jahvatatud-kohv/jahvatatud-kohv-tchibo-exclusive-medium-500g/p/1020513",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1020513_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1020513_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -85389,7 +85589,7 @@
       "price_per_unit": 0.4,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/kohvikapslid/kohvikapslid-lor-colombia-10tk/p/1002581",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1002581_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1002581_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -85437,7 +85637,7 @@
       "price_per_unit": 31.09,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/kohvioad/kohvioad-starbucks-blonde-espresso-450g/p/1009834",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1009834_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1009834_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -85977,7 +86177,7 @@
       "price_per_unit": 17.99,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/kohvioad/kohvioad-rostitud-rimi-1kg/p/815693",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_815693_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_815693_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -86133,7 +86333,7 @@
       "price_per_unit": 0.34,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/kohvikapslid/kohvikapslid-aroma-gold-flat-white-187g/p/1009491",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1009491_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1009491_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -86157,7 +86357,7 @@
       "price_per_unit": 0.34,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/kohvikapslid/kohvikaps-aroma-gold-vanilla-macadamia-256g/p/1015031",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1015031_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1015031_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -86197,7 +86397,7 @@
       "price_per_unit": 23.64,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/lahustuv-kohv/lahustuv-kohvijook-jacobs-mild-11-1g/p/1019542",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1019542_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1019542_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -86493,7 +86693,7 @@
       "price_per_unit": 24.94,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/eritee-kinkekarbid/mar-pur-man--pass-joogi-val-mashie-4x40ml/p/1018760",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1018760_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1018760_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -86821,7 +87021,7 @@
       "price_per_unit": 25.89,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/kohvioad/kohvioad-merrild-vienna-roast-1kg/p/1021635",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1021635_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1021635_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -92105,7 +92305,7 @@
       "price_per_unit": 4.98,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/jahvatatud-kohv/kohv-rostitud-jahvatatud-vespucci-500g/p/815534",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_815534_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_815534_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -93133,7 +93333,7 @@
       "price_per_unit": 1.53,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/karastusjoogid/limonaad-karastusjook/karastusj-zero-caff-coca-cola-m-ain-1-5l/p/1376415",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1376415_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1376415_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -94917,7 +95117,7 @@
       "price_per_unit": 5.98,
       "unit_label": "kg",
       "url": "https://www.selver.ee/pasta-semi-di-orzo-27-rummo-500g",
-      "img": "https://www.selver.ee/cdn-cgi/image/quality=80,width=450,format=auto/img/450/440/resize/8/0/8008343200271.jpg",
+      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "store": "Selver",
       "is_sale": false
     },
@@ -94933,7 +95133,7 @@
       "price_per_unit": 7.98,
       "unit_label": "kg",
       "url": "https://www.selver.ee/gnocchi-di-patate-rummo-500g",
-      "img": "https://www.selver.ee/cdn-cgi/image/quality=80,width=450,format=auto/img/450/440/resize/8/0/8008343201179.jpg",
+      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
       "store": "Selver",
       "is_sale": false
     },
@@ -94981,7 +95181,7 @@
       "price_per_unit": 5.98,
       "unit_label": "kg",
       "url": "https://www.selver.ee/pasta-farfalle-85-rummo-500g",
-      "img": "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7",
+      "img": "https://www.selver.ee/cdn-cgi/image/quality=80,width=450,format=auto/img/450/440/resize/8/0/8008343200851.jpg",
       "store": "Selver",
       "is_sale": false
     },
@@ -95009,7 +95209,7 @@
       "price_per_unit": 2.66,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/multipakid/olu-originaal-smooth-saku-4-6-0-5l-6-pakk/p/1376397",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1376397_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1376397_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -95195,10 +95395,14 @@
         {
           "t": "2026-03-31T06:59:01.877769",
           "p": 2.35
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 2.29
         }
       ],
-      "latest_price": 2.35,
-      "price_per_unit": 2.35,
+      "latest_price": 2.29,
+      "price_per_unit": 2.29,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/karastusjoogid/limonaad-karastusjook/mine-vesi-kirsi-aroonia-varska-vurtsvasser-1l/p/1376398",
       "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1376398_PCE_EE",
@@ -95239,10 +95443,14 @@
         {
           "t": "2026-04-21T07:17:46.181255",
           "p": 2.79
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 2.99
         }
       ],
-      "latest_price": 2.79,
-      "price_per_unit": 0.7,
+      "latest_price": 2.99,
+      "price_per_unit": 0.75,
       "unit_label": "kg",
       "url": "https://barbora.ee/toode/suvine-klaasipesuvedelik-solid-2-c-4-l-84624",
       "img": "https://cdn.barbora.ee/products/7c801ef9-f699-40c8-b1bc-188b1b308961_m.png",
@@ -95309,7 +95517,7 @@
       "price_per_unit": 3.98,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-a-le-coq-special-5-2-vol-0-5l/p/1375594",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1375594_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1375594_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -95511,10 +95719,14 @@
         {
           "t": "2026-04-28T07:59:39.687594",
           "p": 5.79
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 7.99
         }
       ],
-      "latest_price": 5.79,
-      "price_per_unit": 0.36,
+      "latest_price": 7.99,
+      "price_per_unit": 0.5,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/kohvikapslid/kohvikap-lavazza-amm-rossa-16tk-120g/p/1012434",
       "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1012434_PCE_EE",
@@ -95535,13 +95747,17 @@
         {
           "t": "2026-04-28T07:59:39.687594",
           "p": 5.79
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 7.99
         }
       ],
-      "latest_price": 5.79,
-      "price_per_unit": 0.36,
+      "latest_price": 7.99,
+      "price_per_unit": 0.5,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/kohvikapslid/kohvikap-lavazza-amm-passionale-16tk-120g/p/1012453",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1012453_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1012453_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -95583,10 +95799,14 @@
         {
           "t": "2026-04-21T07:17:46.181255",
           "p": 4.79
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 4.99
         }
       ],
-      "latest_price": 4.79,
-      "price_per_unit": 1.2,
+      "latest_price": 4.99,
+      "price_per_unit": 1.25,
       "unit_label": "kg",
       "url": "https://barbora.ee/toode/suv-klaasipesuvedelik-turtle-wax-4-c-4-l",
       "img": "https://cdn.barbora.ee/products/0b3113c2-31fd-47bb-870b-6d8e510aa065_m.png",
@@ -95761,7 +95981,7 @@
       "price_per_unit": 4.19,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/multipakid/olu-saku-on-ice-hola-4-5-0-33l-purk-6-pakk/p/1376520",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1376520_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1376520_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -96505,7 +96725,7 @@
       "price_per_unit": 7.11,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/eritee-kinkekarbid/tee-vaarikamaitseline-lahustuv-ekland-350g/p/1023416",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1023416_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1023416_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -96581,7 +96801,7 @@
       "price_per_unit": 69.75,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/puuviljatee/tee-puuvilja-poldmarja-mustika-loyd-20x2g/p/160580",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_160580_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_160580_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -96713,7 +96933,7 @@
       "price_per_unit": 86.33,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/must-tee/tee-must-mustika-vanilli-dilmah-20x1-5g/p/1023364",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1023364_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1023364_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -96849,7 +97069,7 @@
       "price_per_unit": 98.08,
       "unit_label": "kg",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/kohv-tee-kakao/roheline-tee/tee-roheline-tsitruse-lipton-25pk/p/160571",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_160571_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_160571_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -97203,10 +97423,14 @@
         {
           "t": "2026-04-24T07:30:44.070663",
           "p": 9.99
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 10.79
         }
       ],
-      "latest_price": 9.99,
-      "price_per_unit": 2.52,
+      "latest_price": 10.79,
+      "price_per_unit": 2.72,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/multipakid/olu-saku-originaal-4-7-vol-12x0-33l-prk/p/1376527",
       "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1376527_PCE_EE",
@@ -97875,10 +98099,14 @@
         {
           "t": "2026-04-21T07:17:46.181255",
           "p": 1.39
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 1.79
         }
       ],
-      "latest_price": 1.39,
-      "price_per_unit": 2.78,
+      "latest_price": 1.79,
+      "price_per_unit": 3.58,
       "unit_label": "L",
       "url": "https://barbora.ee/toode/olu-tanker-classic-amber-4-7-proc-500-ml",
       "img": "https://cdn.barbora.ee/products/65ef6b7b-d27d-4b3c-8f0a-9e971dfc375b_m.png",
@@ -97907,10 +98135,14 @@
         {
           "t": "2026-04-16T07:15:08.848153",
           "p": 1.79
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 2.25
         }
       ],
-      "latest_price": 1.79,
-      "price_per_unit": 3.58,
+      "latest_price": 2.25,
+      "price_per_unit": 4.5,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-kloostriolu-5-0-5l/p/1374205",
       "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1374205_PCE_EE",
@@ -98249,7 +98481,7 @@
       "price_per_unit": 5.16,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/energiajook/ene-jook-sudachi-red-bull-sugar-free-m-0-25l/p/1376591",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1376591_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1376591_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -98269,7 +98501,7 @@
       "price_per_unit": 5.16,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/energiajook/energiajook-sudachi-lime-red-bull-summ-0-25l/p/1376590",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1376590_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1376590_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -98303,10 +98535,14 @@
         {
           "t": "2026-04-22T07:16:25.539150",
           "p": 1.25
+        },
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 0.1
         }
       ],
-      "latest_price": 1.25,
-      "price_per_unit": 2.5,
+      "latest_price": 0.1,
+      "price_per_unit": 0.2,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/joogid/karastusjoogid/limonaad-karastusjook/karastusjook-chill-zero-sprite-0-5l/p/1376387",
       "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1376387_PCE_EE",
@@ -98461,7 +98697,7 @@
       "price_per_unit": 2.58,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-tanker-classic-4-7-vol-0-5l/p/1376559",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1376559_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1376559_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -98481,7 +98717,7 @@
       "price_per_unit": 2.58,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/hele-olu/olu-a-le-coq-pilsner-4-2-vol-0-5l-purk/p/1365500",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1365500_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1365500_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -98501,7 +98737,7 @@
       "price_per_unit": 4.38,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/import-olu/olu-bavaria-ultra-4-2-vol-0-5l/p/1376587",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1376587_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1376587_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -98521,7 +98757,7 @@
       "price_per_unit": 2.58,
       "unit_label": "L",
       "url": "https://www.rimi.ee/epood/ee/tooted/alkohol/olu/import-olu/olu-litovel-moravan-4-6-vol-0-5l/p/1376589",
-      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_1.0,f_auto,q_auto:low,w_250/d_ecommerce:backend-fallback.png/MAT_1376589_PCE_EE",
+      "img": "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,h_216,q_1,w_216/d_ecommerce:backend-fallback.png/MAT_1376589_PCE_EE",
       "store": "Rimi",
       "is_sale": false
     },
@@ -98750,6 +98986,22 @@
       "unit_label": "L",
       "url": "https://barbora.ee/toode/limonaad-a-le-coq-kuldne-apelsin-500-ml",
       "img": "https://cdn.barbora.ee/products/ceefb51f-b70b-454a-b298-db9985379f3e_m.png",
+      "store": "Barbora",
+      "is_sale": false
+    },
+    "Hele õlu STAROPRAMEN Prem.5% 500ml": {
+      "category": "Barbora:Heledad Õlled",
+      "entries": [
+        {
+          "t": "2026-04-30T07:56:19.697189",
+          "p": 1.99
+        }
+      ],
+      "latest_price": 1.99,
+      "price_per_unit": 3.98,
+      "unit_label": "L",
+      "url": "https://barbora.ee/toode/hele-olu-staropramen-prem-5-proc-500-ml",
+      "img": "https://cdn.barbora.ee/products/2cb1ee9a-dd97-4a67-b8a4-2120cd5c7a8c_m.png",
       "store": "Barbora",
       "is_sale": false
     }
